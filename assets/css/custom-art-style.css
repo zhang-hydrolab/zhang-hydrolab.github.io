@@ -1,0 +1,393 @@
+/* 动态艺术风格CSS - 张永强课题组主页 */
+
+/* 动态渐变背景 */
+body {
+  background: linear-gradient(-45deg, #e3f2fd, #f3e5f5, #e8f5e9, #fff3e0);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 导航栏美化 */
+.masthead {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  min-height: 60px;
+}
+
+.masthead__inner-wrap {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.masthead__menu {
+  width: 100%;
+}
+
+.greedy-nav {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+/* 移除导航栏内所有元素的背景 */
+.greedy-nav,
+.greedy-nav ul,
+.greedy-nav .visible-links,
+.greedy-nav .visible-links li,
+.masthead__menu,
+.masthead__inner-wrap {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* 移除菜单项的所有背景 - 使用最高优先级 */
+.masthead__menu-item,
+.masthead__menu-item--lg,
+li.masthead__menu-item,
+li.masthead__menu-item--lg,
+.visible-links .masthead__menu-item,
+.visible-links .masthead__menu-item--lg {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.masthead__menu-item a,
+.masthead__menu-item--lg a,
+li.masthead__menu-item a,
+li.masthead__menu-item--lg a,
+.visible-links .masthead__menu-item a,
+.visible-links .masthead__menu-item--lg a {
+  transition: all 0.3s ease;
+  position: relative;
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  color: #424a51 !important;
+  -webkit-text-fill-color: initial !important;
+  padding: 1rem 1.2rem !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  box-shadow: none !important;
+  border: none !important;
+  line-height: 1.5 !important;
+}
+
+.masthead__menu-item a:before,
+.masthead__menu-item a:after,
+.masthead__menu-item--lg a:before,
+.masthead__menu-item--lg a:after {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.masthead__menu-item a:hover,
+.masthead__menu-item--lg a:hover,
+.masthead__menu-item a:focus,
+.masthead__menu-item--lg a:focus,
+.masthead__menu-item a:active,
+.masthead__menu-item--lg a:active {
+  color: #2196F3 !important;
+  transform: translateY(-2px);
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.masthead__menu-item a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background: linear-gradient(90deg, #2196F3, #4CAF50) !important;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.masthead__menu-item a:hover::after {
+  width: 80%;
+}
+
+/* 侧边栏美化 */
+.sidebar {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.sidebar:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.author__avatar img {
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.author__avatar img:hover {
+  transform: scale(1.05) rotate(5deg);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* 主内容区美化 */
+.page {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+}
+
+.page:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* 标题美化 */
+h1, h2, h3 {
+  background: linear-gradient(135deg, #2196F3, #4CAF50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.2); }
+}
+
+/* 链接美化 */
+a {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+a:hover {
+  color: #2196F3 !important;
+}
+
+/* 图片美化 */
+img {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 按钮美化 */
+.btn {
+  background: linear-gradient(135deg, #2196F3, #4CAF50) !important;
+  border: none !important;
+  border-radius: 25px;
+  padding: 10px 25px;
+  color: white !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+}
+
+/* 页脚美化 */
+.page__footer {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+/* 浮动动画 - 已禁用 */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* .author__avatar {
+  animation: float 3s ease-in-out infinite;
+} */
+
+/* 段落美化 */
+p {
+  line-height: 1.8;
+  transition: all 0.3s ease;
+}
+
+p:hover {
+  transform: translateX(5px);
+}
+
+/* 列表项美化 */
+li {
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  transform: translateX(5px);
+  color: #2196F3;
+}
+
+/* Publications box 美化 */
+.publications-box {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid #2196F3;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.publications-box:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 表格美化 */
+table {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+tr {
+  transition: all 0.3s ease;
+}
+
+tr:hover {
+  background: rgba(33, 150, 243, 0.05);
+}
+
+/* News 图片容器美化 */
+div[style*="width: 200px; height: 100px"] {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+div[style*="width: 200px; height: 100px"]:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+/* People 页面卡片美化 */
+div[style*="display: flex"][style*="gap: 20px"] {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+div[style*="display: flex"][style*="gap: 20px"]:hover {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #2196F3, #4CAF50);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #1976D2, #388E3C);
+}
+
+/* 加载动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page__content > * {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+  body {
+    background-size: 600% 600%;
+  }
+
+  .sidebar:hover {
+    transform: none;
+  }
+
+  .page:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* 终极覆盖 - 移除菜单栏所有白色背景 */
+/* 注释掉通配符规则，防止影响display属性
+.masthead *,
+.masthead__inner-wrap *,
+.masthead__menu *,
+.greedy-nav *,
+.visible-links *,
+.visible-links li,
+.visible-links li a {
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+*/
+
+/* 保持主导航栏的半透明背景 */
+.masthead {
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* 确保下拉菜单有背景 */
+.hidden-links {
+  background: white !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}

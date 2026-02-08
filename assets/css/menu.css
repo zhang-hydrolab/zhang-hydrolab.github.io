@@ -1,0 +1,188 @@
+/* Mobile Menu Styles */
+.greedy-nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: none;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.greedy-nav .navicon {
+  width: 1.5rem;
+  height: 0.125rem;
+  background: #333;
+  position: relative;
+  transition: background 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+.greedy-nav .navicon::before,
+.greedy-nav .navicon::after {
+  content: '';
+  display: block;
+  width: 1.5rem;
+  height: 0.125rem;
+  background: #333;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.greedy-nav .navicon::before {
+  top: -0.4rem;
+}
+
+.greedy-nav .navicon::after {
+  top: 0.4rem;
+}
+
+.greedy-nav button.close .navicon {
+  background: transparent;
+}
+
+.greedy-nav button.close .navicon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.greedy-nav button.close .navicon::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.hidden-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 0 0 8px 8px;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.hidden-links.hidden {
+  display: none !important;
+}
+
+.hidden-links li {
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.hidden-links li:last-child {
+  border-bottom: none;
+}
+
+.hidden-links a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hidden-links a:hover {
+  background: #f5f5f5;
+}
+
+/* Responsive Design */
+.greedy-nav {
+  position: relative;
+  background: none !important;
+  background-color: transparent !important;
+}
+
+.greedy-nav ul,
+.greedy-nav .visible-links,
+.greedy-nav .visible-links li {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.masthead__menu {
+  position: relative;
+  background: none !important;
+  background-color: transparent !important;
+}
+
+/* Default - large screens - 增加优先级确保覆盖其他规则 */
+@media screen and (min-width: 901px) {
+  .greedy-nav button {
+    display: none !important;
+  }
+
+  .greedy-nav .visible-links,
+  .visible-links {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 60px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .visible-links li {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  /* Hide the dropdown menu on large screens */
+  .hidden-links {
+    display: none !important;
+  }
+}
+
+/* Small screens only - when menu items don't fit in one line */
+/* Typical breakpoint where 8 menu items won't fit horizontally */
+@media (max-width: 900px) {
+  .greedy-nav button {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+
+  .greedy-nav {
+    position: relative;
+    width: 100%;
+    min-height: 60px;
+  }
+
+  .visible-links {
+    display: none !important;
+  }
+
+  .masthead__menu {
+    position: relative;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Allow hidden-links to show when .hidden class is removed */
+  .hidden-links {
+    display: block !important;
+  }
+
+  .hidden-links.hidden {
+    display: none !important;
+  }
+}

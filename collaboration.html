@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <!-- begin SEO -->
+    <title>Yongqiang Zhang's lab: Large Scale Hydrology - Collaboration</title>
+    <meta property="og:locale" content="en-US" />
+    <meta property="og:site_name" content="Yongqiang Zhang's lab: Large Scale Hydrology" />
+    <meta property="og:title" content="Collaboration" />
+    <link rel="canonical" href="https://ericlyun.github.io/collaboration/" />
+    <meta property="og:url" content="https://ericlyun.github.io/collaboration/" />
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yongqiang Zhang's lab: Large Scale Hydrology",
+        "url": "https://ericlyun.github.io",
+        "sameAs": null
+      }
+    </script>
+    <!-- end SEO -->
+    <link
+      href="https://ericlyun.github.io/feed.xml"
+      type="application/atom+xml"
+      rel="alternate"
+      title="Yun (Eric) Liang's Homepage Feed"
+    />
+    <!-- http://t.co/dKP3o1e -->
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      document.documentElement.className =
+        document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";
+    </script>
+    <!-- For all browsers -->
+    <link
+      rel="stylesheet"
+      href="https://ericlyun.github.io/assets/css/main.css"
+    />
+    <meta http-equiv="cleartype" content="on" />
+
+    <!-- Custom Art Style CSS -->
+    <link rel="stylesheet" href="./assets/css/custom-art-style.css" />
+    <!-- Mobile Menu CSS -->
+    <link rel="stylesheet" href="./assets/css/menu.css" />
+    
+    <!-- Fix Navigation Bar Display -->
+    <style>
+      /* 强制显示导航栏 */
+      .masthead {
+        min-height: 60px !important;
+        height: auto !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+      }
+      
+      .masthead__inner-wrap {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        padding: 0.5rem 1rem !important;
+      }
+      
+      .masthead__menu {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+      }
+      
+      .greedy-nav {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        position: relative !important;
+      }
+      
+      .visible-links {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        height: auto !important;
+        align-items: center !important;
+      }
+      
+      .visible-links li {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        margin: 0 !important;
+      }
+      
+      .visible-links li a {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        padding: 0.5rem 1rem !important;
+        color: #424a51 !important;
+        text-decoration: none !important;
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+      }
+      
+      /* 确保按钮在大屏幕上隐藏 */
+      @media (min-width: 901px) {
+        .greedy-nav button {
+          display: none !important;
+        }
+      }
+    </style>
+
+    <!-- start custom head snippets -->
+    <link rel="shortcut icon" href="/images/favicon.ico?v=M44lzPylqQ" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta
+      name="msapplication-TileImage"
+      content="https://ericlyun.github.io/images/mstile-144x144.png?v=M44lzPylqQ"
+    />
+    <meta
+      name="msapplication-config"
+      content="https://ericlyun.github.io/images/browserconfig.xml?v=M44lzPylqQ"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="stylesheet"
+      href="https://ericlyun.github.io/assets/css/academicons.css"
+    />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } });
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true } });
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"
+      async
+    ></script>
+
+    <style>
+      .collaborator-card {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 35px;
+        padding: 20px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.8);
+        transition: all 0.3s ease;
+        position: relative;
+        align-items: center;
+      }
+
+      .collaborator-card:hover {
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        transform: translateY(-2px);
+        z-index: 100;
+        margin-bottom: 120px;
+      }
+
+      .collaborator-photo {
+        flex-shrink: 0;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #4CAF50;
+      }
+
+      .collaborator-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .collaborator-name {
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #2196F3;
+        margin: 0;
+      }
+
+      .collaborator-institute {
+        font-size: 0.95em;
+        color: #666;
+        font-style: italic;
+        margin: 0;
+      }
+
+      .collaborator-description {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(33, 150, 243, 0.95);
+        color: white;
+        padding: 15px;
+        border-radius: 0 0 10px 10px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 101;
+        font-size: 0.9em;
+        line-height: 1.6;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      .collaborator-card:hover .collaborator-description {
+        opacity: 1;
+        visibility: visible;
+        max-height: 500px;
+      }
+
+      .section-title {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #4CAF50;
+      }
+    </style>
+
+    <!-- end custom head snippets -->
+  </head>
+  <body>
+    <!--[if lt IE 9
+      ]><div class="notice--danger align-center" style="margin: 0">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+        your experience.
+      </div><!
+    [endif]-->
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <button>
+              <div class="navicon"></div>
+            </button>
+            <ul class="visible-links">
+              <li class="masthead__menu-item masthead__menu-item--lg">
+                <a href="./"> Home </a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="./news.html"> News </a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="./data.html"> Data </a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="./publications.html"> Publications </a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="./research.html"> Research </a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="./people.html"> People </a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="./collaboration.html"> Collaboration </a>
+              </li>
+              <li class="masthead__menu-item">
+                <a href="https://igsnrr.cas.cn/sourcedb/zw/zjrck/kygg/bjdbgc/201903/t20190327_5262230.html" target="_blank">
+                  IGSNRR
+                </a>
+              </li>
+            </ul>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div id="main" role="main">
+      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        <meta itemprop="headline" content="Collaboration" />
+        <div class="page__inner-wrap">
+          <header>
+            <h1 class="page__title" itemprop="headline">Collaboration</h1>
+          </header>
+          <section class="page__content" itemprop="text">
+
+            <!-- International Collaborators -->
+            <h2 class="section-title">International Collaborators</h2>
+
+            <div class="collaborator-card">
+              <img src="./colabration/Günter Blöschl.jpg" alt="Günter Blöschl" class="collaborator-photo" />
+              <div class="collaborator-info">
+                <p class="collaborator-name">Prof. Günter Blöschl</p>
+                <p class="collaborator-institute">Vienna University of Technology</p>
+              </div>
+              <div class="collaborator-description">
+                Prof. Günter Blöschl is Head of the Institute of Hydraulic Engineering and Water Resources Management, Director of the Centre for Water Resource Systems of the Vienna University of Technology as well as Chair of the Vienna Doctoral Programme on Water Resource Systems.
+              </div>
+            </div>
+
+            <div class="collaborator-card">
+              <img src="./colabration/Thorsten Wagener.jpeg" alt="Thorsten Wagener" class="collaborator-photo" />
+              <div class="collaborator-info">
+                <p class="collaborator-name">Prof. Thorsten Wagener</p>
+                <p class="collaborator-institute">University of Potsdam</p>
+              </div>
+              <div class="collaborator-description">
+                Prof. Thorsten Wagener is a Humboldt Professor at the University of Potsdam, a Fellow of the European Academy of Sciences, a Fellow of the Royal Academy of Engineering (UK), and a Fellow of the American Geophysical Union (AGU). His research focuses on catchment hydrology, and he has made significant contributions in the areas of catchment classification, prediction in ungauged basins, and environmental model evaluation.
+              </div>
+            </div>
+
+            <div class="collaborator-card">
+              <img src="./colabration/Diego Miralles.jpeg" alt="Diego Miralles" class="collaborator-photo" />
+              <div class="collaborator-info">
+                <p class="collaborator-name">Prof. Diego Miralles</p>
+                <p class="collaborator-institute">University of Gent</p>
+              </div>
+              <div class="collaborator-description">
+                Prof. Diego Miralles became Professor in Hydrology and Climate at Ghent University in 2017, after a journey via UK, The Netherlands and USA. Being a climate scientist with a background on hydrology and remote sensing, his scientific interests and curiosity are wide. He is the recipient of ERC Starting and Consolidator grants and a Clarivate Highly Cited researcher.
+              </div>
+            </div>
+
+            <div class="collaborator-card">
+              <img src="./colabration/Ruby Leung.png" alt="Ruby Leung" class="collaborator-photo" />
+              <div class="collaborator-info">
+                <p class="collaborator-name">Prof. Ruby Leung</p>
+                <p class="collaborator-institute">Pacific Northwest National Laboratory</p>
+              </div>
+              <div class="collaborator-description">
+                Prof. Ruby Leung is an atmospheric scientist internationally recognized for her work in Earth system modeling and hydrologic processes. Her research spans mountain hydrometeorology, aerosol–cloud interactions, orographic precipitation, and climate extremes. Leung was elected to the U.S. National Academy of Engineering in 2017 for her leadership in regional and global climate and hydrological modeling, and she became a Battelle Fellow at the Pacific Northwest National Laboratory in 2019.
+              </div>
+            </div>
+
+            <div class="collaborator-card">
+              <img src="./colabration/Francis Chiew.png" alt="Francis Chiew" class="collaborator-photo" />
+              <div class="collaborator-info">
+                <p class="collaborator-name">Prof. Francis Chiew</p>
+                <p class="collaborator-institute">CSIRO</p>
+              </div>
+              <div class="collaborator-description">
+                Prof. Francis Chiew has 30 years of experience in research, teaching and consulting, and in science leadership and people and project management. Francis joined CSIRO as a Science Leader in Canberra in 2006, after a 15-year academic career at the University of Melbourne. In the past ten years, Francis has led 30-40 hydrologists working on water resources assessment, hydrological forecasting and prediction, climate change adaptation, and integrated basin management, in projects totalling more than AUD$10m per year.
+              </div>
+            </div>
+
+            <div class="collaborator-card">
+              <img src="./colabration/Tim McVicar.webp" alt="Tim McVicar" class="collaborator-photo" />
+              <div class="collaborator-info">
+                <p class="collaborator-name">Prof. Tim McVicar</p>
+                <p class="collaborator-institute">CSIRO</p>
+              </div>
+              <div class="collaborator-description">
+                Prof. Tim McVicar is a Research Scientist who leads the Biophysical Dynamics Team in the Living Landscapes Program of CSIRO Environment. With over 35 years of experience in ecohydrology, climatology, remote sensing, and spatial interpolation, he develops high-resolution estimates of actual evapotranspiration across Australia using satellite imagery. His research focuses on modelling AET, monitoring vegetation dynamics, assessing drought and climate variability, and understanding surface-energy exchanges through satellite–meteorological data integration.
+              </div>
+            </div>
+
+            <div class="collaborator-card">
+              <img src="./colabration/Amir AghaKouchak.webp" alt="Amir AghaKouchak" class="collaborator-photo" />
+              <div class="collaborator-info">
+                <p class="collaborator-name">Prof. Amir AghaKouchak</p>
+                <p class="collaborator-institute">University of California, Irvine</p>
+              </div>
+              <div class="collaborator-description">
+                Prof. Amir AghaKouchak is a Chancellor's Professor of Civil and Environmental Engineering and Director of the Center for Hydrometeorology and Remote Sensing (CHRS) at the University of California, Irvine. His research bridges hydrology, climatology, and remote sensing, focusing on natural hazards, climate extremes, and compound and cascading events. He has authored over 270 peer-reviewed papers and received major honors including the AGU James B. Macelwane Medal, AGU, ASCE, and EWRI Fellowships, ASCE Norman Medal, AMS Robert E. Horton Lectureship in Hydrology, and the ASCE Huber Research Prize.
+              </div>
+            </div>
+
+          </section>
+          <footer class="page__meta"></footer>
+        </div>
+      </article>
+    </div>
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- <a href="/sitemap/">Sitemap</a> -->
+        <!-- end custom footer snippets -->
+        <div class="page__footer-copyright">
+          &copy; 2024 Yongqiang Zhang's lab: Large Scale Hydrology. Powered by
+          <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp;
+          <a href="https://github.com/academicpages/academicpages.github.io"
+            >AcademicPages</a
+          >, a fork of
+          <a
+            href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/"
+            rel="nofollow"
+            >Minimal Mistakes</a
+          >.
+        </div>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/menu.js"></script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <!-- SEO -->
+    <title>Yongqiang Zhang's lab: Large Scale Hydrology - Research</title>
+    <meta property="og:locale" content="en-US" />
+    <meta property="og:site_name" content="Yongqiang Zhang's lab: Large Scale Hydrology" />
+    <meta property="og:title" content="Research" />
+    <link rel="canonical" href="https://ericlyun.github.io/research/" />
+    <meta property="og:url" content="https://ericlyun.github.io/research/" />
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yongqiang Zhang's lab: Large Scale Hydrology",
+        "url": "https://ericlyun.github.io",
+        "sameAs": null
+      }
+    </script>
+    <!-- Feed -->
+    <link href="https://ericlyun.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Yongqiang Zhang's Homepage Feed" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      document.documentElement.className =
+        document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";
+    </script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://ericlyun.github.io/assets/css/main.css" />
+    <link rel="stylesheet" href="https://ericlyun.github.io/assets/css/academicons.css" />
+    <meta http-equiv="cleartype" content="on" />
+
+    <!-- Custom Art Style CSS -->
+    <link rel="stylesheet" href="./assets/css/custom-art-style.css" />
+    <!-- Mobile Menu CSS -->
+    <link rel="stylesheet" href="./assets/css/menu.css" />
+    
+    <!-- Fix Navigation Bar Display -->
+    <style>
+      /* 强制显示导航栏 */
+      .masthead {
+        min-height: 60px !important;
+        height: auto !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+      }
+      
+      .masthead__inner-wrap {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        padding: 0.5rem 1rem !important;
+      }
+      
+      .masthead__menu {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+      }
+      
+      .greedy-nav {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        position: relative !important;
+      }
+      
+      .visible-links {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        height: auto !important;
+        align-items: center !important;
+      }
+      
+      .visible-links li {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        margin: 0 !important;
+      }
+      
+      .visible-links li a {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        padding: 0.5rem 1rem !important;
+        color: #424a51 !important;
+        text-decoration: none !important;
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+      }
+      
+      /* 确保按钮在大屏幕上隐藏 */
+      @media (min-width: 901px) {
+        .greedy-nav button {
+          display: none !important;
+        }
+      }
+    </style>
+
+    <!-- Custom head -->
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="msapplication-TileImage" content="https://ericlyun.github.io/images/mstile-144x144.png?v=M44lzPylqQ" />
+    <meta name="msapplication-config" content="https://ericlyun.github.io/images/browserconfig.xml?v=M44lzPylqQ" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } });
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true } });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script>
+
+    <style>
+      /* Research Theme Sections */
+      .research-theme {
+        margin: 4em 0;
+        padding: 3em 2em;
+        border-radius: 15px;
+        background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(245,247,250,0.95) 100%);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+      }
+
+      .research-theme:hover {
+        box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+        transform: translateY(-5px);
+      }
+
+      .research-theme.theme-water-cycle {
+        border-left: 5px solid #2196F3;
+      }
+
+      .research-theme.theme-disaster {
+        border-left: 5px solid #FF5722;
+      }
+
+      .research-theme.theme-technology {
+        border-left: 5px solid #4CAF50;
+      }
+
+      .theme-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5em;
+        padding-bottom: 1em;
+        border-bottom: 2px solid rgba(0,0,0,0.1);
+      }
+
+      .theme-icon {
+        width: 120px;
+        height: 120px;
+        margin-right: 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      }
+
+      .theme-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .theme-water-cycle .theme-icon {
+        border: 3px solid #2196F3;
+      }
+
+      .theme-disaster .theme-icon {
+        border: 3px solid #FF5722;
+      }
+
+      .theme-technology .theme-icon {
+        border: 3px solid #4CAF50;
+      }
+
+      .theme-title-wrapper {
+        flex: 1;
+      }
+
+      .theme-title {
+        font-size: 2em;
+        font-weight: 700;
+        color: #2c3e50;
+        margin: 0;
+      }
+
+      .theme-subtitle {
+        font-size: 1.1em;
+        color: #7f8c8d;
+        margin: 0.3em 0 0 0;
+        font-style: italic;
+      }
+
+      .theme-description {
+        font-size: 1.05em;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 2em;
+        text-align: justify;
+      }
+
+      /* Research Project Cards */
+      .research-projects {
+        display: grid;
+        gap: 2em;
+      }
+
+      .research-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .research-card:hover {
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        transform: translateY(-3px);
+      }
+
+      .research-card-image {
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        position: relative;
+        background: #f5f7fa;
+      }
+
+      .research-card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.5s ease;
+      }
+
+      .research-card:hover .research-card-image img {
+        transform: scale(1.05);
+      }
+
+      .research-card-content {
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .research-card-title {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: #2c3e50;
+        margin: 0 0 0.8em 0;
+      }
+
+      .research-card-description {
+        font-size: 1em;
+        line-height: 1.7;
+        color: #666;
+        margin-bottom: 1.5em;
+        flex: 1;
+      }
+
+      .research-card-publications {
+        margin-top: auto;
+      }
+
+      .publications-title {
+        font-size: 0.9em;
+        font-weight: 600;
+        color: #7f8c8d;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.8em;
+      }
+
+      .publication-item {
+        font-size: 0.9em;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 0.8em;
+        padding-left: 1.2em;
+        position: relative;
+      }
+
+      .publication-item::before {
+        content: "📄";
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .publication-item a {
+        color: #2196F3;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .publication-item a:hover {
+        color: #1976D2;
+        text-decoration: underline;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .research-card-image {
+          height: 250px;
+        }
+
+        .research-card-content {
+          padding: 1.5em;
+        }
+
+        .theme-title {
+          font-size: 1.5em;
+        }
+
+        .theme-subtitle {
+          font-size: 1em;
+        }
+
+        .research-card-title {
+          font-size: 1.3em;
+        }
+
+        .theme-description {
+          font-size: 1em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--[if lt IE 9]>
+    <div class="notice--danger align-center" style="margin: 0">
+      You are using an <strong>outdated</strong> browser. Please
+      <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+    </div>
+    <![endif]-->
+
+    <!-- Masthead -->
+    <div class="masthead">
+      <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+          <nav id="site-nav" class="greedy-nav">
+            <button><div class="navicon"></div></button>
+            <ul class="visible-links">
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="./">Home</a></li>
+              <li class="masthead__menu-item"><a href="./news.html">News</a></li>
+              <li class="masthead__menu-item"><a href="./data.html">Data</a></li>
+              <li class="masthead__menu-item"><a href="./publications.html">Publications</a></li>
+              <li class="masthead__menu-item"><a href="./research.html">Research</a></li>
+              <li class="masthead__menu-item"><a href="./people.html">People</a></li>
+              <li class="masthead__menu-item"><a href="./collaboration.html">Collaboration</a></li>
+              <li class="masthead__menu-item"><a href="https://igsnrr.cas.cn/sourcedb/zw/zjrck/kygg/bjdbgc/201903/t20190327_5262230.html" target="_blank">IGSNRR</a></li>
+            </ul>
+            <ul class="hidden-links hidden"></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div id="main" role="main">
+      <!-- Main Content -->
+      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+        <meta itemprop="headline" content="Research" />
+        <div class="page__inner-wrap">
+          <header>
+            <h1 class="page__title" itemprop="headline">Research</h1>
+          </header>
+          <section class="page__content" itemprop="text">
+
+            <!-- Theme 1: Water Cycle and Ecohydrology -->
+            <div class="research-theme theme-water-cycle">
+              <div class="theme-header">
+                <div class="theme-icon">
+                  <img src="./Research/Understanding the Changing Global Water Cycle.png" alt="Water Cycle">
+                </div>
+                <div class="theme-title-wrapper">
+                  <h2 class="theme-title">Water Cycle and Ecohydrology</h2>
+                  <p class="theme-subtitle">Understanding the Changing Global Water Cycle</p>
+                </div>
+              </div>
+              <p class="theme-description">
+                The team investigates how global warming and human activities are altering fundamental water cycle processes. They seek to reconcile different data sources (like satellite, model (such as PML-V2 evapotranspiration and HBV-PML hydrological models), and ground observations) to better quantify these changes, asking critical questions such as why parts of the water cycle appear to be stagnating despite warming, and how human actions reshape water availability and ecosystem functions—like the roles of forests as "sponges" or "pumps"—at regional and global scales.
+              </p>
+
+              <div class="research-projects">
+                <!-- PML_v2 Project -->
+                <div class="research-card">
+                  <div class="research-card-image">
+                    <img src="./Research/PML_v2.png" alt="PML_v2">
+                  </div>
+                  <div class="research-card-content">
+                    <h3 class="research-card-title">PML_v2</h3>
+                    <p class="research-card-description">
+                      Penman-Monteith-Leuning Evapotranspiration V2 (PML_V2) products include evapotranspiration (ET), its three components, and gross primary production (GPP) at 500m and 8-day resolution during 2000-2023.
+                    </p>
+                    <div class="research-card-publications">
+                      <p class="publications-title">Related Publications</p>
+                      <div class="publication-item">
+                        Zhang, Y., et al. (2016). Multi-decadal trends in global terrestrial evapotranspiration and its components. <em>Sci. Rep.</em> 6, 19124. <a href="https://doi.org/10.1038/srep19124" target="_blank">https://doi.org/10.1038/srep19124</a>
+                      </div>
+                      <div class="publication-item">
+                        Zhang, Y., et al. (2019). Coupled estimation of 500m and 8-day resolution global evapotranspiration and gross primary production in 2002-2017. <em>Remote Sensing Environ.</em> 222, 165-182. <a href="https://doi.org/10.1016/j.rse.2018.12.031" target="_blank">https://doi.org/10.1016/j.rse.2018.12.031</a>
+                      </div>
+                      <div class="publication-item">
+                        He, S., et al. (2022). A daily and 500 m coupled evapotranspiration and gross primary production product across China during 2000–2020. <em>Earth Syst. Sci. Data.</em> <a href="https://doi.org/10.5194/essd-2022-183" target="_blank">https://doi.org/10.5194/essd-2022-183</a>
+                      </div>
+                      <div class="publication-item">
+                        Wang, X., et al. (2025). Satellite data-driven estimation of daily and 500 m net ecosystem exchange over China during 2003–2020. <em>Remote Sensing of Environment</em>, 331, 115047. <a href="https://doi.org/10.1016/j.rse.2025.115047" target="_blank">https://doi.org/10.1016/j.rse.2025.115047</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- HBV-PML Project -->
+                <div class="research-card">
+                  <div class="research-card-image">
+                    <img src="./Research/HBV-PML.png" alt="HBV-PML">
+                  </div>
+                  <div class="research-card-content">
+                    <h3 class="research-card-title">HBV-PML</h3>
+                    <p class="research-card-description">
+                      The HBV-PML model provides critical data support for global water resource assessments. This innovative model integrates the remote sensing evapotranspiration model PML with the classical hydrological model HBV, significantly improving the accuracy of evapotranspiration simulation through remote sensing observations. It effectively overcomes the limitations of traditional models in representing vegetation dynamics.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Theme 2: Water Disasters and Security -->
+            <div class="research-theme theme-disaster">
+              <div class="theme-header">
+                <div class="theme-icon">
+                  <img src="./Research/Water-Related Disasters and Security Under Climate Change.png" alt="Water Disasters">
+                </div>
+                <div class="theme-title-wrapper">
+                  <h2 class="theme-title">Water-Related Disasters and Security</h2>
+                  <p class="theme-subtitle">Under Climate Change</p>
+                </div>
+              </div>
+              <p class="theme-description">
+                This theme focuses on the mechanisms and impacts of extreme hydrological events, including droughts and floods. The group studies how droughts develop and propagate through different environmental layers, how flood patterns have evolved in China over decades, and how to enhance societal and ecological resilience to water-related extremes in a changing climate.
+              </p>
+
+              <div class="research-projects">
+                <!-- Forest Fire & Flood Project -->
+                <div class="research-card">
+                  <div class="research-card-image">
+                    <img src="./Research/flood.png" alt="Forest Fire and Flood">
+                  </div>
+                  <div class="research-card-content">
+                    <h3 class="research-card-title">Forest Fire & Flood Ecological-Hydrological Effects</h3>
+                    <p class="research-card-description">
+                      The research explores the impacts of bushfires on hydrological processes in southeast Australia, particularly focusing on changes in water balance and flood magnitudes. One study examines the effects of the 2009 Victorian Bushfires on water balance in eight forested catchments, finding a reduction in evapotranspiration and an increase in streamflow, leading to a long-term decline in water storage in burned areas. Another study investigates the 2019-2020 mega forest fires, showing that these fires significantly amplified flood magnitudes, especially in regions with winter-dominated rainfall.
+                    </p>
+                    <div class="research-card-publications">
+                      <p class="publications-title">Related Publications</p>
+                      <div class="publication-item">
+                        Xu, Z., et al. (2022). Bushfire‐Induced Water Balance Changes Detected by a Modified Paired Catchment Method. <em>Water Resources Research</em>, 58(11). <a href="https://doi.org/10.1029/2021wr031013" target="_blank">https://doi.org/10.1029/2021wr031013</a>
+                      </div>
+                      <div class="publication-item">
+                        Xu, Z., et al. (2023). Mega Forest Fires Intensify Flood Magnitudes in Southeast Australia. <em>Geophysical Research Letters</em>, 50(12). <a href="https://doi.org/10.1029/2023gl103812" target="_blank">https://doi.org/10.1029/2023gl103812</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Theme 3: Hydrology with New Technologies -->
+            <div class="research-theme theme-technology">
+              <div class="theme-header">
+                <div class="theme-icon">
+                  <img src="./Research/Innovating Water Science with New Technologies and Models.png" alt="Water Technology">
+                </div>
+                <div class="theme-title-wrapper">
+                  <h2 class="theme-title">Innovating Water Science</h2>
+                  <p class="theme-subtitle">with New Technologies and Models</p>
+                </div>
+              </div>
+              <p class="theme-description">
+                The group leverages advanced technologies such as high-resolution remote sensing and artificial intelligence (AI) to improve the monitoring and prediction of hydrological processes. They develop fine-scale datasets for evapotranspiration and vegetation productivity, integrate AI with physical models to enable better forecasting in ungauged basins, and work toward real-time flood prediction systems that support water resources management under climate change.
+              </p>
+
+              <div class="research-projects">
+                <!-- AI for Hydrology Project -->
+                <div class="research-card">
+                  <div class="research-card-image">
+                    <img src="./data/GRACE.png" alt="AI for Hydrology">
+                  </div>
+                  <div class="research-card-content">
+                    <h3 class="research-card-title">AI for Hydrology Modeling</h3>
+                    <p class="research-card-description">
+                      We introduce an AI-driven Transformer-based deep learning model to address data gaps in GRACE and GRACE Follow-On satellite data. By integrating meteorological and hydrological features like temperature, precipitation, and evapotranspiration, the model effectively fills the 11-month data gap, showing superior accuracy, particularly in arid regions. The transformer-based approach outperforms traditional methods, demonstrating the potential of AI in enhancing satellite data continuity and reliability for environmental monitoring.
+                    </p>
+                    <div class="research-card-publications">
+                      <p class="publications-title">Related Publications</p>
+                      <div class="publication-item">
+                        Wang, L., & Zhang, Y. (2024). Filling GRACE data gap using an innovative transformer-based deep learning approach. <em>Remote Sensing of Environment</em>, 315, 114465. <a href="https://doi.org/10.1016/j.rse.2024.114465" target="_blank">https://doi.org/10.1016/j.rse.2024.114465</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- CAS-Canglong Project -->
+                <div class="research-card">
+                  <div class="research-card-image">
+                    <img src="./Research/CAS-Canglong.png" alt="CAS-Canglong">
+                  </div>
+                  <div class="research-card-content">
+                    <h3 class="research-card-title">CAS-Canglong</h3>
+                    <p class="research-card-description">
+                      We present a novel AI-based approach for sub-seasonal to seasonal (S2S) global sea surface temperature (SST) prediction, using a 3D Transformer model called CAS-Canglong. By leveraging the self-attention mechanism inherent in Transformer architectures, the model efficiently handles the complexities of ocean-atmosphere interactions and improves prediction accuracy. Compared to traditional physics-based models, CAS-Canglong demonstrates superior skill in predicting SST patterns, enhancing computational efficiency and forecasting accuracy for up to three months in advance. This approach shows great potential for improving predictions of extreme weather events like droughts and floods, as well as for future climate studies.
+                    </p>
+                    <div class="research-card-publications">
+                      <p class="publications-title">Related Publications</p>
+                      <div class="publication-item">
+                        Wang, L., et al. (2024). CAS-Canglong: A skillful 3D Transformer model for sub-seasonal to seasonal global sea surface temperature prediction. <em>arXiv</em>. <a href="https://doi.org/10.48550/arXiv.2409.05369" target="_blank">https://doi.org/10.48550/arXiv.2409.05369</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+          <footer class="page__meta"></footer>
+        </div>
+      </article>
+    </div>
+
+    <!-- Footer -->
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+        <!-- <a href="/sitemap/">Sitemap</a> -->
+        <!-- end custom footer snippets -->
+        <div class="page__footer-copyright">
+          &copy; 2024 Yongqiang Zhang's lab: Large Scale Hydrology. Powered by
+          <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp;
+          <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>,
+          a fork of
+          <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/menu.js"></script>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () { (i[r].q = i[r].q || []).push(arguments); }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
+      ga("create", "", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
+</html>
