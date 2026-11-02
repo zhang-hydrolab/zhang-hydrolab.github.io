@@ -1,7 +1,8 @@
 import { html, raw, safeHref, t } from '../lib/html.mjs';
 import { NAV, picture } from './parts.mjs';
 
-const LANG_BOOT = `(function(){var d=document.documentElement;d.classList.add('js');try{var l=localStorage.getItem('lab-lang');if(l==='zh'){d.dataset.lang='zh';d.lang='zh-CN'}}catch(e){}})();`;
+// New browsing sessions start in English; keep an explicit choice across pages.
+const LANG_BOOT = `(function(){var d=document.documentElement;d.classList.add('js');try{var l=sessionStorage.getItem('lab-lang');if(l==='zh'){d.dataset.lang='zh';d.lang='zh-CN'}}catch(e){}})();`;
 
 const searchIcon = raw(`<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m14 14 4 4" stroke="currentColor" stroke-width="1.5"/></svg>`);
 const closeIcon = raw(`<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 4 12 12M16 4 4 16" stroke="currentColor" stroke-width="1.5"/></svg>`);

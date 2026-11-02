@@ -631,11 +631,12 @@ html[data-lang='zh'] .pagehead__lead {
   color: var(--ink);
 }
 
-.sheet__close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: var(--paper);
+.sheet__tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
 .zoom {

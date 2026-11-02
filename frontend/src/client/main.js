@@ -53,7 +53,7 @@ function setupLanguage() {
       root.dataset.lang = next;
       root.lang = next === 'zh' ? 'zh-CN' : 'en';
       try {
-        localStorage.setItem('lab-lang', next);
+        sessionStorage.setItem('lab-lang', next);
       } catch {
         /* Private mode: the choice just lasts for this page. */
       }

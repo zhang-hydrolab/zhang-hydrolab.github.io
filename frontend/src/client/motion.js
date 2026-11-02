@@ -42,7 +42,6 @@ const BLOCKS = [
   '.project > *',
   '.dataset > *',
   '.group > h2',
-  '.person',
   '.collab',
 ].join(', ');
 

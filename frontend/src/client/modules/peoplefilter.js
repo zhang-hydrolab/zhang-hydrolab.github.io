@@ -28,6 +28,7 @@ export default function init(root) {
 
   const openPerson = (person, trigger) => {
     slot.replaceChildren(person.querySelector('.person__detail').cloneNode(true));
+    slot.querySelector('h3').id = 'person-dialog-title';
     dialog.dataset.returnId = person.id;
     dialog.showModal();
     trigger?.blur();

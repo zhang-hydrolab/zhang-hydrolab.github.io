@@ -98,6 +98,24 @@ describe('store', () => {
     assert.equal(after.role, 'phd');
   });
 
+  it('keeps bilingual people content through export and a database rebuild', () => {
+    const row = store.create('people', {
+      name_en: 'Ning Ma', name_zh: '马宁', role: 'co_pi',
+      research_field: 'Hydrological Processes', research_field_zh: '水文过程',
+      bio_en: 'Studies evapotranspiration.', bio_zh: '研究蒸散发。',
+    });
+    store.update('people', row.id, { email: 'person@example.com' });
+    store.close();
+    fs.rmSync(cfg.dbPath);
+    store = Store.open(cfg);
+    const person = buildApi(store)['people.json'].groups[0].members[0];
+    assert.equal(person.research_field, 'Hydrological Processes');
+    assert.equal(person.research_field_zh, '水文过程');
+    assert.equal(person.bio_en, 'Studies evapotranspiration.');
+    assert.equal(person.bio_zh, '研究蒸散发。');
+    assert.equal(store.list('people', { q: '水文过程' }).length, 1);
+  });
+
   it('rejects a reference to missing media and a wrong media type', () => {
     assert.throws(() => store.create('people', { name_en: 'A', role: 'phd', photo_id: 'missing' }), /photo_id/);
     const img = store.addMedia(PNG, { filename: 'x.png' });

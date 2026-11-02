@@ -4,6 +4,7 @@ import { renderMarkdown } from '../lib/markdown.mjs';
 import { coverage } from './charts.mjs';
 import { categoryLabel, newsDate, newsHref, newsTarget } from './home.mjs';
 import { layout } from './layout.mjs';
+import { personLinks } from './person-links.mjs';
 import { fig, more, paragraphs, pauseButton, picture, pubItem, terrainBlock } from './parts.mjs';
 
 const pageHead = ({ en, zh, lead, scene }) =>
@@ -150,23 +151,20 @@ export function dataPage(ctx) {
 
 function personTile(ctx, person) {
   const name = [person.honorific, person.name_en].filter(Boolean).join(' ');
-  const search = `${person.name_en} ${person.name_zh} ${person.research_field}`.toLowerCase();
+  const search = `${person.name_en} ${person.name_zh} ${person.research_field} ${person.research_field_zh || ''}`.toLowerCase();
   return html`<li class="person" data-search="${search}" id="p-${person.id}">
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media">${picture(ctx, person.photo_id, { sizes: '(max-width: 640px) 46vw, (max-width: 1100px) 30vw, 220px', alt: '', style: `object-position:${person.photo_focus}` })}</span>
-      <span class="person__name">${person.name_en}${person.name_zh ? html` <span lang="zh-CN">${person.name_zh}</span>` : ''}</span>
-      <span class="person__field">${person.research_field}</span>
-    </button>
+      <span class="person__media">${picture(ctx, person.photo_id, { sizes: '(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px', alt: '', style: `object-position:${person.photo_focus}` })}</span>
+      <span class="person__copy">
+        <span class="person__name">${t(person.name_en, person.name_zh)}</span>
+        <span class="person__field">${t(person.research_field, person.research_field_zh)}</span>
+      </span>
+    </button><div class="person__footer">${personLinks(person)}</div>
     <div class="person__detail">
       ${picture(ctx, person.photo_id, { sizes: '220px', alt: `Portrait of ${name}`, style: `object-position:${person.photo_focus}` })}
       <div>
-        <h3>${name}${person.name_zh ? html` <span lang="zh-CN">${person.name_zh}</span>` : ''}</h3>
-        <p class="meta">${person.research_field}</p>
-        ${person.bio_en ? html`<p>${person.bio_en}</p>` : ''}
-        <ul class="plain">
-          ${person.email ? html`<li><a class="link" href="mailto:${person.email}">${person.email}</a></li>` : ''}
-          ${person.links.map((link) => html`<li><a class="link" href="${safeHref(link.url)}" target="_blank" rel="noopener">${link.label}</a></li>`)}
-        </ul>
+        <h3>${t(name, person.name_zh || name)}</h3>
+        <p class="meta">${t(person.research_field, person.research_field_zh)}</p>${person.bio_en || person.bio_zh ? html`<div class="person__bio">${paragraphs((person.bio_en || person.bio_zh).split(/\n\s*\n/), 'en')}${paragraphs((person.bio_zh || person.bio_en).split(/\n\s*\n/), 'zh')}</div>` : ''}${personLinks(person)}
       </div>
     </div>
   </li>`;
@@ -181,32 +179,42 @@ export function peoplePage(ctx) {
   const assets = site['site.assets'];
 
   const body = html`
-    ${pageHead({
-      scene: 'snowy',
-      en: 'People',
-      zh: '团队成员',
-      lead: t(`${meta.counts.people} researchers and students, and ${meta.counts.alumni} alumni.`, `现有科研人员与学生 ${meta.counts.people} 人，校友 ${meta.counts.alumni} 人。`),
-    })}
+    <header class="people-head">
+      <div class="wrap">
+        <p class="kicker">${t('Large Scale Hydrology · IGSNRR, CAS', '大尺度水文学团队 · 中国科学院地理科学与资源研究所')}</p>
+        <div class="people-head__row">
+          <h1>${t('People', '团队成员')}</h1>
+          <p>${t('The people behind our research into water, climate and a changing world.', '探索水循环、气候与变化世界的科研伙伴。')}</p>
+        </div>
+        <div class="people-head__meta">
+          <span>${t(`${meta.counts.people} researchers & students`, `${meta.counts.people} 位科研人员与学生`)}</span>
+          <span>${t(`${meta.counts.alumni} alumni`, `${meta.counts.alumni} 位校友`)}</span>
+          <span>${t('Beijing, China', '中国 · 北京')}</span>
+        </div>
+      </div>
+    </header>
     ${pi
       ? html`<section class="wrap pi" id="pi">
           <div class="pi__side">
-            ${picture(ctx, pi.photo_id, { cls: 'pi__photo', sizes: '(max-width: 1000px) 60vw, 300px', alt: `Portrait of ${pi.honorific} ${pi.name_en}`, style: `object-position:${pi.photo_focus}` })}
-            <dl class="pi__stats">${stats.map((s) => html`<div><dt>${t(s.label_en, s.label_zh)}</dt><dd>${s.value.toLocaleString('en-US')}${s.suffix}</dd></div>`)}</dl>
+            ${picture(ctx, pi.photo_id, { cls: 'pi__photo', sizes: '(max-width: 560px) 120px, (max-width: 760px) 160px, 240px', alt: `Portrait of ${pi.honorific} ${pi.name_en}`, style: `object-position:${pi.photo_focus}` })}
+            ${personLinks(pi)}
           </div>
           <div class="pi__text">
             <p class="kicker">${t('Principal Investigator', '团队负责人')}</p>
             <h2>${t(`${pi.honorific} ${pi.name_en}`, `${pi.name_zh}研究员`)}</h2>
             <p class="pi__role">${t(piSetting.title_en, piSetting.title_zh)}</p>
-            ${paragraphs(piSetting.bio_en, 'en')}
-            ${paragraphs(piSetting.bio_zh, 'zh')}
-            <ul class="plain plain--row">
-              <li><a class="link" href="mailto:${pi.email}">${pi.email}</a></li>
-              ${pi.links.map((link) => html`<li><a class="link" href="${safeHref(link.url)}" target="_blank" rel="noopener">${link.label}</a></li>`)}
-            </ul>
+            ${paragraphs((pi.bio_en || piSetting.bio_en[0]).split(/\n\s*\n/), 'en')}
+            ${paragraphs((pi.bio_zh || piSetting.bio_zh[0]).split(/\n\s*\n/), 'zh')}
+            <details class="pi__more">
+              <summary>${t('More about the group & principal investigator', '了解更多团队与负责人介绍')}</summary>
+              ${paragraphs(piSetting.bio_en, 'en')}
+              ${paragraphs(piSetting.bio_zh, 'zh')}
+            </details>
           </div>
+          <dl class="pi__stats">${stats.map((s) => html`<div><dt>${t(s.label_en, s.label_zh)}</dt><dd>${s.value.toLocaleString('en-US')}${s.suffix}</dd></div>`)}</dl>
         </section>`
       : ''}
-    <section class="wrap" data-module="peoplefilter">
+    <section class="wrap people-directory" data-module="peoplefilter">
       <div class="filters">
         <label class="field"><span class="sr-only">Search people</span><input type="search" data-people-q placeholder="Search name or research field" data-placeholder-zh="搜索姓名或研究方向" autocomplete="off"></label>
         <div class="tags" role="group" aria-label="Filter by role">
@@ -216,7 +224,7 @@ export function peoplePage(ctx) {
       </div>
       ${groups.map(
         (g) => html`<section class="group" data-group="${g.key}" id="${g.key}">
-          <h2>${t(g.label.en, g.label.zh)}</h2>
+          <div class="group__heading"><h2>${t(g.label.en, g.label.zh)}</h2><span class="group__count">${t(`${g.members.length} ${g.members.length === 1 ? 'member' : 'members'}`, `${g.members.length} 位成员`)}</span></div>
           <ul class="people-grid">${g.members.map((m) => personTile(ctx, m))}</ul>
         </section>`,
       )}
@@ -227,8 +235,11 @@ export function peoplePage(ctx) {
         <figcaption>${t('Group photo at the 2026 graduation ceremony.', '2026 年毕业典礼团队合影。')}</figcaption>
       </figure>
     </section>
-    <dialog class="sheet" data-person-dialog aria-label="Person details">
-      <button class="tool sheet__close" type="button" data-dialog-close aria-label="Close"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 4 12 12M16 4 4 16" stroke="currentColor" stroke-width="1.5"/></svg></button>
+    <dialog class="sheet" data-person-dialog aria-labelledby="person-dialog-title">
+      <div class="sheet__tools">
+        <button class="tool tool--text" type="button" data-lang-toggle aria-label="Switch language: English or Chinese"><span class="t-en">中文</span><span class="t-zh">English</span></button>
+        <button class="tool" type="button" data-dialog-close><span class="sr-only">${t('Close', '关闭')}</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 4 12 12M16 4 4 16" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      </div>
       <div data-person-slot></div>
     </dialog>`;
   return layout(ctx, { page: 'people', title: 'People', description: 'Members and alumni of the Large Scale Hydrology group led by Prof. Yongqiang Zhang (张永强) at IGSNRR, Chinese Academy of Sciences.', body, path: '/people.html' });
