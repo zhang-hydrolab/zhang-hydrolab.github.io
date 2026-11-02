@@ -79,6 +79,27 @@ for (const page of pages) {
   }
 }
 
+// Images must always show their own colours, and CSS may not run any motion forever. The 3D views
+// are the only continuous motion. They run in script, which stops them off screen and when paused.
+for (const file of files.filter((f) => f.endsWith('.css'))) {
+  const css = fs.readFileSync(file, 'utf8');
+  for (const rule of ['mix-blend-mode', 'grayscale(', 'sepia(', 'hue-rotate(', 'saturate(', 'filter:', 'infinite']) {
+    if (css.includes(rule)) problems.push(`${path.relative(DIST, file)}: contains "${rule}"`);
+  }
+}
+
+// Every 3D view sits on an image of itself, so it is still there without WebGL or a fast machine.
+for (const page of pages) {
+  const source = fs.readFileSync(page, 'utf8');
+  const name = path.relative(DIST, page);
+  for (const [canvas] of source.matchAll(/<canvas\b[^>]*>/g)) {
+    if (!canvas.includes('aria-hidden="true"')) problems.push(`${name}: canvas not hidden from screen readers`);
+  }
+  for (const [, module] of source.matchAll(/data-module="(earth|block|watercycle|collabglobe)"/g)) {
+    if (!/-still\.webp/.test(source)) problems.push(`${name}: ${module} has no still image`);
+  }
+}
+
 for (const banned of ['ericlyun', 'Ningmu', 'cdnjs.cloudflare', 'jquery', 'academicpages']) {
   for (const page of pages) {
     if (fs.readFileSync(page, 'utf8').includes(banned)) problems.push(`${path.relative(DIST, page)}: contains "${banned}"`);

@@ -69,7 +69,7 @@ function syncToRoot() {
   }
 
   // Tidy directories emptied by removals.
-  for (const dir of ['media', 'assets', 'news', 'api']) {
+  for (const dir of ['media', 'assets', 'news', 'api', 'earth']) {
     const full = path.join(ROOT, dir);
     if (!fs.existsSync(full)) continue;
     const prune = (d) => {

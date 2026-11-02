@@ -1,22 +1,18 @@
-/* Runs on every page. Heavier behaviour lives in ./modules and loads on demand. */
+/* Runs on every page. Only behaviour that does a job for the reader lives here. */
+import { setupMotion } from './motion.js';
 
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const finePointer = matchMedia('(pointer: fine) and (hover: hover)').matches;
 
 const MODULES = {
-  isolines: () => import('./modules/isolines.js'),
-  herotype: () => import('./modules/herotype.js'),
-  scrollwords: () => import('./modules/scrollwords.js'),
   budget: () => import('./modules/budget.js'),
-  panels: () => import('./modules/panels.js'),
-  dragscroll: () => import('./modules/dragscroll.js'),
-  coverage: () => import('./modules/coverage.js'),
-  dotwave: () => import('./modules/dotwave.js'),
-  mosaic: () => import('./modules/mosaic.js'),
   pubfilter: () => import('./modules/pubfilter.js'),
   peoplefilter: () => import('./modules/peoplefilter.js'),
-  newslist: () => import('./modules/newslist.js'),
-  worldmap: () => import('./modules/worldmap.js'),
+  collabmap: () => import('./modules/collabmap.js'),
+  earth: () => import('./modules/earth.js'),
+  block: () => import('./modules/block.js'),
+  watercycle: () => import('./modules/watercycle.js'),
+  swell: () => import('./modules/swell.js'),
+  collabglobe: () => import('./modules/collabglobe.js'),
 };
 
 function loadModules() {
@@ -25,38 +21,31 @@ function loadModules() {
   const early = new Map();
   document.addEventListener('click', (event) => {
     const host = event.target.closest('[data-module]:not([data-live])');
-    const control = event.target.closest('a, button, [tabindex]');
+    const control = event.target.closest('a, button');
     if (host && control && control.tagName !== 'A' && host.contains(control)) early.set(host, control);
   });
 
-  const start = (el) =>
+  document.querySelectorAll('[data-module]').forEach((el) => {
     MODULES[el.dataset.module]?.()
-      .then((m) => m.default(el, { reduceMotion, finePointer }))
+      .then((m) => m.default(el, { reduceMotion }))
       .then(() => {
         el.dataset.live = '';
         early.get(el)?.click();
         early.delete(el);
       });
+  });
+}
 
-  const lazy = new IntersectionObserver(
-    (entries) => {
-      for (const entry of entries) {
-        if (!entry.isIntersecting) continue;
-        lazy.unobserve(entry.target);
-        start(entry.target);
-      }
-    },
-    { rootMargin: '40% 0px' },
-  );
-  document.querySelectorAll('[data-module]').forEach((el) => {
-    lazy.observe(el);
-    // Fetch the code now, while starting it still waits for the viewport. The
-    // whole set is about 24 KB, and modules do nothing until init is called.
-    MODULES[el.dataset.module]?.().catch(() => {});
+function syncPlaceholders() {
+  const zh = document.documentElement.dataset.lang === 'zh';
+  document.querySelectorAll('[data-placeholder-zh]').forEach((input) => {
+    input.dataset.placeholderEn ??= input.placeholder;
+    input.placeholder = zh ? input.dataset.placeholderZh : input.dataset.placeholderEn;
   });
 }
 
 function setupLanguage() {
+  syncPlaceholders();
   document.querySelectorAll('[data-lang-toggle]').forEach((button) => {
     button.addEventListener('click', () => {
       const root = document.documentElement;
@@ -68,208 +57,36 @@ function setupLanguage() {
       } catch {
         /* Private mode: the choice just lasts for this page. */
       }
+      syncPlaceholders();
       window.dispatchEvent(new CustomEvent('lab:lang', { detail: next }));
     });
   });
 }
 
-function setupNav() {
-  const nav = document.querySelector('[data-nav]');
-  const gauge = document.querySelector('[data-gauge]');
-  const firstPlane = document.querySelector('main > :first-child');
-  let last = scrollY;
-  let ticking = false;
-
-  const update = () => {
-    ticking = false;
-    const y = scrollY;
-    const threshold = (firstPlane?.offsetHeight ?? 400) - 80;
-    nav.classList.toggle('is-solid', y > threshold);
-    if (Math.abs(y - last) > 6) {
-      nav.classList.toggle('is-hidden', y > last && y > 240);
-      last = y;
-    }
-    const max = document.documentElement.scrollHeight - innerHeight;
-    gauge?.style.setProperty('--progress', max > 0 ? (y / max).toFixed(4) : 0);
-  };
-
-  addEventListener(
-    'scroll',
-    () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(update);
-    },
-    { passive: true },
-  );
-  update();
-
-  const menu = document.querySelector('[data-menu]');
-  document.querySelector('[data-menu-open]')?.addEventListener('click', () => menu.showModal());
-  document.querySelector('[data-menu-close]')?.addEventListener('click', () => menu.close());
-}
-
-function setupReveal() {
-  const targets = document.querySelectorAll('[data-reveal], .bars, .worldmap');
-  const io = new IntersectionObserver(
+/** Marks the theme being read in the contents list. */
+function setupContents() {
+  const links = new Map([...document.querySelectorAll('.toc a')].map((a) => [a.hash.slice(1), a]));
+  if (!links.size) return;
+  const observer = new IntersectionObserver(
     (entries) => {
       for (const entry of entries) {
         if (!entry.isIntersecting) continue;
-        entry.target.classList.add('is-in');
-        io.unobserve(entry.target);
-        entry.target.querySelectorAll?.('[data-count]').forEach(countUp);
-        if (entry.target.dataset.count) countUp(entry.target);
+        links.forEach((a) => a.removeAttribute('aria-current'));
+        links.get(entry.target.id)?.setAttribute('aria-current', 'true');
       }
     },
-    { rootMargin: '0px 0px -8% 0px' },
+    { rootMargin: '-30% 0px -65% 0px' },
   );
-  targets.forEach((el) => io.observe(el));
+  for (const id of links.keys()) {
+    const section = document.getElementById(id);
+    if (section) observer.observe(section);
+  }
 }
 
-function countUp(el) {
-  if (reduceMotion) return;
-  const target = Number(el.dataset.count);
-  const suffix = el.dataset.suffix ?? '';
-  const started = performance.now();
-  const duration = 1500;
-  const tick = (now) => {
-    const t = Math.min(1, (now - started) / duration);
-    const eased = 1 - (1 - t) ** 4;
-    el.textContent = `${Math.round(target * eased).toLocaleString('en-US')}${suffix}`;
-    if (t < 1) requestAnimationFrame(tick);
-  };
-  requestAnimationFrame(tick);
-}
-
-function setupMarquees() {
-  if (reduceMotion) return;
-  const tracks = [...document.querySelectorAll('.marquee__track')];
-  if (!tracks.length) return;
-  let last = scrollY;
-  let speed = 1;
-  let running = false;
-  // Runs only while the page scrolls and the speed settles. getAnimations()
-  // flushes styles, so calling it every frame would keep an idle page busy.
-  const frame = () => {
-    const delta = Math.abs(scrollY - last);
-    last = scrollY;
-    speed += (1 + Math.min(delta / 8, 7) - speed) * 0.08;
-    running = delta > 0 || speed - 1 > 0.01;
-    if (!running) speed = 1;
-    for (const track of tracks) for (const animation of track.getAnimations()) animation.playbackRate = speed;
-    if (running) requestAnimationFrame(frame);
-  };
-  addEventListener(
-    'scroll',
-    () => {
-      if (running) return;
-      running = true;
-      requestAnimationFrame(frame);
-    },
-    { passive: true },
-  );
-}
-
-/** CSS animations keep running off-screen, and SVG ones cost main-thread work. */
-function setupSleep() {
-  const watcher = new IntersectionObserver((entries) => {
-    for (const entry of entries) entry.target.classList.toggle('is-asleep', !entry.isIntersecting);
-  });
-  document.querySelectorAll('.marquee, .pictogram, [data-budget-svg]').forEach((el) => watcher.observe(el));
-}
-
-function setupParallax() {
-  if (reduceMotion) return;
-  const items = [...document.querySelectorAll('.crew__photo img')];
-  if (!items.length) return;
-  let ticking = false;
-  const update = () => {
-    ticking = false;
-    for (const img of items) {
-      const box = img.parentElement.getBoundingClientRect();
-      if (box.bottom < 0 || box.top > innerHeight) continue;
-      const progress = (box.top + box.height) / (innerHeight + box.height);
-      img.style.transform = `translateY(${(progress - 1) * 15}%)`;
-    }
-  };
-  addEventListener(
-    'scroll',
-    () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(update);
-    },
-    { passive: true },
-  );
-  update();
-}
-
-function setupMagnetic() {
-  if (!finePointer || reduceMotion) return;
-  document.querySelectorAll('[data-magnetic]').forEach((el) => {
-    el.addEventListener('pointermove', (event) => {
-      const box = el.getBoundingClientRect();
-      const x = (event.clientX - box.left - box.width / 2) * 0.16;
-      const y = (event.clientY - box.top - box.height / 2) * 0.26;
-      el.style.transform = `translate(${x}px, ${y}px)`;
-    });
-    el.addEventListener('pointerleave', () => {
-      el.style.transform = '';
-    });
-  });
-}
-
-function setupCursor() {
-  if (!finePointer || reduceMotion) return;
-  const targets = document.querySelectorAll('[data-cursor]');
-  if (!targets.length) return;
-  const dot = document.createElement('div');
-  dot.className = 'cursor';
-  dot.setAttribute('aria-hidden', 'true');
-  document.body.append(dot);
-
-  let x = 0;
-  let y = 0;
-  let cx = 0;
-  let cy = 0;
-  let scale = 0;
-  let want = 0;
-  let running = false;
-  const frame = () => {
-    cx += (x - cx) * 0.2;
-    cy += (y - cy) * 0.2;
-    scale += (want - scale) * 0.18;
-    running = Math.abs(x - cx) > 0.1 || Math.abs(y - cy) > 0.1 || Math.abs(want - scale) > 0.005;
-    if (!running) {
-      cx = x;
-      cy = y;
-      scale = want;
-    }
-    dot.style.transform = `translate(${cx}px, ${cy}px) scale(${scale})`;
-    if (running) requestAnimationFrame(frame);
-  };
-  const wake = () => {
-    if (running) return;
-    running = true;
-    requestAnimationFrame(frame);
-  };
-  addEventListener('pointermove', (event) => {
-    x = event.clientX;
-    y = event.clientY;
-    wake();
-  }, { passive: true });
-  targets.forEach((el) => {
-    el.addEventListener('pointerenter', () => {
-      dot.textContent = el.dataset.cursor;
-      want = 1;
-      wake();
-    });
-    el.addEventListener('pointerleave', () => {
-      want = 0;
-      wake();
-    });
-  });
-  wake(); // Writes the hidden starting state, then stops until the pointer moves.
+function setupMenu() {
+  const menu = document.querySelector('[data-menu]');
+  document.querySelector('[data-menu-open]')?.addEventListener('click', () => menu.showModal());
+  document.querySelector('[data-menu-close]')?.addEventListener('click', () => menu.close());
 }
 
 export function toast(message) {
@@ -316,6 +133,8 @@ function setupZoom() {
   });
 }
 
+const SEARCH_TYPES_ZH = { Person: '成员', Paper: '论文', Dataset: '数据', News: '新闻', Research: '研究', Collaborator: '合作者' };
+
 function setupSearch() {
   // Scoped to the tag: publication and person cards also carry data-search text.
   const dialog = document.querySelector('dialog[data-search]');
@@ -340,6 +159,7 @@ function setupSearch() {
     list.replaceChildren();
     active = -1;
     if (!query || !index) return;
+    const zh = document.documentElement.dataset.lang === 'zh';
     const words = query.split(/\s+/);
     const matches = index
       .filter((item) => words.every((w) => item.text.includes(w)))
@@ -353,7 +173,7 @@ function setupSearch() {
     if (!matches.length) {
       const none = document.createElement('li');
       none.className = 'search__none';
-      none.textContent = 'No results';
+      none.textContent = zh ? '没有结果' : 'No results';
       list.append(none);
       return;
     }
@@ -363,7 +183,7 @@ function setupSearch() {
       a.href = item.url;
       const type = document.createElement('span');
       type.className = 'search__type';
-      type.textContent = item.type;
+      type.textContent = zh ? SEARCH_TYPES_ZH[item.type] : item.type;
       const title = document.createElement('span');
       title.className = 'search__title';
       title.textContent = item.title;
@@ -423,14 +243,10 @@ function setupSearch() {
   });
 }
 
+setupMotion(reduceMotion);
 setupLanguage();
-setupNav();
-setupReveal();
-setupMarquees();
-setupSleep();
-setupParallax();
-setupMagnetic();
-setupCursor();
+setupContents();
+setupMenu();
 setupCopy();
 setupZoom();
 setupSearch();

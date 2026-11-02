@@ -21,10 +21,6 @@ const band = (x0, y0, x1, y1, thickness) => {
   const mid = (x0 + x1) / 2;
   return `M${x0} ${y0}C${mid} ${y0} ${mid} ${y1} ${x1} ${y1}L${x1} ${y1 + thickness}C${mid} ${y1 + thickness} ${mid} ${y0 + thickness} ${x0} ${y0 + thickness}Z`;
 };
-const spine = (x0, y0, x1, y1) => {
-  const mid = (x0 + x1) / 2;
-  return `M${x0} ${y0}C${mid} ${y0} ${mid} ${y1} ${x1} ${y1}`;
-};
 
 export function budgetLayout(budget, mix, { width, height }) {
   const narrow = width < 640;
@@ -61,15 +57,15 @@ export function budgetLayout(budget, mix, { width, height }) {
   nodes.push({ id: 'land_et', x: x1, y: yEt, h: et, tone: 'green' });
   nodes.push({ id: 'river_flow', x: x1, y: yQ, h: q, tone: 'blue' });
 
-  links.push({ id: 'land_et', tone: 'green', d: band(x0 + nodeWidth, yP, x1, yEt, et), spine: spine(x0 + nodeWidth, yP + et / 2, x1, yEt + et / 2), width: et });
-  links.push({ id: 'river_flow', tone: 'blue', d: band(x0 + nodeWidth, yP + et, x1, yQ, q), spine: spine(x0 + nodeWidth, yP + et + q / 2, x1, yQ + q / 2), width: q });
+  links.push({ id: 'land_et', tone: 'green', d: band(x0 + nodeWidth, yP, x1, yEt, et) });
+  links.push({ id: 'river_flow', tone: 'blue', d: band(x0 + nodeWidth, yP + et, x1, yQ, q) });
 
   let yRight = top;
   let ySource = yEt;
   budget.et_shares.forEach((share, i) => {
     const h = (et * share.share) / 100;
     const id = `share_${i}`;
-    links.push({ id, tone: 'green', detail: true, d: band(x1 + nodeWidth, ySource, x2, yRight, h), spine: spine(x1 + nodeWidth, ySource + h / 2, x2, yRight + h / 2), width: h });
+    links.push({ id, tone: 'green', detail: true, d: band(x1 + nodeWidth, ySource, x2, yRight, h) });
     nodes.push({ id, x: x2, y: yRight, h, tone: 'green', detail: true });
     ySource += h;
     yRight += h + gap;
@@ -84,15 +80,15 @@ export function budgetLayout(budget, mix, { width, height }) {
   ySource = yQ;
   for (const [id, value] of qFlows) {
     const h = (q * value) / qTotal;
-    links.push({ id, tone: 'blue', detail: true, d: band(x1 + nodeWidth, ySource, x2, yRight, h), spine: spine(x1 + nodeWidth, ySource + h / 2, x2, yRight + h / 2), width: h });
+    links.push({ id, tone: 'blue', detail: true, d: band(x1 + nodeWidth, ySource, x2, yRight, h) });
     nodes.push({ id, x: x2, y: yRight, h, tone: 'blue', detail: true });
     ySource += h;
     yRight += h + gap;
   }
 
   // Offsets from a node's top edge to its caption and headline number.
-  const capY = narrow ? 22 : 30;
-  const valueY = narrow ? 54 : 80;
+  const capY = narrow ? 20 : 26;
+  const valueY = narrow ? 44 : 58;
   const inset = narrow ? 8 : 18;
   const labelA = nodeWidth + inset;
   const labelB = x1 + nodeWidth + inset;
@@ -120,10 +116,6 @@ export function budgetSvg(budget, layout) {
     const meaning = link.id.startsWith('share_') ? budget.et_shares[Number(link.id.slice(6))].en : budget.flows[link.id].en;
     parts.push(`<path class="link link--${link.tone}${link.detail ? ' is-detail' : ''}" data-link="${link.id}" d="${link.d}" tabindex="0" role="button" aria-label="${meaning}"/>`);
   }
-  parts.push('</g><g class="bg-spines" aria-hidden="true">');
-  for (const link of links) {
-    parts.push(`<path class="spine${link.detail ? ' is-detail' : ''}" data-spine="${link.id}" d="${link.spine}" style="stroke-width:${Math.min(3, Math.max(1.4, link.width / 14))}px"/>`);
-  }
   parts.push('</g><g aria-hidden="true">');
   for (const node of nodes) {
     parts.push(`<rect class="node node--${node.tone}${node.detail ? ' is-detail' : ''}" data-node="${node.id}" x="${node.x}" y="${node.y}" width="${nodeWidth}" height="${Math.max(1, node.h)}"/>`);
@@ -132,15 +124,13 @@ export function budgetSvg(budget, layout) {
 
   const big = (x, y, cls, id, value) => `<text class="value ${cls}" x="${x}" y="${y}" data-value="${id}">${value}</text>`;
 
-  // Evapotranspiration's label sits on ribbons that fade out, so its colour
-  // follows them (on-detail). The other two sit on ribbons that stay.
   const { capY, valueY } = layout;
-  parts.push(big(labelA, p.y + valueY, 'on-green', 'land_precipitation', fmt(flows.land_precipitation.value)));
-  parts.push(label(labelA, p.y + capY, 'cap on-green', 'land_precipitation', f.land_precipitation.en, f.land_precipitation.zh));
-  parts.push(big(labelB, et.y + valueY, 'on-detail', 'land_et', fmt(flows.land_et.value)));
-  parts.push(label(labelB, et.y + capY, 'cap on-detail', 'land_et', f.land_et.en, f.land_et.zh));
-  parts.push(big(labelB, q.y + valueY, 'on-blue', 'river_flow', fmt(flows.river_flow.value)));
-  parts.push(label(labelB, q.y + capY, 'cap on-blue', 'river_flow', f.river_flow.en, f.river_flow.zh));
+  parts.push(big(labelA, p.y + valueY, '', 'land_precipitation', fmt(flows.land_precipitation.value)));
+  parts.push(label(labelA, p.y + capY, 'cap', 'land_precipitation', f.land_precipitation.en, f.land_precipitation.zh));
+  parts.push(big(labelB, et.y + valueY, '', 'land_et', fmt(flows.land_et.value)));
+  parts.push(label(labelB, et.y + capY, 'cap', 'land_et', f.land_et.en, f.land_et.zh));
+  parts.push(big(labelB, q.y + valueY, '', 'river_flow', fmt(flows.river_flow.value)));
+  parts.push(label(labelB, q.y + capY, 'cap', 'river_flow', f.river_flow.en, f.river_flow.zh));
 
   const xLabel = layout.x2 + nodeWidth + (narrow ? 6 : 12);
   budget.et_shares.forEach((share, i) => {

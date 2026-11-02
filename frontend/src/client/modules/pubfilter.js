@@ -2,7 +2,7 @@
 export default function init(root) {
   const input = root.querySelector('[data-filter-q]');
   const topicButtons = [...root.querySelectorAll('[data-filter-topic]')];
-  const yearButtons = [...document.querySelectorAll('[data-filter-year]')];
+  const yearButtons = [...root.querySelectorAll('[data-filter-year]')];
   const items = [...root.querySelectorAll('.pub')];
   const groups = [...root.querySelectorAll('.year')];
   const count = root.querySelector('[data-filter-count]');
@@ -61,7 +61,6 @@ export default function init(root) {
     button.addEventListener('click', () => {
       state.year = state.year === button.dataset.filterYear ? '' : button.dataset.filterYear;
       render();
-      root.scrollIntoView({ behavior: 'smooth' });
     });
   }
   addEventListener('keydown', (event) => {

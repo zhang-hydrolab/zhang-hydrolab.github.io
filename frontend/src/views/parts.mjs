@@ -9,27 +9,68 @@ export const NAV = [
   { href: '/collaboration.html', key: 'collaboration', en: 'Collaboration', zh: '合作网络' },
 ];
 
-/** The group's badge reduced to one mark: a disc crossed by a river. */
-export const mark = raw(`<svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M-1 12c6-4 9 3 15 2s9-8 19-3v6c-9-4-12 3-18 4S4 16-1 19z" fill="var(--mark-river, var(--lime))"/></svg>`);
+export const arrow = raw(`<svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>`);
 
-export const arrow = raw(`<svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>`);
+export const external = raw(`<svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>`);
 
-export const external = raw(`<svg class="arrow arrow--out" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>`);
+/** Paragraphs for one language of a two-language text. */
+export const paragraphs = (list, lang) => list.map((p) => html`<p class="${lang === 'zh' ? 't-zh' : 't-en'}" ${lang === 'zh' ? raw('lang="zh-CN"') : ''}>${p}</p>`);
 
 export function picture(ctx, id, { alt, sizes = '100vw', cls = '', eager = false, style = '' } = {}) {
   const image = ctx.images[id];
   if (!image) return '';
   const meta = ctx.mediaById.get(id);
-  return html`<img class="${cls}" src="${image.src}" srcset="${image.srcset}" sizes="${sizes}" width="${image.width}" height="${image.height}" alt="${alt ?? meta?.alt_en ?? ''}" loading="${eager ? 'eager' : 'lazy'}" decoding="async" style="background-color:${image.color};${style}">`;
+  return html`<img class="${cls}" src="${image.src}" srcset="${image.srcset}" sizes="${sizes}" width="${image.width}" height="${image.height}" alt="${alt ?? meta?.alt_en ?? ''}" loading="${eager ? 'eager' : 'lazy'}" decoding="async"${style ? raw(` style="${style}"`) : ''}>`;
 }
 
-export const eyebrow = (index, en, zh) => html`<p class="eyebrow"><span class="eyebrow__i">/${index}</span>${t(en, zh)}</p>`;
+/** A scientific figure: shown whole, never cropped, and enlarged on request. */
+export function fig(ctx, id, { alt, en, zh, sizes = '(max-width: 1000px) 100vw, 860px' } = {}) {
+  if (!ctx.images[id]) return '';
+  const label = alt ?? ctx.mediaById.get(id)?.alt_en ?? en ?? 'figure';
+  return html`<figure class="fig">
+    <button class="fig__zoom" type="button" data-zoom aria-label="Enlarge: ${label}">${picture(ctx, id, { alt: label, sizes })}</button>
+    ${en || zh ? html`<figcaption>${t(en, zh)}</figcaption>` : ''}
+  </figure>`;
+}
 
-export const button = (href, en, zh, { cls = '', out = false } = {}) =>
-  html`<a class="btn ${cls}" href="${safeHref(href)}" ${out ? raw('target="_blank" rel="noopener"') : ''} data-magnetic><span>${t(en, zh)}</span>${out ? external : arrow}</a>`;
+/** The real places shown as terrain blocks. See tools/build_earth.py. */
+export const SCENES = {
+  hengduan: { en: 'Hengduan Mountains', zh: '横断山区', contour: 300 },
+  loess: { en: 'Loess Plateau and the Yellow River', zh: '黄土高原与黄河', contour: 200 },
+  qilian: { en: 'Qilian Mountains', zh: '祁连山', contour: 300 },
+  gorges: { en: 'Three Gorges and the middle Yangtze', zh: '三峡与长江中游', contour: 150 },
+  snowy: { en: 'Snowy Mountains and the upper Murray', zh: '澳大利亚雪山与墨累河上游', contour: 150 },
+  alps: { en: 'The Alps', zh: '阿尔卑斯山', contour: 250 },
+};
 
-/** Splits text into masked lines' worth of words for the reveal animation. */
-export const reveal = (en, zh) => t(en, zh);
+export const pauseButton = () =>
+  html`<button class="pause" type="button" data-pause aria-pressed="false" aria-label="Pause the animation" title="Pause or resume" hidden>${raw(`<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3 1.5h2v9H3zM7 1.5h2v9H7z"/></svg>`)}</button>`;
+
+/** A still of the block, with a live one drawn over it where the browser can. */
+export function terrainBlock(name) {
+  const scene = SCENES[name];
+  return html`<figure class="block" data-module="block" data-scene="${name}" data-contour="${scene.contour}">
+    <img class="block__still" src="/earth/${name}-still.webp" width="960" height="640" alt="Terrain of ${scene.en}" decoding="async">
+    <canvas class="block__canvas" aria-hidden="true"></canvas>
+    <figcaption>${t(scene.en, scene.zh)}</figcaption>
+    ${pauseButton()}
+  </figure>`;
+}
+
+export const more = (href, en, zh, { out = false } = {}) =>
+  html`<a class="more" href="${safeHref(href)}" ${out ? raw('target="_blank" rel="noopener"') : ''}>${t(en, zh)}${out ? external : arrow}</a>`;
+
+/** The repeating page structure: a title in the left column, its content in the right. */
+export const section = ({ id = '', en, zh, aside = '', cls = '', body }) =>
+  html`<section class="sec ${cls}" ${id ? raw(`id="${id}"`) : ''}>
+    <div class="wrap sec__grid">
+      <header class="sec__head">
+        <h2>${t(en, zh)}</h2>
+        ${aside}
+      </header>
+      <div class="sec__body">${body}</div>
+    </div>
+  </section>`;
 
 export const apaCitation = (p) => {
   const location = [p.volume && `${p.volume}${p.issue ? `(${p.issue})` : ''}`, p.pages].filter(Boolean).join(', ');
@@ -50,23 +91,14 @@ export function pubItem(p, ctx) {
   const link = pubLink(p);
   const search = `${p.title} ${p.authors} ${p.venue} ${p.year} ${p.doi}`.toLowerCase();
   const pdf = p.pdf_id ? ctx.files[p.pdf_id] : null;
-  return html`<li class="pub${p.featured ? ' pub--featured' : ''}" data-year="${p.year}" data-topics="${p.topics.join('|')}" data-search="${search}">
-    <p class="pub__venue"><span>${p.venue || 'Preprint'}</span>${location ? html`<span class="pub__loc">${location}</span>` : ''}</p>
+  return html`<li class="pub" data-year="${p.year}" data-topics="${p.topics.join('|')}" data-search="${search}">
     <h3 class="pub__title">${link ? html`<a href="${safeHref(link)}" target="_blank" rel="noopener">${p.title}</a>` : p.title}</h3>
     <p class="pub__authors">${piAuthors(p.authors)}</p>
-    <div class="pub__actions">
-      ${p.doi ? html`<a class="link" href="https://doi.org/${p.doi}" target="_blank" rel="noopener">DOI</a>` : ''}
+    <p class="pub__venue"><cite>${p.venue || 'Preprint'}</cite>${location ? `, ${location}` : ''} (${p.year})</p>
+    <p class="pub__actions">
+      ${p.doi ? html`<a class="link" href="https://doi.org/${p.doi}" target="_blank" rel="noopener">DOI: ${p.doi}</a>` : ''}
       ${pdf ? html`<a class="link" href="${pdf.src}" target="_blank" rel="noopener">PDF</a>` : ''}
       <button class="link" type="button" data-copy="${apaCitation(p)}">${t('Copy citation', '复制引用')}</button>
-    </div>
+    </p>
   </li>`;
 }
-
-/** Hand-drawn theme pictograms, drawn in currentColor so they sit flat on any plane. */
-export const pictogram = {
-  'water-cycle': raw(`<svg class="pictogram" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="10"><path class="spin" d="M100 20a80 80 0 0 1 80 80"/><path class="spin spin--b" d="M100 180a80 80 0 0 1-80-80"/></g><path d="M100 58c20 26 32 40 32 56a32 32 0 0 1-64 0c0-16 12-30 32-56z" fill="currentColor"/></svg>`),
-  'water-security': raw(`<svg class="pictogram" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="10"><path class="wave" d="M0 70c25-18 50-18 75 0s50 18 75 0 50-18 75 0"/><path class="wave wave--b" d="M-25 110c25-18 50-18 75 0s50 18 75 0 50-18 75 0"/><path class="wave" d="M0 150c25-18 50-18 75 0s50 18 75 0 50-18 75 0"/></g></svg>`),
-  'water-innovation': raw(`<svg class="pictogram" viewBox="0 0 200 200" aria-hidden="true"><g fill="currentColor">${[
-    [90, 20], [70, 50], [90, 50], [110, 50], [50, 80], [70, 80], [90, 80], [110, 80], [130, 80], [30, 110], [50, 110], [70, 110], [90, 110], [110, 110], [130, 110], [150, 110], [50, 140], [70, 140], [90, 140], [110, 140], [130, 140], [70, 170], [90, 170], [110, 170],
-  ].map(([x, y], i) => `<rect class="px" style="--i:${i}" x="${x}" y="${y}" width="17" height="17"/>`).join('')}</g></svg>`),
-};

@@ -7,11 +7,7 @@ export default function init(section, { reduceMotion }) {
   const svg = section.querySelector('[data-budget-svg]');
   const stage = section.querySelector('.budget__stage');
   const tip = section.querySelector('[data-budget-tip]');
-  const note = section.querySelector('[data-budget-note]');
   const buttons = [...section.querySelectorAll('[data-period]')];
-  const scaleRows = [...section.querySelectorAll('[data-scale]')];
-  const scaleKeys = scaleRows.map((row) => row.dataset.scale);
-  const scaleMax = Math.max(...scaleKeys.map((k) => (budget.flows[k].future ?? budget.flows[k].historical)[0]));
 
   let mix = 0;
   let target = 0;
@@ -20,7 +16,8 @@ export default function init(section, { reduceMotion }) {
 
   const size = () => {
     const available = Math.round(stage.clientWidth);
-    const nextHeight = available < 640 ? 640 : Math.round(Math.min(680, Math.max(520, available * 0.46)));
+    if (!available) return false; // Its tab is closed. It is measured when it opens.
+    const nextHeight = available < 640 ? 600 : Math.round(Math.min(600, Math.max(480, available * 0.46)));
     if (available === width && nextHeight === height) return false;
     width = available;
     height = nextHeight;
@@ -28,19 +25,18 @@ export default function init(section, { reduceMotion }) {
   };
 
   const rebuild = () => {
+    if (!width) return;
     const layout = budgetLayout(budget, mix, { width, height });
     svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
     svg.classList.toggle('is-narrow', layout.narrow);
     svg.innerHTML = budgetSvg(budget, layout);
     apply(layout);
-    if (reduceMotion) svg.querySelectorAll('.spine').forEach((el) => el.remove());
   };
 
   /** Moves existing elements, so hover state and focus survive the tween. */
   const apply = (layout) => {
     for (const link of layout.links) {
       svg.querySelector(`[data-link="${link.id}"]`)?.setAttribute('d', link.d);
-      svg.querySelector(`[data-spine="${link.id}"]`)?.setAttribute('d', link.spine);
     }
     for (const node of layout.nodes) {
       const rect = svg.querySelector(`[data-node="${node.id}"]`);
@@ -70,21 +66,14 @@ export default function init(section, { reduceMotion }) {
     svg.querySelectorAll('.is-detail').forEach((el) => {
       el.style.pointerEvents = layout.detail < 0.05 ? 'none' : '';
     });
-
-    const values = flowValues(budget, mix);
-    scaleRows.forEach((row, i) => {
-      const flow = values[scaleKeys[i]];
-      row.querySelector('[data-scale-value]').textContent = fmt(flow.value);
-      row.querySelector('[data-scale-error]').textContent = fmt(flow.error);
-      row.querySelector('.scale__bar').style.setProperty('--v', (flow.value / scaleMax).toFixed(4));
-    });
   };
 
-  const draw = () => apply(budgetLayout(budget, mix, { width, height }));
+  const draw = () => {
+    if (width) apply(budgetLayout(budget, mix, { width, height }));
+  };
 
   const animateTo = (next) => {
     target = next;
-    note.hidden = next !== 1;
     if (reduceMotion) {
       mix = next;
       draw();
@@ -93,7 +82,7 @@ export default function init(section, { reduceMotion }) {
     const from = mix;
     const started = performance.now();
     const tick = (now) => {
-      const t = Math.min(1, (now - started) / 900);
+      const t = Math.min(1, (now - started) / 420);
       const eased = t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2;
       mix = from + (target - from) * eased;
       draw();
@@ -106,6 +95,7 @@ export default function init(section, { reduceMotion }) {
     button.addEventListener('click', () => {
       for (const b of buttons) b.setAttribute('aria-checked', String(b === button));
       animateTo(button.dataset.period === 'future' ? 1 : 0);
+      section.dispatchEvent(new CustomEvent('lab:period', { detail: button.dataset.period }));
     });
   }
   section.querySelector('.switch').addEventListener('keydown', (event) => {
@@ -114,6 +104,28 @@ export default function init(section, { reduceMotion }) {
     const next = buttons.find((b) => b.getAttribute('aria-checked') === 'false');
     next.focus();
     next.click();
+  });
+
+  const tabs = [...section.querySelectorAll('[role="tab"]')];
+  const openTab = (tab) => {
+    for (const other of tabs) {
+      const selected = other === tab;
+      other.setAttribute('aria-selected', String(selected));
+      other.tabIndex = selected ? 0 : -1;
+      section.querySelector(`#${other.getAttribute('aria-controls')}`).classList.toggle('is-open', selected);
+    }
+    if (size()) rebuild();
+  };
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => openTab(tab));
+    tab.addEventListener('keydown', (event) => {
+      const step = { ArrowLeft: -1, ArrowRight: 1 }[event.key];
+      if (!step) return;
+      event.preventDefault();
+      const next = tabs[(index + step + tabs.length) % tabs.length];
+      next.focus();
+      openTab(next);
+    });
   });
 
   const describe = (id) => {

@@ -1,4 +1,4 @@
-/** Role filter, name search and the side sheet for each person. */
+/** Role filter, name search and the detail sheet for each person. */
 export default function init(root) {
   const input = root.querySelector('[data-people-q]');
   const buttons = [...root.querySelectorAll('[data-people-role]')];
@@ -53,8 +53,7 @@ export default function init(root) {
     document.getElementById(dialog.dataset.returnId)?.querySelector('[data-person]')?.focus();
   });
 
-  // This module loads as the section nears the viewport, so honour anything
-  // already typed into the box.
+  // The box may already hold text typed while this module was loading.
   if (input.value) render();
 
   // Search results link straight to a person.

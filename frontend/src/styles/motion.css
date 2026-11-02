@@ -1,0 +1,269 @@
+/*
+ * Motion in the page. Every effect here plays once, ends within about a second, and marks
+ * something: what has just arrived, or what is under the pointer. Continuous movement belongs
+ * only to the 3D views, which stop off screen and have a pause button.
+ *
+ * Images are never faded, because a half-transparent image shows thinned colour.
+ * They are uncovered with clip-path or moved, so they stay true at every frame.
+ *
+ * The easing and the hover times are the house values of the originkit library.
+ */
+:root {
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Set by client/motion.js, only on what is still below the window. */
+.m-wait {
+  opacity: 0;
+}
+
+.m-line::before {
+  transform: scaleX(0);
+}
+
+@media print {
+  .m-wait {
+    opacity: 1;
+  }
+
+  .m-line::before {
+    transform: none;
+  }
+}
+
+@keyframes m-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+@keyframes m-lift {
+  from {
+    transform: translateY(14px);
+  }
+}
+
+@keyframes m-slide {
+  from {
+    transform: translateX(32px);
+  }
+}
+
+@keyframes m-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+/* The margins keep descenders inside the curtain. */
+@keyframes m-curtain {
+  from {
+    clip-path: inset(-0.2em 100% -0.2em 0);
+  }
+
+  to {
+    clip-path: inset(-0.2em 0 -0.2em 0);
+  }
+}
+
+@keyframes m-uncover {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes m-settle {
+  from {
+    scale: 0.93;
+  }
+}
+
+@keyframes m-grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes m-draw {
+  from {
+    stroke-dasharray: 1 1;
+    stroke-dashoffset: 1;
+  }
+
+  to {
+    stroke-dasharray: 1 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* First screen. Plain CSS, so it plays without any script. */
+  .hero h1,
+  .pagehead h1 {
+    animation: m-curtain 0.9s var(--ease) backwards;
+  }
+
+  .hero .kicker,
+  .pagehead .kicker {
+    animation: m-rise 0.5s var(--ease) backwards;
+  }
+
+  .hero__lead,
+  .pagehead__lead {
+    animation: m-rise 0.6s var(--ease) 0.16s backwards;
+  }
+
+  .hero__pi,
+  .hero__actions {
+    animation: m-rise 0.6s var(--ease) 0.26s backwards;
+  }
+
+  .earth {
+    animation: m-settle 1.3s var(--ease) backwards;
+  }
+
+  .hero__note,
+  .block figcaption {
+    animation: m-fade 0.8s linear 1.4s backwards;
+  }
+
+  .pi__photo {
+    animation: m-uncover 1.1s var(--ease) 0.08s backwards;
+  }
+
+  .pi__text {
+    animation: m-rise 0.6s var(--ease) 0.12s backwards;
+  }
+
+  /* Coverage bars grow along the time axis. */
+  .cov__rows .cov__track i {
+    animation: m-grow 0.9s var(--ease) backwards;
+    transform-origin: left;
+  }
+
+  .cov__rows li:nth-child(2) .cov__track i {
+    animation-delay: 0.1s;
+  }
+
+  .cov__rows li:nth-child(3) .cov__track i {
+    animation-delay: 0.2s;
+  }
+
+  .cov__rows li:nth-child(4) .cov__track i {
+    animation-delay: 0.3s;
+  }
+
+  /* The network draws outwards from Beijing, and each city appears as its line arrives. */
+  .net__arc {
+    animation: m-draw 1.2s var(--ease) backwards;
+    animation-delay: calc(var(--i) * 130ms + 200ms);
+  }
+
+  .worldmap a .worldmap__place {
+    animation: m-fade 0.4s linear backwards;
+    animation-delay: calc(var(--i) * 130ms + 1000ms);
+  }
+
+  /* Dialogs. The two that show images move and never fade. */
+  dialog[open]::backdrop {
+    animation: m-fade 0.2s linear;
+  }
+
+  .search[open] {
+    animation: m-rise 0.22s var(--ease);
+  }
+
+  .sheet[open],
+  .zoom[open] img {
+    animation: m-lift 0.24s var(--ease);
+  }
+
+  .menu[open] {
+    animation: m-slide 0.26s var(--ease);
+  }
+
+  .toast.is-on {
+    animation: m-rise 0.18s var(--ease);
+  }
+
+  /* Under the pointer */
+  .link,
+  .more,
+  .tag,
+  .tool,
+  .toc a,
+  .switch button,
+  .fig__zoom,
+  .pub__title a,
+  .person__name,
+  .rows__title,
+  .brief__title,
+  .collab,
+  .table tbody tr {
+    transition:
+      color 0.15s,
+      background-color 0.15s,
+      border-color 0.15s,
+      text-decoration-color 0.15s;
+  }
+
+  .nav__links a::after,
+  .brief__fig::after,
+  .newslist__fig::after,
+  .person__media::after,
+  .toc a::before {
+    transition: transform 0.25s var(--ease);
+  }
+
+  .arrow,
+  .rows__title,
+  .about__more summary::before,
+  .refs summary::before {
+    transition: transform 0.2s var(--ease);
+  }
+
+  .more:hover .arrow {
+    transform: translateX(3px);
+  }
+
+  .rows a:hover .rows__title {
+    transform: translateX(4px);
+  }
+
+  .budget__svg .link,
+  .net__arc,
+  .worldmap__halo {
+    transition:
+      opacity 0.2s,
+      stroke-width 0.2s,
+      r 0.2s;
+  }
+}
+
+/* Separate, because a browser without this selector drops the whole rule. */
+@media (prefers-reduced-motion: no-preference) {
+  details::details-content {
+    height: 0;
+    overflow: clip;
+    transition:
+      height 0.3s var(--ease),
+      content-visibility 0.3s allow-discrete;
+  }
+
+  details[open]::details-content {
+    height: auto;
+  }
+}

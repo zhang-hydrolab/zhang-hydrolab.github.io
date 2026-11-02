@@ -36,7 +36,7 @@ export async function bundle(outDir, { dev = false } = {}) {
     if (output.endsWith('.map')) continue;
     if (/assets\/main[-.]/.test(output) && output.endsWith('.js')) assets.js = href;
     if (/assets\/style[-.]/.test(output) && output.endsWith('.css')) assets.css = href;
-    if (output.endsWith('.woff2') && output.includes('mona-sans')) assets.fonts.push(href);
+    if (/source-(sans-3|serif-4)-latin-wght-normal/.test(output)) assets.fonts.push(href);
   }
   return assets;
 }
@@ -96,6 +96,7 @@ export async function buildSite({ apiSource, mediaSource, outDir, dev = false })
 
   const copyDir = path.join(ROOT, 'src', 'public');
   fs.copyFileSync(path.join(copyDir, 'favicon.svg'), path.join(outDir, 'favicon.svg'));
+  fs.cpSync(path.join(copyDir, 'earth'), path.join(outDir, 'earth'), { recursive: true });
   fs.writeFileSync(path.join(outDir, '.nojekyll'), '');
   fs.writeFileSync(path.join(outDir, 'assets', 'search-index.json'), JSON.stringify(buildSearchIndex(api)));
 
@@ -113,12 +114,13 @@ export async function buildSite({ apiSource, mediaSource, outDir, dev = false })
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const { values } = parseArgs({ options: { api: { type: 'string' }, media: { type: 'string' }, out: { type: 'string' } } });
+  const { values } = parseArgs({ options: { api: { type: 'string' }, media: { type: 'string' }, out: { type: 'string' }, dev: { type: 'boolean' } } });
   const started = Date.now();
   const summary = await buildSite({
     apiSource: values.api ?? process.env.LAB_API_SOURCE ?? path.resolve(ROOT, '..', 'api', 'v1'),
     mediaSource: values.media ?? process.env.LAB_MEDIA_SOURCE ?? path.resolve(ROOT, '..', 'backend', 'archive', 'media'),
     outDir: path.resolve(ROOT, values.out ?? 'dist'),
+    dev: values.dev,
   });
   console.log(`Built ${summary.pages} pages, ${summary.images} images (${summary.generated} new variants) in ${((Date.now() - started) / 1000).toFixed(1)}s`);
 }

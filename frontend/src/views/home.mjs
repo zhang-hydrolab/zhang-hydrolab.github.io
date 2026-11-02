@@ -1,230 +1,306 @@
 import { html, raw, safeHref, t } from '../lib/html.mjs';
-import { budgetSection, coverage, yearBars } from './charts.mjs';
+import { budgetSection } from './charts.mjs';
 import { layout } from './layout.mjs';
-import { arrow, button, external, eyebrow, pictogram, picture, pubItem } from './parts.mjs';
+import { more, paragraphs, pauseButton, picture, pubItem, section } from './parts.mjs';
 
 export const newsHref = (n) => (n.body_md ? `/news/${encodeURIComponent(n.id)}.html` : n.source_url || '/news.html');
+export const newsTarget = (n) => (n.body_md ? '' : raw('target="_blank" rel="noopener"'));
+export const newsDate = (n) => n.date || String(n.year);
+
 const CATEGORY = {
   news: ['News', '新闻'],
-  publication: ['Paper', '论文'],
+  publication: ['Publication', '论文'],
   award: ['Honour', '荣誉'],
   event: ['Event', '活动'],
 };
 export const categoryLabel = (key) => t(...(CATEGORY[key] ?? CATEGORY.news));
 
+/** Rivers named on the globe, each placed on its own channel. */
+const RIVERS = [
+  ['Yangtze', '长江', 112.6, 30.2],
+  ['Yellow River', '黄河', 109.6, 37.5],
+  ['Mekong', '湄公河', 101.6, 18.6],
+  ['Ganges', '恒河', 82.5, 25.4],
+  ['Lena', '勒拿河', 125.0, 62.0],
+  ['Yenisei', '叶尼塞河', 90.0, 60.0],
+  ['Volga', '伏尔加河', 47.0, 52.0],
+  ['Danube', '多瑙河', 19.0, 45.5],
+  ['Nile', '尼罗河', 32.5, 15.5],
+  ['Niger', '尼日尔河', 3.0, 13.0],
+  ['Congo', '刚果河', 22.0, 0.5],
+  ['Murray', '墨累河', 143.5, -34.4],
+  ['Amazon', '亚马孙河', -60.0, -3.2],
+  ['Paraná', '巴拉那河', -59.0, -28.0],
+  ['Mississippi', '密西西比河', -90.5, 35.0],
+  ['Mackenzie', '马更些河', -125.0, 64.0],
+];
+
 function hero(ctx) {
-  const { site, news } = ctx.api;
+  const { site, people } = ctx.api;
   const lab = site['site.lab'];
-  const latest = news.items[0];
+  const pi = people.groups.find((g) => g.key === 'pi')?.members[0];
   return html`<section class="hero">
-    <canvas class="hero__field" data-module="isolines" aria-hidden="true"></canvas>
-    <div class="hero__inner">
-      <h1 class="hero__title" data-module="herotype">
-        <span class="t-en"><span class="hl">Large</span><span class="hl">Scale</span><span class="hl hl--wide">Hydrology</span></span>
-        <span class="t-zh" lang="zh-CN"><span class="hl">大尺度</span><span class="hl">水文学</span></span>
-      </h1>
-      <div class="hero__aside">
-        <p class="hero__tag">${t(lab.tagline_en, lab.tagline_zh)}</p>
-        <div class="hero__cta">
-          ${button('/research.html', 'Our research', '研究方向', { cls: 'btn--lime' })}
-          ${button('/data.html', 'Open data', '开放数据', { cls: 'btn--ghost' })}
-        </div>
-        <dl class="hero__spec">
-          <div><dt>${t('Institute', '依托单位')}</dt><dd>${lab.institute_short}</dd></div>
-          <div><dt>${t('Station', '位置')}</dt><dd>39.99°N 116.39°E</dd></div>
-          <div class="hero__hint"><dt>${t('Field', '交互')}</dt><dd>${t('Move across the water. Click to drop rain.', '在水面上移动，点击落下雨滴。')}</dd></div>
-        </dl>
+    <figure class="earth" data-module="earth">
+      <img class="earth__still" src="/earth/earth-still.webp" width="1200" height="1200" alt="The Earth with its river network drawn in blue" decoding="async" fetchpriority="high">
+      <canvas class="earth__canvas" aria-hidden="true"></canvas>
+      <ol class="earth__labels" aria-hidden="true">
+        ${RIVERS.map(([en, zh, lon, lat]) => html`<li data-lon="${lon}" data-lat="${lat}"><span>${t(en, zh)}</span></li>`)}
+      </ol>
+      ${pauseButton()}
+    </figure>
+    <div class="wrap hero__grid">
+      <div class="hero__text">
+        <p class="kicker">${t(lab.institute_en, lab.institute_zh)}</p>
+        <h1>${t(`${lab.name_en} Group`, lab.name_zh)}</h1>
+        <p class="hero__lead">${t(lab.statement_en, lab.statement_zh)}</p>
+        ${pi
+          ? html`<p class="hero__pi">${t('Principal Investigator: ', '团队负责人：')}<a class="link" href="/people.html#pi">${t(`${pi.honorific} ${pi.name_en}`, `${pi.name_zh}研究员`)}</a></p>`
+          : ''}
+        <p class="hero__actions">
+          <a class="btn btn--solid" href="/research.html">${t('Our research', '研究方向')}</a>
+          <a class="btn" href="/data.html">${t('Data products', '数据产品')}</a>
+        </p>
       </div>
     </div>
-    ${latest
-      ? html`<a class="hero__ticker" href="${safeHref(newsHref(latest))}" ${latest.body_md ? '' : raw('target="_blank" rel="noopener"')}>
-          <span class="hero__ticker-tag">${t('Latest', '最新')}</span>
-          <span class="hero__ticker-text">${t(latest.title_en, latest.title_zh)}</span>
-          ${arrow}
-        </a>`
-      : ''}
+    <p class="hero__note wrap">${t(
+      html`River size is an estimate from the long-term water balance, P − ET, routed downstream at 0.1°. It is not gauged discharge.<span class="hero__drag"> Drag to turn the globe.</span>`,
+      html`河流粗细由多年平均水量平衡（P − ET）按 0.1° 逐级汇流估算，并非实测流量。<span class="hero__drag">拖动可旋转地球。</span>`,
+    )}</p>
   </section>`;
 }
 
-function marquee(items, cls = '') {
-  const row = html`${items.map((item) => html`<span>${item}</span><i aria-hidden="true"></i>`)}`;
-  return html`<div class="marquee ${cls}" data-marquee aria-hidden="true"><div class="marquee__track">${row}${row}${row}${row}</div></div>`;
+/** The group's own introduction, with the part about the PI folded below it. */
+function about(ctx) {
+  const { bio_en: en, bio_zh: zh } = ctx.api.site['site.pi'];
+  const { cover } = ctx.api.site['site.assets'];
+  return section({
+    en: 'About the group',
+    zh: '课题组简介',
+    aside: more('/people.html', 'Meet the team', '团队成员'),
+    body: html`<div class="about">
+      <div class="about__text">
+        ${paragraphs(en.slice(2), 'en')}
+        ${paragraphs(zh.slice(2), 'zh')}
+      </div>
+      <figure class="about__photo">${picture(ctx, cover, { sizes: '(max-width: 1000px) 100vw, 420px' })}</figure>
+      <details class="about__more">
+        <summary>${t('About the Principal Investigator', '团队负责人简介')}</summary>
+        ${paragraphs(en.slice(0, 2), 'en')}
+        ${paragraphs(zh.slice(0, 2), 'zh')}
+      </details>
+    </div>`,
+  });
 }
 
-function statement(ctx, index) {
-  const { site } = ctx.api;
-  const lab = site['site.lab'];
-  const stats = site['site.stats'];
-  const tones = ['paper-2', 'ink', 'blue', 'lime'];
-  return html`<section class="statement plane plane--paper">
+function metrics(ctx) {
+  const stats = ctx.api.site['site.stats'];
+  return html`<section class="band" aria-label="Group metrics" data-module="swell">
+    <canvas class="band__sea" aria-hidden="true"></canvas>
     <div class="wrap">
-      ${eyebrow(index, 'What we do', '我们做什么')}
-      <p class="statement__text" data-module="scrollwords">${t(lab.statement_en, lab.statement_zh)}</p>
+      <dl class="metrics">
+        ${stats.map(
+          (s) => html`<div>
+            <dd data-count="${s.value}" data-suffix="${s.suffix}">${s.value.toLocaleString('en-US')}${s.suffix}</dd>
+            <dt>${t(s.label_en, s.label_zh)}</dt>
+          </div>`,
+        )}
+      </dl>
     </div>
-    <ul class="tiles">
-      ${stats.map(
-        (s, i) => html`<li class="tile-stat tile-stat--${tones[i % tones.length]}" data-reveal>
-          <span class="tile-stat__n" data-count="${s.value}" data-suffix="${s.suffix}">${s.value.toLocaleString('en-US')}${s.suffix}</span>
-          <span class="tile-stat__l">${t(s.label_en, s.label_zh)}</span>
-        </li>`,
-      )}
-    </ul>
   </section>`;
 }
 
-function themes(ctx, index) {
-  const { themes: items } = ctx.api.research;
-  return html`<section class="themes plane plane--paper">
+function news(ctx) {
+  const { items } = ctx.api.news;
+  const lead = items.filter((n) => n.featured).slice(0, 3);
+  const rest = items.filter((n) => !lead.includes(n)).slice(0, 3);
+  return section({
+    en: 'News',
+    zh: '新闻动态',
+    aside: more('/news.html', 'All news', '全部新闻'),
+    body: html`
+      <ul class="briefs">
+        ${lead.map(
+          (n) => html`<li>
+            <a href="${safeHref(newsHref(n))}" ${newsTarget(n)}>
+              <span class="brief__fig">${picture(ctx, n.cover_id, { sizes: '(max-width: 760px) 100vw, 300px' })}</span>
+              <span class="meta">${newsDate(n)} · ${categoryLabel(n.category)}</span>
+              <span class="brief__title">${t(n.title_en, n.title_zh)}</span>
+            </a>
+          </li>`,
+        )}
+      </ul>
+      <ul class="rows">
+        ${rest.map(
+          (n) => html`<li>
+            <a href="${safeHref(newsHref(n))}" ${newsTarget(n)}>
+              <span class="meta">${newsDate(n)}</span>
+              <span class="meta">${categoryLabel(n.category)}</span>
+              <span class="rows__title">${t(n.title_en, n.title_zh)}</span>
+            </a>
+          </li>`,
+        )}
+      </ul>`,
+  });
+}
+
+/** Each programme is shown with a place its work is about. */
+const THEME_BLOCK = {
+  'water-cycle': 'hengduan',
+  'water-security': 'gorges',
+  'water-innovation': 'alps',
+};
+
+function research(ctx) {
+  const { themes } = ctx.api.research;
+  return html`<section class="sky" id="research">
     <div class="wrap">
-      <div class="sec-head">
-        <div>
-          ${eyebrow(index, 'Research', '研究方向')}
-          <h2 class="title" data-reveal>${t('Three currents,', '三条主线，')}<br>${html`<span class="dim">${t('one water cycle.', '一个水循环。')}</span>`}</h2>
-        </div>
-        ${button('/research.html', 'All research', '全部研究')}
-      </div>
-    </div>
-    <div class="panels" data-module="panels">
-      ${items.map(
-        (theme, i) => html`<article class="panel panel--${theme.accent}${i === 0 ? ' is-open' : ''}" tabindex="0">
-          <div class="panel__head">
-            <span class="panel__i">0${i + 1}</span>
-            ${pictogram[theme.id] ?? ''}
-          </div>
-          <div class="panel__body">
-            <h3>${t(theme.title_en, theme.title_zh)}</h3>
-            <div class="panel__more">
-              <div>
-                <p>${t(theme.summary_en, theme.summary_zh)}</p>
-                <ul class="chips chips--static">${theme.projects.map((p) => html`<li>${p.name}</li>`)}</ul>
-                <a class="link" href="/research.html#${theme.id}">${t('Read more', '了解更多')} ${arrow}</a>
-              </div>
-            </div>
-          </div>
-        </article>`,
-      )}
+      <header class="sky__head">
+        <h2>${t('Research', '研究方向')}</h2>
+        ${more('/research.html', 'All research', '全部研究')}
+      </header>
+      <ol class="cards">
+        ${themes.map(
+          (theme) => html`<li class="card" data-tilt>
+            <a href="/research.html#${theme.id}">
+              <img class="card__block" src="/earth/${THEME_BLOCK[theme.id] ?? 'hengduan'}-still.webp" width="960" height="640" alt="" loading="lazy" decoding="async">
+              <h3>${t(theme.title_en, theme.title_zh)}</h3>
+              <p>${t(theme.summary_en, theme.summary_zh)}</p>
+              <p class="meta">${theme.projects.map((p) => p.name).join(' · ')}</p>
+            </a>
+          </li>`,
+        )}
+      </ol>
     </div>
   </section>`;
 }
 
-function highlights(ctx, index) {
-  const items = ctx.api.news.items.filter((n) => n.featured);
-  return html`<section class="highlights plane plane--paper">
-    <div class="wrap sec-head">
-      <div>
-        ${eyebrow(index, 'Highlights', '研究亮点')}
-        <h2 class="title" data-reveal>${t('Recent', '近期')} ${html`<span class="dim">${t('currents.', '动态。')}</span>`}</h2>
-      </div>
-      ${button('/news.html', 'All news', '全部新闻')}
-    </div>
-    <ul class="strip" data-module="dragscroll" tabindex="0" aria-label="Highlights, scrollable">
-      ${items.map(
-        (n) => html`<li class="card">
-          <a href="${safeHref(newsHref(n))}" ${n.body_md ? '' : raw('target="_blank" rel="noopener"')} data-cursor="Read">
-            <span class="card__media">${picture(ctx, n.cover_id, { sizes: '(max-width: 720px) 82vw, 34vw', alt: '' })}</span>
-            <span class="card__meta"><span>${categoryLabel(n.category)}</span><span>${n.year}</span></span>
-            <span class="card__title">${t(n.title_en, n.title_zh)}</span>
-          </a>
-        </li>`,
-      )}
-    </ul>
-  </section>`;
+function publications(ctx) {
+  const { site, publications: pubs } = ctx.api;
+  const selected = pubs.items.filter((p) => p.featured).slice(0, 5);
+  return section({
+    en: 'Selected publications',
+    zh: '代表性论文',
+    aside: html`${more('/publications.html', 'All publications', '全部论文')}
+      <p class="note">${t('Recent work appears in', '近期成果发表于')} ${site['site.journals'].slice(0, 6).join(', ')}.</p>`,
+    body: html`<ul class="pubs">${selected.map((p) => pubItem(p, ctx))}</ul>`,
+  });
 }
 
-function data(ctx, index) {
-  return html`<section class="data-band plane plane--blue">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          ${eyebrow(index, 'Open data', '开放数据')}
-          <h2 class="title" data-reveal>${t('Four decades', '四十余年')}<br>${html`<span class="dim">${t('of the land surface.', '的陆面观测。')}</span>`}</h2>
-        </div>
-        ${button('/data.html', 'All datasets', '全部数据', { cls: 'btn--lime' })}
-      </div>
-      ${coverage(ctx)}
-    </div>
-  </section>`;
+/** The inputs of the river network on the globe, drawn as the stack of maps they are. */
+const LAYERS = [
+  ['river', 'River flow', '河川径流', 'Accumulated downstream', '沿河网累加'],
+  ['et', 'Evapotranspiration', '蒸散发', 'PML-V2.2, 2001–2020', 'PML-V2.2，2001–2020 年'],
+  ['pre', 'Precipitation', '降水', 'CRU TS 4.09, 2001–2020', 'CRU TS 4.09，2001–2020 年'],
+  ['dem', 'Elevation', '高程', '1 km terrain model', '1 km 地形模型'],
+];
+
+function data(ctx) {
+  const { items } = ctx.api.datasets;
+  return section({
+    en: 'Data products',
+    zh: '数据产品',
+    aside: more('/data.html', 'Download and cite', '下载与引用'),
+    body: html`<figure class="layers">
+      <ol class="layers__stack">
+        ${LAYERS.map(
+          ([id, en, zh, noteEn, noteZh], i) => html`<li style="--i:${i}">
+            <div class="layers__map"><img src="/earth/layer-${id}.webp" width="720" height="280" alt="Global map of ${en.toLowerCase()}" loading="lazy" decoding="async"></div>
+            <p><b>${t(en, zh)}</b> ${t(noteEn, noteZh)}</p>
+          </li>`,
+        )}
+      </ol>
+      <figcaption>${t(
+        'How the rivers on the globe were computed: precipitation minus evapotranspiration from our PML-V2.2 product, routed over elevation. Precipitation: CRU TS 4.09 (Harris et al., 2020). Coastlines, lakes and main river courses: Natural Earth.',
+        '地球上的河流由此算得：降水减去本组 PML-V2.2 产品的蒸散发，再沿地形汇流。降水来自 CRU TS 4.09（Harris 等，2020），海岸线、湖泊和主要河道来自 Natural Earth。',
+      )}</figcaption>
+    </figure>
+    <div class="table-scroll"><table class="table">
+      <thead><tr>
+        <th scope="col">${t('Product', '产品')}</th>
+        <th scope="col">${t('Variables', '变量')}</th>
+        <th scope="col">${t('Scope', '范围')}</th>
+        <th scope="col">${t('Time step', '时间分辨率')}</th>
+        <th scope="col">${t('Grid', '空间分辨率')}</th>
+        <th scope="col">${t('Period', '时段')}</th>
+      </tr></thead>
+      <tbody>
+        ${items.map(
+          (d) => html`<tr>
+            <th scope="row"><a class="link" href="/data.html#${d.id}">${d.name}</a></th>
+            <td>${d.variables}</td>
+            <td>${d.scope}</td>
+            <td>${d.temporal}</td>
+            <td>${d.spatial}</td>
+            <td>${d.coverage_label}</td>
+          </tr>`,
+        )}
+      </tbody>
+    </table></div>`,
+  });
 }
 
-function papers(ctx, index) {
-  const latest = ctx.api.publications.items.filter((p) => p.featured).slice(0, 3);
-  return html`<section class="papers plane plane--paper">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          ${eyebrow(index, 'Publications', '论文成果')}
-          <h2 class="title" data-reveal>${t('In print.', '已发表。')}</h2>
-        </div>
-        ${button('/publications.html', 'All publications', '全部论文')}
-      </div>
-      <div class="papers__grid">
-        <div>
-          ${yearBars(ctx)}
-          <p class="note">${t('Selected publications listed on this site. Select a year to browse it.', '本站收录的代表性论文。选择年份即可浏览。')}</p>
-        </div>
-        <ul class="pubs pubs--compact">${latest.map((p) => pubItem(p, ctx))}</ul>
-      </div>
-    </div>
-  </section>`;
-}
-
-function crew(ctx, index) {
-  const { people, site, meta } = ctx.api;
+function people(ctx) {
+  const { people: team, site, meta } = ctx.api;
   const assets = site['site.assets'];
-  const active = people.groups.filter((g) => g.key !== 'alumni');
-  const names = active.flatMap((g) => g.members.map((m) => m.name_en));
-  const half = Math.ceil(names.length / 2);
-  return html`<section class="crew plane plane--ink">
-    <div class="crew__photo">
-      ${picture(ctx, assets.group_photo, { cls: 'duotone', sizes: '100vw', alt: 'Group photo at the 2026 graduation ceremony' })}
-    </div>
-    ${marquee(names.slice(0, half), 'marquee--names')}
-    ${marquee(names.slice(half), 'marquee--names marquee--rev')}
-    <div class="wrap crew__foot">
-      <div>
-        ${eyebrow(index, 'People', '团队成员')}
-        <h2 class="title" data-reveal>${t(`${meta.counts.people} people,`, `${meta.counts.people} 位成员，`)}<br>${html`<span class="dim">${t(`${meta.counts.alumni} alumni.`, `${meta.counts.alumni} 位校友。`)}</span>`}</h2>
-      </div>
-      <div class="crew__cta">
-        <ul class="counts">${active.map((g) => html`<li><b>${g.members.length}</b><span>${t(g.label.en, g.label.zh)}</span></li>`)}</ul>
-        ${button('/people.html', 'Meet the group', '认识我们', { cls: 'btn--lime' })}
-      </div>
-    </div>
-  </section>`;
+  const piSetting = site['site.pi'];
+  const pi = team.groups.find((g) => g.key === 'pi')?.members[0];
+  const active = team.groups.filter((g) => !['alumni', 'pi'].includes(g.key));
+  return section({
+    en: 'People',
+    zh: '团队成员',
+    aside: html`${more('/people.html', 'All members', '全部成员')}
+      <p class="note">${t(`${meta.counts.people} members and ${meta.counts.alumni} alumni.`, `现有成员 ${meta.counts.people} 人，校友 ${meta.counts.alumni} 人。`)}</p>`,
+    body: html`
+      ${pi
+        ? html`<div class="pi-card">
+            ${picture(ctx, pi.photo_id, { sizes: '180px', alt: `Portrait of ${pi.honorific} ${pi.name_en}`, style: `object-position:${pi.photo_focus}` })}
+            <div>
+              <h3><a href="/people.html#pi">${t(`${pi.honorific} ${pi.name_en}`, `${pi.name_zh}研究员`)}</a></h3>
+              <p class="pi-card__role">${t(piSetting.title_en, piSetting.title_zh)}</p>
+              <p><a class="link" href="mailto:${pi.email}">${pi.email}</a></p>
+              <ul class="counts">${active.map((g) => html`<li>${t(g.label.en, g.label.zh)}: ${g.members.length}</li>`)}</ul>
+            </div>
+          </div>`
+        : ''}
+      <figure class="plate">
+        ${picture(ctx, assets.group_photo_alt, { sizes: '(max-width: 1000px) 100vw, 860px' })}
+        <figcaption>${t('Group photo.', '团队合影。')}</figcaption>
+      </figure>`,
+  });
 }
 
-function join(ctx, index) {
+function positions(ctx) {
   const r = ctx.api.site['site.recruitment'];
   const contact = ctx.api.site['site.contact'];
   const col = (en, zh, items) => html`<div><h3>${t(en, zh)}</h3><ul>${items.map((x) => html`<li>${t(x.en, x.zh)}</li>`)}</ul></div>`;
-  return html`<section class="join plane plane--coral" id="join">
-    <div class="wrap">
-      ${eyebrow(index, 'Join us', '加入我们')}
-      <h2 class="join__title" data-reveal>${t(r.title_en, r.title_zh)}</h2>
-      <div class="join__grid">
-        <p class="join__body">${t(r.body_en, r.body_zh)}</p>
+  return section({
+    id: 'join',
+    cls: 'sec--sky',
+    en: r.title_en,
+    zh: r.title_zh,
+    body: html`
+      <p class="prose-lead">${t(r.body_en, r.body_zh)}</p>
+      <div class="positions">
         ${col('Openings', '招收', r.openings)}
-        ${col('Topics', '方向', r.topics)}
-        ${col('Love of', '技能', r.skills)}
+        ${col('Topics', '研究方向', r.topics)}
+        ${col('Skills', '技能', r.skills)}
       </div>
-      <a class="join__mail" href="mailto:${contact.email}" data-magnetic>${contact.email} ${external}</a>
-    </div>
-  </section>`;
+      <p>${t('Applications and enquiries:', '申请与咨询：')} <a class="link" href="mailto:${contact.email}">${contact.email}</a></p>`,
+  });
 }
 
 export function homePage(ctx) {
-  const { site } = ctx.api;
-  const lab = site['site.lab'];
+  const lab = ctx.api.site['site.lab'];
   const body = html`
     ${hero(ctx)}
-    ${marquee(site['site.journals'], 'marquee--journals')}
-    ${statement(ctx, '01')}
-    ${budgetSection(ctx, '02')}
-    ${themes(ctx, '03')}
-    ${highlights(ctx, '04')}
-    ${data(ctx, '05')}
-    ${papers(ctx, '06')}
-    ${crew(ctx, '07')}
-    ${join(ctx, '08')}`;
-  return layout(ctx, { page: 'home', description: `${lab.name_en} group at ${lab.institute_en}. ${lab.tagline_en}`, nav: 'dark', body, path: '/' });
+    ${about(ctx)}
+    ${metrics(ctx)}
+    ${news(ctx)}
+    ${research(ctx)}
+    ${budgetSection(ctx)}
+    ${publications(ctx)}
+    ${data(ctx)}
+    ${people(ctx)}
+    ${positions(ctx)}`;
+  return layout(ctx, { page: 'home', description: `${lab.name_en} group at ${lab.institute_en}. ${lab.tagline_en}`, body, path: '/' });
 }

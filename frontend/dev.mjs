@@ -3,12 +3,12 @@
  * Reads the API from ../frontend/.cache/api/v1 (run the root "npm run build"
  * once first) or from any --api directory/URL.
  */
+import { execFile } from 'node:child_process';
 import fs from 'node:fs';
 import http from 'node:http';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
-import { buildSite } from './build.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const { values } = parseArgs({
@@ -36,11 +36,23 @@ const TYPES = {
   '.txt': 'text/plain; charset=utf-8',
 };
 
-const rebuild = () => buildSite({ apiSource: values.api, mediaSource: values.media, outDir: OUT, dev: true });
+// Every request waits on this, because a build empties dist before refilling it.
+let building = Promise.resolve();
+
+// A child process, because Node caches imported modules: a build in this process
+// would pick up edited styles and scripts but never edited page templates.
+const rebuild = () => {
+  building = new Promise((resolve, reject) => {
+    const args = ['build.mjs', '--api', values.api, '--media', values.media, '--out', OUT, '--dev'];
+    execFile(process.execPath, args, { cwd: HERE }, (error, _stdout, stderr) => (error ? reject(new Error(stderr || error.message)) : resolve()));
+  });
+  return building;
+};
 
 if (!values['no-build']) await rebuild();
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
+  await building.catch(() => {});
   const url = new URL(req.url, 'http://localhost');
   let file = path.normalize(path.join(OUT, decodeURIComponent(url.pathname)));
   if (!file.startsWith(OUT)) {
@@ -54,7 +66,9 @@ const server = http.createServer((req, res) => {
     file = path.join(OUT, '404.html');
   }
   res.writeHead(status, { 'content-type': TYPES[path.extname(file)] ?? 'application/octet-stream', 'cache-control': 'no-store' });
-  fs.createReadStream(file).pipe(res);
+  fs.createReadStream(file)
+    .on('error', () => res.destroy())
+    .pipe(res);
 });
 
 const port = Number(values.port);

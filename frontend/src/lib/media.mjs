@@ -10,7 +10,8 @@ const WIDTHS = {
   full: [800, 1600, 2400],
   mark: [160, 320],
 };
-const PIPELINE_VERSION = 1;
+const PIPELINE_VERSION = 2;
+const QUALITY = { mark: 90, figure: 90, card: 88, portrait: 84, full: 84 };
 
 /** Decides which published files the site needs, and at what sizes. */
 function collectUsage(api) {
@@ -97,7 +98,7 @@ export async function buildMedia(api, { mediaSource, outDir, cacheDir }) {
       const variants = [];
       for (const w of targets) {
         const file = `${id}-${w}.webp`;
-        await base.clone().resize({ width: w, withoutEnlargement: true }).webp({ quality: kind === 'mark' ? 88 : 76, effort: 5 }).toFile(path.join(cacheDir, file));
+        await base.clone().resize({ width: w, withoutEnlargement: true }).webp({ quality: QUALITY[kind], smartSubsample: true, effort: 5 }).toFile(path.join(cacheDir, file));
         variants.push({ w, file });
         generated += 1;
       }
