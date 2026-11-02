@@ -1,0 +1,19 @@
+{
+  "name": "@zhang-hydrolab/frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site generator for the Large Scale Hydrology website. Consumes the /api/v1 JSON contract only.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node dev.mjs",
+    "check": "node test/check-site.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "sharp": "0.35.5"
+  }
+}
