@@ -335,6 +335,12 @@ body[data-nav-tone='light'] {
   transition: --s 0.3s;
 }
 
+/* Set by main.js while an element is off-screen. */
+.is-asleep,
+.is-asleep * {
+  animation-play-state: paused !important;
+}
+
 /* Marquee */
 .marquee {
   overflow: hidden;

@@ -9,7 +9,8 @@ export default function init(root) {
   const empty = root.querySelector('[data-filter-empty]');
 
   const params = new URLSearchParams(location.search);
-  const state = { q: params.get('q') ?? '', topic: params.get('topic') ?? '', year: params.get('year') ?? '' };
+  // The box may already hold text typed while this module was loading.
+  const state = { q: params.get('q') ?? input.value, topic: params.get('topic') ?? '', year: params.get('year') ?? '' };
   input.value = state.q;
 
   const render = ({ pushUrl = true } = {}) => {

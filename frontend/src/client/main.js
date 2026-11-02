@@ -20,7 +20,24 @@ const MODULES = {
 };
 
 function loadModules() {
-  const start = (el) => MODULES[el.dataset.module]?.().then((m) => m.default(el, { reduceMotion, finePointer }));
+  // GitHub Pages can be slow to reach, so a press may land before its module has
+  // arrived. Remember the last one and repeat it once the module is running.
+  const early = new Map();
+  document.addEventListener('click', (event) => {
+    const host = event.target.closest('[data-module]:not([data-live])');
+    const control = event.target.closest('a, button, [tabindex]');
+    if (host && control && control.tagName !== 'A' && host.contains(control)) early.set(host, control);
+  });
+
+  const start = (el) =>
+    MODULES[el.dataset.module]?.()
+      .then((m) => m.default(el, { reduceMotion, finePointer }))
+      .then(() => {
+        el.dataset.live = '';
+        early.get(el)?.click();
+        early.delete(el);
+      });
+
   const lazy = new IntersectionObserver(
     (entries) => {
       for (const entry of entries) {
@@ -31,7 +48,12 @@ function loadModules() {
     },
     { rootMargin: '40% 0px' },
   );
-  document.querySelectorAll('[data-module]').forEach((el) => lazy.observe(el));
+  document.querySelectorAll('[data-module]').forEach((el) => {
+    lazy.observe(el);
+    // Fetch the code now, while starting it still waits for the viewport. The
+    // whole set is about 24 KB, and modules do nothing until init is called.
+    MODULES[el.dataset.module]?.().catch(() => {});
+  });
 }
 
 function setupLanguage() {
@@ -125,14 +147,35 @@ function setupMarquees() {
   if (!tracks.length) return;
   let last = scrollY;
   let speed = 1;
+  let running = false;
+  // Runs only while the page scrolls and the speed settles. getAnimations()
+  // flushes styles, so calling it every frame would keep an idle page busy.
   const frame = () => {
     const delta = Math.abs(scrollY - last);
     last = scrollY;
     speed += (1 + Math.min(delta / 8, 7) - speed) * 0.08;
+    running = delta > 0 || speed - 1 > 0.01;
+    if (!running) speed = 1;
     for (const track of tracks) for (const animation of track.getAnimations()) animation.playbackRate = speed;
-    requestAnimationFrame(frame);
+    if (running) requestAnimationFrame(frame);
   };
-  requestAnimationFrame(frame);
+  addEventListener(
+    'scroll',
+    () => {
+      if (running) return;
+      running = true;
+      requestAnimationFrame(frame);
+    },
+    { passive: true },
+  );
+}
+
+/** CSS animations keep running off-screen, and SVG ones cost main-thread work. */
+function setupSleep() {
+  const watcher = new IntersectionObserver((entries) => {
+    for (const entry of entries) entry.target.classList.toggle('is-asleep', !entry.isIntersecting);
+  });
+  document.querySelectorAll('.marquee, .pictogram, [data-budget-svg]').forEach((el) => watcher.observe(el));
 }
 
 function setupParallax() {
@@ -191,27 +234,42 @@ function setupCursor() {
   let cy = 0;
   let scale = 0;
   let want = 0;
+  let running = false;
+  const frame = () => {
+    cx += (x - cx) * 0.2;
+    cy += (y - cy) * 0.2;
+    scale += (want - scale) * 0.18;
+    running = Math.abs(x - cx) > 0.1 || Math.abs(y - cy) > 0.1 || Math.abs(want - scale) > 0.005;
+    if (!running) {
+      cx = x;
+      cy = y;
+      scale = want;
+    }
+    dot.style.transform = `translate(${cx}px, ${cy}px) scale(${scale})`;
+    if (running) requestAnimationFrame(frame);
+  };
+  const wake = () => {
+    if (running) return;
+    running = true;
+    requestAnimationFrame(frame);
+  };
   addEventListener('pointermove', (event) => {
     x = event.clientX;
     y = event.clientY;
+    wake();
   }, { passive: true });
   targets.forEach((el) => {
     el.addEventListener('pointerenter', () => {
       dot.textContent = el.dataset.cursor;
       want = 1;
+      wake();
     });
     el.addEventListener('pointerleave', () => {
       want = 0;
+      wake();
     });
   });
-  const frame = () => {
-    cx += (x - cx) * 0.2;
-    cy += (y - cy) * 0.2;
-    scale += (want - scale) * 0.18;
-    dot.style.transform = `translate(${cx}px, ${cy}px) scale(${scale})`;
-    requestAnimationFrame(frame);
-  };
-  requestAnimationFrame(frame);
+  wake(); // Writes the hidden starting state, then stops until the pointer moves.
 }
 
 export function toast(message) {
@@ -369,6 +427,7 @@ setupLanguage();
 setupNav();
 setupReveal();
 setupMarquees();
+setupSleep();
 setupParallax();
 setupMagnetic();
 setupCursor();

@@ -17,4 +17,9 @@ export default function init(root) {
       }
     });
   }
+
+  // pointerenter will not fire for a pointer that was already resting here
+  // when this module arrived.
+  const hovered = root.querySelector('.panel:hover');
+  if (hovered) open(hovered);
 }
