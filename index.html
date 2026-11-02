@@ -1,1127 +1,477 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-
+<!doctype html><html lang="en" data-lang="en">
 <head>
-  <meta charset="utf-8" />
-  <!-- begin SEO -->
-  <title>Yongqiang Zhang - Yongqiang Zhang's Homepage</title>
-  <meta property="og:locale" content="en-US" />
-  <meta property="og:site_name" content="Yongqiang Zhang's Homepage" />
-  <meta property="og:title" content="Yongqiang Zhang" />
-  <link rel="canonical" href="https://zhangyongqiang.github.io/" />
-  <meta property="og:url" content="https://zhangyongqiang.github.io/" />
-  <meta property="og:description" content="About me" />
-  <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "Person",
-        "name": "Yongqiang Zhang's Homepage",
-        "url": "https://zhangyongqiang.github.io",
-        "sameAs": null
-      }
-    </script>
-  <!-- end SEO -->
-  <link href="https://ericlyun.github.io/feed.xml" type="application/atom+xml" rel="alternate"
-    title="Yongqiang Zhang's Homepage Feed" />
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="MobileOptimized" content="320" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script>
-    document.documentElement.className =
-      document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";
-  </script>
-  <!-- For all browsers -->
-  <link rel="stylesheet" href="https://ericlyun.github.io/assets/css/main.css" />
-  <meta http-equiv="cleartype" content="on" />
-
-  <!-- Custom Art Style CSS -->
-  <link rel="stylesheet" href="./assets/css/custom-art-style.css" />
-  <!-- Mobile Menu CSS -->
-  <link rel="stylesheet" href="./assets/css/menu.css" />
-
-  <!-- Language Toggle Style -->
-  <style>
-    .lang-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 1000;
-      background: rgba(197, 154, 109, 0.9);
-      border: none;
-      border-radius: 20px;
-      padding: 8px 16px;
-      color: white;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    .lang-toggle:hover {
-      background: rgba(197, 154, 109, 1);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-  </style>
-
-  <!-- start custom head snippets -->
-  <link rel="shortcut icon" href="/images/favicon.ico?v=M44lzPylqQ" />
-  <meta name="msapplication-TileColor" content="#000000" />
-  <meta name="msapplication-TileImage" content="https://ericlyun.github.io/images/mstile-144x144.png?v=M44lzPylqQ" />
-  <meta name="msapplication-config" content="https://ericlyun.github.io/images/browserconfig.xml?v=M44lzPylqQ" />
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="stylesheet" href="https://ericlyun.github.io/assets/css/academicons.css" />
-  <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-          TeX: {
-              equationNumbers: {
-                  autoNumber: "all"
-              }
-          }
-      });
-    </script>
-  <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-          tex2jax: {
-              inlineMath: [['$', '$'], ["\\(", "\\)"]],
-              processEscapes: true
-          }
-      });
-    </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script>
-  <!-- end custom head snippets -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Large Scale Hydrology · IGSNRR, CAS</title>
+<meta name="description" content="Large Scale Hydrology group at Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences. We measure, model and forecast how water moves across a changing planet.">
+<link rel="canonical" href="https://zhang-hydrolab.github.io/">
+<meta name="theme-color" content="#1437F5">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Large Scale Hydrology">
+<meta property="og:title" content="Large Scale Hydrology · IGSNRR, CAS">
+<meta property="og:description" content="Large Scale Hydrology group at Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences. We measure, model and forecast how water moves across a changing planet.">
+<meta property="og:url" content="https://zhang-hydrolab.github.io/">
+<meta property="og:image" content="https://zhang-hydrolab.github.io/media/e40a2308e73d60dd-2400.webp">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var l=localStorage.getItem('lab-lang');if(l==='zh'){d.dataset.lang='zh';d.lang='zh-CN'}}catch(e){}})();</script>
+<link rel="preload" href="/assets/fonts/mona-sans-latin-OCDL5MMG.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style-4M4QOCJB.css">
+<script type="module" src="/assets/main-WJ3SWXLL.js"></script>
 </head>
+<body id="top" data-page="home" data-nav-tone="dark">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" data-nav>
+    <a class="nav__brand" href="/" aria-label="Large Scale Hydrology, home"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M-1 12c6-4 9 3 15 2s9-8 19-3v6c-9-4-12 3-18 4S4 16-1 19z" fill="var(--mark-river, var(--lime))"/></svg><span class="nav__name"><span class="t-en">Large Scale Hydrology</span><span class="t-zh" lang="zh-CN">大尺度水文学团队</span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/research.html" ><span><span class="t-en">Research</span><span class="t-zh" lang="zh-CN">研究方向</span></span></a><a href="/publications.html" ><span><span class="t-en">Publications</span><span class="t-zh" lang="zh-CN">论文成果</span></span></a><a href="/data.html" ><span><span class="t-en">Data</span><span class="t-zh" lang="zh-CN">数据产品</span></span></a><a href="/people.html" ><span><span class="t-en">People</span><span class="t-zh" lang="zh-CN">团队成员</span></span></a><a href="/news.html" ><span><span class="t-en">News</span><span class="t-zh" lang="zh-CN">新闻动态</span></span></a><a href="/collaboration.html" ><span><span class="t-en">Collaboration</span><span class="t-zh" lang="zh-CN">合作网络</span></span></a>
+    </nav>
+    <div class="nav__tools">
+      <button class="nav__tool" type="button" data-search-open aria-label="Search the site"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m14 14 4 4" stroke="currentColor" stroke-width="1.8"/></svg><kbd>Ctrl K</kbd></button>
+      <button class="nav__tool nav__lang" type="button" data-lang-toggle aria-label="Switch language: English or Chinese"><span class="t-en">中</span><span class="t-zh">EN</span></button>
+      <button class="nav__tool nav__burger" type="button" data-menu-open aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </header>
+<dialog class="menu" data-menu aria-label="Menu">
+    <div class="menu__top">
+      <span class="eyebrow"><span class="t-en">Menu</span><span class="t-zh" lang="zh-CN">菜单</span></span>
+      <button class="nav__tool" type="button" data-menu-close aria-label="Close menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 4 12 12M16 4 4 16" stroke="currentColor" stroke-width="1.8"/></svg></button>
+    </div>
+    <nav aria-label="Mobile">
+      <a href="/"><span class="t-en">Home</span><span class="t-zh" lang="zh-CN">首页</span></a>
+      <a href="/research.html"><span class="t-en">Research</span><span class="t-zh" lang="zh-CN">研究方向</span></a><a href="/publications.html"><span class="t-en">Publications</span><span class="t-zh" lang="zh-CN">论文成果</span></a><a href="/data.html"><span class="t-en">Data</span><span class="t-zh" lang="zh-CN">数据产品</span></a><a href="/people.html"><span class="t-en">People</span><span class="t-zh" lang="zh-CN">团队成员</span></a><a href="/news.html"><span class="t-en">News</span><span class="t-zh" lang="zh-CN">新闻动态</span></a><a href="/collaboration.html"><span class="t-en">Collaboration</span><span class="t-zh" lang="zh-CN">合作网络</span></a>
+    </nav>
+  </dialog>
+<main id="main">
 
-<body>
-  <!--[if lt IE 9]>
-      <div class="notice--danger align-center" style="margin: 0">
-        You are using an
-        <strong> outdated </strong>
-        browser. Please
-        <a href="http://browsehappy.com/"> upgrade your browser </a>
-        to improve your experience.
-      </div>
-    <![endif]-->
-
-  <!-- Language Toggle Button -->
-  <button class="lang-toggle" onclick="toggleLanguage()" id="langBtn">中文</button>
-
-  <!-- Header Cover -->
-  <div class="header"
-    style="background:url('./images/cover.jpg') no-repeat center center; background-size:cover; min-height:400px; position:relative; opacity:0.7;">
-    <div class="header-info"
-      style="width:40%; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); text-align:center;">
-      <h1
-        style="font-weight:900; color:rgb(255, 10, 10); font-size:4em; margin:0; padding:0; font-family:'Papyrus', sans-serif; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
-        Large Scale Hydrology
+    <section class="hero">
+    <canvas class="hero__field" data-module="isolines" aria-hidden="true"></canvas>
+    <div class="hero__inner">
+      <h1 class="hero__title" data-module="herotype">
+        <span class="t-en"><span class="hl">Large</span><span class="hl">Scale</span><span class="hl hl--wide">Hydrology</span></span>
+        <span class="t-zh" lang="zh-CN"><span class="hl">大尺度</span><span class="hl">水文学</span></span>
       </h1>
-      <h3
-        style="font-weight:500; color:rgba(193, 26, 26, 0.9); font-size:2em; margin:0.5em 0 0 0; font-family:'Montserrat', sans-serif; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
-        @IGSNRR
-      </h3>
-    </div>
-  </div>
-
-  <div class="masthead">
-    <div class="masthead__inner-wrap">
-      <div class="masthead__menu">
-        <nav id="site-nav" class="greedy-nav">
-          <button>
-            <div class="navicon"></div>
-          </button>
-          <ul class="visible-links">
-            <li class="masthead__menu-item masthead__menu-item--lg">
-              <a href="./"> Home </a>
-            </li>
-            <li class="masthead__menu-item">
-              <a href="./news.html">
-                News </a>
-            </li>
-            <li class="masthead__menu-item">
-              <a href="./data.html">
-                Data
-              </a>
-            </li>
-            <li class="masthead__menu-item">
-              <a href="./publications.html">
-                Publications
-              </a>
-            </li>
-            <li class="masthead__menu-item">
-              <a href="./research.html"> Research </a>
-            </li>
-            <li class="masthead__menu-item">
-              <a href="./people.html"> People </a>
-            </li>
-            <li class="masthead__menu-item">
-              <a href="./collaboration.html"> Collaboration </a>
-            </li>
-            <li class="masthead__menu-item">
-              <a href="https://igsnrr.cas.cn/sourcedb/zw/zjrck/kygg/bjdbgc/201903/t20190327_5262230.html" target="_blank"> IGSNRR </a>
-            </li>
-          </ul>
-          <ul class="hidden-links hidden"></ul>
-        </nav>
+      <div class="hero__aside">
+        <p class="hero__tag"><span class="t-en">We measure, model and forecast how water moves across a changing planet.</span><span class="t-zh" lang="zh-CN">我们观测、模拟并预测水在变化的地球上如何运动。</span></p>
+        <div class="hero__cta">
+          <a class="btn btn--lime" href="/research.html"  data-magnetic><span><span class="t-en">Our research</span><span class="t-zh" lang="zh-CN">研究方向</span></span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+          <a class="btn btn--ghost" href="/data.html"  data-magnetic><span><span class="t-en">Open data</span><span class="t-zh" lang="zh-CN">开放数据</span></span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+        </div>
+        <dl class="hero__spec">
+          <div><dt><span class="t-en">Institute</span><span class="t-zh" lang="zh-CN">依托单位</span></dt><dd>IGSNRR, CAS</dd></div>
+          <div><dt><span class="t-en">Station</span><span class="t-zh" lang="zh-CN">位置</span></dt><dd>39.99°N 116.39°E</dd></div>
+          <div class="hero__hint"><dt><span class="t-en">Field</span><span class="t-zh" lang="zh-CN">交互</span></dt><dd><span class="t-en">Move across the water. Click to drop rain.</span><span class="t-zh" lang="zh-CN">在水面上移动，点击落下雨滴。</span></dd></div>
+        </dl>
       </div>
     </div>
-  </div>
-  <div id="main" role="main">
-    <div class="sidebar sticky">
-      <div itemscope itemtype="http://schema.org/Person">
-        <div class="author__avatar">
-          <img src="./images/people/zyq_photo.jpg" class="author__avatar" alt="Yongqiang Zhang" />
-        </div>
-        <div class="author__content">
-          <h3 class="author__name" id="sidebarName">Yongqiang Zhang</h3>
-          <p class="author__bio"></p>
-        </div>
-        <div class="author__urls-wrapper">
-          <button class="btn btn--inverse" id="followBtn" onclick="copyContactInfo()">Follow</button>
-          <ul class="author__urls social-icons">
-            <li id="contactAddress">
-              <i class="fa fa-fw fa-map-marker" aria-hidden="true"> </i>
-              Address: IGSNRR, A937
-            </li>
-            <li id="contactEmail">
-              <i class="fas fa-fw fa-envelope" aria-hidden="true"> </i>
-              zhangyq@igsnrr.ac.cn
-            </li>
-            <li>
-              <a href="https://scholar.google.com/citations?user=t5iGFeAAAAAJ&hl=zh-CN&oi=ao">
-                <i class="fas fa-fw fa-graduation-cap"> </i>
-                Google Scholar
-              </a>
-            </li>
-            <li>
-              <a href="https://igsnrr.cas.cn/sourcedb/zw/zjrck/kygg/bjdbgc/201903/t20190327_5262230.html">
-                <i class="fas fa-fw fa-university" aria-hidden="true"></i> IGSNRR
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="headline" content="Yongqiang Zhang" />
-      <meta itemprop="description" content="About me" />
-      <div class="page__inner-wrap">
-        <header>
-          <h1 class="page__title" itemprop="headline">Yongqiang Zhang's lab: Large Scale Hydrology</h1>
-        </header>
-        <section class="page__content" itemprop="text">
-          <div style="text-align: center; margin-bottom: 2em;">
-            <img src="./images/people/group_people_all_2026.JPG" alt="Group Photo 2026" style="max-width: 100%; height: auto;" />
-          </div>
-
-          <!-- English Content -->
-          <div class="lang-content lang-en">
-            <p>
-              Dr. Yongqiang Zhang is a Distinguished Professor in Hydrology and Water Resources at the Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences. He also serves as the Deputy Director of the Key Laboratory of Land Water Cycle and Surface Processes. Professor Zhang is a Fellow of the Modelling and Simulation Society of Australia and New Zealand and a Fellow of the Alexander von Humboldt Foundation in Germany. He currently holds leadership roles as the Director of the Hydro-Geography Committee of the Geographical Society of China and chairs the Hydrometeorology Stream of the Modelling and Simulation Society of Australia and New Zealand. In addition, Professor Zhang serves on the editorial boards of five major international journals, including Journal of Geophysical Research: Atmospheres, Journal of Hydrology, and Remote Sensing of Environment. Over the past five years, he has led seven key research projects, including grants from the National Key Research and Development Program, a key project of the National Natural Science Foundation, and the Talent Program of the Chinese Academy of Sciences.
-            </p>
-            <p>
-              Professor Zhang has devoted his career to large scale hydrology, with a special focus on evapotranspiration mechanisms and their eco-hydrological effects. He has published 260 papers in peer-reviewed journals, including prestigious titles such as <a href="https://doi.org/10.1126/science.adh0716" target="_blank" style="color:#c59a6d; text-decoration:none; font-weight:600;">Science</a>, <a href="https://doi.org/10.1038/s44221-023-00030-7" target="_blank" style="color:#c59a6d; text-decoration:none; font-weight:600;">Nature Water</a>, and <a href="https://doi.org/10.1038/s41467-024-53879-x" target="_blank" style="color:#c59a6d; text-decoration:none; font-weight:600;">Nature Communications</a>. In the past five years alone, he has authored or co-authored 70 papers as first or corresponding author in top-tier journals. His research has been cited more than 21,000 times, and he has an H-index of 70. His most cited first-authored paper has accumulated over 700 citations. In addition, Professor Zhang has ten ESI Highly Cited Papers and has been recognized as an Elsevier Highly Cited Chinese Researcher for four consecutive years.
-            </p>
-            <p>
-              The team led by Professor Zhang comprises professors, associate professors, postdoc fellows, doctoral candidates, and master's students, totaling nearly 25 members. Students in the team are primarily recruited from leading universities such as Tsinghua University, Beijing Normal University, Northwest A&F University, and Hohai University. The team actively collaborates with top researchers both in China and abroad and has established long-term academic partnerships with internationally renowned institutions, including Ghent University, Vienna University of Technology, Pacific Northwest National Laboratory in the United States, and the Commonwealth Scientific and Industrial Research Organisation (CSIRO) in Australia.
-            </p>
-            <p>
-              Under Professor Zhang's supervision, students and young researchers from both China and abroad have thrived in a dynamic, interdisciplinary research environment. Domestically, team members regularly present at major national conferences and have received numerous awards for young scientists. International students and visiting scholars contribute diverse perspectives, with many going on to secure positions at leading global institutions. This cultivation of next-generation talent underscores the team's lasting impact on the hydrological sciences worldwide.
-            </p>
-          </div>
-
-          <!-- Chinese Content -->
-          <div class="lang-content lang-zh" style="display:none;">
-            <p>
-              张永强博士是中国科学院地理科学与资源研究所水文与水资源学科的二级研究员，同时担任陆地水循环及地表过程重点实验室副主任。张教授是澳大利亚和新西兰模型模拟学会会士，德国洪堡基金会学者。他目前担任中国地理学会水文地理专业委员会主任，以及澳大利亚和新西兰模型模拟学会水文气象部主席。此外，张教授还担任五个主要国际期刊的编委，包括Journal of Geophysical Research: Atmospheres、Journal of Hydrology和Remote Sensing of Environment。在过去五年中，他主持了七个重点科研项目，包括国家重点研发计划、国家自然科学基金重点项目和中国科学院人才计划等。
-            </p>
-            <p>
-              张教授致力于大尺度水文学研究，特别关注蒸散发机制及其生态水文效应。他在同行评审期刊上发表了260篇论文，包括<a href="https://doi.org/10.1126/science.adh0716" target="_blank" style="color:#c59a6d; text-decoration:none; font-weight:600;">Science</a>、<a href="https://doi.org/10.1038/s44221-023-00030-7" target="_blank" style="color:#c59a6d; text-decoration:none; font-weight:600;">Nature Water</a>和<a href="https://doi.org/10.1038/s41467-024-53879-x" target="_blank" style="color:#c59a6d; text-decoration:none; font-weight:600;">Nature Communications</a>等著名期刊。仅在过去五年，他就以第一作者或通讯作者身份在顶级期刊发表了70篇论文。他的研究已被引用超过21,000次，H指数为70。他的被引次数最多的第一作者论文累计引用超过700次。此外，张教授拥有10篇ESI高被引论文，并连续四年被评为爱思唯尔中国高被引学者。
-            </p>
-            <p>
-              张教授领导的团队由教授、副教授、博士后、博士研究生和硕士研究生组成，共有近25名成员。团队学生主要来自清华大学、北京师范大学、西北农林科技大学和河海大学等国内一流大学。团队积极与国内外顶尖研究人员合作，并与国际知名机构建立了长期学术合作关系，包括根特大学、维也纳工业大学、美国西北太平洋国家实验室和澳大利亚联邦科学与工业研究组织（CSIRO）。
-            </p>
-            <p>
-              在张教授的指导下，来自中国和国外的学生和青年研究人员在一个充满活力的跨学科研究环境中茁壮成长。在国内，团队成员定期在主要的全国性会议上发表演讲，并获得了众多青年科学家奖项。国际学生和访问学者贡献了多元化的视角，许多人随后在全球领先机构获得了职位。这种对下一代人才的培养凸显了该团队对全球水文科学的持久影响。
-            </p>
-          </div>
-
-          <!-- Highlights Section -->
-          <div style="margin: 3em 0;">
-            <h2 id="highlightsHeading"
-              style="color:#424a51; text-transform:uppercase; font-weight:700; font-size:1.8em; margin:0 0 0.4em 0; text-align:center;">
-              Research Highlights</h2>
-            <div style="text-align:center; margin-bottom:2em;">
-              <span style="height:2px; width:7%; background:#c59a6d; display:inline-block;"></span>
-            </div>
-
-            <!-- News & Publications Carousel -->
-            <div class="owl-carousel owl-theme" id="highlightsCarousel" style="margin-top:2em;">
-              <!-- News Item 1 -->
-              <div class="item"
-                style="position:relative; height:300px; border-radius:10px; overflow:hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                <div style="background:url('./images/news/2026_eurasc.png') center/cover; height:100%; position:relative;">
-                  <div
-                    style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding:20px; color:white;">
-                    <h4 class="highlight-title" data-highlight-key="eurasc" style="margin:0 0 10px 0; font-size:1.2em;">Prof. Yongqiang Zhang elected as a Non-European Fellow of EurASc</h4>
-                    <p class="highlight-meta" data-highlight-key="eurasc" style="margin:0; font-size:0.9em; opacity:0.9;">News | 2026</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Publication Item 1 -->
-              <div class="item"
-                style="position:relative; height:300px; border-radius:10px; overflow:hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                <div style="background:url('./images/news/2024_nc.png') center/cover; height:100%; position:relative;">
-                  <div
-                    style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding:20px; color:white;">
-                    <h4 class="highlight-title" data-highlight-key="nature" style="margin:0 0 10px 0; font-size:1.2em;">Nature Communications: Direct vegetation response to recent CO2 rise shows limited effect on global streamflow</h4>
-                    <p class="highlight-meta" data-highlight-key="nature" style="margin:0; font-size:0.9em; opacity:0.9;">Publication | 2024</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- News Item 2 -->
-              <div class="item"
-                style="position:relative; height:300px; border-radius:10px; overflow:hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                <div
-                  style="background:url('./images/news/2023science.png') center/cover; height:100%; position:relative;">
-                  <div
-                    style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding:20px; color:white;">
-                    <h4 class="highlight-title" data-highlight-key="science" style="margin:0 0 10px 0; font-size:1.2em;">Science: Southern Hemisphere dominates recent decline in global water availability</h4>
-                    <p class="highlight-meta" data-highlight-key="science" style="margin:0; font-size:0.9em; opacity:0.9;">Publication | 2023</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- News Item 3 -->
-              <div class="item"
-                style="position:relative; height:300px; border-radius:10px; overflow:hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                <div
-                  style="background:url('./images/news/2023_MSSANZ.jpg') center/cover; height:100%; position:relative;">
-                  <div
-                    style="position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding:20px; color:white;">
-                    <h4 class="highlight-title" data-highlight-key="mssanz" style="margin:0 0 10px 0; font-size:1.2em;">Prof. Zhang Yongqiang awarded MSSANZ Biennial Medal and elected as Fellow</h4>
-                    <p class="highlight-meta" data-highlight-key="mssanz" style="margin:0; font-size:0.9em; opacity:0.9;">News | 2023</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div style="text-align:center; margin-top:2em;">
-              <a href="./news.html" id="newsCta"
-                style="background:#c59a6d; color:#FFF; text-transform:uppercase; letter-spacing:0.1em; padding:0.8em 2em; text-decoration:none; display:inline-block; margin-right:1em;">More News</a>
-              <a href="./publications.html" id="publicationsCta"
-                style="background:#c59a6d; color:#FFF; text-transform:uppercase; letter-spacing:0.1em; padding:0.8em 2em; text-decoration:none; display:inline-block;">More Publications</a>
-            </div>
-          </div>
-
-          <!-- Data Section -->
-          <div style="margin: 3em 0; background:#f8f9fa; padding:3em 2em; border-radius:10px;">
-            <h2 id="datasetsHeading"
-              style="color:#424a51; text-transform:uppercase; font-weight:700; font-size:1.8em; margin:0 0 0.4em 0; text-align:center;">
-              Featured Datasets</h2>
-            <div style="text-align:center; margin-bottom:2em;">
-              <span style="height:2px; width:7%; background:#c59a6d; display:inline-block;"></span>
-            </div>
-
-            <!-- Data Carousel -->
-            <div class="owl-carousel owl-theme" id="dataCarousel" style="margin-top:2em;">
-              <!-- Data Item 1: PML_v2 -->
-              <div class="item"
-                style="position:relative; height:350px; border-radius:10px; overflow:hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background:white;">
-                <div
-                  style="height:200px; overflow:hidden; display:flex; align-items:center; justify-content:center; background:#fff;">
-                  <img src="./data/PML_v2.png" alt="PML_v2" style="width:100%; height:100%; object-fit:cover;" />
-                </div>
-                <div style="padding:20px;">
-                  <h4 style="margin:0 0 10px 0; font-size:1.3em; color:#424a51; font-weight:700;">PML_v2</h4>
-                  <p style="margin:0 0 10px 0; font-size:0.9em; color:#666; line-height:1.5;">Global evapotranspiration
-                    and GPP dataset (2002-present)</p>
-                  <p style="margin:0; font-size:0.85em; color:#999;">8-day, 500m/0.05° resolution</p>
-                </div>
-              </div>
-
-              <!-- Data Item 2: PML_v2-china -->
-              <div class="item"
-                style="position:relative; height:350px; border-radius:10px; overflow:hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background:white;">
-                <div
-                  style="height:200px; overflow:hidden; display:flex; align-items:center; justify-content:center; background:#fff;">
-                  <img src="./data/PML_china.png" alt="PML_china" style="width:100%; height:100%; object-fit:cover;" />
-                </div>
-                <div style="padding:20px;">
-                  <h4 style="margin:0 0 10px 0; font-size:1.3em; color:#424a51; font-weight:700;">PML_v2-China</h4>
-                  <p style="margin:0 0 10px 0; font-size:0.9em; color:#666; line-height:1.5;">Daily ET and GPP for China
-                    (2000-2020)</p>
-                  <p style="margin:0; font-size:0.85em; color:#999;">Daily, 500m resolution</p>
-                </div>
-              </div>
-
-              <!-- Data Item 3: GRACE-transformer-gap -->
-              <div class="item"
-                style="position:relative; height:350px; border-radius:10px; overflow:hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background:white;">
-                <div
-                  style="height:200px; overflow:hidden; display:flex; align-items:center; justify-content:center; background:#fff;">
-                  <img src="./data/GRACE.png" alt="GRACE" style="width:100%; height:100%; object-fit:cover;" />
-                </div>
-                <div style="padding:20px;">
-                  <h4 style="margin:0 0 10px 0; font-size:1.3em; color:#424a51; font-weight:700;">GRACE-Transformer-Gap
-                  </h4>
-                  <p style="margin:0 0 10px 0; font-size:0.9em; color:#666; line-height:1.5;">Gap-filled GRACE
-                    terrestrial water storage (2002-present)</p>
-                  <p style="margin:0; font-size:0.85em; color:#999;">Monthly, 0.25° resolution</p>
-                </div>
-              </div>
-            </div>
-
-            <div style="text-align:center; margin-top:2em;">
-              <a href="./data.html" id="datasetsCta"
-                style="background:#c59a6d; color:#FFF; text-transform:uppercase; letter-spacing:0.1em; padding:0.8em 2em; text-decoration:none; display:inline-block;">Explore
-                All Datasets</a>
-            </div>
-          </div>
-
-          </ul>
-
-          <!-- Team Section -->
-          <div style="margin: 3em 0; padding:3em 2em; background:#fff; border-radius:10px;">
-            <h2 id="peopleHeading"
-              style="color:#424a51; text-transform:uppercase; font-weight:700; font-size:1.8em; margin:0 0 0.4em 0; text-align:center;">
-              The Large Scale Hydrology Group</h2>
-            <div style="text-align:center; margin-bottom:1em;">
-              <span style="height:2px; width:7%; background:#c59a6d; display:inline-block;"></span>
-            </div>
-
-            <p id="peopleDescription"
-              style="color:#424a51; font-size:1.1em; line-height:1.8em; text-align:justify; max-width:900px; margin:0 auto 2em auto; padding:0 20px;">
-              We are expanding our team now. If you are interested in research topics related to water, climate,
-              hydrology, natural
-              resources and natural disasters, and you also happen to love Hydrological model, Big Data
-              analysis, machine learning, data science or simply programming and algorithm development, we have
-              MPhil/PhD Student, Postdoc Researcher available in our group.
-            </p>
-
-            <!-- Team Members Grid -->
-            <div
-              style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:20px; max-width:1200px; margin:2em auto; padding:0 20px;">
-              <!-- PI -->
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/张永强.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Yongqiang Zhang" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Yongqiang Zhang</h4>
-                <p class="person-role" data-role-key="pi" style="color:#c59a6d; margin:0; font-size:0.85em; text-align:center;">PI</p>
-              </div>
-
-              <!-- Staff -->
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/田静.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Jing Tian" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Jing Tian</h4>
-                <p class="person-role" data-role-key="staff" style="color:#c59a6d; margin:0; font-size:0.85em; text-align:center;">Staff</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/张选泽.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Xuanzhe Zhang" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Xuanzhe Zhang</h4>
-                <p class="person-role" data-role-key="staff" style="color:#c59a6d; margin:0; font-size:0.85em; text-align:center;">Staff</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/马宁.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Ning Ma" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Ning Ma</h4>
-                <p class="person-role" data-role-key="staff" style="color:#c59a6d; margin:0; font-size:0.85em; text-align:center;">Staff</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/李晓婕.jpg?v=2"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Xiaojie Li" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Xiaojie Li</h4>
-                <p class="person-role" data-role-key="staff" style="color:#c59a6d; margin:0; font-size:0.85em; text-align:center;">Staff</p>
-              </div>
-
-              <!-- Postdocs -->
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/王显.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Xian Wang" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Xian Wang</h4>
-                <p class="person-role" data-role-key="postdoc" style="color:#8e9297; margin:0; font-size:0.85em; text-align:center;">Postdoc</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/魏豪杉.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Haoshan Wei" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Haoshan Wei</h4>
-                <p class="person-role" data-role-key="postdoc" style="color:#8e9297; margin:0; font-size:0.85em; text-align:center;">Postdoc</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/黄振.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Zhen Huang" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Zhen Huang</h4>
-                <p class="person-role" data-role-key="postdoc" style="color:#8e9297; margin:0; font-size:0.85em; text-align:center;">Postdoc</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/李聪聪.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Congcong Li" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Congcong Li</h4>
-                <p class="person-role" data-role-key="postdoc" style="color:#8e9297; margin:0; font-size:0.85em; text-align:center;">Postdoc</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/许振武.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Zhenwu Xu" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Zhenwu Xu</h4>
-                <p class="person-role" data-role-key="postdoc" style="color:#8e9297; margin:0; font-size:0.85em; text-align:center;">Postdoc</p>
-              </div>
-
-              <!-- PhD Students -->
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/杨雪宁.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Xuening Yang" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Xuening Yang</h4>
-                <p class="person-role" data-role-key="phd" style="color:#94989B; margin:0; font-size:0.85em; text-align:center;">PhD Student</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/王龙浩.JPG"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Longhao Wang" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Longhao Wang</h4>
-                <p class="person-role" data-role-key="phd" style="color:#94989B; margin:0; font-size:0.85em; text-align:center;">PhD Student</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/马亦哲.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Yizhe Ma" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Yizhe Ma</h4>
-                <p class="person-role" data-role-key="phd" style="color:#94989B; margin:0; font-size:0.85em; text-align:center;">PhD Student</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/侯文杰.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Wenjie Hou" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Wenjie Hou</h4>
-                <p class="person-role" data-role-key="phd" style="color:#94989B; margin:0; font-size:0.85em; text-align:center;">PhD Student</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/郑雨诗.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Yushi Zheng" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Yushi Zheng</h4>
-                <p class="person-role" data-role-key="phd" style="color:#94989B; margin:0; font-size:0.85em; text-align:center;">PhD Student</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/Daniel Geletaw.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Daniel Geletaw" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Daniel Geletaw</h4>
-                <p class="person-role" data-role-key="phd" style="color:#94989B; margin:0; font-size:0.85em; text-align:center;">PhD Student</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/谢宇轩.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Yuxuan Xie" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Yuxuan Xie</h4>
-                <p class="person-role" data-role-key="phd" style="color:#94989B; margin:0; font-size:0.85em; text-align:center;">PhD Student</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/张雯雯.png"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Wenwen Zhang" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Wenwen Zhang</h4>
-                <p class="person-role" data-role-key="phd" style="color:#94989B; margin:0; font-size:0.85em; text-align:center;">PhD Student</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/邹圣羽.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Shengyu Zou" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Shengyu Zou</h4>
-                <p class="person-role" data-role-key="phd" style="color:#94989B; margin:0; font-size:0.85em; text-align:center;">PhD Student</p>
-              </div>
-
-              <!-- Master Students -->
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/谢雅琳.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Yalin Xie" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Yalin Xie</h4>
-                <p class="person-role" data-role-key="master" style="color:#a0a4a8; margin:0; font-size:0.85em; text-align:center;">Master Student</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/罗洢雯.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Yiwen Luo" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Yiwen Luo</h4>
-                <p class="person-role" data-role-key="master" style="color:#a0a4a8; margin:0; font-size:0.85em; text-align:center;">Master Student</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/曹致业.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Zhiye Cao" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Zhiye Cao</h4>
-                <p class="person-role" data-role-key="master" style="color:#a0a4a8; margin:0; font-size:0.85em; text-align:center;">Master Student</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/张旭东.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Xudong Zhang" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Xudong Zhang</h4>
-                <p class="person-role" data-role-key="master" style="color:#a0a4a8; margin:0; font-size:0.85em; text-align:center;">Master Student</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/彭巧雪.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Qiaoxue Peng" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Qiaoxue Peng</h4>
-                <p class="person-role" data-role-key="master" style="color:#a0a4a8; margin:0; font-size:0.85em; text-align:center;">Master Student</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/韦鑫海.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Xinhai Wei" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Xinhai Wei</h4>
-                <p class="person-role" data-role-key="master" style="color:#a0a4a8; margin:0; font-size:0.85em; text-align:center;">Master Student</p>
-              </div>
-
-              <!-- Research Assistant -->
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/方靖怡.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Jingyi Fang" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Jingyi Fang</h4>
-                <p class="person-role" data-role-key="assistant" style="color:#a0a4a8; margin:0; font-size:0.85em; text-align:center;">Research Assistant</p>
-              </div>
-
-              <!-- Visiting Students -->
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/李江萌.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Jiangmeng Li" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Jiangmeng Li</h4>
-                <p class="person-role" data-role-key="visiting" style="color:#b0b4b8; margin:0; font-size:0.85em; text-align:center;">Visiting Student</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/张力文.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Liwen Zhang" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Liwen Zhang</h4>
-                <p class="person-role" data-role-key="visiting" style="color:#b0b4b8; margin:0; font-size:0.85em; text-align:center;">Visiting Student</p>
-              </div>
-
-              <div style="text-align:center;" data-person-card>
-                <div
-                  style="width:150px; height:150px; margin:0 auto 10px; border-radius:50%; overflow:hidden; border:3px solid #c59a6d;">
-                  <img src="./people/photo/丁佳怡.jpg"
-                    style="width:100%; height:100%; object-fit:cover;" alt="Jiayi Ding" />
-                </div>
-                <h4 class="person-name" style="color:#424a51; margin:5px 0; font-size:1em; text-align:center;">Jiayi Ding</h4>
-                <p class="person-role" data-role-key="visiting" style="color:#b0b4b8; margin:0; font-size:0.85em; text-align:center;">Visiting Student</p>
-              </div>
-            </div>
-
-            <div style="text-align:center; margin-top:3em;">
-              <a href="./people.html" id="peopleCta"
-                style="background:#c59a6d; color:#FFF; text-transform:uppercase; letter-spacing:0.1em; padding:0.8em 2em; text-decoration:none; display:inline-block;">Meet
-                Our Team</a>
-            </div>
-          </div>
-
-        </section>
-        <footer class="page__meta"></footer>
-      </div>
-    </article>
-  </div>
-  <div class="page__footer">
-    <footer>
-      <!-- start custom footer snippets -->
-      <!-- <a href="/sitemap/">Sitemap</a> -->
-      <!-- end custom footer snippets -->
-      <div class="page__footer-copyright">
-        &copy; 2024 Yongqiang Zhang's Homepage. Powered by
-        <a href="http://jekyllrb.com" rel="nofollow"> Jekyll </a>
-        &amp;
-        <a href="https://github.com/academicpages/academicpages.github.io">
-          AcademicPages
+    <a class="hero__ticker" href="/news/2026-eurasc-fellow.html" >
+          <span class="hero__ticker-tag"><span class="t-en">Latest</span><span class="t-zh" lang="zh-CN">最新</span></span>
+          <span class="hero__ticker-text"><span class="t-en">Prof. Yongqiang Zhang elected as a Non-European Fellow of EurASc</span><span class="t-zh" lang="zh-CN">热烈祝贺张永强研究员当选欧洲科学院外籍院士</span></span>
+          <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
         </a>
-        , a fork of
-        <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">
-          Minimal Mistakes
-        </a>
-        .
+  </section>
+    <div class="marquee marquee--journals" data-marquee aria-hidden="true"><div class="marquee__track"><span>Science</span><i aria-hidden="true"></i><span>Nature Geoscience</span><i aria-hidden="true"></i><span>Nature Water</span><i aria-hidden="true"></i><span>Nature Communications</span><i aria-hidden="true"></i><span>Remote Sensing of Environment</span><i aria-hidden="true"></i><span>Water Resources Research</span><i aria-hidden="true"></i><span>Geophysical Research Letters</span><i aria-hidden="true"></i><span>Earth System Science Data</span><i aria-hidden="true"></i><span>Journal of Hydrology</span><i aria-hidden="true"></i><span>Science</span><i aria-hidden="true"></i><span>Nature Geoscience</span><i aria-hidden="true"></i><span>Nature Water</span><i aria-hidden="true"></i><span>Nature Communications</span><i aria-hidden="true"></i><span>Remote Sensing of Environment</span><i aria-hidden="true"></i><span>Water Resources Research</span><i aria-hidden="true"></i><span>Geophysical Research Letters</span><i aria-hidden="true"></i><span>Earth System Science Data</span><i aria-hidden="true"></i><span>Journal of Hydrology</span><i aria-hidden="true"></i><span>Science</span><i aria-hidden="true"></i><span>Nature Geoscience</span><i aria-hidden="true"></i><span>Nature Water</span><i aria-hidden="true"></i><span>Nature Communications</span><i aria-hidden="true"></i><span>Remote Sensing of Environment</span><i aria-hidden="true"></i><span>Water Resources Research</span><i aria-hidden="true"></i><span>Geophysical Research Letters</span><i aria-hidden="true"></i><span>Earth System Science Data</span><i aria-hidden="true"></i><span>Journal of Hydrology</span><i aria-hidden="true"></i><span>Science</span><i aria-hidden="true"></i><span>Nature Geoscience</span><i aria-hidden="true"></i><span>Nature Water</span><i aria-hidden="true"></i><span>Nature Communications</span><i aria-hidden="true"></i><span>Remote Sensing of Environment</span><i aria-hidden="true"></i><span>Water Resources Research</span><i aria-hidden="true"></i><span>Geophysical Research Letters</span><i aria-hidden="true"></i><span>Earth System Science Data</span><i aria-hidden="true"></i><span>Journal of Hydrology</span><i aria-hidden="true"></i></div></div>
+    <section class="statement plane plane--paper">
+    <div class="wrap">
+      <p class="eyebrow"><span class="eyebrow__i">/01</span><span class="t-en">What we do</span><span class="t-zh" lang="zh-CN">我们做什么</span></p>
+      <p class="statement__text" data-module="scrollwords"><span class="t-en">We investigate how warming and human activity are reshaping the water cycle, and turn satellites, models and AI into open data that anyone can use.</span><span class="t-zh" lang="zh-CN">我们研究气候变暖与人类活动如何重塑水循环，并将卫星、模型与人工智能转化为人人可用的开放数据。</span></p>
+    </div>
+    <ul class="tiles">
+      <li class="tile-stat tile-stat--paper-2" data-reveal>
+          <span class="tile-stat__n" data-count="24000" data-suffix="+">24,000+</span>
+          <span class="tile-stat__l"><span class="t-en">Citations</span><span class="t-zh" lang="zh-CN">谷歌学术引用</span></span>
+        </li><li class="tile-stat tile-stat--ink" data-reveal>
+          <span class="tile-stat__n" data-count="75" data-suffix="">75</span>
+          <span class="tile-stat__l"><span class="t-en">H-index</span><span class="t-zh" lang="zh-CN">H 指数</span></span>
+        </li><li class="tile-stat tile-stat--blue" data-reveal>
+          <span class="tile-stat__n" data-count="260" data-suffix="">260</span>
+          <span class="tile-stat__l"><span class="t-en">Peer-reviewed papers</span><span class="t-zh" lang="zh-CN">同行评审论文</span></span>
+        </li><li class="tile-stat tile-stat--lime" data-reveal>
+          <span class="tile-stat__n" data-count="10" data-suffix="">10</span>
+          <span class="tile-stat__l"><span class="t-en">ESI highly cited papers</span><span class="t-zh" lang="zh-CN">ESI 高被引论文</span></span>
+        </li>
+    </ul>
+  </section>
+    <section class="budget plane plane--ink" id="water-budget" data-module="budget">
+    <div class="wrap">
+      <div class="budget__head">
+        <div>
+          <p class="eyebrow"><span class="eyebrow__i">/02</span><span class="t-en">Signature result</span><span class="t-zh" lang="zh-CN">代表性成果</span></p>
+          <h2 class="title" data-reveal><span class="t-en">Every drop,</span><span class="t-zh" lang="zh-CN">每一滴水，</span><br><span class="dim"><span class="t-en">accounted for.</span><span class="t-zh" lang="zh-CN">都有账可查。</span></span></h2>
+        </div>
+        <div class="budget__intro">
+          <p data-reveal><span class="t-en">By constraining Earth system models with river-flow observations from 50 large basins, our 2026 Nature Geoscience study redrew the global water budget. Explore it below.</span><span class="t-zh" lang="zh-CN">我们 2026 年发表于 Nature Geoscience 的研究利用全球 50 条大型河流的实测径流约束地球系统模型，重新绘制了全球水量收支。您可以在下方亲自探索。</span></p>
+          <div class="switch" role="radiogroup" aria-label="Period">
+            <button type="button" role="radio" aria-checked="true" data-period="historical"><b><span class="t-en">Historical</span><span class="t-zh" lang="zh-CN">历史时期</span></b><span>1980–2014</span></button>
+            <button type="button" role="radio" aria-checked="false" data-period="future"><b><span class="t-en">Future</span><span class="t-zh" lang="zh-CN">未来时期</span></b><span>2051–2100, SSP2-4.5</span></button>
+          </div>
+        </div>
       </div>
-    </footer>
+
+      <div class="budget__stage">
+        <p class="budget__unit"><span class="t-en">10³ km³ per year</span><span class="t-zh" lang="zh-CN">10³ km³/年</span></p>
+        <svg class="budget__svg" data-budget-svg viewBox="0 0 1160 620" role="group" aria-label="Sankey diagram of the land water budget. Values are listed in the data table below."><g class="bg-links"><path class="link link--green" data-link="land_et" d="M14 8C209.5 8 209.5 8 405 8L405 326.39898132427845C209.5 326.39898132427845 209.5 326.39898132427845 14 326.39898132427845Z" tabindex="0" role="button" aria-label="Land evapotranspiration"/><path class="link link--blue" data-link="river_flow" d="M14 326.39898132427845C209.5 326.39898132427845 209.5 356.39898132427845 405 356.39898132427845L405 525.5755517826825C209.5 525.5755517826825 209.5 495.5755517826825 14 495.5755517826825Z" tabindex="0" role="button" aria-label="Total river flow"/><path class="link link--green is-detail" data-link="share_0" d="M419 8C684.5 8 684.5 8 950 8L950 108.93247707979626C684.5 108.93247707979626 684.5 108.93247707979626 419 108.93247707979626Z" tabindex="0" role="button" aria-label="Shrubland"/><path class="link link--green is-detail" data-link="share_1" d="M419 108.93247707979626C684.5 108.93247707979626 684.5 117.93247707979626 950 117.93247707979626L950 212.17857555178267C684.5 212.17857555178267 684.5 203.17857555178267 419 203.17857555178267Z" tabindex="0" role="button" aria-label="Forest"/><path class="link link--green is-detail" data-link="share_2" d="M419 203.17857555178267C684.5 203.17857555178267 684.5 221.17857555178267 950 221.17857555178267L950 281.6743820033956C684.5 281.6743820033956 684.5 263.6743820033956 419 263.6743820033956Z" tabindex="0" role="button" aria-label="Grassland"/><path class="link link--green is-detail" data-link="share_3" d="M419 263.6743820033956C684.5 263.6743820033956 684.5 290.6743820033956 950 290.6743820033956L950 329.83745670628184C684.5 329.83745670628184 684.5 302.83745670628184 419 302.83745670628184Z" tabindex="0" role="button" aria-label="Cropland"/><path class="link link--green is-detail" data-link="share_4" d="M419 302.83745670628184C684.5 302.83745670628184 684.5 338.83745670628184 950 338.83745670628184L950 351.2550169779287C684.5 351.2550169779287 684.5 315.2550169779287 419 315.2550169779287Z" tabindex="0" role="button" aria-label="Others"/><path class="link link--green is-detail" data-link="share_5" d="M419 315.2550169779287C684.5 315.2550169779287 684.5 360.2550169779287 950 360.2550169779287L950 365.6677996604414C684.5 365.6677996604414 684.5 320.6677996604414 419 320.6677996604414Z" tabindex="0" role="button" aria-label="Wetland"/><path class="link link--green is-detail" data-link="share_6" d="M419 320.6677996604414C684.5 320.6677996604414 684.5 374.6677996604414 950 374.6677996604414L950 380.08058234295413C684.5 380.08058234295413 684.5 326.08058234295413 419 326.08058234295413Z" tabindex="0" role="button" aria-label="Water"/><path class="link link--blue is-detail" data-link="subsurface_flow" d="M419 356.39898132427845C684.5 356.39898132427845 684.5 410.08058234295413 950 410.08058234295413L950 522.1438348972423C684.5 522.1438348972423 684.5 468.46223387856656 419 468.46223387856656Z" tabindex="0" role="button" aria-label="Subsurface flow"/><path class="link link--blue is-detail" data-link="surface_flow" d="M419 468.46223387856656C684.5 468.46223387856656 684.5 531.1438348972423 950 531.1438348972423L950 588.2571528013583C684.5 588.2571528013583 684.5 525.5755517826825 419 525.5755517826825Z" tabindex="0" role="button" aria-label="Surface flow"/></g><g class="bg-spines" aria-hidden="true"><path class="spine" data-spine="land_et" d="M14 167.19949066213923C209.5 167.19949066213923 209.5 167.19949066213923 405 167.19949066213923" style="stroke-width:3px"/><path class="spine" data-spine="river_flow" d="M14 410.9872665534805C209.5 410.9872665534805 209.5 440.9872665534805 405 440.9872665534805" style="stroke-width:3px"/><path class="spine is-detail" data-spine="share_0" d="M419 58.46623853989813C684.5 58.46623853989813 684.5 58.46623853989813 950 58.46623853989813" style="stroke-width:3px"/><path class="spine is-detail" data-spine="share_1" d="M419 156.05552631578948C684.5 156.05552631578948 684.5 165.05552631578948 950 165.05552631578948" style="stroke-width:3px"/><path class="spine is-detail" data-spine="share_2" d="M419 233.42647877758913C684.5 233.42647877758913 684.5 251.42647877758913 950 251.42647877758913" style="stroke-width:3px"/><path class="spine is-detail" data-spine="share_3" d="M419 283.2559193548387C684.5 283.2559193548387 684.5 310.2559193548387 950 310.2559193548387" style="stroke-width:2.7973624787775893px"/><path class="spine is-detail" data-spine="share_4" d="M419 309.04623684210526C684.5 309.04623684210526 684.5 345.04623684210526 950 345.04623684210526" style="stroke-width:1.4px"/><path class="spine is-detail" data-spine="share_5" d="M419 317.96140831918507C684.5 317.96140831918507 684.5 362.96140831918507 950 362.96140831918507" style="stroke-width:1.4px"/><path class="spine is-detail" data-spine="share_6" d="M419 323.3741910016978C684.5 323.3741910016978 684.5 377.3741910016978 950 377.3741910016978" style="stroke-width:1.4px"/><path class="spine is-detail" data-spine="subsurface_flow" d="M419 412.43060760142254C684.5 412.43060760142254 684.5 466.1122086200982 950 466.1122086200982" style="stroke-width:3px"/><path class="spine is-detail" data-spine="surface_flow" d="M419 497.01889283062457C684.5 497.01889283062457 684.5 559.7004938493003 950 559.7004938493003" style="stroke-width:3px"/></g><g aria-hidden="true"><rect class="node node--paper" data-node="land_precipitation" x="0" y="8" width="14" height="487.5755517826825"/><rect class="node node--green" data-node="land_et" x="405" y="8" width="14" height="318.39898132427845"/><rect class="node node--blue" data-node="river_flow" x="405" y="356.39898132427845" width="14" height="169.17657045840406"/><rect class="node node--green is-detail" data-node="share_0" x="950" y="8" width="14" height="100.93247707979626"/><rect class="node node--green is-detail" data-node="share_1" x="950" y="117.93247707979626" width="14" height="94.24609847198643"/><rect class="node node--green is-detail" data-node="share_2" x="950" y="221.17857555178267" width="14" height="60.49580645161291"/><rect class="node node--green is-detail" data-node="share_3" x="950" y="290.6743820033956" width="14" height="39.16307470288625"/><rect class="node node--green is-detail" data-node="share_4" x="950" y="338.83745670628184" width="14" height="12.41756027164686"/><rect class="node node--green is-detail" data-node="share_5" x="950" y="360.2550169779287" width="14" height="5.412782682512734"/><rect class="node node--green is-detail" data-node="share_6" x="950" y="374.6677996604414" width="14" height="5.412782682512734"/><rect class="node node--blue is-detail" data-node="subsurface_flow" x="950" y="410.08058234295413" width="14" height="112.06325255428813"/><rect class="node node--blue is-detail" data-node="surface_flow" x="950" y="531.1438348972423" width="14" height="57.11331790411595"/></g><g class="bg-labels" aria-hidden="true"><text class="value on-green" x="32" y="88" data-value="land_precipitation">112.4</text><text class="cap on-green" x="32" y="38" data-label="land_precipitation"><tspan class="t-en">Land precipitation</tspan><tspan class="t-zh">陆地降水</tspan></text><text class="value on-detail" x="437" y="88" data-value="land_et">73.4</text><text class="cap on-detail" x="437" y="38" data-label="land_et"><tspan class="t-en">Land evapotranspiration</tspan><tspan class="t-zh">陆地蒸散发</tspan></text><text class="value on-blue" x="437" y="436.39898132427845" data-value="river_flow">39.1</text><text class="cap on-blue" x="437" y="386.39898132427845" data-label="river_flow"><tspan class="t-en">Total river flow</tspan><tspan class="t-zh">河川总流量</tspan></text><text class="row is-detail" x="976" y="62.46623853989813" data-row="share_0"><tspan class="t-en">Shrubland</tspan><tspan class="t-zh">灌丛</tspan><tspan class="row__v" dx="6">31.7%</tspan></text><text class="row is-detail" x="976" y="169.05552631578948" data-row="share_1"><tspan class="t-en">Forest</tspan><tspan class="t-zh">森林</tspan><tspan class="row__v" dx="6">29.6%</tspan></text><text class="row is-detail" x="976" y="255.42647877758913" data-row="share_2"><tspan class="t-en">Grassland</tspan><tspan class="t-zh">草地</tspan><tspan class="row__v" dx="6">19%</tspan></text><text class="row is-detail" x="976" y="314.2559193548387" data-row="share_3"><tspan class="t-en">Cropland</tspan><tspan class="t-zh">农田</tspan><tspan class="row__v" dx="6">12.3%</tspan></text><text class="row is-detail" x="976" y="349.04623684210526" data-row="share_4"><tspan class="t-en">Others</tspan><tspan class="t-zh">其他</tspan><tspan class="row__v" dx="6">3.9%</tspan></text><text class="row is-detail" x="976" y="366.96140831918507" data-row="share_5"><tspan class="t-en">Wetland</tspan><tspan class="t-zh">湿地</tspan><tspan class="row__v" dx="6">1.7%</tspan></text><text class="row is-detail" x="976" y="381.3741910016978" data-row="share_6"><tspan class="t-en">Water</tspan><tspan class="t-zh">水体</tspan><tspan class="row__v" dx="6">1.7%</tspan></text><text class="row is-detail" x="976" y="470.1122086200982" data-row="subsurface_flow"><tspan class="t-en">Subsurface</tspan><tspan class="t-zh">地下流</tspan><tspan class="row__v" dx="6">25.9</tspan></text><text class="row is-detail" x="976" y="563.7004938493003" data-row="surface_flow"><tspan class="t-en">Surface</tspan><tspan class="t-zh">地表流</tspan><tspan class="row__v" dx="6">13.2</tspan></text></g></svg>
+        <div class="budget__tip" data-budget-tip hidden></div>
+        <p class="budget__note" data-budget-note hidden><span class="t-en">Land-cover and surface / subsurface splits are published for the historical period only.</span><span class="t-zh" lang="zh-CN">土地覆盖与地表/地下径流的分配仅发表了历史时期的结果。</span></p>
+      </div>
+
+      <div class="budget__below">
+        <div class="scale">
+          <h3 class="scale__title"><span class="t-en">Land against ocean, on one scale</span><span class="t-zh" lang="zh-CN">陆地与海洋，同一标尺</span></h3>
+          <ul>
+            <li data-scale="ocean_evaporation">
+                <span class="scale__label"><span class="t-en">Ocean evaporation</span><span class="t-zh" lang="zh-CN">海洋蒸发</span></span>
+                <span class="scale__track"><i class="scale__bar scale__bar--paper" style="--v:0.9755"></i></span>
+                <span class="scale__value"><b data-scale-value>434.6</b><span>± <span data-scale-error>21.3</span></span></span>
+              </li><li data-scale="ocean_precipitation">
+                <span class="scale__label"><span class="t-en">Ocean precipitation</span><span class="t-zh" lang="zh-CN">海洋降水</span></span>
+                <span class="scale__track"><i class="scale__bar scale__bar--paper" style="--v:0.8878"></i></span>
+                <span class="scale__value"><b data-scale-value>395.5</b><span>± <span data-scale-error>20.6</span></span></span>
+              </li><li data-scale="land_precipitation">
+                <span class="scale__label"><span class="t-en">Land precipitation</span><span class="t-zh" lang="zh-CN">陆地降水</span></span>
+                <span class="scale__track"><i class="scale__bar scale__bar--paper" style="--v:0.2523"></i></span>
+                <span class="scale__value"><b data-scale-value>112.4</b><span>± <span data-scale-error>4.2</span></span></span>
+              </li><li data-scale="land_et">
+                <span class="scale__label"><span class="t-en">Land evapotranspiration</span><span class="t-zh" lang="zh-CN">陆地蒸散发</span></span>
+                <span class="scale__track"><i class="scale__bar scale__bar--green" style="--v:0.1648"></i></span>
+                <span class="scale__value"><b data-scale-value>73.4</b><span>± <span data-scale-error>6.2</span></span></span>
+              </li><li data-scale="river_flow">
+                <span class="scale__label"><span class="t-en">Total river flow</span><span class="t-zh" lang="zh-CN">河川总流量</span></span>
+                <span class="scale__track"><i class="scale__bar scale__bar--blue" style="--v:0.0878"></i></span>
+                <span class="scale__value"><b data-scale-value>39.1</b><span>± <span data-scale-error>5.4</span></span></span>
+              </li>
+          </ul>
+        </div>
+        <ul class="facts">
+          <li><b>66%</b><span><span class="t-en">of river flow arrives through the subsurface</span><span class="t-zh" lang="zh-CN">的河川流量来自地下径流</span></span></li>
+          <li><b>12.3%</b><span><span class="t-en">of land evapotranspiration comes from cropland</span><span class="t-zh" lang="zh-CN">的陆地蒸散发来自农田</span></span></li>
+          <li><b>+7.8</b><span><span class="t-en">mm of river flow per year for each 1 °C of warming (± 5.5)</span><span class="t-zh" lang="zh-CN">每升温 1 °C，河川流量增加的毫米/年（± 5.5）</span></span></li>
+        </ul>
+      </div>
+
+      <details class="budget__table">
+        <summary><span class="t-en">View the numbers as a table</span><span class="t-zh" lang="zh-CN">以表格查看数据</span></summary>
+        <div class="table-scroll"><table>
+          <caption><span class="t-en">All fluxes in 10³ km³ per year, mean ± uncertainty</span><span class="t-zh" lang="zh-CN">全部通量单位为 10³ km³/年，均值 ± 不确定性</span></caption>
+          <thead><tr><th scope="col"><span class="t-en">Flux</span><span class="t-zh" lang="zh-CN">通量</span></th><th scope="col"><span class="t-en">Historical</span><span class="t-zh" lang="zh-CN">历史时期</span> (1980–2014)</th><th scope="col"><span class="t-en">Future</span><span class="t-zh" lang="zh-CN">未来时期</span> (2051–2100, SSP2-4.5)</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><span class="t-en">Land precipitation</span><span class="t-zh" lang="zh-CN">陆地降水</span></th><td>112.4 ± 4.2</td><td>117.8 ± 5.3</td></tr><tr><th scope="row"><span class="t-en">Land evapotranspiration</span><span class="t-zh" lang="zh-CN">陆地蒸散发</span></th><td>73.4 ± 6.2</td><td>75.7 ± 6.5</td></tr><tr><th scope="row"><span class="t-en">Total river flow</span><span class="t-zh" lang="zh-CN">河川总流量</span></th><td>39.1 ± 5.4</td><td>42.1 ± 5.7</td></tr><tr><th scope="row"><span class="t-en">Surface flow</span><span class="t-zh" lang="zh-CN">地表流</span></th><td>13.2 ± 3.6</td><td>—</td></tr><tr><th scope="row"><span class="t-en">Subsurface flow</span><span class="t-zh" lang="zh-CN">地下流</span></th><td>25.9 ± 5.1</td><td>—</td></tr><tr><th scope="row"><span class="t-en">Ocean precipitation</span><span class="t-zh" lang="zh-CN">海洋降水</span></th><td>395.5 ± 20.6</td><td>404.7 ± 21.7</td></tr><tr><th scope="row"><span class="t-en">Ocean evaporation</span><span class="t-zh" lang="zh-CN">海洋蒸发</span></th><td>434.6 ± 21.3</td><td>445.5 ± 22.9</td></tr>
+            <tr><th scope="row"><span class="t-en">ET from shrubland</span><span class="t-zh" lang="zh-CN">灌丛蒸散发占比</span></th><td>31.7% ± 1.2%</td><td>—</td></tr><tr><th scope="row"><span class="t-en">ET from forest</span><span class="t-zh" lang="zh-CN">森林蒸散发占比</span></th><td>29.6% ± 1.9%</td><td>—</td></tr><tr><th scope="row"><span class="t-en">ET from grassland</span><span class="t-zh" lang="zh-CN">草地蒸散发占比</span></th><td>19% ± 1%</td><td>—</td></tr><tr><th scope="row"><span class="t-en">ET from cropland</span><span class="t-zh" lang="zh-CN">农田蒸散发占比</span></th><td>12.3% ± 0.9%</td><td>—</td></tr><tr><th scope="row"><span class="t-en">ET from others</span><span class="t-zh" lang="zh-CN">其他蒸散发占比</span></th><td>3.9% ± 0.3%</td><td>—</td></tr><tr><th scope="row"><span class="t-en">ET from wetland</span><span class="t-zh" lang="zh-CN">湿地蒸散发占比</span></th><td>1.7% ± 0.3%</td><td>—</td></tr><tr><th scope="row"><span class="t-en">ET from water</span><span class="t-zh" lang="zh-CN">水体蒸散发占比</span></th><td>1.7% ± 0.6%</td><td>—</td></tr>
+          </tbody>
+        </table></div>
+      </details>
+
+      <p class="budget__source"><span class="t-en">Source:</span><span class="t-zh" lang="zh-CN">来源：</span> <a class="link" href="https://doi.org/10.1038/s41561-025-01897-9" target="_blank" rel="noopener">Zhang et al. (2026), Nature Geoscience</a></p>
+    </div>
+    <script type="application/json" id="budget-data">{"unit_en":"10³ km³ per year","unit_zh":"10³ km³/年","periods":{"historical":{"label_en":"Historical","label_zh":"历史时期","range":"1980–2014"},"future":{"label_en":"Future","label_zh":"未来时期","range":"2051–2100, SSP2-4.5"}},"flows":{"land_precipitation":{"en":"Land precipitation","zh":"陆地降水","historical":[112.4,4.2],"future":[117.8,5.3]},"land_et":{"en":"Land evapotranspiration","zh":"陆地蒸散发","historical":[73.4,6.2],"future":[75.7,6.5]},"river_flow":{"en":"Total river flow","zh":"河川总流量","historical":[39.1,5.4],"future":[42.1,5.7]},"surface_flow":{"en":"Surface flow","zh":"地表流","historical":[13.2,3.6],"future":null},"subsurface_flow":{"en":"Subsurface flow","zh":"地下流","historical":[25.9,5.1],"future":null},"ocean_precipitation":{"en":"Ocean precipitation","zh":"海洋降水","historical":[395.5,20.6],"future":[404.7,21.7]},"ocean_evaporation":{"en":"Ocean evaporation","zh":"海洋蒸发","historical":[434.6,21.3],"future":[445.5,22.9]}},"et_shares":[{"en":"Shrubland","zh":"灌丛","share":31.7,"error":1.2},{"en":"Forest","zh":"森林","share":29.6,"error":1.9},{"en":"Grassland","zh":"草地","share":19,"error":1},{"en":"Cropland","zh":"农田","share":12.3,"error":0.9},{"en":"Others","zh":"其他","share":3.9,"error":0.3},{"en":"Wetland","zh":"湿地","share":1.7,"error":0.3},{"en":"Water","zh":"水体","share":1.7,"error":0.6}],"warming":{"per_degree":[7.8,5.5],"unit":"mm/yr per °C"},"source":{"citation":"Zhang et al. (2026), Nature Geoscience","url":"https://doi.org/10.1038/s41561-025-01897-9"}}</script>
+  </section>
+    <section class="themes plane plane--paper">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow"><span class="eyebrow__i">/03</span><span class="t-en">Research</span><span class="t-zh" lang="zh-CN">研究方向</span></p>
+          <h2 class="title" data-reveal><span class="t-en">Three currents,</span><span class="t-zh" lang="zh-CN">三条主线，</span><br><span class="dim"><span class="t-en">one water cycle.</span><span class="t-zh" lang="zh-CN">一个水循环。</span></span></h2>
+        </div>
+        <a class="btn " href="/research.html"  data-magnetic><span><span class="t-en">All research</span><span class="t-zh" lang="zh-CN">全部研究</span></span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      </div>
+    </div>
+    <div class="panels" data-module="panels">
+      <article class="panel panel--blue is-open" tabindex="0">
+          <div class="panel__head">
+            <span class="panel__i">01</span>
+            <svg class="pictogram" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="10"><path class="spin" d="M100 20a80 80 0 0 1 80 80"/><path class="spin spin--b" d="M100 180a80 80 0 0 1-80-80"/></g><path d="M100 58c20 26 32 40 32 56a32 32 0 0 1-64 0c0-16 12-30 32-56z" fill="currentColor"/></svg>
+          </div>
+          <div class="panel__body">
+            <h3><span class="t-en">Water Cycle and Ecohydrology</span><span class="t-zh" lang="zh-CN">水循环和生态水文</span></h3>
+            <div class="panel__more">
+              <div>
+                <p><span class="t-en">The team investigates how global warming and human activities are altering fundamental water cycle processes. They seek to reconcile different data sources (like satellite, model (such as PML-V2 evapotranspiration and HBV-PML hydrological models), and ground observations) to better quantify these changes, asking critical questions such as why parts of the water cycle appear to be stagnating despite warming, and how human actions reshape water availability and ecosystem functions—like the roles of forests as “sponges” or “pumps”—at regional and global scales.</span><span class="t-zh" lang="zh-CN">团队研究全球变暖和人类活动如何改变水循环的基本过程，融合卫星、模型（如 PML-V2 蒸散发模型与 HBV-PML 水文模型）和地面观测以更好地量化这些变化，并回答关键问题：为何升温背景下部分水循环过程反而趋于停滞，人类活动又如何在区域和全球尺度上重塑水资源可用性和生态系统功能，例如森林究竟扮演“海绵”还是“水泵”的角色。</span></p>
+                <ul class="chips chips--static"><li>PML_v2</li><li>HBV-PML</li></ul>
+                <a class="link" href="/research.html#water-cycle"><span class="t-en">Read more</span><span class="t-zh" lang="zh-CN">了解更多</span> <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </article><article class="panel panel--coral" tabindex="0">
+          <div class="panel__head">
+            <span class="panel__i">02</span>
+            <svg class="pictogram" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="10"><path class="wave" d="M0 70c25-18 50-18 75 0s50 18 75 0 50-18 75 0"/><path class="wave wave--b" d="M-25 110c25-18 50-18 75 0s50 18 75 0 50-18 75 0"/><path class="wave" d="M0 150c25-18 50-18 75 0s50 18 75 0 50-18 75 0"/></g></svg>
+          </div>
+          <div class="panel__body">
+            <h3><span class="t-en">Water-Related Disasters and Security</span><span class="t-zh" lang="zh-CN">水灾害和水安全</span></h3>
+            <div class="panel__more">
+              <div>
+                <p><span class="t-en">This theme focuses on the mechanisms and impacts of extreme hydrological events, including droughts and floods. The group studies how droughts develop and propagate through different environmental layers, how flood patterns have evolved in China over decades, and how to enhance societal and ecological resilience to water-related extremes in a changing climate.</span><span class="t-zh" lang="zh-CN">这一方向聚焦干旱和洪水等极端水文事件的机理与影响，研究干旱如何在不同环境圈层中发展和传播，中国洪水格局在数十年间如何演变，以及如何在气候变化下增强社会和生态系统对水相关极端事件的韧性。</span></p>
+                <ul class="chips chips--static"><li>Forest Fire &amp; Flood Ecological-Hydrological Effects</li></ul>
+                <a class="link" href="/research.html#water-security"><span class="t-en">Read more</span><span class="t-zh" lang="zh-CN">了解更多</span> <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </article><article class="panel panel--lime" tabindex="0">
+          <div class="panel__head">
+            <span class="panel__i">03</span>
+            <svg class="pictogram" viewBox="0 0 200 200" aria-hidden="true"><g fill="currentColor"><rect class="px" style="--i:0" x="90" y="20" width="17" height="17"/><rect class="px" style="--i:1" x="70" y="50" width="17" height="17"/><rect class="px" style="--i:2" x="90" y="50" width="17" height="17"/><rect class="px" style="--i:3" x="110" y="50" width="17" height="17"/><rect class="px" style="--i:4" x="50" y="80" width="17" height="17"/><rect class="px" style="--i:5" x="70" y="80" width="17" height="17"/><rect class="px" style="--i:6" x="90" y="80" width="17" height="17"/><rect class="px" style="--i:7" x="110" y="80" width="17" height="17"/><rect class="px" style="--i:8" x="130" y="80" width="17" height="17"/><rect class="px" style="--i:9" x="30" y="110" width="17" height="17"/><rect class="px" style="--i:10" x="50" y="110" width="17" height="17"/><rect class="px" style="--i:11" x="70" y="110" width="17" height="17"/><rect class="px" style="--i:12" x="90" y="110" width="17" height="17"/><rect class="px" style="--i:13" x="110" y="110" width="17" height="17"/><rect class="px" style="--i:14" x="130" y="110" width="17" height="17"/><rect class="px" style="--i:15" x="150" y="110" width="17" height="17"/><rect class="px" style="--i:16" x="50" y="140" width="17" height="17"/><rect class="px" style="--i:17" x="70" y="140" width="17" height="17"/><rect class="px" style="--i:18" x="90" y="140" width="17" height="17"/><rect class="px" style="--i:19" x="110" y="140" width="17" height="17"/><rect class="px" style="--i:20" x="130" y="140" width="17" height="17"/><rect class="px" style="--i:21" x="70" y="170" width="17" height="17"/><rect class="px" style="--i:22" x="90" y="170" width="17" height="17"/><rect class="px" style="--i:23" x="110" y="170" width="17" height="17"/></g></svg>
+          </div>
+          <div class="panel__body">
+            <h3><span class="t-en">Innovating Water Science</span><span class="t-zh" lang="zh-CN">水文水资源与新技术</span></h3>
+            <div class="panel__more">
+              <div>
+                <p><span class="t-en">The group leverages advanced technologies such as high-resolution remote sensing and artificial intelligence (AI) to improve the monitoring and prediction of hydrological processes. They develop fine-scale datasets for evapotranspiration and vegetation productivity, integrate AI with physical models to enable better forecasting in ungauged basins, and work toward real-time flood prediction systems that support water resources management under climate change.</span><span class="t-zh" lang="zh-CN">团队利用高分辨率遥感和人工智能等先进技术改进水文过程的监测与预测：研发蒸散发和植被生产力的精细尺度数据集，融合人工智能与物理模型以提升无资料流域的预报能力，并致力于发展实时洪水预报系统，为气候变化下的水资源管理提供支撑。</span></p>
+                <ul class="chips chips--static"><li>AI for Hydrology Modeling</li><li>CAS-Canglong</li></ul>
+                <a class="link" href="/research.html#water-innovation"><span class="t-en">Read more</span><span class="t-zh" lang="zh-CN">了解更多</span> <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </article>
+    </div>
+  </section>
+    <section class="highlights plane plane--paper">
+    <div class="wrap sec-head">
+      <div>
+        <p class="eyebrow"><span class="eyebrow__i">/04</span><span class="t-en">Highlights</span><span class="t-zh" lang="zh-CN">研究亮点</span></p>
+        <h2 class="title" data-reveal><span class="t-en">Recent</span><span class="t-zh" lang="zh-CN">近期</span> <span class="dim"><span class="t-en">currents.</span><span class="t-zh" lang="zh-CN">动态。</span></span></h2>
+      </div>
+      <a class="btn " href="/news.html"  data-magnetic><span><span class="t-en">All news</span><span class="t-zh" lang="zh-CN">全部新闻</span></span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+    </div>
+    <ul class="strip" data-module="dragscroll" tabindex="0" aria-label="Highlights, scrollable">
+      <li class="card">
+          <a href="/news/2026-eurasc-fellow.html"  data-cursor="Read">
+            <span class="card__media"><img class="" src="/media/47431d51b2f6a282-556.webp" srcset="/media/47431d51b2f6a282-480.webp 480w, /media/47431d51b2f6a282-556.webp 556w" sizes="(max-width: 720px) 82vw, 34vw" width="556" height="764" alt="" loading="lazy" decoding="async" style="background-color:#f8f8f8;"></span>
+            <span class="card__meta"><span><span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></span><span>2026</span></span>
+            <span class="card__title"><span class="t-en">Prof. Yongqiang Zhang elected as a Non-European Fellow of EurASc</span><span class="t-zh" lang="zh-CN">热烈祝贺张永强研究员当选欧洲科学院外籍院士</span></span>
+          </a>
+        </li><li class="card">
+          <a href="/news/2026-nature-geoscience-water-cycle.html"  data-cursor="Read">
+            <span class="card__media"><img class="" src="/media/1f65a86024c625cd-1080.webp" srcset="/media/1f65a86024c625cd-480.webp 480w, /media/1f65a86024c625cd-960.webp 960w, /media/1f65a86024c625cd-1080.webp 1080w" sizes="(max-width: 720px) 82vw, 34vw" width="1080" height="655" alt="" loading="lazy" decoding="async" style="background-color:#f8f8f8;"></span>
+            <span class="card__meta"><span><span class="t-en">Paper</span><span class="t-zh" lang="zh-CN">论文</span></span><span>2026</span></span>
+            <span class="card__title"><span class="t-en">Nature Geoscience: quantifying the global water cycle more precisely and updating the classic diagram</span><span class="t-zh" lang="zh-CN">课题组在Nature Geoscience发文：更精准量化全球水循环分量，更新传统水循环示意图</span></span>
+          </a>
+        </li><li class="card">
+          <a href="https://mp.weixin.qq.com/s/qyGU64fDShVqHpm4NgYmkA" target="_blank" rel="noopener" data-cursor="Read">
+            <span class="card__media"><img class="" src="/media/ee60fccabbf1f46a-1274.webp" srcset="/media/ee60fccabbf1f46a-480.webp 480w, /media/ee60fccabbf1f46a-960.webp 960w, /media/ee60fccabbf1f46a-1274.webp 1274w" sizes="(max-width: 720px) 82vw, 34vw" width="1274" height="601" alt="" loading="lazy" decoding="async" style="background-color:#f8f8f8;"></span>
+            <span class="card__meta"><span><span class="t-en">Paper</span><span class="t-zh" lang="zh-CN">论文</span></span><span>2024</span></span>
+            <span class="card__title"><span class="t-en">Nature Communications: Direct vegetation response to recent CO₂ rise shows limited effect on global streamflow</span><span class="t-zh" lang="zh-CN">课题组在Nature Communications发文揭示CO₂-植被过程对全球径流影响</span></span>
+          </a>
+        </li><li class="card">
+          <a href="https://mp.weixin.qq.com/s/OF8j3oksXzmWIxFg55V9Fg" target="_blank" rel="noopener" data-cursor="Read">
+            <span class="card__media"><img class="" src="/media/4bcc8eaac61af942-933.webp" srcset="/media/4bcc8eaac61af942-480.webp 480w, /media/4bcc8eaac61af942-933.webp 933w" sizes="(max-width: 720px) 82vw, 34vw" width="933" height="833" alt="" loading="lazy" decoding="async" style="background-color:#f8f8f8;"></span>
+            <span class="card__meta"><span><span class="t-en">Paper</span><span class="t-zh" lang="zh-CN">论文</span></span><span>2023</span></span>
+            <span class="card__title"><span class="t-en">Science: Southern Hemisphere dominates recent decline in global water availability</span><span class="t-zh" lang="zh-CN">课题组在Science杂志发布一项关于全球陆地水资源可用性近20年变化的研究</span></span>
+          </a>
+        </li><li class="card">
+          <a href="https://mp.weixin.qq.com/s/FPQh-Iyc0B9BJTBZ4pzjqw" target="_blank" rel="noopener" data-cursor="Read">
+            <span class="card__media"><img class="" src="/media/0224eecd2dcaf54a-1155.webp" srcset="/media/0224eecd2dcaf54a-480.webp 480w, /media/0224eecd2dcaf54a-960.webp 960w, /media/0224eecd2dcaf54a-1155.webp 1155w" sizes="(max-width: 720px) 82vw, 34vw" width="1155" height="867" alt="" loading="lazy" decoding="async" style="background-color:#080808;"></span>
+            <span class="card__meta"><span><span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></span><span>2023</span></span>
+            <span class="card__title"><span class="t-en">Prof. Zhang Yongqiang awarded MSSANZ Biennial Medal and elected as Fellow</span><span class="t-zh" lang="zh-CN">张永强研究员荣获澳洲/新西兰模型模拟学会双年度奖章并入选学会会士</span></span>
+          </a>
+        </li>
+    </ul>
+  </section>
+    <section class="data-band plane plane--blue">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow"><span class="eyebrow__i">/05</span><span class="t-en">Open data</span><span class="t-zh" lang="zh-CN">开放数据</span></p>
+          <h2 class="title" data-reveal><span class="t-en">Four decades</span><span class="t-zh" lang="zh-CN">四十余年</span><br><span class="dim"><span class="t-en">of the land surface.</span><span class="t-zh" lang="zh-CN">的陆面观测。</span></span></h2>
+        </div>
+        <a class="btn btn--lime" href="/data.html"  data-magnetic><span><span class="t-en">All datasets</span><span class="t-zh" lang="zh-CN">全部数据</span></span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      </div>
+      <div class="cov" data-module="coverage">
+    <div class="cov__chart">
+      <ol class="cov__rows">
+        <li>
+            <button type="button" class="cov__row is-active" data-cov="pml-v2-2" aria-pressed="">
+              <span class="cov__name">PML_v2.2</span>
+              <span class="cov__track"><i class="cov__bar is-open" style="left:4.35%;width:95.65%"></i></span>
+              <span class="cov__range">1982 – near present</span>
+            </button>
+          </li><li>
+            <button type="button" class="cov__row" data-cov="pml-v2" aria-pressed="">
+              <span class="cov__name">PML_v2</span>
+              <span class="cov__track"><i class="cov__bar is-open" style="left:47.83%;width:52.17%"></i></span>
+              <span class="cov__range">2002.07 – near present</span>
+            </button>
+          </li><li>
+            <button type="button" class="cov__row" data-cov="pml-v2-china" aria-pressed="">
+              <span class="cov__name">PML_v2-China</span>
+              <span class="cov__track"><i class="cov__bar" style="left:43.48%;width:43.48%"></i></span>
+              <span class="cov__range">2000.02.26 – 2020.12.31</span>
+            </button>
+          </li><li>
+            <button type="button" class="cov__row" data-cov="grace-transformer-gap" aria-pressed="">
+              <span class="cov__name">GRACE-Transformer-Gap</span>
+              <span class="cov__track"><i class="cov__bar is-open" style="left:47.83%;width:52.17%"></i></span>
+              <span class="cov__range">2002 – near present</span>
+            </button>
+          </li>
+      </ol>
+      <div class="cov__axis" aria-hidden="true">
+        <span class="cov__name"></span>
+        <span class="cov__track"><span style="left:0.00%">1980</span><span style="left:21.74%">1990</span><span style="left:43.48%">2000</span><span style="left:65.22%">2010</span><span style="left:86.96%">2020</span><span class="is-now" style="left:100%">2026</span></span>
+        <span class="cov__range"></span>
+      </div>
+    </div>
+    <div class="cov__panels">
+          <article class="cov__panel is-active" data-cov-panel="pml-v2-2">
+              <h3>PML_v2.2</h3>
+              <p><span class="t-en">Coupled ET and GPP extending PML_v2 back to 1982 by integrating MODIS and AVHRR archives; calibrated at 208 flux stations.</span><span class="t-zh" lang="zh-CN">融合 MODIS 与 AVHRR 存档，将 PML_v2 的耦合蒸散发和总初级生产力数据向前延伸至 1982 年，并基于 208 个通量站点率定。</span></p>
+              <dl class="spec">
+                <div><dt><span class="t-en">Scope</span><span class="t-zh" lang="zh-CN">范围</span></dt><dd>Global</dd></div>
+                <div><dt><span class="t-en">Variables</span><span class="t-zh" lang="zh-CN">变量</span></dt><dd>ET, GPP</dd></div>
+                <div><dt><span class="t-en">Time step</span><span class="t-zh" lang="zh-CN">时间分辨率</span></dt><dd>8-day · half-month</dd></div>
+                <div><dt><span class="t-en">Grid</span><span class="t-zh" lang="zh-CN">空间分辨率</span></dt><dd>500 m · 0.1°</dd></div>
+              </dl>
+              <a class="link" href="/data.html#pml-v2-2"><span class="t-en">Download and cite</span><span class="t-zh" lang="zh-CN">下载与引用</span></a>
+            </article><article class="cov__panel" data-cov-panel="pml-v2">
+              <h3>PML_v2</h3>
+              <p><span class="t-en">Penman-Monteith-Leuning Evapotranspiration V2: evapotranspiration, its three components, and gross primary production.</span><span class="t-zh" lang="zh-CN">Penman-Monteith-Leuning 蒸散发第二版产品，包含蒸散发及其三个分量和总初级生产力。</span></p>
+              <dl class="spec">
+                <div><dt><span class="t-en">Scope</span><span class="t-zh" lang="zh-CN">范围</span></dt><dd>Global</dd></div>
+                <div><dt><span class="t-en">Variables</span><span class="t-zh" lang="zh-CN">变量</span></dt><dd>ET, ET components, GPP</dd></div>
+                <div><dt><span class="t-en">Time step</span><span class="t-zh" lang="zh-CN">时间分辨率</span></dt><dd>8-day</dd></div>
+                <div><dt><span class="t-en">Grid</span><span class="t-zh" lang="zh-CN">空间分辨率</span></dt><dd>500 m · 0.05°</dd></div>
+              </dl>
+              <a class="link" href="/data.html#pml-v2"><span class="t-en">Download and cite</span><span class="t-zh" lang="zh-CN">下载与引用</span></a>
+            </article><article class="cov__panel" data-cov-panel="pml-v2-china">
+              <h3>PML_v2-China</h3>
+              <p><span class="t-en">Daily, 500 m coupled evapotranspiration and gross primary production across China.</span><span class="t-zh" lang="zh-CN">中国区域逐日、500 米分辨率的耦合蒸散发和总初级生产力数据集。</span></p>
+              <dl class="spec">
+                <div><dt><span class="t-en">Scope</span><span class="t-zh" lang="zh-CN">范围</span></dt><dd>China</dd></div>
+                <div><dt><span class="t-en">Variables</span><span class="t-zh" lang="zh-CN">变量</span></dt><dd>ET, GPP</dd></div>
+                <div><dt><span class="t-en">Time step</span><span class="t-zh" lang="zh-CN">时间分辨率</span></dt><dd>Daily</dd></div>
+                <div><dt><span class="t-en">Grid</span><span class="t-zh" lang="zh-CN">空间分辨率</span></dt><dd>500 m</dd></div>
+              </dl>
+              <a class="link" href="/data.html#pml-v2-china"><span class="t-en">Download and cite</span><span class="t-zh" lang="zh-CN">下载与引用</span></a>
+            </article><article class="cov__panel" data-cov-panel="grace-transformer-gap">
+              <h3>GRACE-Transformer-Gap</h3>
+              <p><span class="t-en">Global gap filling of GRACE CSR RL06 terrestrial water storage using a Transformer-based deep learning model.</span><span class="t-zh" lang="zh-CN">基于 Transformer 深度学习模型对 GRACE CSR RL06 陆地水储量进行全球空缺填补。</span></p>
+              <dl class="spec">
+                <div><dt><span class="t-en">Scope</span><span class="t-zh" lang="zh-CN">范围</span></dt><dd>Global</dd></div>
+                <div><dt><span class="t-en">Variables</span><span class="t-zh" lang="zh-CN">变量</span></dt><dd>Terrestrial water storage</dd></div>
+                <div><dt><span class="t-en">Time step</span><span class="t-zh" lang="zh-CN">时间分辨率</span></dt><dd>Monthly</dd></div>
+                <div><dt><span class="t-en">Grid</span><span class="t-zh" lang="zh-CN">空间分辨率</span></dt><dd>0.25°</dd></div>
+              </dl>
+              <a class="link" href="/data.html#grace-transformer-gap"><span class="t-en">Download and cite</span><span class="t-zh" lang="zh-CN">下载与引用</span></a>
+            </article>
+        </div>
   </div>
-  <!-- Owl Carousel JS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-  <script>
-    $(document).ready(function () {
-      $("#highlightsCarousel").owlCarousel({
-        items: 3,
-        loop: true,
-        margin: 20,
-        autoplay: true,
-        autoplayTimeout: 4000,
-        autoplayHoverPause: true,
-        nav: true,
-        navText: ["<", ">"],
-        responsive: {
-          0: { items: 1 },
-          768: { items: 2 },
-          1024: { items: 3 }
-        }
-      });
-
-      $("#dataCarousel").owlCarousel({
-        items: 3,
-        loop: true,
-        margin: 20,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: true,
-        nav: true,
-        navText: ["<", ">"],
-        responsive: {
-          0: { items: 1 },
-          768: { items: 2 },
-          1024: { items: 3 }
-        }
-      });
-    });
-  </script>
-
-  <script src="./assets/js/menu.js"></script>
-  <script>
-    (function (i, s, o, g, r, a, m) {
-      i["GoogleAnalyticsObject"] = r;
-      (i[r] =
-        i[r] ||
-        function () {
-          (i[r].q = i[r].q || []).push(arguments);
-        }),
-        (i[r].l = 1 * new Date());
-      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m);
-    })(
-      window,
-      document,
-      "script",
-      "//www.google-analytics.com/analytics.js",
-      "ga"
-    );
-    ga("create", "", "auto");
-    ga("send", "pageview");
-  </script>
-
-  <!-- Language Toggle Script -->
-  <script>
-    let currentLang = 'en'; // Default language
-
-    const translations = {
-      highlights: {
-        heading: {
-          en: 'Research Highlights',
-          zh: '研究亮点'
-        },
-        items: {
-          eurasc: {
-            title: {
-              en: 'Prof. Yongqiang Zhang elected as a Non-European Fellow of EurASc',
-              zh: '热烈祝贺张永强研究员当选欧洲科学院外籍院士'
-            },
-            meta: {
-              en: 'News | 2026',
-              zh: '新闻 | 2026'
-            }
-          },
-          nature: {
-            title: {
-              en: 'Nature Communications: Direct vegetation response to recent CO2 rise shows limited effect on global streamflow',
-              zh: 'Nature Communications: 植被对近期CO2上升的直接响应对全球径流影响有限'
-            },
-            meta: {
-              en: 'Publication | 2024',
-              zh: '论文 | 2024'
-            }
-          },
-          science: {
-            title: {
-              en: 'Science: Southern Hemisphere dominates recent decline in global water availability',
-              zh: 'Science: 南半球主导全球水资源可用性近年下降'
-            },
-            meta: {
-              en: 'Publication | 2023',
-              zh: '论文 | 2023'
-            }
-          },
-          mssanz: {
-            title: {
-              en: 'Prof. Zhang Yongqiang awarded MSSANZ Biennial Medal and elected as Fellow',
-              zh: '张永强研究员荣获MSSANZ双年度奖章并当选会士'
-            },
-            meta: {
-              en: 'News | 2023',
-              zh: '新闻 | 2023'
-            }
-          }
-        }
-      },
-      people: {
-        heading: {
-          en: 'The Large Scale Hydrology Group',
-          zh: '大尺度水文学团队'
-        },
-        description: {
-          en: 'We are expanding our team now. If you are interested in research topics related to water, climate, hydrology, natural resources and natural disasters, and you also happen to love Hydrological model, Big Data analysis, machine learning, data science or simply programming and algorithm development, we have MPhil/PhD Student, Postdoc Researcher available in our group.',
-          zh: '我们正在扩充团队。如果你对水、气候、水文学、自然资源与自然灾害等研究主题感兴趣，并且热爱水文模型、大数据分析、机器学习、数据科学或编程算法开发，我们诚挚邀请硕士、博士研究生及博士后来加入我们的团队。'
-        },
-        cta: {
-          en: 'Meet Our Team',
-          zh: '了解我们的团队'
-        },
-        roles: {
-          pi: '团队负责人',
-          staff: '科研人员',
-          postdoc: '博士后',
-          phd: '博士研究生',
-          master: '硕士研究生',
-          assistant: '科研助理',
-          visiting: '访问学生'
-        }
-      },
-      ctas: {
-        datasetsHeading: {
-          en: 'Featured Datasets',
-          zh: '精选数据集'
-        },
-        datasets: {
-          en: 'Explore All Datasets',
-          zh: '查看全部数据集'
-        },
-        news: {
-          en: 'More News',
-          zh: '更多新闻'
-        },
-        publications: {
-          en: 'More Publications',
-          zh: '更多论文'
-        }
-      }
-    };
-
-    function updateHighlights(language) {
-      const highlightHeading = document.getElementById('highlightsHeading');
-      const highlightTitles = document.querySelectorAll('.highlight-title');
-      const highlightMeta = document.querySelectorAll('.highlight-meta');
-      const items = translations.highlights.items;
-
-      if (highlightHeading) {
-        highlightHeading.textContent = translations.highlights.heading[language];
-      }
-
-      highlightTitles.forEach(item => {
-        const key = item.dataset.highlightKey;
-        const entry = items[key];
-        if (entry && entry.title && entry.title[language]) {
-          item.textContent = entry.title[language];
-        }
-      });
-
-      highlightMeta.forEach(item => {
-        const key = item.dataset.highlightKey;
-        const entry = items[key];
-        if (entry && entry.meta && entry.meta[language]) {
-          item.textContent = entry.meta[language];
-        }
-      });
-    }
-
-    function extractNameFromSrc(src) {
-      if (!src) return '';
-      const cleaned = src.split('?')[0];
-      const lastSlash = cleaned.lastIndexOf('/');
-      const lastDot = cleaned.lastIndexOf('.');
-      const filename = cleaned.substring(lastSlash + 1, lastDot > lastSlash ? lastDot : undefined);
-      try {
-        return decodeURIComponent(filename);
-      } catch (e) {
-        return filename;
-      }
-    }
-
-    function updatePeople(language) {
-      const peopleTranslations = translations.people;
-      const heading = document.getElementById('peopleHeading');
-      const description = document.getElementById('peopleDescription');
-      const cta = document.getElementById('peopleCta');
-
-      if (heading) {
-        heading.textContent = peopleTranslations.heading[language];
-      }
-      if (description) {
-        description.textContent = peopleTranslations.description[language];
-      }
-      if (cta) {
-        cta.textContent = peopleTranslations.cta[language];
-      }
-
-      const cards = document.querySelectorAll('[data-person-card]');
-      cards.forEach(card => {
-        const nameEl = card.querySelector('.person-name');
-        const roleEl = card.querySelector('.person-role');
-        if (!nameEl || !roleEl) return;
-
-        if (!nameEl.dataset.enName) {
-          nameEl.dataset.enName = nameEl.textContent.trim();
-        }
-        if (!nameEl.dataset.zhName) {
-          const img = card.querySelector('img');
-          const src = img ? img.getAttribute('src') : '';
-          const derived = extractNameFromSrc(src);
-          const hasHan = /[\u4e00-\u9fff]/.test(derived);
-          nameEl.dataset.zhName = hasHan ? derived : nameEl.dataset.enName;
-        }
-
-        nameEl.textContent =
-          language === 'zh'
-            ? (nameEl.dataset.zhName || nameEl.dataset.enName)
-            : (nameEl.dataset.enName || nameEl.textContent.trim());
-
-        if (!roleEl.dataset.enRole) {
-          roleEl.dataset.enRole = roleEl.textContent.trim();
-        }
-
-        const roleKey = roleEl.dataset.roleKey;
-        if (language === 'zh' && roleKey && peopleTranslations.roles[roleKey]) {
-          roleEl.textContent = peopleTranslations.roles[roleKey];
-        } else {
-          roleEl.textContent = roleEl.dataset.enRole || roleEl.textContent.trim();
-        }
-      });
-    }
-
-    function updateCtas(language) {
-      const ctaTranslations = translations.ctas;
-      const datasetsHeading = document.getElementById('datasetsHeading');
-      const datasetsCta = document.getElementById('datasetsCta');
-      const newsCta = document.getElementById('newsCta');
-      const publicationsCta = document.getElementById('publicationsCta');
-
-      if (datasetsHeading) {
-        datasetsHeading.textContent = ctaTranslations.datasetsHeading[language];
-      }
-      if (datasetsCta) {
-        datasetsCta.textContent = ctaTranslations.datasets[language];
-      }
-      if (newsCta) {
-        newsCta.textContent = ctaTranslations.news[language];
-      }
-      if (publicationsCta) {
-        publicationsCta.textContent = ctaTranslations.publications[language];
-      }
-    }
-
-    function toggleLanguage() {
-      const btn = document.getElementById('langBtn');
-      const enContent = document.querySelectorAll('.lang-en');
-      const zhContent = document.querySelectorAll('.lang-zh');
-      const sidebarName = document.getElementById('sidebarName');
-
-      if (currentLang === 'en') {
-        currentLang = 'zh';
-        btn.textContent = 'English';
-        enContent.forEach(el => el.style.display = 'none');
-        zhContent.forEach(el => el.style.display = 'block');
-        if (sidebarName) {
-          sidebarName.textContent = '张永强';
-        }
-      } else {
-        currentLang = 'en';
-        btn.textContent = '中文';
-        enContent.forEach(el => el.style.display = 'block');
-        zhContent.forEach(el => el.style.display = 'none');
-        if (sidebarName) {
-          sidebarName.textContent = 'Yongqiang Zhang';
-        }
-      }
-
-      updateHighlights(currentLang);
-      updatePeople(currentLang);
-      updateCtas(currentLang);
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      updateHighlights(currentLang);
-      updatePeople(currentLang);
-      updateCtas(currentLang);
-
-      if (window.jQuery && typeof jQuery.fn.owlCarousel === 'function') {
-        jQuery('#highlightsCarousel').on('initialized.owl.carousel translated.owl.carousel refreshed.owl.carousel', function () {
-          updateHighlights(currentLang);
-        });
-      } else {
-        // Fallback in case Owl Carousel initializes after DOMContentLoaded
-        setTimeout(() => updateHighlights(currentLang), 300);
-      }
-    });
-
-    // Copy contact information to clipboard
-    function copyContactInfo() {
-      const name = document.getElementById('sidebarName').textContent;
-      const addressElement = document.getElementById('contactAddress');
-      const emailElement = document.getElementById('contactEmail');
-
-      // Extract text without the icons
-      const address = addressElement ? addressElement.textContent.replace(/^\s*/, '').trim() : '';
-      const email = emailElement ? emailElement.textContent.replace(/^\s*/, '').trim() : 'zhangyq@igsnrr.ac.cn';
-
-      // Create the text to copy
-      const contactInfo = `${name}\n${address}\nEmail: ${email}\nGoogle Scholar: https://scholar.google.com/citations?user=t5iGFeAAAAAJ\nIGSNRR: https://igsnrr.cas.cn/sourcedb/zw/zjrck/kygg/bjdbgc/201903/t20190327_5262230.html`;
-
-      // Copy to clipboard
-      if (navigator.clipboard && window.isSecureContext) {
-        // Use modern clipboard API
-        navigator.clipboard.writeText(contactInfo).then(function() {
-          // Show success feedback
-          showCopyFeedback('Contact information copied!');
-        }, function(err) {
-          // Fallback for error
-          fallbackCopyTextToClipboard(contactInfo);
-        });
-      } else {
-        // Fallback for older browsers
-        fallbackCopyTextToClipboard(contactInfo);
-      }
-    }
-
-    // Fallback copy function for older browsers
-    function fallbackCopyTextToClipboard(text) {
-      const textArea = document.createElement("textarea");
-      textArea.value = text;
-      textArea.style.top = "0";
-      textArea.style.left = "0";
-      textArea.style.position = "fixed";
-      textArea.style.opacity = "0";
-
-      document.body.appendChild(textArea);
-      textArea.focus();
-      textArea.select();
-
-      try {
-        const successful = document.execCommand('copy');
-        if (successful) {
-          showCopyFeedback('Contact information copied!');
-        }
-      } catch (err) {
-        showCopyFeedback('Failed to copy');
-      }
-
-      document.body.removeChild(textArea);
-    }
-
-    // Show visual feedback when copying
-    function showCopyFeedback(message) {
-      const btn = document.getElementById('followBtn');
-      const originalText = btn.textContent;
-
-      btn.textContent = message;
-      btn.style.backgroundColor = '#4CAF50';
-
-      setTimeout(function() {
-        btn.textContent = originalText;
-        btn.style.backgroundColor = '';
-      }, 2000);
-    }
-  </script>
+    </div>
+  </section>
+    <section class="papers plane plane--paper">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow"><span class="eyebrow__i">/06</span><span class="t-en">Publications</span><span class="t-zh" lang="zh-CN">论文成果</span></p>
+          <h2 class="title" data-reveal><span class="t-en">In print.</span><span class="t-zh" lang="zh-CN">已发表。</span></h2>
+        </div>
+        <a class="btn " href="/publications.html"  data-magnetic><span><span class="t-en">All publications</span><span class="t-zh" lang="zh-CN">全部论文</span></span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      </div>
+      <div class="papers__grid">
+        <div>
+          <ol class="bars" aria-label="Listed publications per year">
+    <li class=""><a href="/publications.html?year=2018" aria-label="2018: 2 listed publications"><span class="bars__v">2</span><i style="--h:0.105"></i><span class="bars__y">2018</span></a></li><li class=""><a href="/publications.html?year=2019" aria-label="2019: 3 listed publications"><span class="bars__v">3</span><i style="--h:0.158"></i><span class="bars__y">2019</span></a></li><li class=""><a href="/publications.html?year=2020" aria-label="2020: 6 listed publications"><span class="bars__v">6</span><i style="--h:0.316"></i><span class="bars__y">2020</span></a></li><li class=""><a href="/publications.html?year=2021" aria-label="2021: 10 listed publications"><span class="bars__v">10</span><i style="--h:0.526"></i><span class="bars__y">2021</span></a></li><li class=""><a href="/publications.html?year=2022" aria-label="2022: 17 listed publications"><span class="bars__v">17</span><i style="--h:0.895"></i><span class="bars__y">2022</span></a></li><li class=""><a href="/publications.html?year=2023" aria-label="2023: 11 listed publications"><span class="bars__v">11</span><i style="--h:0.579"></i><span class="bars__y">2023</span></a></li><li class="is-peak"><a href="/publications.html?year=2024" aria-label="2024: 19 listed publications"><span class="bars__v">19</span><i style="--h:1.000"></i><span class="bars__y">2024</span></a></li><li class=""><a href="/publications.html?year=2025" aria-label="2025: 13 listed publications"><span class="bars__v">13</span><i style="--h:0.684"></i><span class="bars__y">2025</span></a></li><li class=""><a href="/publications.html?year=2026" aria-label="2026: 2 listed publications"><span class="bars__v">2</span><i style="--h:0.105"></i><span class="bars__y">2026</span></a></li>
+  </ol>
+          <p class="note"><span class="t-en">Selected publications listed on this site. Select a year to browse it.</span><span class="t-zh" lang="zh-CN">本站收录的代表性论文。选择年份即可浏览。</span></p>
+        </div>
+        <ul class="pubs pubs--compact"><li class="pub pub--featured" data-year="2026" data-topics="Streamflow" data-search="overestimation of past and future increases in global river flow by earth system models zhang, y., blöschl, g., wei, h., kong, d., ma, n., wagener, t., tian, j., xia, j., li, c., wang, l., chiew, f. h. s., leung, l. r., liu, x., zheng, h., zhang, x., &amp; liu, c. nature geoscience 2026 10.1038/s41561-025-01897-9">
+    <p class="pub__venue"><span>Nature Geoscience</span></p>
+    <h3 class="pub__title"><a href="https://doi.org/10.1038/s41561-025-01897-9" target="_blank" rel="noopener">Overestimation of past and future increases in global river flow by Earth system models</a></h3>
+    <p class="pub__authors"><b>Zhang, Y.</b>, Blöschl, G., Wei, H., Kong, D., Ma, N., Wagener, T., Tian, J., Xia, J., Li, C., Wang, L., Chiew, F. H. S., Leung, L. R., Liu, X., Zheng, H., Zhang, X., &amp; Liu, C.</p>
+    <div class="pub__actions">
+      <a class="link" href="https://doi.org/10.1038/s41561-025-01897-9" target="_blank" rel="noopener">DOI</a>
+      
+      <button class="link" type="button" data-copy="Zhang, Y., Blöschl, G., Wei, H., Kong, D., Ma, N., Wagener, T., Tian, J., Xia, J., Li, C., Wang, L., Chiew, F. H. S., Leung, L. R., Liu, X., Zheng, H., Zhang, X., &amp; Liu, C. (2026). Overestimation of past and future increases in global river flow by Earth system models. Nature Geoscience. https://doi.org/10.1038/s41561-025-01897-9"><span class="t-en">Copy citation</span><span class="t-zh" lang="zh-CN">复制引用</span></button>
+    </div>
+  </li><li class="pub pub--featured" data-year="2024" data-topics="Streamflow|Vegetation &amp; CO₂" data-search="direct vegetation response to recent co2 rise shows limited effect on global streamflow wei, h., zhang, y., huang, q., chiew, f. h. s., luan, j., xia, j., &amp; liu, c. nature communications 2024 10.1038/s41467-024-53879-x">
+    <p class="pub__venue"><span>Nature Communications</span><span class="pub__loc">15(1)</span></p>
+    <h3 class="pub__title"><a href="https://doi.org/10.1038/s41467-024-53879-x" target="_blank" rel="noopener">Direct vegetation response to recent CO2 rise shows limited effect on global streamflow</a></h3>
+    <p class="pub__authors">Wei, H., <b>Zhang, Y.</b>, Huang, Q., Chiew, F. H. S., Luan, J., Xia, J., &amp; Liu, C.</p>
+    <div class="pub__actions">
+      <a class="link" href="https://doi.org/10.1038/s41467-024-53879-x" target="_blank" rel="noopener">DOI</a>
+      <a class="link" href="/media/25389ebe9540d7a3.pdf" target="_blank" rel="noopener">PDF</a>
+      <button class="link" type="button" data-copy="Wei, H., Zhang, Y., Huang, Q., Chiew, F. H. S., Luan, J., Xia, J., &amp; Liu, C. (2024). Direct vegetation response to recent CO2 rise shows limited effect on global streamflow. Nature Communications, 15(1). https://doi.org/10.1038/s41467-024-53879-x"><span class="t-en">Copy citation</span><span class="t-zh" lang="zh-CN">复制引用</span></button>
+    </div>
+  </li><li class="pub pub--featured" data-year="2023" data-topics="" data-search="southern hemisphere dominates recent decline in global water availability zhang, y., li, c., chiew, f. h. s., post, d. a., zhang, x., ma, n., tian, j., kong, d., leung, l. r., yu, q., shi, j., &amp; liu, c. science 2023 10.1126/science.adh0716">
+    <p class="pub__venue"><span>Science</span><span class="pub__loc">382(6670), 579–584</span></p>
+    <h3 class="pub__title"><a href="https://doi.org/10.1126/science.adh0716" target="_blank" rel="noopener">Southern Hemisphere dominates recent decline in global water availability</a></h3>
+    <p class="pub__authors"><b>Zhang, Y.</b>, Li, C., Chiew, F. H. S., Post, D. A., Zhang, X., Ma, N., Tian, J., Kong, D., Leung, L. R., Yu, Q., Shi, J., &amp; Liu, C.</p>
+    <div class="pub__actions">
+      <a class="link" href="https://doi.org/10.1126/science.adh0716" target="_blank" rel="noopener">DOI</a>
+      
+      <button class="link" type="button" data-copy="Zhang, Y., Li, C., Chiew, F. H. S., Post, D. A., Zhang, X., Ma, N., Tian, J., Kong, D., Leung, L. R., Yu, Q., Shi, J., &amp; Liu, C. (2023). Southern Hemisphere dominates recent decline in global water availability. Science, 382(6670), 579–584. https://doi.org/10.1126/science.adh0716"><span class="t-en">Copy citation</span><span class="t-zh" lang="zh-CN">复制引用</span></button>
+    </div>
+  </li></ul>
+      </div>
+    </div>
+  </section>
+    <section class="crew plane plane--ink">
+    <div class="crew__photo">
+      <img class="duotone" src="/media/0fa088b6f51e1484-2400.webp" srcset="/media/0fa088b6f51e1484-800.webp 800w, /media/0fa088b6f51e1484-1600.webp 1600w, /media/0fa088b6f51e1484-2400.webp 2400w" sizes="100vw" width="6240" height="4160" alt="Group photo at the 2026 graduation ceremony" loading="lazy" decoding="async" style="background-color:#f86858;">
+    </div>
+    <div class="marquee marquee--names" data-marquee aria-hidden="true"><div class="marquee__track"><span>Yongqiang Zhang</span><i aria-hidden="true"></i><span>Jing Tian</span><i aria-hidden="true"></i><span>Xuanze Zhang</span><i aria-hidden="true"></i><span>Ning Ma</span><i aria-hidden="true"></i><span>Xiaojie Li</span><i aria-hidden="true"></i><span>Xian Wang</span><i aria-hidden="true"></i><span>Haoshan Wei</span><i aria-hidden="true"></i><span>Zhen Huang</span><i aria-hidden="true"></i><span>Congcong Li</span><i aria-hidden="true"></i><span>Zhenwu Xu</span><i aria-hidden="true"></i><span>Xuening Yang</span><i aria-hidden="true"></i><span>Longhao Wang</span><i aria-hidden="true"></i><span>Yizhe Ma</span><i aria-hidden="true"></i><span>Wenjie Hou</span><i aria-hidden="true"></i><span>Yushi Zheng</span><i aria-hidden="true"></i><span>Yongqiang Zhang</span><i aria-hidden="true"></i><span>Jing Tian</span><i aria-hidden="true"></i><span>Xuanze Zhang</span><i aria-hidden="true"></i><span>Ning Ma</span><i aria-hidden="true"></i><span>Xiaojie Li</span><i aria-hidden="true"></i><span>Xian Wang</span><i aria-hidden="true"></i><span>Haoshan Wei</span><i aria-hidden="true"></i><span>Zhen Huang</span><i aria-hidden="true"></i><span>Congcong Li</span><i aria-hidden="true"></i><span>Zhenwu Xu</span><i aria-hidden="true"></i><span>Xuening Yang</span><i aria-hidden="true"></i><span>Longhao Wang</span><i aria-hidden="true"></i><span>Yizhe Ma</span><i aria-hidden="true"></i><span>Wenjie Hou</span><i aria-hidden="true"></i><span>Yushi Zheng</span><i aria-hidden="true"></i><span>Yongqiang Zhang</span><i aria-hidden="true"></i><span>Jing Tian</span><i aria-hidden="true"></i><span>Xuanze Zhang</span><i aria-hidden="true"></i><span>Ning Ma</span><i aria-hidden="true"></i><span>Xiaojie Li</span><i aria-hidden="true"></i><span>Xian Wang</span><i aria-hidden="true"></i><span>Haoshan Wei</span><i aria-hidden="true"></i><span>Zhen Huang</span><i aria-hidden="true"></i><span>Congcong Li</span><i aria-hidden="true"></i><span>Zhenwu Xu</span><i aria-hidden="true"></i><span>Xuening Yang</span><i aria-hidden="true"></i><span>Longhao Wang</span><i aria-hidden="true"></i><span>Yizhe Ma</span><i aria-hidden="true"></i><span>Wenjie Hou</span><i aria-hidden="true"></i><span>Yushi Zheng</span><i aria-hidden="true"></i><span>Yongqiang Zhang</span><i aria-hidden="true"></i><span>Jing Tian</span><i aria-hidden="true"></i><span>Xuanze Zhang</span><i aria-hidden="true"></i><span>Ning Ma</span><i aria-hidden="true"></i><span>Xiaojie Li</span><i aria-hidden="true"></i><span>Xian Wang</span><i aria-hidden="true"></i><span>Haoshan Wei</span><i aria-hidden="true"></i><span>Zhen Huang</span><i aria-hidden="true"></i><span>Congcong Li</span><i aria-hidden="true"></i><span>Zhenwu Xu</span><i aria-hidden="true"></i><span>Xuening Yang</span><i aria-hidden="true"></i><span>Longhao Wang</span><i aria-hidden="true"></i><span>Yizhe Ma</span><i aria-hidden="true"></i><span>Wenjie Hou</span><i aria-hidden="true"></i><span>Yushi Zheng</span><i aria-hidden="true"></i></div></div>
+    <div class="marquee marquee--names marquee--rev" data-marquee aria-hidden="true"><div class="marquee__track"><span>Daniel Geletaw</span><i aria-hidden="true"></i><span>Yuxuan Xie</span><i aria-hidden="true"></i><span>Wenwen Zhang</span><i aria-hidden="true"></i><span>Shengyu Zou</span><i aria-hidden="true"></i><span>Yalin Xie</span><i aria-hidden="true"></i><span>Yiwen Luo</span><i aria-hidden="true"></i><span>Zhiye Cao</span><i aria-hidden="true"></i><span>Xudong Zhang</span><i aria-hidden="true"></i><span>Qiaoxue Peng</span><i aria-hidden="true"></i><span>Xinhai Wei</span><i aria-hidden="true"></i><span>Jingyi Fang</span><i aria-hidden="true"></i><span>Jiangmeng Li</span><i aria-hidden="true"></i><span>Liwen Zhang</span><i aria-hidden="true"></i><span>Jiayi Ding</span><i aria-hidden="true"></i><span>Daniel Geletaw</span><i aria-hidden="true"></i><span>Yuxuan Xie</span><i aria-hidden="true"></i><span>Wenwen Zhang</span><i aria-hidden="true"></i><span>Shengyu Zou</span><i aria-hidden="true"></i><span>Yalin Xie</span><i aria-hidden="true"></i><span>Yiwen Luo</span><i aria-hidden="true"></i><span>Zhiye Cao</span><i aria-hidden="true"></i><span>Xudong Zhang</span><i aria-hidden="true"></i><span>Qiaoxue Peng</span><i aria-hidden="true"></i><span>Xinhai Wei</span><i aria-hidden="true"></i><span>Jingyi Fang</span><i aria-hidden="true"></i><span>Jiangmeng Li</span><i aria-hidden="true"></i><span>Liwen Zhang</span><i aria-hidden="true"></i><span>Jiayi Ding</span><i aria-hidden="true"></i><span>Daniel Geletaw</span><i aria-hidden="true"></i><span>Yuxuan Xie</span><i aria-hidden="true"></i><span>Wenwen Zhang</span><i aria-hidden="true"></i><span>Shengyu Zou</span><i aria-hidden="true"></i><span>Yalin Xie</span><i aria-hidden="true"></i><span>Yiwen Luo</span><i aria-hidden="true"></i><span>Zhiye Cao</span><i aria-hidden="true"></i><span>Xudong Zhang</span><i aria-hidden="true"></i><span>Qiaoxue Peng</span><i aria-hidden="true"></i><span>Xinhai Wei</span><i aria-hidden="true"></i><span>Jingyi Fang</span><i aria-hidden="true"></i><span>Jiangmeng Li</span><i aria-hidden="true"></i><span>Liwen Zhang</span><i aria-hidden="true"></i><span>Jiayi Ding</span><i aria-hidden="true"></i><span>Daniel Geletaw</span><i aria-hidden="true"></i><span>Yuxuan Xie</span><i aria-hidden="true"></i><span>Wenwen Zhang</span><i aria-hidden="true"></i><span>Shengyu Zou</span><i aria-hidden="true"></i><span>Yalin Xie</span><i aria-hidden="true"></i><span>Yiwen Luo</span><i aria-hidden="true"></i><span>Zhiye Cao</span><i aria-hidden="true"></i><span>Xudong Zhang</span><i aria-hidden="true"></i><span>Qiaoxue Peng</span><i aria-hidden="true"></i><span>Xinhai Wei</span><i aria-hidden="true"></i><span>Jingyi Fang</span><i aria-hidden="true"></i><span>Jiangmeng Li</span><i aria-hidden="true"></i><span>Liwen Zhang</span><i aria-hidden="true"></i><span>Jiayi Ding</span><i aria-hidden="true"></i></div></div>
+    <div class="wrap crew__foot">
+      <div>
+        <p class="eyebrow"><span class="eyebrow__i">/07</span><span class="t-en">People</span><span class="t-zh" lang="zh-CN">团队成员</span></p>
+        <h2 class="title" data-reveal><span class="t-en">29 people,</span><span class="t-zh" lang="zh-CN">29 位成员，</span><br><span class="dim"><span class="t-en">15 alumni.</span><span class="t-zh" lang="zh-CN">15 位校友。</span></span></h2>
+      </div>
+      <div class="crew__cta">
+        <ul class="counts"><li><b>1</b><span><span class="t-en">Principal Investigator</span><span class="t-zh" lang="zh-CN">团队负责人</span></span></li><li><b>4</b><span><span class="t-en">Co-PI</span><span class="t-zh" lang="zh-CN">科研人员</span></span></li><li><b>5</b><span><span class="t-en">Postdoc</span><span class="t-zh" lang="zh-CN">博士后</span></span></li><li><b>9</b><span><span class="t-en">Ph.D. Students</span><span class="t-zh" lang="zh-CN">博士研究生</span></span></li><li><b>6</b><span><span class="t-en">Master Students</span><span class="t-zh" lang="zh-CN">硕士研究生</span></span></li><li><b>1</b><span><span class="t-en">Research Assistants</span><span class="t-zh" lang="zh-CN">科研助理</span></span></li><li><b>3</b><span><span class="t-en">Visiting Students</span><span class="t-zh" lang="zh-CN">访问学生</span></span></li></ul>
+        <a class="btn btn--lime" href="/people.html"  data-magnetic><span><span class="t-en">Meet the group</span><span class="t-zh" lang="zh-CN">认识我们</span></span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      </div>
+    </div>
+  </section>
+    <section class="join plane plane--coral" id="join">
+    <div class="wrap">
+      <p class="eyebrow"><span class="eyebrow__i">/08</span><span class="t-en">Join us</span><span class="t-zh" lang="zh-CN">加入我们</span></p>
+      <h2 class="join__title" data-reveal><span class="t-en">Come work on water.</span><span class="t-zh" lang="zh-CN">加入我们，研究水。</span></h2>
+      <div class="join__grid">
+        <p class="join__body"><span class="t-en">We are expanding our team now. If you are interested in research topics related to water, climate, hydrology, natural resources and natural disasters, and you also happen to love hydrological modelling, big data analysis, machine learning, data science or simply programming and algorithm development, we have MPhil/PhD Student and Postdoc Researcher positions available in our group.</span><span class="t-zh" lang="zh-CN">我们正在扩充团队。如果你对水、气候、水文学、自然资源与自然灾害等研究主题感兴趣，并且热爱水文模型、大数据分析、机器学习、数据科学或编程算法开发，我们团队长期招收硕士/博士研究生和博士后研究人员。</span></p>
+        <div><h3><span class="t-en">Openings</span><span class="t-zh" lang="zh-CN">招收</span></h3><ul><li><span class="t-en">MPhil / Ph.D. students</span><span class="t-zh" lang="zh-CN">硕士 / 博士研究生</span></li><li><span class="t-en">Postdoc researchers</span><span class="t-zh" lang="zh-CN">博士后研究人员</span></li></ul></div>
+        <div><h3><span class="t-en">Topics</span><span class="t-zh" lang="zh-CN">方向</span></h3><ul><li><span class="t-en">Water, climate and hydrology</span><span class="t-zh" lang="zh-CN">水、气候与水文</span></li><li><span class="t-en">Natural resources and disasters</span><span class="t-zh" lang="zh-CN">自然资源与自然灾害</span></li></ul></div>
+        <div><h3><span class="t-en">Love of</span><span class="t-zh" lang="zh-CN">技能</span></h3><ul><li><span class="t-en">Hydrological modelling</span><span class="t-zh" lang="zh-CN">水文模型</span></li><li><span class="t-en">Big data and machine learning</span><span class="t-zh" lang="zh-CN">大数据与机器学习</span></li><li><span class="t-en">Programming and algorithms</span><span class="t-zh" lang="zh-CN">编程与算法开发</span></li></ul></div>
+      </div>
+      <a class="join__mail" href="mailto:zhangyq@igsnrr.ac.cn" data-magnetic>zhangyq@igsnrr.ac.cn <svg class="arrow arrow--out" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+    <canvas class="footer__water" data-module="dotwave" aria-hidden="true"></canvas>
+    <div class="wrap footer__grid">
+      <div class="footer__lab">
+        <img class="footer__logo" src="/media/601b88f216dd2c21-320.webp" srcset="/media/601b88f216dd2c21-160.webp 160w, /media/601b88f216dd2c21-320.webp 320w" sizes="96px" width="1024" height="1024" alt="Large Scale Hydrology research group badge" loading="lazy" decoding="async" style="background-color:#585858;">
+        <p><span class="t-en">Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences</span><span class="t-zh" lang="zh-CN">中国科学院地理科学与资源研究所</span></p>
+      </div>
+      <div>
+        <p class="eyebrow"><span class="t-en">Find us</span><span class="t-zh" lang="zh-CN">联系方式</span></p>
+        <p><span class="t-en">IGSNRR, A937</span><span class="t-zh" lang="zh-CN">中国科学院地理科学与资源研究所 A937</span></p>
+        <p><a class="link" href="mailto:zhangyq@igsnrr.ac.cn">zhangyq@igsnrr.ac.cn</a></p>
+      </div>
+      <div>
+        <p class="eyebrow"><span class="t-en">Explore</span><span class="t-zh" lang="zh-CN">浏览</span></p>
+        <ul class="footer__nav"><li><a class="link" href="/research.html"><span class="t-en">Research</span><span class="t-zh" lang="zh-CN">研究方向</span></a></li><li><a class="link" href="/publications.html"><span class="t-en">Publications</span><span class="t-zh" lang="zh-CN">论文成果</span></a></li><li><a class="link" href="/data.html"><span class="t-en">Data</span><span class="t-zh" lang="zh-CN">数据产品</span></a></li><li><a class="link" href="/people.html"><span class="t-en">People</span><span class="t-zh" lang="zh-CN">团队成员</span></a></li><li><a class="link" href="/news.html"><span class="t-en">News</span><span class="t-zh" lang="zh-CN">新闻动态</span></a></li><li><a class="link" href="/collaboration.html"><span class="t-en">Collaboration</span><span class="t-zh" lang="zh-CN">合作网络</span></a></li></ul>
+      </div>
+      <div>
+        <p class="eyebrow"><span class="t-en">Elsewhere</span><span class="t-zh" lang="zh-CN">外部链接</span></p>
+        <ul class="footer__nav"><li><a class="link" href="https://scholar.google.com/citations?user=t5iGFeAAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li><li><a class="link" href="https://igsnrr.cas.cn/sourcedb/zw/zjrck/kygg/bjdbgc/201903/t20190327_5262230.html" target="_blank" rel="noopener">IGSNRR profile</a></li>
+          <li><a class="link" href="/api/v1/meta.json"><span class="t-en">Open content API</span><span class="t-zh" lang="zh-CN">开放内容接口</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__word" aria-hidden="true">Hydrology</p>
+    <div class="wrap footer__legal">
+      <span>© 2026 <span class="t-en">Large Scale Hydrology</span><span class="t-zh" lang="zh-CN">大尺度水文学团队</span></span>
+      <span><span class="t-en">Content updated</span><span class="t-zh" lang="zh-CN">内容更新于</span> 2026-11-01</span>
+      <a class="link" href="#top"><span class="t-en">Back to top</span><span class="t-zh" lang="zh-CN">返回顶部</span> <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+    </div>
+  </footer>
+<dialog class="search" data-search aria-label="Search">
+    <form method="dialog" class="search__box">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m14 14 4 4" stroke="currentColor" stroke-width="1.8"/></svg>
+      <input data-search-input type="search" placeholder="People, papers, datasets, news" aria-label="Search the site" autocomplete="off">
+      <button class="search__esc" type="submit" aria-label="Close search">Esc</button>
+    </form>
+    <ul class="search__results" data-search-results aria-live="polite"></ul>
+  </dialog>
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+<div class="gauge" data-gauge aria-hidden="true"><i></i></div>
 </body>
-
 </html>

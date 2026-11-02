@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /backend/
+Disallow: /frontend/
+Sitemap: https://zhang-hydrolab.github.io/sitemap.xml

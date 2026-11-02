@@ -1,0 +1,114 @@
+{
+  "count": 4,
+  "items": [
+    {
+      "id": "pml-v2-2",
+      "name": "PML_v2.2",
+      "summary_en": "Coupled ET and GPP extending PML_v2 back to 1982 by integrating MODIS and AVHRR archives; calibrated at 208 flux stations.",
+      "summary_zh": "融合 MODIS 与 AVHRR 存档，将 PML_v2 的耦合蒸散发和总初级生产力数据向前延伸至 1982 年，并基于 208 个通量站点率定。",
+      "scope": "Global",
+      "variables": "ET, GPP",
+      "temporal": "8-day · half-month",
+      "spatial": "500 m · 0.1°",
+      "start_year": 1982,
+      "end_year": null,
+      "coverage_label": "1982 – near present",
+      "downloads": [
+        {
+          "label": "500 m · Google Earth Engine",
+          "url": "https://developers.google.com/earth-engine/datasets/catalog/projects_pml_evapotranspiration_PML_OUTPUT_PML_V22a"
+        },
+        {
+          "label": "0.1° · National Tibetan Plateau Data Center",
+          "url": "https://data.tpdc.ac.cn/zh-hans/data/40f57c67-33a6-402d-bd37-6ede91919f23"
+        }
+      ],
+      "citations": [
+        "Xu, Z., Zhang, Y., Kong, D., Ma, N., & Zhang, X. (2026). Extended global terrestrial evapotranspiration and gross primary production dataset from 1982 to near present. Earth System Science Data Discussions. https://essd.copernicus.org/preprints/essd-2026-94/"
+      ],
+      "image_id": "9f0da4c0be8819b9"
+    },
+    {
+      "id": "pml-v2",
+      "name": "PML_v2",
+      "summary_en": "Penman-Monteith-Leuning Evapotranspiration V2: evapotranspiration, its three components, and gross primary production.",
+      "summary_zh": "Penman-Monteith-Leuning 蒸散发第二版产品，包含蒸散发及其三个分量和总初级生产力。",
+      "scope": "Global",
+      "variables": "ET, ET components, GPP",
+      "temporal": "8-day",
+      "spatial": "500 m · 0.05°",
+      "start_year": 2002,
+      "end_year": null,
+      "coverage_label": "2002.07 – near present",
+      "downloads": [
+        {
+          "label": "500 m · Google Earth Engine",
+          "url": "https://developers.google.cn/earth-engine/datasets/catalog/CAS_IGSNRR_PML_V2_v018"
+        },
+        {
+          "label": "0.05° · National Tibetan Plateau Data Center",
+          "url": "https://data.tpdc.ac.cn/zh-hans/data/48c16a8d-d307-4973-abab-972e9449627c/"
+        }
+      ],
+      "citations": [
+        "Zhang, Y., Peña-Arancibia, J.L., McVicar, T.R., Chiew, F.H.S., Vaze, J., Liu, C., Lu, X., Zheng, H., Wang, Y., Liu, Y.Y., Miralles, D.G., Pan, M., 2016. Multi-decadal trends in global terrestrial evapotranspiration and its components. Sci. Rep. 6, 19124. https://doi.org/10.1038/srep19124.",
+        "Zhang, Y., Kong, D., Gan, R., Chiew, F.H.S., McVicar, T.R., Zhang, Q., & Yang, Y. (2019). Coupled estimation of 500m and 8-day resolution global evapotranspiration and gross primary production in 2002-2017. Remote Sensing Environ. 222, 165-182. https://doi.org/10.1016/j.rse.2018.12.031."
+      ],
+      "image_id": "a92231ba083108fd"
+    },
+    {
+      "id": "pml-v2-china",
+      "name": "PML_v2-China",
+      "summary_en": "Daily, 500 m coupled evapotranspiration and gross primary production across China.",
+      "summary_zh": "中国区域逐日、500 米分辨率的耦合蒸散发和总初级生产力数据集。",
+      "scope": "China",
+      "variables": "ET, GPP",
+      "temporal": "Daily",
+      "spatial": "500 m",
+      "start_year": 2000,
+      "end_year": 2020,
+      "coverage_label": "2000.02.26 – 2020.12.31",
+      "downloads": [
+        {
+          "label": "National Tibetan Plateau Data Center",
+          "url": "https://data.tpdc.ac.cn/zh-hans/data/40f57c67-33a6-402d-bd37-6ede91919f23"
+        }
+      ],
+      "citations": [
+        "He, S., Zhang, Y., Ma, N., Tian, J., Kong, D., & Liu, C. (2022). A daily and 500 m coupled evapotranspiration and gross primary production product across China during 2000–2020, Earth Syst. Sci. Data., https://doi.org/10.5194/essd-2022-183."
+      ],
+      "image_id": "99f87c3f8f3493fb"
+    },
+    {
+      "id": "grace-transformer-gap",
+      "name": "GRACE-Transformer-Gap",
+      "summary_en": "Global gap filling of GRACE CSR RL06 terrestrial water storage using a Transformer-based deep learning model.",
+      "summary_zh": "基于 Transformer 深度学习模型对 GRACE CSR RL06 陆地水储量进行全球空缺填补。",
+      "scope": "Global",
+      "variables": "Terrestrial water storage",
+      "temporal": "Monthly",
+      "spatial": "0.25°",
+      "start_year": 2002,
+      "end_year": null,
+      "coverage_label": "2002 – near present",
+      "downloads": [
+        {
+          "label": "Single months · figshare",
+          "url": "https://doi.org/10.6084/m9.figshare.24614958"
+        },
+        {
+          "label": "Google Drive",
+          "url": "https://drive.google.com/file/d/1l7oQdkEUl-bvoH7OTg9mKlaIybtuscqA/view?usp=drive_link"
+        },
+        {
+          "label": "Baidu Netdisk",
+          "url": "https://pan.baidu.com/s/1Zah2ILpn-DTjDG-WimT_TQ?pwd=ancc"
+        }
+      ],
+      "citations": [
+        "Wang, L., & Zhang, Y. (2024). Filling GRACE data gap using an innovative transformer-based deep learning approach. Remote Sensing of Environment, 315, 114465. https://doi.org/10.1016/j.rse.2024.114465"
+      ],
+      "image_id": "b31b5f27e3866661"
+    }
+  ]
+}

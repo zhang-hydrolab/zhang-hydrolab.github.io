@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "contentHash": "083fc703dc5d04714700374526bcce5025cf620f1f8da81025bcc8a80be05649",
+  "updatedAt": "2026-11-01T08:06:55.542Z",
+  "counts": {
+    "people": 29,
+    "alumni": 15,
+    "publications": 83,
+    "news": 8,
+    "datasets": 4,
+    "researchThemes": 3,
+    "researchProjects": 5,
+    "collaborators": 7
+  }
+}

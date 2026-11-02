@@ -1,345 +1,231 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-  <head>
-    <meta charset="utf-8" />
-    <!-- begin SEO -->
-    <title>Yongqiang Zhang's lab: Large Scale Hydrology - Data</title>
-    <meta property="og:locale" content="en-US" />
-    <meta property="og:site_name" content="Yongqiang Zhang's lab: Large Scale Hydrology" />
-    <meta property="og:title" content="Data" />
-    <link rel="canonical" href="https://ericlyun.github.io/data/" />
-    <meta property="og:url" content="https://ericlyun.github.io/data/" />
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "Person",
-        "name": "Yongqiang Zhang's lab: Large Scale Hydrology",
-        "url": "https://ericlyun.github.io",
-        "sameAs": null
-      }
-    </script>
-    <!-- end SEO -->
-    <link
-      href="https://ericlyun.github.io/feed.xml"
-      type="application/atom+xml"
-      rel="alternate"
-      title="Yun (Eric) Liang's Homepage Feed"
-    />
-    <!-- http://t.co/dKP3o1e -->
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="MobileOptimized" content="320" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      document.documentElement.className =
-        document.documentElement.className.replace(/\bno-js\b/g, "") + " js ";
-    </script>
-    <!-- For all browsers -->
-    <link
-      rel="stylesheet"
-      href="https://ericlyun.github.io/assets/css/main.css"
-    />
-    <meta http-equiv="cleartype" content="on" />
+<!doctype html><html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data · Large Scale Hydrology</title>
+<meta name="description" content="Open global and regional evapotranspiration, GPP and terrestrial water storage datasets: PML_v2, PML_v2.2, PML_v2-China and GRACE-Transformer-Gap.">
+<link rel="canonical" href="https://zhang-hydrolab.github.io/data.html">
+<meta name="theme-color" content="#1437F5">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Large Scale Hydrology">
+<meta property="og:title" content="Data · Large Scale Hydrology">
+<meta property="og:description" content="Open global and regional evapotranspiration, GPP and terrestrial water storage datasets: PML_v2, PML_v2.2, PML_v2-China and GRACE-Transformer-Gap.">
+<meta property="og:url" content="https://zhang-hydrolab.github.io/data.html">
+<meta property="og:image" content="https://zhang-hydrolab.github.io/media/e40a2308e73d60dd-2400.webp">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var l=localStorage.getItem('lab-lang');if(l==='zh'){d.dataset.lang='zh';d.lang='zh-CN'}}catch(e){}})();</script>
+<link rel="preload" href="/assets/fonts/mona-sans-latin-OCDL5MMG.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style-4M4QOCJB.css">
+<script type="module" src="/assets/main-WJ3SWXLL.js"></script>
+</head>
+<body id="top" data-page="data" data-nav-tone="dark">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav" data-nav>
+    <a class="nav__brand" href="/" aria-label="Large Scale Hydrology, home"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="16" fill="currentColor"/><path d="M-1 12c6-4 9 3 15 2s9-8 19-3v6c-9-4-12 3-18 4S4 16-1 19z" fill="var(--mark-river, var(--lime))"/></svg><span class="nav__name"><span class="t-en">Large Scale Hydrology</span><span class="t-zh" lang="zh-CN">大尺度水文学团队</span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/research.html" ><span><span class="t-en">Research</span><span class="t-zh" lang="zh-CN">研究方向</span></span></a><a href="/publications.html" ><span><span class="t-en">Publications</span><span class="t-zh" lang="zh-CN">论文成果</span></span></a><a href="/data.html" aria-current="page"><span><span class="t-en">Data</span><span class="t-zh" lang="zh-CN">数据产品</span></span></a><a href="/people.html" ><span><span class="t-en">People</span><span class="t-zh" lang="zh-CN">团队成员</span></span></a><a href="/news.html" ><span><span class="t-en">News</span><span class="t-zh" lang="zh-CN">新闻动态</span></span></a><a href="/collaboration.html" ><span><span class="t-en">Collaboration</span><span class="t-zh" lang="zh-CN">合作网络</span></span></a>
+    </nav>
+    <div class="nav__tools">
+      <button class="nav__tool" type="button" data-search-open aria-label="Search the site"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m14 14 4 4" stroke="currentColor" stroke-width="1.8"/></svg><kbd>Ctrl K</kbd></button>
+      <button class="nav__tool nav__lang" type="button" data-lang-toggle aria-label="Switch language: English or Chinese"><span class="t-en">中</span><span class="t-zh">EN</span></button>
+      <button class="nav__tool nav__burger" type="button" data-menu-open aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </header>
+<dialog class="menu" data-menu aria-label="Menu">
+    <div class="menu__top">
+      <span class="eyebrow"><span class="t-en">Menu</span><span class="t-zh" lang="zh-CN">菜单</span></span>
+      <button class="nav__tool" type="button" data-menu-close aria-label="Close menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 4 12 12M16 4 4 16" stroke="currentColor" stroke-width="1.8"/></svg></button>
+    </div>
+    <nav aria-label="Mobile">
+      <a href="/"><span class="t-en">Home</span><span class="t-zh" lang="zh-CN">首页</span></a>
+      <a href="/research.html"><span class="t-en">Research</span><span class="t-zh" lang="zh-CN">研究方向</span></a><a href="/publications.html"><span class="t-en">Publications</span><span class="t-zh" lang="zh-CN">论文成果</span></a><a href="/data.html"><span class="t-en">Data</span><span class="t-zh" lang="zh-CN">数据产品</span></a><a href="/people.html"><span class="t-en">People</span><span class="t-zh" lang="zh-CN">团队成员</span></a><a href="/news.html"><span class="t-en">News</span><span class="t-zh" lang="zh-CN">新闻动态</span></a><a href="/collaboration.html"><span class="t-en">Collaboration</span><span class="t-zh" lang="zh-CN">合作网络</span></a>
+    </nav>
+  </dialog>
+<main id="main">
 
-    <!-- Custom Art Style CSS -->
-    <link rel="stylesheet" href="./assets/css/custom-art-style.css" />
-    <!-- Mobile Menu CSS -->
-    <link rel="stylesheet" href="./assets/css/menu.css" />
-    
-    <!-- Fix Navigation Bar Display -->
-    <style>
-      /* 强制显示导航栏 */
-      .masthead {
-        min-height: 60px !important;
-        height: auto !important;
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        position: relative !important;
-      }
-      
-      .masthead__inner-wrap {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        height: auto !important;
-        padding: 0.5rem 1rem !important;
-      }
-      
-      .masthead__menu {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        height: auto !important;
-      }
-      
-      .greedy-nav {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        height: auto !important;
-        position: relative !important;
-      }
-      
-      .visible-links {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        list-style: none !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        height: auto !important;
-        align-items: center !important;
-      }
-      
-      .visible-links li {
-        display: inline-block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        height: auto !important;
-        margin: 0 !important;
-      }
-      
-      .visible-links li a {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        padding: 0.5rem 1rem !important;
-        color: #424a51 !important;
-        text-decoration: none !important;
-        font-size: 14px !important;
-        line-height: 1.5 !important;
-      }
-      
-      /* 确保按钮在大屏幕上隐藏 */
-      @media (min-width: 901px) {
-        .greedy-nav button {
-          display: none !important;
-        }
-      }
-    </style>
-
-    <!-- start custom head snippets -->
-    <link rel="shortcut icon" href="/images/favicon.ico?v=M44lzPylqQ" />
-    <meta name="msapplication-TileColor" content="#000000" />
-    <meta
-      name="msapplication-TileImage"
-      content="https://ericlyun.github.io/images/mstile-144x144.png?v=M44lzPylqQ"
-    />
-    <meta
-      name="msapplication-config"
-      content="https://ericlyun.github.io/images/browserconfig.xml?v=M44lzPylqQ"
-    />
-    <meta name="theme-color" content="#ffffff" />
-    <link
-      rel="stylesheet"
-      href="https://ericlyun.github.io/assets/css/academicons.css"
-    />
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } });
-    </script>
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true } });
-    </script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"
-      async
-    ></script>
-    <!-- end custom head snippets -->
-  </head>
-  <body>
-    <!--[if lt IE 9
-      ]><div class="notice--danger align-center" style="margin: 0">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
-        your experience.
-      </div><!
-    [endif]-->
-    <div class="masthead">
-      <div class="masthead__inner-wrap">
-        <div class="masthead__menu">
-          <nav id="site-nav" class="greedy-nav">
-            <button>
-              <div class="navicon"></div>
+    <section class="pagehead plane plane--ink pagehead--data">
+    <canvas class="pagehead__field" data-module="mosaic" aria-hidden="true"></canvas>
+    <div class="wrap pagehead__inner">
+      <p class="eyebrow"><span class="eyebrow__i">/D</span><span class="t-en">Open data</span><span class="t-zh" lang="zh-CN">开放数据</span></p>
+      <h1 class="pagehead__title" data-reveal><span class="t-en">Open data</span><span class="t-zh" lang="zh-CN">开放数据</span></h1>
+      <p class="pagehead__lead"><span class="t-en">Gridded evapotranspiration, productivity and water-storage products, free to download. Every pixel below stands for how we see the land: one cell at a time.</span><span class="t-zh" lang="zh-CN">免费开放的蒸散发、生产力和水储量格点数据产品。下方每个像元，都代表我们观察陆地的方式：一格一格地看。</span></p>
+    </div>
+  </section>
+    <section class="plane plane--blue data-cov">
+      <div class="wrap">
+        <h2 class="scale__title"><span class="t-en">Temporal coverage</span><span class="t-zh" lang="zh-CN">时间覆盖</span></h2>
+        <div class="cov" >
+    <div class="cov__chart">
+      <ol class="cov__rows">
+        <li>
+            <button type="button" class="cov__row is-active" data-cov="pml-v2-2" aria-pressed="">
+              <span class="cov__name">PML_v2.2</span>
+              <span class="cov__track"><i class="cov__bar is-open" style="left:4.35%;width:95.65%"></i></span>
+              <span class="cov__range">1982 – near present</span>
             </button>
-            <ul class="visible-links">
-              <li class="masthead__menu-item masthead__menu-item--lg">
-                <a href="./"> Home </a>
-              </li>
-              <li class="masthead__menu-item">
-                <a href="./news.html"> News </a>
-              </li>
-              <li class="masthead__menu-item">
-                <a href="./data.html"> Data </a>
-              </li>
-              <li class="masthead__menu-item">
-                <a href="./publications.html"> Publications </a>
-              </li>
-              <li class="masthead__menu-item">
-                <a href="./research.html"> Research </a>
-              </li>
-              <li class="masthead__menu-item">
-                <a href="./people.html"> People </a>
-              </li>
-              <li class="masthead__menu-item">
-                <a href="./collaboration.html"> Collaboration </a>
-              </li>
-              <li class="masthead__menu-item">
-                <a href="https://igsnrr.cas.cn/sourcedb/zw/zjrck/kygg/bjdbgc/201903/t20190327_5262230.html" target="_blank">
-                  IGSNRR
-                </a>
-              </li>
-            </ul>
-            <ul class="hidden-links hidden"></ul>
-          </nav>
-        </div>
+          </li><li>
+            <button type="button" class="cov__row" data-cov="pml-v2" aria-pressed="">
+              <span class="cov__name">PML_v2</span>
+              <span class="cov__track"><i class="cov__bar is-open" style="left:47.83%;width:52.17%"></i></span>
+              <span class="cov__range">2002.07 – near present</span>
+            </button>
+          </li><li>
+            <button type="button" class="cov__row" data-cov="pml-v2-china" aria-pressed="">
+              <span class="cov__name">PML_v2-China</span>
+              <span class="cov__track"><i class="cov__bar" style="left:43.48%;width:43.48%"></i></span>
+              <span class="cov__range">2000.02.26 – 2020.12.31</span>
+            </button>
+          </li><li>
+            <button type="button" class="cov__row" data-cov="grace-transformer-gap" aria-pressed="">
+              <span class="cov__name">GRACE-Transformer-Gap</span>
+              <span class="cov__track"><i class="cov__bar is-open" style="left:47.83%;width:52.17%"></i></span>
+              <span class="cov__range">2002 – near present</span>
+            </button>
+          </li>
+      </ol>
+      <div class="cov__axis" aria-hidden="true">
+        <span class="cov__name"></span>
+        <span class="cov__track"><span style="left:0.00%">1980</span><span style="left:21.74%">1990</span><span style="left:43.48%">2000</span><span style="left:65.22%">2010</span><span style="left:86.96%">2020</span><span class="is-now" style="left:100%">2026</span></span>
+        <span class="cov__range"></span>
       </div>
     </div>
-    <div id="main" role="main">
-      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-        <meta itemprop="headline" content="Data" />
-        <div class="page__inner-wrap">
-          <header>
-            <h1 class="page__title" itemprop="headline">Data</h1>
-          </header>
-          <section class="page__content" itemprop="text">
-
-            <!-- PML_v2.2 -->
-            <div style="display: flex; gap: 20px; margin-bottom: 40px; align-items: flex-start;">
-              <div style="flex-shrink: 0;">
-                <img src="./data/PML_v2c.png" alt="PML_v2.2" style="width: 300px; height: auto; object-fit: cover;" />
+    
+  </div>
+      </div>
+    </section>
+    <section class="plane plane--paper">
+      <div class="wrap sheets">
+        <article class="sheet" id="pml-v2-2">
+            <header class="sheet__head">
+              <span class="sheet__i">01</span>
+              <h2>PML_v2.2</h2>
+              <p><span class="t-en">Coupled ET and GPP extending PML_v2 back to 1982 by integrating MODIS and AVHRR archives; calibrated at 208 flux stations.</span><span class="t-zh" lang="zh-CN">融合 MODIS 与 AVHRR 存档，将 PML_v2 的耦合蒸散发和总初级生产力数据向前延伸至 1982 年，并基于 208 个通量站点率定。</span></p>
+            </header>
+            <dl class="spec spec--grid">
+              <div><dt><span class="t-en">Scope</span><span class="t-zh" lang="zh-CN">范围</span></dt><dd>Global</dd></div>
+              <div><dt><span class="t-en">Variables</span><span class="t-zh" lang="zh-CN">变量</span></dt><dd>ET, GPP</dd></div>
+              <div><dt><span class="t-en">Time step</span><span class="t-zh" lang="zh-CN">时间分辨率</span></dt><dd>8-day · half-month</dd></div>
+              <div><dt><span class="t-en">Grid</span><span class="t-zh" lang="zh-CN">空间分辨率</span></dt><dd>500 m · 0.1°</dd></div>
+              <div><dt><span class="t-en">Coverage</span><span class="t-zh" lang="zh-CN">时间范围</span></dt><dd>1982 – near present</dd></div>
+            </dl>
+            <div class="sheet__body">
+              <div>
+                <h3><span class="t-en">Download</span><span class="t-zh" lang="zh-CN">下载</span></h3>
+                <ul class="dl"><li><a href="https://developers.google.com/earth-engine/datasets/catalog/projects_pml_evapotranspiration_PML_OUTPUT_PML_V22a" target="_blank" rel="noopener" data-magnetic>500 m · Google Earth Engine <svg class="arrow arrow--out" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a></li><li><a href="https://data.tpdc.ac.cn/zh-hans/data/40f57c67-33a6-402d-bd37-6ede91919f23" target="_blank" rel="noopener" data-magnetic>0.1° · National Tibetan Plateau Data Center <svg class="arrow arrow--out" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a></li></ul>
+                <h3><span class="t-en">How to cite</span><span class="t-zh" lang="zh-CN">引用方式</span></h3>
+                <ol class="cite"><li><p>Xu, Z., Zhang, Y., Kong, D., Ma, N., &amp; Zhang, X. (2026). Extended global terrestrial evapotranspiration and gross primary production dataset from 1982 to near present. Earth System Science Data Discussions. https://essd.copernicus.org/preprints/essd-2026-94/</p><button class="link" type="button" data-copy="Xu, Z., Zhang, Y., Kong, D., Ma, N., &amp; Zhang, X. (2026). Extended global terrestrial evapotranspiration and gross primary production dataset from 1982 to near present. Earth System Science Data Discussions. https://essd.copernicus.org/preprints/essd-2026-94/"><span class="t-en">Copy</span><span class="t-zh" lang="zh-CN">复制</span></button></li></ol>
               </div>
-              <div style="flex: 1;">
-                <h2 id="pml_v2_2" style="margin-top: 0;"><strong>PML_v2.2</strong></h2>
-                <p><strong>Description:</strong> Global 1982 to near present; 8-day 500 m or half-month 0.1°; coupled ET and GPP extending PML_v2 back to 1982 by integrating MODIS and AVHRR archives; calibrated at 208 flux stations</p>
-                <p><strong>How to download:</strong></p>
-                <ul>
-                  <li>500 m: <a href="https://developers.google.com/earth-engine/datasets/catalog/projects_pml_evapotranspiration_PML_OUTPUT_PML_V22a" target="_blank">Google Earth Engine</a></li>
-                  <li>0.1°: <a href="https://data.tpdc.ac.cn/zh-hans/data/40f57c67-33a6-402d-bd37-6ede91919f23" target="_blank">国家青藏高原科学数据中心</a></li>
-                </ul>
-                <p><strong>How to cite:</strong></p>
-                <ul>
-                  <li>[1] Xu, Z., Zhang, Y., Kong, D., Ma, N., & Zhang, X. (2026). Extended global terrestrial evapotranspiration and gross primary production dataset from 1982 to near present. <em>Earth System Science Data Discussions</em>. <a href="https://essd.copernicus.org/preprints/essd-2026-94/" target="_blank">https://essd.copernicus.org/preprints/essd-2026-94/</a></li>
-                </ul>
-              </div>
+              <button class="project__fig" type="button" data-zoom data-cursor="Zoom" aria-label="Enlarge figure for PML_v2.2"><img class="" src="/media/9f0da4c0be8819b9-1642.webp" srcset="/media/9f0da4c0be8819b9-640.webp 640w, /media/9f0da4c0be8819b9-1280.webp 1280w, /media/9f0da4c0be8819b9-1642.webp 1642w" sizes="(max-width: 900px) 100vw, 44vw" width="1642" height="1285" alt="PML_v2.2 figure" loading="lazy" decoding="async" style="background-color:#f8f8f8;"></button>
             </div>
-
-            <hr style="margin: 40px 0; border: 0; border-top: 2px solid #e0e0e0;" />
-
-            <!-- PML_v2 -->
-            <div style="display: flex; gap: 20px; margin-bottom: 40px; align-items: flex-start;">
-              <div style="flex-shrink: 0;">
-                <img src="./data/PML_v2.png" alt="PML_v2" style="width: 300px; height: auto; object-fit: cover;" />
+          </article><article class="sheet" id="pml-v2">
+            <header class="sheet__head">
+              <span class="sheet__i">02</span>
+              <h2>PML_v2</h2>
+              <p><span class="t-en">Penman-Monteith-Leuning Evapotranspiration V2: evapotranspiration, its three components, and gross primary production.</span><span class="t-zh" lang="zh-CN">Penman-Monteith-Leuning 蒸散发第二版产品，包含蒸散发及其三个分量和总初级生产力。</span></p>
+            </header>
+            <dl class="spec spec--grid">
+              <div><dt><span class="t-en">Scope</span><span class="t-zh" lang="zh-CN">范围</span></dt><dd>Global</dd></div>
+              <div><dt><span class="t-en">Variables</span><span class="t-zh" lang="zh-CN">变量</span></dt><dd>ET, ET components, GPP</dd></div>
+              <div><dt><span class="t-en">Time step</span><span class="t-zh" lang="zh-CN">时间分辨率</span></dt><dd>8-day</dd></div>
+              <div><dt><span class="t-en">Grid</span><span class="t-zh" lang="zh-CN">空间分辨率</span></dt><dd>500 m · 0.05°</dd></div>
+              <div><dt><span class="t-en">Coverage</span><span class="t-zh" lang="zh-CN">时间范围</span></dt><dd>2002.07 – near present</dd></div>
+            </dl>
+            <div class="sheet__body">
+              <div>
+                <h3><span class="t-en">Download</span><span class="t-zh" lang="zh-CN">下载</span></h3>
+                <ul class="dl"><li><a href="https://developers.google.cn/earth-engine/datasets/catalog/CAS_IGSNRR_PML_V2_v018" target="_blank" rel="noopener" data-magnetic>500 m · Google Earth Engine <svg class="arrow arrow--out" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a></li><li><a href="https://data.tpdc.ac.cn/zh-hans/data/48c16a8d-d307-4973-abab-972e9449627c/" target="_blank" rel="noopener" data-magnetic>0.05° · National Tibetan Plateau Data Center <svg class="arrow arrow--out" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a></li></ul>
+                <h3><span class="t-en">How to cite</span><span class="t-zh" lang="zh-CN">引用方式</span></h3>
+                <ol class="cite"><li><p>Zhang, Y., Peña-Arancibia, J.L., McVicar, T.R., Chiew, F.H.S., Vaze, J., Liu, C., Lu, X., Zheng, H., Wang, Y., Liu, Y.Y., Miralles, D.G., Pan, M., 2016. Multi-decadal trends in global terrestrial evapotranspiration and its components. Sci. Rep. 6, 19124. https://doi.org/10.1038/srep19124.</p><button class="link" type="button" data-copy="Zhang, Y., Peña-Arancibia, J.L., McVicar, T.R., Chiew, F.H.S., Vaze, J., Liu, C., Lu, X., Zheng, H., Wang, Y., Liu, Y.Y., Miralles, D.G., Pan, M., 2016. Multi-decadal trends in global terrestrial evapotranspiration and its components. Sci. Rep. 6, 19124. https://doi.org/10.1038/srep19124."><span class="t-en">Copy</span><span class="t-zh" lang="zh-CN">复制</span></button></li><li><p>Zhang, Y., Kong, D., Gan, R., Chiew, F.H.S., McVicar, T.R., Zhang, Q., &amp; Yang, Y. (2019). Coupled estimation of 500m and 8-day resolution global evapotranspiration and gross primary production in 2002-2017. Remote Sensing Environ. 222, 165-182. https://doi.org/10.1016/j.rse.2018.12.031.</p><button class="link" type="button" data-copy="Zhang, Y., Kong, D., Gan, R., Chiew, F.H.S., McVicar, T.R., Zhang, Q., &amp; Yang, Y. (2019). Coupled estimation of 500m and 8-day resolution global evapotranspiration and gross primary production in 2002-2017. Remote Sensing Environ. 222, 165-182. https://doi.org/10.1016/j.rse.2018.12.031."><span class="t-en">Copy</span><span class="t-zh" lang="zh-CN">复制</span></button></li></ol>
               </div>
-              <div style="flex: 1;">
-                <h2 id="pml_v2" style="margin-top: 0;"><strong>PML_v2</strong></h2>
-                <p><strong>Description:</strong> Global 2002.07 to near now; 8 day 0.05° for TPDC & 500m for GEE</p>
-                <p><strong>How to download:</strong></p>
-                <ul>
-                  <li>500m: <a href="https://developers.google.cn/earth-engine/datasets/catalog/CAS_IGSNRR_PML_V2_v018" target="_blank">Google Earth Engine</a></li>
-                  <li>0.05°: <a href="https://data.tpdc.ac.cn/zh-hans/data/48c16a8d-d307-4973-abab-972e9449627c/" target="_blank">国家青藏高原科学数据中心</a></li>
-                </ul>
-                <p><strong>How to cite:</strong></p>
-                <ul>
-                  <li>[1] Zhang, Y., Peña-Arancibia, J.L., McVicar, T.R., Chiew, F.H.S., Vaze, J., Liu, C., Lu, X., Zheng, H., Wang, Y., Liu, Y.Y., Miralles, D.G., Pan, M., 2016. Multi-decadal trends in global terrestrial evapotranspiration and its components. Sci. Rep. 6, 19124. <a href="https://doi.org/10.1038/srep19124" target="_blank">https://doi.org/10.1038/srep19124</a></li>
-                  <li>[2] Zhang, Y., Kong, D., Gan, R., Chiew, F.H.S., McVicar, T.R., Zhang, Q., & Yang, Y. (2019). Coupled estimation of 500m and 8-day resolution global evapotranspiration and gross primary production in 2002-2017. Remote Sensing Environ. 222, 165-182. <a href="https://doi.org/10.1016/j.rse.2018.12.031" target="_blank">https://doi.org/10.1016/j.rse.2018.12.031</a></li>
-                </ul>
-              </div>
+              <button class="project__fig" type="button" data-zoom data-cursor="Zoom" aria-label="Enlarge figure for PML_v2"><img class="" src="/media/a92231ba083108fd-1447.webp" srcset="/media/a92231ba083108fd-640.webp 640w, /media/a92231ba083108fd-1280.webp 1280w, /media/a92231ba083108fd-1447.webp 1447w" sizes="(max-width: 900px) 100vw, 44vw" width="1447" height="629" alt="PML_v2 figure" loading="lazy" decoding="async" style="background-color:#f8f8f8;"></button>
             </div>
-
-            <hr style="margin: 40px 0; border: 0; border-top: 2px solid #e0e0e0;" />
-
-            <!-- PML_v2-china -->
-            <div style="display: flex; gap: 20px; margin-bottom: 40px; align-items: flex-start;">
-              <div style="flex-shrink: 0;">
-                <img src="./data/PML_china.png" alt="PML_china" style="width: 300px; height: auto; object-fit: cover;" />
+          </article><article class="sheet" id="pml-v2-china">
+            <header class="sheet__head">
+              <span class="sheet__i">03</span>
+              <h2>PML_v2-China</h2>
+              <p><span class="t-en">Daily, 500 m coupled evapotranspiration and gross primary production across China.</span><span class="t-zh" lang="zh-CN">中国区域逐日、500 米分辨率的耦合蒸散发和总初级生产力数据集。</span></p>
+            </header>
+            <dl class="spec spec--grid">
+              <div><dt><span class="t-en">Scope</span><span class="t-zh" lang="zh-CN">范围</span></dt><dd>China</dd></div>
+              <div><dt><span class="t-en">Variables</span><span class="t-zh" lang="zh-CN">变量</span></dt><dd>ET, GPP</dd></div>
+              <div><dt><span class="t-en">Time step</span><span class="t-zh" lang="zh-CN">时间分辨率</span></dt><dd>Daily</dd></div>
+              <div><dt><span class="t-en">Grid</span><span class="t-zh" lang="zh-CN">空间分辨率</span></dt><dd>500 m</dd></div>
+              <div><dt><span class="t-en">Coverage</span><span class="t-zh" lang="zh-CN">时间范围</span></dt><dd>2000.02.26 – 2020.12.31</dd></div>
+            </dl>
+            <div class="sheet__body">
+              <div>
+                <h3><span class="t-en">Download</span><span class="t-zh" lang="zh-CN">下载</span></h3>
+                <ul class="dl"><li><a href="https://data.tpdc.ac.cn/zh-hans/data/40f57c67-33a6-402d-bd37-6ede91919f23" target="_blank" rel="noopener" data-magnetic>National Tibetan Plateau Data Center <svg class="arrow arrow--out" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a></li></ul>
+                <h3><span class="t-en">How to cite</span><span class="t-zh" lang="zh-CN">引用方式</span></h3>
+                <ol class="cite"><li><p>He, S., Zhang, Y., Ma, N., Tian, J., Kong, D., &amp; Liu, C. (2022). A daily and 500 m coupled evapotranspiration and gross primary production product across China during 2000–2020, Earth Syst. Sci. Data., https://doi.org/10.5194/essd-2022-183.</p><button class="link" type="button" data-copy="He, S., Zhang, Y., Ma, N., Tian, J., Kong, D., &amp; Liu, C. (2022). A daily and 500 m coupled evapotranspiration and gross primary production product across China during 2000–2020, Earth Syst. Sci. Data., https://doi.org/10.5194/essd-2022-183."><span class="t-en">Copy</span><span class="t-zh" lang="zh-CN">复制</span></button></li></ol>
               </div>
-              <div style="flex: 1;">
-                <h2 id="pml_v2_china" style="margin-top: 0;"><strong>PML_v2-china</strong></h2>
-                <p><strong>Description:</strong> China daily 2000.02.26-2020.12.31 500m</p>
-                <p><strong>How to download:</strong></p>
-                <ul>
-                  <li><a href="https://data.tpdc.ac.cn/zh-hans/data/40f57c67-33a6-402d-bd37-6ede91919f23" target="_blank">国家青藏高原科学数据中心</a></li>
-                </ul>
-                <p><strong>How to cite:</strong></p>
-                <ul>
-                  <li>[1] He, S., Zhang, Y., Ma, N., Tian, J., Kong, D., & Liu, C. (2022). A daily and 500 m coupled evapotranspiration and gross primary production product across China during 2000–2020, Earth Syst. Sci. Data., <a href="https://doi.org/10.5194/essd-2022-183" target="_blank">https://doi.org/10.5194/essd-2022-183</a></li>
-                </ul>
-              </div>
+              <button class="project__fig" type="button" data-zoom data-cursor="Zoom" aria-label="Enlarge figure for PML_v2-China"><img class="" src="/media/99f87c3f8f3493fb-430.webp" srcset="/media/99f87c3f8f3493fb-430.webp 430w" sizes="(max-width: 900px) 100vw, 44vw" width="430" height="355" alt="PML_v2-China figure" loading="lazy" decoding="async" style="background-color:#a8d8f8;"></button>
             </div>
-
-            <hr style="margin: 40px 0; border: 0; border-top: 2px solid #e0e0e0;" />
-
-            <!-- GRACE-transformer-gap -->
-            <div style="display: flex; gap: 20px; margin-bottom: 40px; align-items: flex-start;">
-              <div style="flex-shrink: 0;">
-                <img src="./data/GRACE.png" alt="GRACE" style="width: 300px; height: auto; object-fit: cover;" />
+          </article><article class="sheet" id="grace-transformer-gap">
+            <header class="sheet__head">
+              <span class="sheet__i">04</span>
+              <h2>GRACE-Transformer-Gap</h2>
+              <p><span class="t-en">Global gap filling of GRACE CSR RL06 terrestrial water storage using a Transformer-based deep learning model.</span><span class="t-zh" lang="zh-CN">基于 Transformer 深度学习模型对 GRACE CSR RL06 陆地水储量进行全球空缺填补。</span></p>
+            </header>
+            <dl class="spec spec--grid">
+              <div><dt><span class="t-en">Scope</span><span class="t-zh" lang="zh-CN">范围</span></dt><dd>Global</dd></div>
+              <div><dt><span class="t-en">Variables</span><span class="t-zh" lang="zh-CN">变量</span></dt><dd>Terrestrial water storage</dd></div>
+              <div><dt><span class="t-en">Time step</span><span class="t-zh" lang="zh-CN">时间分辨率</span></dt><dd>Monthly</dd></div>
+              <div><dt><span class="t-en">Grid</span><span class="t-zh" lang="zh-CN">空间分辨率</span></dt><dd>0.25°</dd></div>
+              <div><dt><span class="t-en">Coverage</span><span class="t-zh" lang="zh-CN">时间范围</span></dt><dd>2002 – near present</dd></div>
+            </dl>
+            <div class="sheet__body">
+              <div>
+                <h3><span class="t-en">Download</span><span class="t-zh" lang="zh-CN">下载</span></h3>
+                <ul class="dl"><li><a href="https://doi.org/10.6084/m9.figshare.24614958" target="_blank" rel="noopener" data-magnetic>Single months · figshare <svg class="arrow arrow--out" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a></li><li><a href="https://drive.google.com/file/d/1l7oQdkEUl-bvoH7OTg9mKlaIybtuscqA/view?usp=drive_link" target="_blank" rel="noopener" data-magnetic>Google Drive <svg class="arrow arrow--out" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a></li><li><a href="https://pan.baidu.com/s/1Zah2ILpn-DTjDG-WimT_TQ?pwd=ancc" target="_blank" rel="noopener" data-magnetic>Baidu Netdisk <svg class="arrow arrow--out" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a></li></ul>
+                <h3><span class="t-en">How to cite</span><span class="t-zh" lang="zh-CN">引用方式</span></h3>
+                <ol class="cite"><li><p>Wang, L., &amp; Zhang, Y. (2024). Filling GRACE data gap using an innovative transformer-based deep learning approach. Remote Sensing of Environment, 315, 114465. https://doi.org/10.1016/j.rse.2024.114465</p><button class="link" type="button" data-copy="Wang, L., &amp; Zhang, Y. (2024). Filling GRACE data gap using an innovative transformer-based deep learning approach. Remote Sensing of Environment, 315, 114465. https://doi.org/10.1016/j.rse.2024.114465"><span class="t-en">Copy</span><span class="t-zh" lang="zh-CN">复制</span></button></li></ol>
               </div>
-              <div style="flex: 1;">
-                <h2 id="grace_transformer_gap" style="margin-top: 0;"><strong>GRACE-transformer-gap</strong></h2>
-                <p><strong>Description:</strong> Global gap filling of GRACE CSR RL06 2002-near now; 0.25°</p>
-                <p><strong>How to download:</strong></p>
-                <ul>
-                  <li>Single month data: <a href="https://doi.org/10.6084/m9.figshare.24614958" target="_blank">Figshare</a></li>
-                  <li><a href="https://drive.google.com/file/d/1l7oQdkEUl-bvoH7OTg9mKlaIybtuscqA/view?usp=drive_link" target="_blank">Google Drive</a></li>
-                  <li><a href="https://pan.baidu.com/s/1Zah2ILpn-DTjDG-WimT_TQ?pwd=ancc" target="_blank">BaiduNetDisk</a> (password: ancc)</li>
-                </ul>
-                <p><strong>How to cite:</strong></p>
-                <ul>
-                  <li>[1] Wang, L., & Zhang, Y. (2024). Filling GRACE data gap using an innovative transformer-based deep learning approach. <em>Remote Sensing of Environment</em>, <em>315</em>, 114465. <a href="https://doi.org/10.1016/j.rse.2024.114465" target="_blank">https://doi.org/10.1016/j.rse.2024.114465</a></li>
-                </ul>
-              </div>
+              <button class="project__fig" type="button" data-zoom data-cursor="Zoom" aria-label="Enlarge figure for GRACE-Transformer-Gap"><img class="" src="/media/b31b5f27e3866661-1074.webp" srcset="/media/b31b5f27e3866661-640.webp 640w, /media/b31b5f27e3866661-1074.webp 1074w" sizes="(max-width: 900px) 100vw, 44vw" width="1074" height="742" alt="GRACE-Transformer-Gap figure" loading="lazy" decoding="async" style="background-color:#f8f8f8;"></button>
             </div>
-
-
-          </section>
-          <footer class="page__meta"></footer>
-        </div>
-      </article>
+          </article>
+      </div>
+    </section>
+</main>
+<footer class="footer">
+    <canvas class="footer__water" data-module="dotwave" aria-hidden="true"></canvas>
+    <div class="wrap footer__grid">
+      <div class="footer__lab">
+        <img class="footer__logo" src="/media/601b88f216dd2c21-320.webp" srcset="/media/601b88f216dd2c21-160.webp 160w, /media/601b88f216dd2c21-320.webp 320w" sizes="96px" width="1024" height="1024" alt="Large Scale Hydrology research group badge" loading="lazy" decoding="async" style="background-color:#585858;">
+        <p><span class="t-en">Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences</span><span class="t-zh" lang="zh-CN">中国科学院地理科学与资源研究所</span></p>
+      </div>
+      <div>
+        <p class="eyebrow"><span class="t-en">Find us</span><span class="t-zh" lang="zh-CN">联系方式</span></p>
+        <p><span class="t-en">IGSNRR, A937</span><span class="t-zh" lang="zh-CN">中国科学院地理科学与资源研究所 A937</span></p>
+        <p><a class="link" href="mailto:zhangyq@igsnrr.ac.cn">zhangyq@igsnrr.ac.cn</a></p>
+      </div>
+      <div>
+        <p class="eyebrow"><span class="t-en">Explore</span><span class="t-zh" lang="zh-CN">浏览</span></p>
+        <ul class="footer__nav"><li><a class="link" href="/research.html"><span class="t-en">Research</span><span class="t-zh" lang="zh-CN">研究方向</span></a></li><li><a class="link" href="/publications.html"><span class="t-en">Publications</span><span class="t-zh" lang="zh-CN">论文成果</span></a></li><li><a class="link" href="/data.html"><span class="t-en">Data</span><span class="t-zh" lang="zh-CN">数据产品</span></a></li><li><a class="link" href="/people.html"><span class="t-en">People</span><span class="t-zh" lang="zh-CN">团队成员</span></a></li><li><a class="link" href="/news.html"><span class="t-en">News</span><span class="t-zh" lang="zh-CN">新闻动态</span></a></li><li><a class="link" href="/collaboration.html"><span class="t-en">Collaboration</span><span class="t-zh" lang="zh-CN">合作网络</span></a></li></ul>
+      </div>
+      <div>
+        <p class="eyebrow"><span class="t-en">Elsewhere</span><span class="t-zh" lang="zh-CN">外部链接</span></p>
+        <ul class="footer__nav"><li><a class="link" href="https://scholar.google.com/citations?user=t5iGFeAAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li><li><a class="link" href="https://igsnrr.cas.cn/sourcedb/zw/zjrck/kygg/bjdbgc/201903/t20190327_5262230.html" target="_blank" rel="noopener">IGSNRR profile</a></li>
+          <li><a class="link" href="/api/v1/meta.json"><span class="t-en">Open content API</span><span class="t-zh" lang="zh-CN">开放内容接口</span></a></li>
+        </ul>
+      </div>
     </div>
-    <div class="page__footer">
-      <footer>
-        <!-- start custom footer snippets -->
-        <!-- <a href="/sitemap/">Sitemap</a> -->
-        <!-- end custom footer snippets -->
-        <div class="page__footer-copyright">
-          &copy; 2024 Yongqiang Zhang's lab: Large Scale Hydrology. Powered by
-          <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp;
-          <a href="https://github.com/academicpages/academicpages.github.io"
-            >AcademicPages</a
-          >, a fork of
-          <a
-            href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/"
-            rel="nofollow"
-            >Minimal Mistakes</a
-          >.
-        </div>
-      </footer>
+    <p class="footer__word" aria-hidden="true">Hydrology</p>
+    <div class="wrap footer__legal">
+      <span>© 2026 <span class="t-en">Large Scale Hydrology</span><span class="t-zh" lang="zh-CN">大尺度水文学团队</span></span>
+      <span><span class="t-en">Content updated</span><span class="t-zh" lang="zh-CN">内容更新于</span> 2026-11-01</span>
+      <a class="link" href="#top"><span class="t-en">Back to top</span><span class="t-zh" lang="zh-CN">返回顶部</span> <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./assets/js/menu.js"></script>
-    <script>
-      (function (i, s, o, g, r, a, m) {
-        i["GoogleAnalyticsObject"] = r;
-        (i[r] =
-          i[r] ||
-          function () {
-            (i[r].q = i[r].q || []).push(arguments);
-          }),
-          (i[r].l = 1 * new Date());
-        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m);
-      })(
-        window,
-        document,
-        "script",
-        "//www.google-analytics.com/analytics.js",
-        "ga"
-      );
-      ga("create", "", "auto");
-      ga("send", "pageview");
-    </script>
-  </body>
+  </footer>
+<dialog class="search" data-search aria-label="Search">
+    <form method="dialog" class="search__box">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m14 14 4 4" stroke="currentColor" stroke-width="1.8"/></svg>
+      <input data-search-input type="search" placeholder="People, papers, datasets, news" aria-label="Search the site" autocomplete="off">
+      <button class="search__esc" type="submit" aria-label="Close search">Esc</button>
+    </form>
+    <ul class="search__results" data-search-results aria-live="polite"></ul>
+  </dialog>
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+<div class="gauge" data-gauge aria-hidden="true"><i></i></div>
+</body>
 </html>

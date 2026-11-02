@@ -1,0 +1,92 @@
+{
+  "themes": [
+    {
+      "id": "water-cycle",
+      "title_en": "Water Cycle and Ecohydrology",
+      "title_zh": "水循环和生态水文",
+      "heading_en": "Understanding the Changing Global Water Cycle",
+      "summary_en": "The team investigates how global warming and human activities are altering fundamental water cycle processes. They seek to reconcile different data sources (like satellite, model (such as PML-V2 evapotranspiration and HBV-PML hydrological models), and ground observations) to better quantify these changes, asking critical questions such as why parts of the water cycle appear to be stagnating despite warming, and how human actions reshape water availability and ecosystem functions—like the roles of forests as “sponges” or “pumps”—at regional and global scales.",
+      "summary_zh": "团队研究全球变暖和人类活动如何改变水循环的基本过程，融合卫星、模型（如 PML-V2 蒸散发模型与 HBV-PML 水文模型）和地面观测以更好地量化这些变化，并回答关键问题：为何升温背景下部分水循环过程反而趋于停滞，人类活动又如何在区域和全球尺度上重塑水资源可用性和生态系统功能，例如森林究竟扮演“海绵”还是“水泵”的角色。",
+      "image_id": "3091916df3c5aab7",
+      "accent": "blue",
+      "projects": [
+        {
+          "id": "pml-v2",
+          "theme_id": "water-cycle",
+          "name": "PML_v2",
+          "description": "Penman-Monteith-Leuning Evapotranspiration V2 (PML_V2) products include evapotranspiration (ET), its three components, and gross primary production (GPP) at 500m and 8-day resolution during 2000-2023.",
+          "image_id": "a92231ba083108fd",
+          "related": [
+            "Zhang, Y., Peña-Arancibia, J.L., McVicar, T.R., Chiew, F.H.S., Vaze, J., Liu, C., Lu, X., Zheng, H., Wang, Y., Liu, Y.Y., Miralles, D.G., Pan, M., 2016. Multi-decadal trends in global terrestrial evapotranspiration and its components. Sci. Rep. 6, 19124. https://doi.org/10.1038/srep19124.",
+            "Zhang, Y., Kong, D., Gan, R., Chiew, F.H.S., McVicar, T.R., Zhang, Q., & Yang, Y. (2019). Coupled estimation of 500m and 8-day resolution global evapotranspiration and gross primary production in 2002-2017. Remote Sensing Environ. 222, 165-182. https://doi.org/10.1016/j.rse.2018.12.031.",
+            "He, S., Zhang, Y., Ma, N., Tian, J., Kong, D., & Liu, C. (2022). A daily and 500 m coupled evapotranspiration and gross primary production product across China during 2000–2020, Earth Syst. Sci. Data., https://doi.org/10.5194/essd-2022-183.",
+            "Wang, X., Zhang, Y., Zhang, X., He, S., Kong, D., Tian, J., Wei, H., Wang, L., Quan, Y., Zheng, Y., & Wang, Y. (2025). Satellite data-driven estimation of daily and 500 m net ecosystem exchange over China during 2003–2020. Remote Sensing of Environment, 331, 115047. https://doi.org/10.1016/j.rse.2025.115047"
+          ]
+        },
+        {
+          "id": "hbv-pml",
+          "theme_id": "water-cycle",
+          "name": "HBV-PML",
+          "description": "The HBV-PML model, provides critical data support for global water resource assessments. This innovative model integrates the remote sensing evapotranspiration model PML with the classical hydrological model HBV, significantly improving the accuracy of evapotranspiration simulation through remote sensing observations. It effectively overcomes the limitations of traditional models in representing vegetation dynamics.",
+          "image_id": "9b23de9d4f3643a6",
+          "related": []
+        }
+      ]
+    },
+    {
+      "id": "water-security",
+      "title_en": "Water-Related Disasters and Security",
+      "title_zh": "水灾害和水安全",
+      "heading_en": "Water-Related Disasters and Security Under Climate Change",
+      "summary_en": "This theme focuses on the mechanisms and impacts of extreme hydrological events, including droughts and floods. The group studies how droughts develop and propagate through different environmental layers, how flood patterns have evolved in China over decades, and how to enhance societal and ecological resilience to water-related extremes in a changing climate.",
+      "summary_zh": "这一方向聚焦干旱和洪水等极端水文事件的机理与影响，研究干旱如何在不同环境圈层中发展和传播，中国洪水格局在数十年间如何演变，以及如何在气候变化下增强社会和生态系统对水相关极端事件的韧性。",
+      "image_id": "a24db0a4103908bf",
+      "accent": "coral",
+      "projects": [
+        {
+          "id": "forest-fire-flood-ecological-hydrological-effects",
+          "theme_id": "water-security",
+          "name": "Forest Fire & Flood Ecological-Hydrological Effects",
+          "description": "The research explores the impacts of bushfires on hydrological processes in southeast Australia, particularly focusing on changes in water balance and flood magnitudes. One study examines the effects of the 2009 Victorian Bushfires on water balance in eight forested catchments, finding a reduction in evapotranspiration and an increase in streamflow, leading to a long-term decline in water storage in burned areas. Another study investigates the 2019-2020 mega forest fires, showing that these fires significantly amplified flood magnitudes, especially in regions with winter-dominated rainfall.",
+          "image_id": "378d11a0298c8e7d",
+          "related": [
+            "Xu, Z., Zhang, Y., Zhang, X., Ma, N., Tian, J., Kong, D., & Post, D. (2022). Bushfire‐Induced Water Balance Changes Detected by a Modified Paired Catchment Method. Water Resources Research, 58(11). https://doi.org/10.1029/2021wr031013",
+            "Xu, Z., Zhang, Y., Blöschl, G., & Piao, S. (2023). Mega Forest Fires Intensify Flood Magnitudes in Southeast Australia. Geophysical Research Letters, 50(12). https://doi.org/10.1029/2023gl103812"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "water-innovation",
+      "title_en": "Innovating Water Science",
+      "title_zh": "水文水资源与新技术",
+      "heading_en": "Innovating Water Science with New Technologies and Models",
+      "summary_en": "The group leverages advanced technologies such as high-resolution remote sensing and artificial intelligence (AI) to improve the monitoring and prediction of hydrological processes. They develop fine-scale datasets for evapotranspiration and vegetation productivity, integrate AI with physical models to enable better forecasting in ungauged basins, and work toward real-time flood prediction systems that support water resources management under climate change.",
+      "summary_zh": "团队利用高分辨率遥感和人工智能等先进技术改进水文过程的监测与预测：研发蒸散发和植被生产力的精细尺度数据集，融合人工智能与物理模型以提升无资料流域的预报能力，并致力于发展实时洪水预报系统，为气候变化下的水资源管理提供支撑。",
+      "image_id": "0f2c4381ccecc77c",
+      "accent": "lime",
+      "projects": [
+        {
+          "id": "ai-for-hydrology-modeling",
+          "theme_id": "water-innovation",
+          "name": "AI for Hydrology Modeling",
+          "description": "We introduce an AI-driven Transformer-based deep learning model to address data gaps in GRACE and GRACE Follow-On satellite data. By integrating meteorological and hydrological features like temperature, precipitation, and evapotranspiration, the model effectively fills the 11-month data gap, showing superior accuracy, particularly in arid regions. The transformer-based approach outperforms traditional methods, demonstrating the potential of AI in enhancing satellite data continuity and reliability for environmental monitoring.",
+          "image_id": "b31b5f27e3866661",
+          "related": [
+            "Wang, L., & Zhang, Y. (2024). Filling GRACE data gap using an innovative transformer-based deep learning approach. Remote Sensing of Environment, 315, 114465. https://doi.org/10.1016/j.rse.2024.114465"
+          ]
+        },
+        {
+          "id": "cas-canglong",
+          "theme_id": "water-innovation",
+          "name": "CAS-Canglong",
+          "description": "We present a novel AI-based approach for sub-seasonal to seasonal (S2S) global sea surface temperature (SST) prediction, using a 3D Transformer model called CAS-Canglong. By leveraging the self-attention mechanism inherent in Transformer architectures, the model efficiently handles the complexities of ocean-atmosphere interactions and improves prediction accuracy. Compared to traditional physics-based models, CAS-Canglong demonstrates superior skill in predicting SST patterns, enhancing computational efficiency and forecasting accuracy for up to three months in advance. This approach shows great potential for improving predictions of extreme weather events like droughts and floods, as well as for future climate studies.",
+          "image_id": "7904f1af69b15ed4",
+          "related": [
+            "Wang, L., Zhang, X., Leung, L. R., Chiew, F. H. S., AghaKouchak, A., Ying, K., & Zhang, Y. (2024). CAS-Canglong: A skillful 3D Transformer model for sub-seasonal to seasonal global sea surface temperature prediction (No. arXiv:2409.05369). arXiv. https://doi.org/10.48550/arXiv.2409.05369"
+          ]
+        }
+      ]
+    }
+  ]
+}

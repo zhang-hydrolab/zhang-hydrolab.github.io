@@ -1,0 +1,17 @@
+{
+  "name": "zhang-hydrolab",
+  "private": true,
+  "description": "Large Scale Hydrology group website: frontend and backend sources. The generated site lives at the repository root.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "setup": "npm install --prefix frontend",
+    "backend": "npm start --prefix backend",
+    "dev": "npm run build && npm run dev --prefix frontend",
+    "test": "npm test --prefix backend",
+    "build": "node scripts/publish.mjs --build-only",
+    "publish": "node scripts/publish.mjs"
+  }
+}

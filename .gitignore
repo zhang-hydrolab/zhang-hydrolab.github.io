@@ -3,3 +3,11 @@ Thumbs.db
 .DS_Store
 CLAUDE.md
 ~$*.xlsx
+
+# Dependencies and build output
+node_modules/
+frontend/dist/
+frontend/.cache/
+
+# Local database and private files. Rebuilt from backend/content/ when missing.
+backend/var/

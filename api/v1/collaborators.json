@@ -1,0 +1,75 @@
+{
+  "count": 7,
+  "items": [
+    {
+      "id": "gunter-bloschl",
+      "name": "Günter Blöschl",
+      "institute": "Vienna University of Technology",
+      "city": "Vienna",
+      "lat": 48.2,
+      "lon": 16.37,
+      "bio": "Günter Blöschl is Head of the Institute of Hydraulic Engineering and Water Resources Management, Director of the Centre for Water Resource Systems of the Vienna University of Technology as well as Chair of the Vienna Doctoral Programme on Water Resource Systems.",
+      "photo_id": "04a36f7cdc786716"
+    },
+    {
+      "id": "thorsten-wagener",
+      "name": "Thorsten Wagener",
+      "institute": "University of Potsdam",
+      "city": "Potsdam",
+      "lat": 52.4,
+      "lon": 13.06,
+      "bio": "Thorsten Wagener is a Humboldt Professor at the University of Potsdam, a Fellow of the European Academy of Sciences, a Fellow of the Royal Academy of Engineering (UK), and a Fellow of the American Geophysical Union (AGU). His research focuses on catchment hydrology, and he has made significant contributions in the areas of catchment classification, prediction in ungauged basins, and environmental model evaluation.",
+      "photo_id": "310d9e5944bb16a2"
+    },
+    {
+      "id": "diego-miralles",
+      "name": "Diego Miralles",
+      "institute": "Ghent University",
+      "city": "Ghent",
+      "lat": 51.05,
+      "lon": 3.72,
+      "bio": "Diego Miralles became Professor in Hydrology and Climate at Ghent University in 2017, after a journey via UK, The Netherlands and USA. Being a climate scientist with a background on hydrology and remote sensing, his scientific interests and curiosity are wide. He is the recipient of ERC Starting and Consolidator grants and a Clarivate Highly Cited researcher.",
+      "photo_id": "8d541a07a67e279d"
+    },
+    {
+      "id": "ruby-leung",
+      "name": "Ruby Leung",
+      "institute": "Pacific Northwest National Laboratory",
+      "city": "Richland, WA",
+      "lat": 46.28,
+      "lon": -119.28,
+      "bio": "Ruby Leung is an atmospheric scientist internationally recognized for her work in Earth system modeling and hydrologic processes. Her research spans mountain hydrometeorology, aerosol–cloud interactions, orographic precipitation, and climate extremes. Leung was elected to the U.S. National Academy of Engineering in 2017 for her leadership in regional and global climate and hydrological modeling, and she became a Battelle Fellow at the Pacific Northwest National Laboratory in 2019.",
+      "photo_id": "e35649a7db22aade"
+    },
+    {
+      "id": "francis-chiew",
+      "name": "Francis Chiew",
+      "institute": "CSIRO",
+      "city": "Canberra",
+      "lat": -35.28,
+      "lon": 149.13,
+      "bio": "Francis Chiew has 30 years of experience in research, teaching and consulting, and in science leadership and people and project management. Francis joined CSIRO as a Science Leader in Canberra in 2006, after a 15-year academic career at the University of Melbourne. In the past ten years, Francis has led 30-40 hydrologists working on water resources assessment, hydrological forecasting and prediction, climate change adaptation, and integrated basin management, in projects totalling more than AUD$10m per year.",
+      "photo_id": "a9170b74a18f6d7d"
+    },
+    {
+      "id": "tim-mcvicar",
+      "name": "Tim McVicar",
+      "institute": "CSIRO",
+      "city": "Canberra",
+      "lat": -35.28,
+      "lon": 149.13,
+      "bio": "Tim McVicar is a Research Scientist who leads the Biophysical Dynamics Team in the Living Landscapes Program of CSIRO Environment. With over 35 years of experience in ecohydrology, climatology, remote sensing, and spatial interpolation, he develops high-resolution estimates of actual evapotranspiration across Australia using satellite imagery. His research focuses on modelling AET, monitoring vegetation dynamics, assessing drought and climate variability, and understanding surface-energy exchanges through satellite–meteorological data integration.",
+      "photo_id": "1aec8f0cdc78ddca"
+    },
+    {
+      "id": "amir-aghakouchak",
+      "name": "Amir AghaKouchak",
+      "institute": "University of California, Irvine",
+      "city": "Irvine, CA",
+      "lat": 33.64,
+      "lon": -117.84,
+      "bio": "Amir AghaKouchak is a Chancellor’s Professor of Civil and Environmental Engineering and Director of the Center for Hydrometeorology and Remote Sensing (CHRS) at the University of California, Irvine. His research bridges hydrology, climatology, and remote sensing, focusing on natural hazards, climate extremes, and compound and cascading events. He has authored over 270 peer-reviewed papers and received major honors including the AGU James B. Macelwane Medal, AGU, ASCE, and EWRI Fellowships, ASCE Norman Medal, AMS Robert E. Horton Lectureship in Hydrology, and the ASCE Huber Research Prize.",
+      "photo_id": "ff73838dd0813f43"
+    }
+  ]
+}
