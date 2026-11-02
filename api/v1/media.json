@@ -1,6 +1,86 @@
 {
-  "count": 83,
+  "count": 91,
   "items": [
+    {
+      "id": "0a3714cadd177e29",
+      "sha256": "0a3714cadd177e290c8722c4e6cdfdeb2a16336535aa9b7b4a06d7f75bff1565",
+      "ext": "png",
+      "mime": "image/png",
+      "bytes": 159732,
+      "filename": "2026-xuanze-zhang-afm-editor.png",
+      "alt_en": "Agricultural and Forest Meteorology editorial profile of Xuanze Zhang",
+      "alt_zh": "Agricultural and Forest Meteorology 的张选泽编辑介绍页"
+    },
+    {
+      "id": "2c4c526e977cb5a1",
+      "sha256": "2c4c526e977cb5a16360a9f2982736a2e26ceacdd03ee2678cf591a8397aa725",
+      "ext": "jpg",
+      "mime": "image/jpeg",
+      "bytes": 49077,
+      "filename": "2026-longhao-wang-cast-selection.jpg",
+      "alt_en": "Selection announcement for Longhao Wang in the CAST 2026 doctoral student talent development program",
+      "alt_zh": "王龙浩入选 2026 年中国科协青年科技人才培育工程博士生专项计划的通知"
+    },
+    {
+      "id": "de5b71f6ecf5d398",
+      "sha256": "de5b71f6ecf5d398839ebcf2ce9376b8f5e92e69927c9e0df99e20b77467a5ea",
+      "ext": "jpg",
+      "mime": "image/jpeg",
+      "bytes": 248445,
+      "filename": "2026-nanjing-physical-geography-group.jpg",
+      "alt_en": "Group members at the 2026 China National Conference on Physical Geography in Nanjing, 22–24 October",
+      "alt_zh": "团队成员参加 2026 年 10 月 22—24 日在南京举行的全国自然地理学大会"
+    },
+    {
+      "id": "92014d78a1abb2f3",
+      "sha256": "92014d78a1abb2f3dbb6b35285ea6152cbbac3fe6f6941da872ba60b6e33e317",
+      "ext": "png",
+      "mime": "image/png",
+      "bytes": 74750,
+      "filename": "2026-agu-joanne-simpson-zhang.png",
+      "alt_en": "AGU announcement naming Yongqiang Zhang as a 2026 Joanne Simpson Medal recipient",
+      "alt_zh": "AGU 公布张永强为 2026 年 Joanne Simpson 奖章获得者"
+    },
+    {
+      "id": "42e75a8ccb60b52b",
+      "sha256": "42e75a8ccb60b52bf5f657697ffa5266f52249598023ed7784197ff1a7219609",
+      "ext": "jpg",
+      "mime": "image/jpeg",
+      "bytes": 92322,
+      "filename": "2026-ai4climate-canglong-award.jpg",
+      "alt_en": "CAS-Canglong receives the AI4Climate 2026 Best Climate Solution Award; excerpt from the official winners poster",
+      "alt_zh": "AI4Climate 2026 官方获奖海报中的中科苍龙最佳气候解决方案奖"
+    },
+    {
+      "id": "de15314d5fee4d13",
+      "sha256": "de15314d5fee4d130f2377a638b39dbfcf681d2bd42a3034fc0e304231921e01",
+      "ext": "png",
+      "mime": "image/png",
+      "bytes": 320529,
+      "filename": "2026-canglong-sst.png",
+      "alt_en": "Global sea surface temperature prediction with CAS-Canglong, from the laboratory research news",
+      "alt_zh": "实验室科研快讯中的中科苍龙全球海温预报结果"
+    },
+    {
+      "id": "f92101e0be5423da",
+      "sha256": "f92101e0be5423daee1ac08fc55ab289a4426078dd93d92d79becb6fa3524b68",
+      "ext": "png",
+      "mime": "image/png",
+      "bytes": 335704,
+      "filename": "2026-nsr-drought-recovery.png",
+      "alt_en": "Basin-scale recovery of water storage after severe droughts, from the laboratory research news",
+      "alt_zh": "实验室科研快讯中的全球大流域严重干旱后水储量恢复格局"
+    },
+    {
+      "id": "b44e882cb97a6cce",
+      "sha256": "b44e882cb97a6ccef99dea4995e302ceaa150a57bb5e17a47c58f38065d898fd",
+      "ext": "jpg",
+      "mime": "image/jpeg",
+      "bytes": 53174,
+      "filename": "2026-science-advances-et.jpg",
+      "alt_en": "Global and hemispheric evapotranspiration anomalies and trends, from the laboratory research news",
+      "alt_zh": "实验室科研快讯中的全球及南北半球蒸散发距平与变化趋势"
+    },
     {
       "id": "b1cd5049121b6eb1",
       "sha256": "b1cd5049121b6eb15701df2b1fd9fb15d69daddc9779f0f37159eb9285d365be",

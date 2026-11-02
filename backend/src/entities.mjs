@@ -17,7 +17,7 @@ export const ENTITIES = {
     label: 'News',
     title: (r) => r.title_en || r.title_zh,
     subtitle: (r) => `${r.year} · ${r.category}`,
-    order: 'year DESC, sort_order ASC, id DESC',
+    order: 'year DESC, date DESC, sort_order ASC, id DESC',
     slugFrom: (r) => `${r.year}-${r.title_en || r.title_zh}`,
     search: ['title_en', 'title_zh', 'summary_en', 'summary_zh'],
     fields: [

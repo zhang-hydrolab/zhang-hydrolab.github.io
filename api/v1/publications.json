@@ -1,5 +1,5 @@
 {
-  "count": 83,
+  "count": 97,
   "years": [
     {
       "year": 2018,
@@ -31,74 +31,146 @@
     },
     {
       "year": 2025,
-      "count": 13
+      "count": 16
     },
     {
       "year": 2026,
-      "count": 2
+      "count": 13
     }
   ],
   "topics": [
     {
       "topic": "Vegetation & CO₂",
-      "count": 28
+      "count": 30
     },
     {
       "topic": "Streamflow",
-      "count": 17
-    },
-    {
-      "topic": "Evapotranspiration",
-      "count": 14
+      "count": 22
     },
     {
       "topic": "Remote sensing",
-      "count": 11
+      "count": 19
+    },
+    {
+      "topic": "Evapotranspiration",
+      "count": 16
     },
     {
       "topic": "Drought",
-      "count": 10
+      "count": 13
     },
     {
       "topic": "Groundwater & storage",
-      "count": 9
+      "count": 7
     },
     {
       "topic": "Soil moisture",
-      "count": 7
+      "count": 6
     },
     {
       "topic": "Floods & extremes",
       "count": 5
     },
     {
+      "topic": "Prediction",
+      "count": 4
+    },
+    {
       "topic": "Agriculture",
-      "count": 3
+      "count": 2
     },
     {
       "topic": "AI & machine learning",
-      "count": 3
-    },
-    {
-      "topic": "Lakes",
-      "count": 3
+      "count": 2
     }
   ],
   "items": [
     {
-      "id": "2026-zhang-overestimation-of-past-and-future",
+      "id": "2026-xie-predicting-root-zone-soil-moisture-using",
       "year": 2026,
-      "title": "Overestimation of past and future increases in global river flow by Earth system models",
-      "authors": "Zhang, Y., Blöschl, G., Wei, H., Kong, D., Ma, N., Wagener, T., Tian, J., Xia, J., Li, C., Wang, L., Chiew, F. H. S., Leung, L. R., Liu, X., Zheng, H., Zhang, X., & Liu, C.",
-      "venue": "Nature Geoscience",
-      "volume": "",
+      "title": "Predicting root-zone soil moisture using a small sample deep learning approach",
+      "authors": "Xie, Y., Tian, J., Zhang, Y., Zhang, X., Wang, L., Wei, H., Wang, X., & Tang, Z.",
+      "venue": "Journal of Hydrology",
+      "volume": "680",
       "issue": "",
-      "pages": "",
-      "doi": "10.1038/s41561-025-01897-9",
+      "pages": "136348",
+      "doi": "10.1016/j.jhydrol.2026.136348",
       "url": "",
       "pdf_id": null,
       "topics": [
+        "Remote sensing",
+        "Prediction"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2026-wang-improved-skills-for-predicting-sub-seasonal",
+      "year": 2026,
+      "title": "Improved Skills for Predicting Sub‐Seasonal to Seasonal Global Sea Surface Temperature",
+      "authors": "Wang, L., Zhang, X., Leung, R. L., Chiew, F. H. S., AghaKouchak, A., Ying, K., & Zhang, Y.",
+      "venue": "Advanced Science",
+      "volume": "",
+      "issue": "",
+      "pages": "e78271",
+      "doi": "10.1002/advs.78271",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Prediction"
+      ],
+      "featured": 1
+    },
+    {
+      "id": "2026-faiz-baseflow-dominates-river-flow-during",
+      "year": 2026,
+      "title": "Baseflow dominates river flow during droughts across the global streamflow network",
+      "authors": "Faiz, M. A., Zhang, L., Liu, D., Fu, Q., Li, M., Zhang, Y., Ma, N., Qi, X., Li, T., Cui, S., Baig, F., Naz, F., & Viet Ha, T. T.",
+      "venue": "Communications Earth & Environment",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.1038/s43247-026-04107-5",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Drought",
         "Streamflow"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2026-xu-satellite-evidence-of-unequal-basin-scale",
+      "year": 2026,
+      "title": "Satellite evidence of unequal basin-scale recovery from severe droughts",
+      "authors": "Xu, Z., Zhang, Y., Blöschl, G., Wagener, T., AghaKouchak, A., Zhang, X., Wang, L., Tian, J., Ma, N., Li, X., Li, C., Huang, Q., Tang, Z., Yang, X., Xia, J., & Liu, C.",
+      "venue": "National Science Review",
+      "volume": "",
+      "issue": "",
+      "pages": "nwag624",
+      "doi": "10.1093/nsr/nwag624",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Drought",
+        "Streamflow",
+        "Remote sensing"
+      ],
+      "featured": 1
+    },
+    {
+      "id": "2026-zhang-hemispheric-asymmetry-in-evapotranspiration-reveals",
+      "year": 2026,
+      "title": "Hemispheric asymmetry in evapotranspiration reveals terrestrial water-flux redistribution",
+      "authors": "Zhang, Y., Li, C., Kong, D., Xu, Z., Miralles, D., McVicar, T. R., Tian, J., Zhang, X., Ma, N., Li, X., Zhang, Y., Wei, H., Zhao, G., Xia, J., Huang, Y., Ai, Z., Tang, R., Sun, G., Uhlenbrook, S., & Destouni, G.",
+      "venue": "Science Advances",
+      "volume": "12",
+      "issue": "35",
+      "pages": "eaeg1633",
+      "doi": "10.1126/sciadv.aeg1633",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Evapotranspiration"
       ],
       "featured": 1
     },
@@ -107,12 +179,12 @@
       "year": 2026,
       "title": "Extended global terrestrial evapotranspiration and gross primary production dataset from 1982 to near present",
       "authors": "Xu, Z., Zhang, Y., Kong, D., Ma, N., & Zhang, X.",
-      "venue": "Earth System Science Data Discussions",
-      "volume": "",
-      "issue": "",
-      "pages": "",
-      "doi": "",
-      "url": "https://essd.copernicus.org/preprints/essd-2026-94/",
+      "venue": "Earth System Science Data",
+      "volume": "18",
+      "issue": "7",
+      "pages": "5663-5695",
+      "doi": "10.5194/essd-18-5663-2026",
+      "url": "",
       "pdf_id": null,
       "topics": [
         "Evapotranspiration",
@@ -121,9 +193,147 @@
       "featured": 0
     },
     {
+      "id": "2026-huang-disentangling-the-impacts-of-changes",
+      "year": 2026,
+      "title": "Disentangling the Impacts of Changes in Climate and Vegetation on Hydrological Processes Across 2,252 Global Catchments",
+      "authors": "Huang, Q., & Zhang, Y.",
+      "venue": "Water Resources Research",
+      "volume": "62",
+      "issue": "7",
+      "pages": "e2025WR043326",
+      "doi": "10.1029/2025wr043326",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Vegetation & CO₂"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2026-tang-using-station-pair-to-elucidate-the",
+      "year": 2026,
+      "title": "Using station-pair to elucidate the cooling effect of vegetation in megacities",
+      "authors": "Tang, Z., Tian, J., Zhang, Y., Zhang, J., Zhang, X., & Ma, N.",
+      "venue": "Scientific Reports",
+      "volume": "16",
+      "issue": "1",
+      "pages": "25832",
+      "doi": "10.1038/s41598-026-55645-z",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Vegetation & CO₂"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2026-cao-estimating-regional-groundwater-level-by",
+      "year": 2026,
+      "title": "Estimating Regional Groundwater Level by Combining Satellite, Model, and Large-Sample Observations Inputs",
+      "authors": "Cao, Y., Zhang, Y., Chen, Y., Zhang, X., Tian, J., Yang, X., Huang, Q., & Su, J.",
+      "venue": "Remote Sensing",
+      "volume": "18",
+      "issue": "10",
+      "pages": "1622",
+      "doi": "10.3390/rs18101622",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Remote sensing"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2026-eshete-combined-effect-of-climate-change",
+      "year": 2026,
+      "title": "Combined effect of climate change and catchment characteristics on streamflow response in the Upper Blue Nile River Basin",
+      "authors": "Eshete, D. G., Zhang, Y., Xu, Z., Li, C., & Huang, Z.",
+      "venue": "Journal of Environmental Management",
+      "volume": "405",
+      "issue": "",
+      "pages": "129682",
+      "doi": "10.1016/j.jenvman.2026.129682",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Streamflow"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2026-huang-coherent-changes-in-global-high",
+      "year": 2026,
+      "title": "Coherent changes in global high and low flows",
+      "authors": "Huang, Q., Seibert, J., & Zhang, Y.",
+      "venue": "Journal of Hydrology X",
+      "volume": "30",
+      "issue": "",
+      "pages": "100212",
+      "doi": "10.1016/j.hydroa.2025.100212",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Streamflow"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2026-zhang-overestimation-of-past-and-future",
+      "year": 2026,
+      "title": "Overestimation of past and future increases in global river flow by Earth system models",
+      "authors": "Zhang, Y., Blöschl, G., Wei, H., Kong, D., Ma, N., Wagener, T., Tian, J., Xia, J., Li, C., Wang, L., Chiew, F. H. S., Leung, L. R., Liu, X., Zheng, H., Zhang, X., & Liu, C.",
+      "venue": "Nature Geoscience",
+      "volume": "19",
+      "issue": "3",
+      "pages": "311-316",
+      "doi": "10.1038/s41561-025-01897-9",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Streamflow"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2026-ren-grace-based-hydrological-droughts-are-less",
+      "year": 2026,
+      "title": "GRACE-based hydrological droughts are less frequent but more severe than meteorological droughts in global major basins",
+      "authors": "Ren, C., Zhang, X., Tian, J., Li, X., Wang, S., Tang, Z., Wang, X., & Zhang, Y.",
+      "venue": "Journal of Hydrology",
+      "volume": "664",
+      "issue": "",
+      "pages": "134582",
+      "doi": "10.1016/j.jhydrol.2025.134582",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Drought",
+        "Streamflow",
+        "Remote sensing"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2025-naeem-simulating-and-predicting-lake-dynamics",
+      "year": 2025,
+      "title": "Simulating and predicting lake dynamics by fusing HBV modeling, machine learning approach and remote sensing data",
+      "authors": "Naeem, M., Zhang, Y., Ma, N., Tang, Z., Miao, P., Tian, X., Li, C., Huang, Q., Xu, Z., wang, L., & Huang, Z.",
+      "venue": "Journal of Hydrology",
+      "volume": "663",
+      "issue": "",
+      "pages": "134303",
+      "doi": "10.1016/j.jhydrol.2025.134303",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Prediction"
+      ],
+      "featured": 0
+    },
+    {
       "id": "2025-wang-satellite-data-driven-estimation-of-daily",
       "year": 2025,
-      "title": "Satellite data-driven estimation of daily and 500 m net ecosystem exchange over China during 2003–2020",
+      "title": "Satellite data-driven estimation of daily and 500 m net ecosystem exchange over China during 2003–2020",
       "authors": "Wang, X., Zhang, Y., Zhang, X., He, S., Kong, D., Tian, J., Wei, H., Wang, L., Quan, Y., Zheng, Y., & Wang, Y.",
       "venue": "Remote Sensing of Environment",
       "volume": "331",
@@ -133,27 +343,43 @@
       "url": "",
       "pdf_id": null,
       "topics": [
-        "Vegetation & CO₂",
-        "Remote sensing"
+        "Remote sensing",
+        "Vegetation & CO₂"
       ],
       "featured": 0
     },
     {
-      "id": "2025-naeem-simulating-and-predicting-lake-dynamics",
+      "id": "2025-huang-climate-change-dominates-recent-increase",
       "year": 2025,
-      "title": "Simulating and predicting lake dynamics by fusing HBV modeling, machine learning approach and remote sensing data",
-      "authors": "Naeem, M., Zhang, Y., Ma, N., Tang, Z., Miao, P., Tian, X., Li, C., Huang, Q., Xu, Z., Wang, L., & Huang, Z.",
+      "title": "Climate change dominates recent increase in streamflow in the Yellow River Basin",
+      "authors": "Huang, Z., Tang, Z., Tian, J., Zhang, X., Ma, N., Bai, X., & Zhang, Y.",
       "venue": "Journal of Hydrology",
-      "volume": "663",
+      "volume": "661",
       "issue": "",
-      "pages": "134303",
-      "doi": "10.1016/j.jhydrol.2025.134303",
+      "pages": "133737",
+      "doi": "10.1016/j.jhydrol.2025.133737",
       "url": "",
       "pdf_id": null,
       "topics": [
-        "AI & machine learning",
-        "Remote sensing",
-        "Lakes"
+        "Streamflow"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2025-xie-evaluation-of-the-performance-of",
+      "year": 2025,
+      "title": "Evaluation of the performance of multiple reanalysis forcing data in potential evapotranspiration estimation and its implication for actual evapotranspiration modeling",
+      "authors": "Xie, Y., Kong, D., Zhang, Y., Zhong, Y., Ma, N., Gong, R., Ci, H., Xiao, M., & Gu, X.",
+      "venue": "Journal of Hydrology",
+      "volume": "660",
+      "issue": "",
+      "pages": "133472",
+      "doi": "10.1016/j.jhydrol.2025.133472",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Evapotranspiration",
+        "Remote sensing"
       ],
       "featured": 0
     },
@@ -165,13 +391,13 @@
       "venue": "Hydrology and Water Resources",
       "volume": "1",
       "issue": "1",
-      "pages": "2",
-      "doi": "",
+      "pages": "",
+      "doi": "10.53941/hwr.2026.100002",
       "url": "",
       "pdf_id": null,
       "topics": [
-        "Groundwater & storage",
-        "Streamflow"
+        "Streamflow",
+        "Remote sensing"
       ],
       "featured": 0
     },
@@ -183,7 +409,7 @@
       "venue": "Water Resources Research",
       "volume": "61",
       "issue": "9",
-      "pages": "",
+      "pages": "e2025WR041001",
       "doi": "10.1029/2025wr041001",
       "url": "",
       "pdf_id": null,
@@ -195,7 +421,7 @@
     {
       "id": "2025-luo-divergent-vegetation-greening-s-direct-impacts",
       "year": 2025,
-      "title": "Divergent vegetation greening’s direct impacts on land-atmosphere water and carbon exchanges in the northeastern Tibetan Plateau",
+      "title": "Divergent vegetation greening's direct impacts on land-atmosphere water and carbon exchanges in the northeastern Tibetan Plateau",
       "authors": "Luo, Y., Ma, N., & Zhang, Y.",
       "venue": "Global and Planetary Change",
       "volume": "251",
@@ -222,24 +448,7 @@
       "url": "",
       "pdf_id": null,
       "topics": [
-        "Soil moisture"
-      ],
-      "featured": 0
-    },
-    {
-      "id": "2025-huang-climate-change-dominates-recent-increase",
-      "year": 2025,
-      "title": "Climate change dominates recent increase in streamflow in the Yellow River Basin",
-      "authors": "Huang, Z., Tang, Z., Tian, J., Zhang, X., Ma, N., Bai, X., & Zhang, Y.",
-      "venue": "Journal of Hydrology",
-      "volume": "661",
-      "issue": "",
-      "pages": "133737",
-      "doi": "10.1016/j.jhydrol.2025.133737",
-      "url": "",
-      "pdf_id": null,
-      "topics": [
-        "Streamflow"
+        "Remote sensing"
       ],
       "featured": 0
     },
@@ -256,7 +465,7 @@
       "url": "",
       "pdf_id": null,
       "topics": [
-        "Groundwater & storage"
+        "Remote sensing"
       ],
       "featured": 0
     },
@@ -268,7 +477,7 @@
       "venue": "Geophysical Research Letters",
       "volume": "52",
       "issue": "9",
-      "pages": "",
+      "pages": "e2024GL113685",
       "doi": "10.1029/2024gl113685",
       "url": "",
       "pdf_id": null,
@@ -281,17 +490,17 @@
     {
       "id": "2025-naeem-assessing-and-predicting-bojiang-lake",
       "year": 2025,
-      "title": "Assessing and Predicting Bojiang Lake Area and Lulc Changes from 2000 to 2045",
-      "authors": "Naeem, M., Zhang, Y., Tian, X., Miao, P., Li, C., Xu, Z., Wang, L., Mumtaz, F., He, S., & Tang, Z.",
-      "venue": "SSRN (preprint)",
-      "volume": "",
+      "title": "Assessing and predicting Bojiang lake area and LULC changes from 2000 to 2045",
+      "authors": "Naeem, M., Zhang, Y., Tian, X., Miao, P., Li, C., Xu, Z., Wang, L., Mumtaz, F., Tang, Z., & He, S.",
+      "venue": "Journal of Hydrology: Regional Studies",
+      "volume": "58",
       "issue": "",
-      "pages": "",
-      "doi": "10.2139/ssrn.5003164",
+      "pages": "102216",
+      "doi": "10.1016/j.ejrh.2025.102216",
       "url": "",
       "pdf_id": null,
       "topics": [
-        "Lakes"
+        "Prediction"
       ],
       "featured": 0
     },
@@ -307,9 +516,7 @@
       "doi": "10.1016/j.eja.2024.127494",
       "url": "",
       "pdf_id": null,
-      "topics": [
-        "Agriculture"
-      ],
+      "topics": [],
       "featured": 0
     },
     {
@@ -320,13 +527,28 @@
       "venue": "Geophysical Research Letters",
       "volume": "52",
       "issue": "4",
-      "pages": "",
+      "pages": "e2024GL114256",
       "doi": "10.1029/2024gl114256",
       "url": "",
       "pdf_id": null,
       "topics": [
         "Evapotranspiration"
       ],
+      "featured": 0
+    },
+    {
+      "id": "2025-lu-hotspots-of-global-water-resource",
+      "year": 2025,
+      "title": "Hotspots of Global Water Resource Changes and Their Causes",
+      "authors": "Lu, J., Kong, D., Zhang, Y., Xie, Y., Gu, X., & Gulakhmadov, A.",
+      "venue": "Earth's Future",
+      "volume": "13",
+      "issue": "2",
+      "pages": "e2024EF005461",
+      "doi": "10.1029/2024ef005461",
+      "url": "",
+      "pdf_id": null,
+      "topics": [],
       "featured": 0
     },
     {
@@ -341,8 +563,23 @@
       "doi": "10.1016/j.jenvman.2024.123443",
       "url": "",
       "pdf_id": null,
+      "topics": [],
+      "featured": 0
+    },
+    {
+      "id": "2025-song-an-innovative-framework-for-hourly",
+      "year": 2025,
+      "title": "An Innovative Framework for Hourly Satellite Soil Moisture Retrieval via Integrated Spatiotemporal Downscaling Techniques",
+      "authors": "Song, P., Wang, M., Dong, L., Zhao, T., Zhao, H., Huang, J., Yao, P., Zheng, J., & Zhang, Y.",
+      "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+      "volume": "63",
+      "issue": "",
+      "pages": "1-16",
+      "doi": "10.1109/tgrs.2025.3635555",
+      "url": "",
+      "pdf_id": null,
       "topics": [
-        "Lakes"
+        "Remote sensing"
       ],
       "featured": 0
     },

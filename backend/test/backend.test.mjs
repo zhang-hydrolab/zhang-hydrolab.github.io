@@ -79,6 +79,18 @@ describe('store', () => {
     assert.throws(() => store.create('news', { year: 2026 }), /title_en/);
   });
 
+  it('exports news by date, with undated items after dated items in their year', () => {
+    const news = (id, year, date, sort_order) => store.create('news', { id, year, date, sort_order, title_en: id });
+    news('older', 2026, '2026-08-26', 1);
+    news('latest', 2026, '2026-10-27', 100);
+    news('undated', 2026, '', 0);
+    news('previous-year', 2025, '2025-12-31', 0);
+    news('same-day', 2026, '2026-08-26', 2);
+    assert.deepEqual(buildApi(store)['news.json'].items.map((n) => n.id), [
+      'latest', 'older', 'same-day', 'undated', 'previous-year',
+    ]);
+  });
+
   it('preserves omitted fields on partial update', () => {
     const row = store.create('people', { name_en: 'A', role: 'phd', links: [{ label: 'Web', url: 'https://a.example' }] });
     const after = store.update('people', row.id, { research_field: 'ET' });

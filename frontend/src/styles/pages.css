@@ -950,6 +950,11 @@ html.js .person > .person__detail {
   padding-top: clamp(32px, 4.5vw, 52px);
 }
 
+.article__cover--portrait .fig {
+  width: min(100%, 280px);
+  margin-inline: auto;
+}
+
 .article__head h1 {
   font-size: clamp(30px, 3.4vw, 40px);
 }

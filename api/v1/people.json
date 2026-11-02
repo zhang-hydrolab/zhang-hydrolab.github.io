@@ -15,8 +15,8 @@
           "honorific": "Prof.",
           "role": "pi",
           "research_field": "Global and regional hydrology and water resources",
-          "bio_en": "Prof. Yongqiang Zhang is a hydrologist specializing in hydrology and water resources. His research focuses on understanding the mechanisms and processes of global evapotranspiration, exploring eco-hydrological processes, and advancing hydrological modeling, prediction, and projection through remote sensing techniques.",
-          "bio_zh": "",
+          "bio_en": "Prof. Yongqiang Zhang is a hydrologist specializing in hydrology and water resources. His research focuses on understanding the mechanisms and processes of global evapotranspiration, exploring eco-hydrological processes, and advancing hydrological modeling, prediction, and projection through remote sensing techniques. In 2026, he received the AGU Joanne Simpson Medal and became an AGU Fellow.",
+          "bio_zh": "张永强研究员从事全球与区域水文及水资源研究，关注蒸散发机制、生态水文过程以及遥感支持的水文模拟、预测与预估。2026 年荣获 AGU Joanne Simpson 奖章并当选 AGU 会士。",
           "email": "zhangyq@igsnrr.ac.cn",
           "links": [
             {
@@ -57,8 +57,8 @@
           "honorific": "Dr.",
           "role": "co_pi",
           "research_field": "Land surface modeling; Ecoclimatology",
-          "bio_en": "Dr. Xuanze Zhang studies the feedback interactions between the global carbon cycle and climate change. His research focuses on the mechanisms and processes of evapotranspiration, as well as the dynamics and underlying principles of drought events.",
-          "bio_zh": "",
+          "bio_en": "Dr. Xuanze Zhang studies the feedback interactions between the global carbon cycle and climate change. His research focuses on the mechanisms and processes of evapotranspiration, as well as the dynamics and underlying principles of drought events. In July 2026, he was appointed Editor of Agricultural and Forest Meteorology.",
+          "bio_zh": "张选泽研究全球碳循环与气候变化之间的反馈，关注蒸散发机制、干旱过程、生态水文与陆面模拟。2026 年 7 月担任 Agricultural and Forest Meteorology 编辑（Editor）。",
           "email": "xuanzezhang@igsnrr.ac.cn",
           "links": [
             {
@@ -76,8 +76,8 @@
           "honorific": "Dr.",
           "role": "co_pi",
           "research_field": "Hydrological Processes",
-          "bio_en": "Dr. Ning Ma focuses on surface hydrological processes, with a particular emphasis on the mechanisms and dynamics of evapotranspiration.",
-          "bio_zh": "",
+          "bio_en": "Dr. Ning Ma focuses on surface hydrological processes, with a particular emphasis on the mechanisms and dynamics of evapotranspiration. In 2026, Ning Ma received NSFC Young Scientists Fund (Category B).",
+          "bio_zh": "马宁为中国科学院地理科学与资源研究所副研究员。他关注地表水文过程，结合观测、模型与遥感方法研究陆气水热交换及水循环对气候变化的响应。\n\n研究方向：蒸散发过程与机理、陆面过程观测与模拟、生态水文和遥感水文。2026 年获青年科学基金项目（B 类）资助。",
           "email": "ningma@igsnrr.ac.cn",
           "links": [
             {
@@ -131,8 +131,8 @@
           "honorific": "Dr.",
           "role": "postdoc",
           "research_field": "AI for Hydrology",
-          "bio_en": "Dr. Xian Wang focuses on integrating artificial intelligence with hydrology to enhance the simulation and prediction of hydrological processes.",
-          "bio_zh": "",
+          "bio_en": "Dr. Xian Wang focuses on integrating artificial intelligence with hydrology to enhance the simulation and prediction of hydrological processes. In 2026, Xian Wang received NSFC Young Scientists Fund (Category C).",
+          "bio_zh": "王显为中国科学院地理科学与资源研究所博士后，聚焦人工智能与水文学的融合，研究如何提升水文过程模拟与预测能力。\n\n研究方向：人工智能水文学、水文过程模拟与预测。2026 年获青年科学基金项目（C 类）资助。",
           "email": "xianwang@igsnrr.ac.cn",
           "links": [],
           "photo_id": "8f5e4945ec1ad89d",
@@ -187,8 +187,8 @@
           "honorific": "Dr.",
           "role": "postdoc",
           "research_field": "Hydroclimate; Ecohydrology",
-          "bio_en": "Dr. Zhenwu Xu specializes in hydroclimate extremes. His research focuses on hydrological responses to disturbances caused by droughts, wildfires, and human activities, aiming to advance understanding of the resilience and evolution of Earth’s water resources and ecosystems.",
-          "bio_zh": "",
+          "bio_en": "Dr. Zhenwu Xu specializes in hydroclimate extremes. His research focuses on hydrological responses to disturbances caused by droughts, wildfires, and human activities, aiming to advance understanding of the resilience and evolution of Earth’s water resources and ecosystems. In 2026, Zhenwu Xu received NSFC Young Scientists Fund (Category C).",
+          "bio_zh": "许振武为中国科学院地理科学与资源研究所博士后，2024 年于中国科学院大学获得博士学位，博士期间曾赴维也纳工业大学接受联合研究训练。他整合卫星观测、实测资料与分布式生态水文模型，研究干旱、野火及人类活动扰动下的水文响应，并参与 PML 蒸散发与生产力模型的数据和方法开发。\n\n研究方向：水文气候极端事件、生态水文与水文系统韧性。2026 年获青年科学基金项目（C 类）资助。",
           "email": "xuzhenwu@igsnrr.ac.cn",
           "links": [
             {
@@ -234,8 +234,8 @@
           "honorific": "",
           "role": "phd",
           "research_field": "AI for hydrology",
-          "bio_en": "Longhao Wang received the B.S. degree from Hohai University, he is currently using AI models to simulate meteorological and hydrological processes, with a focus on coupling physical processes with machine learning for large-scale forecasting.",
-          "bio_zh": "",
+          "bio_en": "Longhao Wang received the B.S. degree from Hohai University, he is currently using AI models to simulate meteorological and hydrological processes, with a focus on coupling physical processes with machine learning for large-scale forecasting. He was selected for the CAST 2026 doctoral student talent development program.",
+          "bio_zh": "王龙浩为中国科学院地理科学与资源研究所自然地理学博士研究生，导师为张永强研究员。聚焦人工智能与物理过程耦合、次季节—季节水文气象预报、GRACE 与蒸散发。2026 年入选中国科协青年科技人才培育工程博士生专项计划。",
           "email": "wanglonghao0857@igsnrr.ac.cn",
           "links": [
             {
@@ -608,12 +608,12 @@
         {
           "id": "muhammad-abrar-faiz",
           "name_en": "Muhammad Abrar Faiz",
-          "name_zh": "",
+          "name_zh": "费辞",
           "honorific": "Dr.",
           "role": "alumni",
           "research_field": "Hydro-climate extremes",
-          "bio_en": "Dr. Muhammad Abrar Faiz, completed his Ph.D. in 2018 and is currently a Professor at Northeast Agricultural University in Harbin, China. His research focuses on ecosystem responses to regional climate change, streamflow variability, precipitation time-series fluctuations, drought monitoring, hydrological modeling, and drought indices. His work has appeared in journals such as the Journal of Advanced Research, Journal of Hydrology, Journal of Cleaner Production, and Agricultural Water Management, among others. He aims to improve early warning of climate-driven vegetation stress through coupled hydrological models and drought-index analytics.",
-          "bio_zh": "",
+          "bio_en": "Dr. Muhammad Abrar Faiz, completed his Ph.D. in 2018 and is currently a Professor at Northeast Agricultural University in Harbin, China. His research focuses on ecosystem responses to regional climate change, streamflow variability, precipitation time-series fluctuations, drought monitoring, hydrological modeling, and drought indices. His work has appeared in journals such as the Journal of Advanced Research, Journal of Hydrology, Journal of Cleaner Production, and Agricultural Water Management, among others. He aims to improve early warning of climate-driven vegetation stress through coupled hydrological models and drought-index analytics. In 2026, Muhammad Abrar Faiz received NSFC funding for foreign young scholars (Category B).",
+          "bio_zh": "费辞为课题组校友，现任东北农业大学教授。他的研究围绕区域气候变化下的水文响应、径流变异、干旱指数及生态系统响应展开，并持续与团队开展合作。\n\n研究方向：水文气候极端事件、径流变化、干旱监测与水文模拟。2026 年获外国青年 B 类项目资助。",
           "email": "faiz_ma@neau.edu.cn",
           "links": [
             {

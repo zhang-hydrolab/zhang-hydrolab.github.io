@@ -267,6 +267,7 @@ export function newsPage(ctx) {
 
 export function articlePage(ctx, n) {
   const figure = (id, alt) => html`<figure class="fig">${picture(ctx, id, { sizes: '(max-width: 800px) 100vw, 760px', alt })}</figure>`;
+  const portrait = ctx.api.people.groups.some((group) => group.members.some((p) => p.photo_id === n.cover_id));
   const body = html`
     <article class="article">
       <header class="wrap article__head">
@@ -275,7 +276,7 @@ export function articlePage(ctx, n) {
         <p class="meta">${n.date || n.year} · ${categoryLabel(n.category)}</p>
         ${n.summary_en || n.summary_zh ? html`<p class="pagehead__lead">${t(n.summary_en, n.summary_zh)}</p>` : ''}
       </header>
-      ${n.cover_id ? html`<div class="wrap article__cover">${fig(ctx, n.cover_id, { sizes: '(max-width: 800px) 100vw, 760px' })}</div>` : ''}
+      ${n.cover_id ? html`<div class="wrap article__cover ${portrait ? 'article__cover--portrait' : ''}">${fig(ctx, n.cover_id, { sizes: portrait ? '280px' : '(max-width: 800px) 100vw, 760px' })}</div>` : ''}
       <div class="wrap article__body" lang="zh-CN">${renderMarkdown(n.body_md, figure)}</div>
       <footer class="wrap article__foot">
         ${n.source_url ? more(n.source_url, 'Original article', '阅读原文', { out: true }) : ''}
