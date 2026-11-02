@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hydrology Lab Admin</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="admin.css">
+  <script type="module" src="admin.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail">
+      <a class="rail__brand" href="#/">Lab admin</a>
+      <nav id="nav" aria-label="Sections"></nav>
+      <label class="rail__author">
+        <span>Your name, recorded in history</span>
+        <input id="author" autocomplete="name" placeholder="admin">
+      </label>
+    </aside>
+    <main id="view" tabindex="-1"></main>
+  </div>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <dialog id="picker" class="picker" aria-label="Choose a file"></dialog>
+  <dialog id="token" class="tokenbox" aria-label="Admin token">
+    <form method="dialog" id="tokenform">
+      <h2>Admin token required</h2>
+      <p>This server is protected. Enter the value of <code>LAB_ADMIN_TOKEN</code>.</p>
+      <input id="tokeninput" type="password" autocomplete="off" required aria-label="Admin token">
+      <button class="btn btn--primary" type="submit">Continue</button>
+    </form>
+  </dialog>
+</body>
+</html>
