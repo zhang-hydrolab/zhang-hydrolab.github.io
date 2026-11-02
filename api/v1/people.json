@@ -1,5 +1,5 @@
 {
-  "count": 44,
+  "count": 45,
   "groups": [
     {
       "key": "pi",
@@ -395,6 +395,21 @@
           "photo_id": "b5261178478f49b8",
           "photo_focus": "50% 25%",
           "research_field_zh": "遥感；水文学"
+        },
+        {
+          "id": "jingyi-tian",
+          "name_en": "Jingyi Tian",
+          "name_zh": "田婧宜",
+          "honorific": "",
+          "role": "phd",
+          "research_field": "Hydrology and Water Resources",
+          "bio_en": "",
+          "bio_zh": "",
+          "email": "tjingyi2023@lzu.edu.cn",
+          "links": [],
+          "photo_id": "f0db5ebcf5de8bf5",
+          "photo_focus": "50% 25%",
+          "research_field_zh": "水文与水资源"
         }
       ]
     },

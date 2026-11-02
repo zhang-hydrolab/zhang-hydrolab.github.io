@@ -130,6 +130,38 @@
       "source": "Group profile"
     }
   ],
+  "site.talent": [
+    {
+      "person_id": "yongqiang-zhang",
+      "title_en": "Ten Thousand Talents Programme",
+      "title_zh": "万人计划",
+      "year": null
+    },
+    {
+      "person_id": "ning-ma",
+      "title_en": "NSFC Young Scientists Fund (Category B)",
+      "title_zh": "国家自然科学基金青年科学基金项目（B 类）",
+      "year": 2026
+    },
+    {
+      "person_id": "muhammad-abrar-faiz",
+      "title_en": "NSFC funding for foreign young scholars (Category B)",
+      "title_zh": "外国青年 B 类项目",
+      "year": 2026
+    },
+    {
+      "person_id": "xian-wang",
+      "title_en": "NSFC Young Scientists Fund (Category C)",
+      "title_zh": "国家自然科学基金青年科学基金项目（C 类）",
+      "year": 2026
+    },
+    {
+      "person_id": "zhenwu-xu",
+      "title_en": "NSFC Young Scientists Fund (Category C)",
+      "title_zh": "国家自然科学基金青年科学基金项目（C 类）",
+      "year": 2026
+    }
+  ],
   "site.water_budget": {
     "unit_en": "10³ km³ per year",
     "unit_zh": "10³ km³/年",

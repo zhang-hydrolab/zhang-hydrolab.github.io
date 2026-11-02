@@ -1,6 +1,16 @@
 {
-  "count": 91,
+  "count": 92,
   "items": [
+    {
+      "id": "f0db5ebcf5de8bf5",
+      "sha256": "f0db5ebcf5de8bf58469d46c54d1a1610c6b52ab9e5236339b370ed71b7ee8be",
+      "ext": "jpg",
+      "mime": "image/jpeg",
+      "bytes": 2712132,
+      "filename": "jingyi-tian.jpg",
+      "alt_en": "Portrait of Jingyi Tian",
+      "alt_zh": "田婧宜证件照"
+    },
     {
       "id": "0a3714cadd177e29",
       "sha256": "0a3714cadd177e290c8722c4e6cdfdeb2a16336535aa9b7b4a06d7f75bff1565",

@@ -149,21 +149,23 @@ export function dataPage(ctx) {
 
 /* ---------- People ---------- */
 
-function personTile(ctx, person) {
+function personTile(ctx, person, recognition) {
   const name = [person.honorific, person.name_en].filter(Boolean).join(' ');
-  const search = `${person.name_en} ${person.name_zh} ${person.research_field} ${person.research_field_zh || ''}`.toLowerCase();
-  return html`<li class="person" data-search="${search}" id="p-${person.id}">
+  const fieldEn = recognition ? `${recognition.title_en}${recognition.year ? ` · ${recognition.year}` : ''}` : person.research_field;
+  const fieldZh = recognition ? `${recognition.title_zh}${recognition.year ? ` · ${recognition.year}` : ''}` : person.research_field_zh;
+  const search = `${person.name_en} ${person.name_zh} ${person.research_field} ${person.research_field_zh || ''} ${fieldEn} ${fieldZh || ''}`.toLowerCase();
+  return html`<li class="person" data-search="${search}" id="${recognition ? 'p-talent' : 'p'}-${person.id}">
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
       <span class="person__media">${picture(ctx, person.photo_id, { sizes: '(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px', alt: '', style: `object-position:${person.photo_focus}` })}</span>
       <span class="person__copy">
         <span class="person__name">${t(person.name_en, person.name_zh)}</span>
-        <span class="person__field">${t(person.research_field, person.research_field_zh)}</span>
+        <span class="person__field">${t(fieldEn, fieldZh)}</span>
       </span>
     </button><div class="person__footer">${personLinks(person)}</div>
     <div class="person__detail">
       ${picture(ctx, person.photo_id, { sizes: '220px', alt: `Portrait of ${name}`, style: `object-position:${person.photo_focus}` })}
       <div>
-        <h3>${t(name, person.name_zh || name)}</h3>
+        <h3>${t(name, person.name_zh || name)}</h3>${recognition ? html`<p class="person__recognition">${t(fieldEn, fieldZh)}</p>` : ''}
         <p class="meta">${t(person.research_field, person.research_field_zh)}</p>${person.bio_en || person.bio_zh ? html`<div class="person__bio">${paragraphs((person.bio_en || person.bio_zh).split(/\n\s*\n/), 'en')}${paragraphs((person.bio_zh || person.bio_en).split(/\n\s*\n/), 'zh')}</div>` : ''}${personLinks(person)}
       </div>
     </div>
@@ -177,6 +179,8 @@ export function peoplePage(ctx) {
   const groups = people.groups.filter((g) => g.key !== 'pi');
   const stats = site['site.stats'];
   const assets = site['site.assets'];
+  const peopleById = new Map(people.groups.flatMap((g) => g.members).map((p) => [p.id, p]));
+  const talents = (site['site.talent'] || []).filter((entry) => peopleById.has(entry.person_id));
 
   const body = html`
     <header class="people-head">
@@ -220,6 +224,7 @@ export function peoplePage(ctx) {
         <div class="tags" role="group" aria-label="Filter by role">
           <button type="button" class="tag is-on" data-people-role="" aria-pressed="true">${t('Everyone', '全部')}</button>
           ${groups.map((g) => html`<button type="button" class="tag" data-people-role="${g.key}" aria-pressed="false">${t(g.label.en, g.label.zh)} (${g.members.length})</button>`)}
+          ${talents.length ? html`<button type="button" class="tag" data-people-role="talent" aria-pressed="false">${t('Talent programmes', '人才计划')} (${talents.length})</button>` : ''}
         </div>
       </div>
       ${groups.map(
@@ -228,6 +233,10 @@ export function peoplePage(ctx) {
           <ul class="people-grid">${g.members.map((m) => personTile(ctx, m))}</ul>
         </section>`,
       )}
+      ${talents.length ? html`<section class="group group--talent" data-group="talent" id="talent">
+        <div class="group__heading"><h2>${t('Talent programmes', '人才计划')}</h2><span class="group__count">${t(`${talents.length} members`, `${talents.length} 位成员`)}</span></div>
+        <ul class="people-grid">${talents.map((entry) => personTile(ctx, peopleById.get(entry.person_id), entry))}</ul>
+      </section>` : ''}
     </section>
     <section class="wrap">
       <figure class="plate plate--wide">
