@@ -1,6 +1,16 @@
 {
-  "count": 110,
+  "count": 111,
   "items": [
+    {
+      "id": "7d1d8e394a905666",
+      "sha256": "7d1d8e394a90566627f95dc12eb3204c8fcea2c44108b3721057974bc058f75b",
+      "ext": "jpg",
+      "mime": "image/jpeg",
+      "bytes": 106877,
+      "filename": "xinyao-wang.jpg",
+      "alt_en": "Portrait of Xinyao Wang",
+      "alt_zh": "王欣瑶的照片"
+    },
     {
       "id": "db452f72bb97dd7c",
       "sha256": "db452f72bb97dd7cb815a56ba33dc23991c44730b2a2136c068964eb01348112",

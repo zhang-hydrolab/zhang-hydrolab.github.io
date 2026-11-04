@@ -1,5 +1,5 @@
 {
-  "count": 45,
+  "count": 46,
   "groups": [
     {
       "key": "pi",
@@ -536,6 +536,22 @@
           "photo_id": "ff935326fee876fc",
           "photo_focus": "50% 25%",
           "research_field_zh": "生态水文学",
+          "author_names": []
+        },
+        {
+          "id": "xinyao-wang",
+          "name_en": "Xinyao Wang",
+          "name_zh": "王欣瑶",
+          "honorific": "",
+          "role": "master",
+          "research_field": "Evapotranspiration",
+          "bio_en": "Xinyao Wang focuses on regional and global changes in evapotranspiration.",
+          "bio_zh": "王欣瑶主要研究区域与全球蒸散发变化。",
+          "email": "wangxinyao_2004@163.com",
+          "links": [],
+          "photo_id": "7d1d8e394a905666",
+          "photo_focus": "50% 25%",
+          "research_field_zh": "蒸散发",
           "author_names": []
         }
       ]
