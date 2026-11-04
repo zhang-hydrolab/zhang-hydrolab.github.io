@@ -3,69 +3,13 @@
  * China Sea. The terrain and rivers are measured. The numbers are the published global totals,
  * placed where each term happens, and the amount of rain and vapour follows them.
  */
-import { bindPause, clamp, createProgram, whenNear } from '../gl/core.js';
-import { createTerrain, HEIGHT } from '../gl/terrain.js';
-
-const VERTEX = /* glsl */ `#version 300 es
-precision highp float;
-layout(location = 0) in vec3 aSeed;
-uniform mat4 uCamera;
-uniform float uTime;
-uniform float uRate;
-uniform float uUp;
-uniform float uSize;
-out float vLife;
-${HEIGHT}
-void main() {
-  float t = fract(aSeed.z + uTime * uRate);
-  vec3 ground = placeAt(aSeed.xy);
-  float high = 0.52 + aSeed.z * 0.08;
-  float y = uUp > 0.5 ? mix(ground.y + 0.01, high, t) : mix(high, ground.y + 0.005, t);
-  vLife = sin(t * 3.14159) * uRise;
-  gl_Position = uCamera * vec4(ground.x, y, ground.z, 1.0);
-  gl_PointSize = uSize;
-}`;
-
-const FRAGMENT = /* glsl */ `#version 300 es
-precision highp float;
-in float vLife;
-out vec4 outColor;
-uniform float uUp;
-void main() {
-  vec2 p = gl_PointCoord - 0.5;
-  // Rain is a short streak and vapour a small round drop.
-  float shape = uUp > 0.5
-    ? 1.0 - smoothstep(0.22, 0.5, length(p))
-    : (1.0 - smoothstep(0.02, 0.07, abs(p.x))) * (1.0 - smoothstep(0.2, 0.5, abs(p.y)));
-  vec3 colour = uUp > 0.5 ? vec3(0.47, 0.70, 0.90) : vec3(0.13, 0.43, 0.72);
-  outColor = vec4(colour, 1.0) * shape * sqrt(max(vLife, 0.0)) * (uUp > 0.5 ? 0.5 : 0.42);
-}`;
+import { bindPause, clamp, whenNear } from '../gl/core.js';
+import { createDrops, seeds } from '../gl/drops.js';
+import { createTerrain } from '../gl/terrain.js';
 
 /** The part of the block, as a fraction of its width, that is land. The rest is sea. */
 const SHORE = 0.84;
 const COUNTS = { rain: 900, vapour: 800, seaRain: 190, seaVapour: 210 };
-
-function seeds(gl, count, fromU, toU) {
-  let state = 12345;
-  const random = () => {
-    state = (state * 48271) % 2147483647;
-    return state / 2147483647;
-  };
-  const data = new Float32Array(count * 3);
-  for (let i = 0; i < count; i += 1) {
-    data[i * 3] = fromU + random() * (toU - fromU);
-    data[i * 3 + 1] = 0.02 + random() * 0.96;
-    data[i * 3 + 2] = random();
-  }
-  const vao = gl.createVertexArray();
-  gl.bindVertexArray(vao);
-  gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
-  gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
-  gl.enableVertexAttribArray(0);
-  gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 0, 0);
-  gl.bindVertexArray(null);
-  return vao;
-}
 
 export default function watercycle(root, { reduceMotion }) {
   const section = root.closest('section');
@@ -114,10 +58,11 @@ export default function watercycle(root, { reduceMotion }) {
     let particles;
     let batches;
 
-    const extra = (scene, now, delta) => {
+    const extra = (scene, now, delta, pass) => {
+      if (pass !== 'air') return;
       const { gl, state } = scene;
       if (!particles) {
-        particles = createProgram(gl, VERTEX, FRAGMENT);
+        particles = createDrops(gl);
         batches = [
           { vao: seeds(gl, COUNTS.rain, 0.02, SHORE), size: COUNTS.rain * 0.9, key: 'rain', up: 0, rate: 0.42, dot: 11 },
           { vao: seeds(gl, COUNTS.vapour, 0.02, SHORE), size: COUNTS.vapour * 0.9, key: 'vapour', up: 1, rate: 0.1, dot: 3.6 },

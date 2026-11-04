@@ -21,7 +21,9 @@
             "Zhang, Y., Kong, D., Gan, R., Chiew, F.H.S., McVicar, T.R., Zhang, Q., & Yang, Y. (2019). Coupled estimation of 500m and 8-day resolution global evapotranspiration and gross primary production in 2002-2017. Remote Sensing Environ. 222, 165-182. https://doi.org/10.1016/j.rse.2018.12.031.",
             "He, S., Zhang, Y., Ma, N., Tian, J., Kong, D., & Liu, C. (2022). A daily and 500 m coupled evapotranspiration and gross primary production product across China during 2000–2020, Earth Syst. Sci. Data., https://doi.org/10.5194/essd-2022-183.",
             "Wang, X., Zhang, Y., Zhang, X., He, S., Kong, D., Tian, J., Wei, H., Wang, L., Quan, Y., Zheng, Y., & Wang, Y. (2025). Satellite data-driven estimation of daily and 500 m net ecosystem exchange over China during 2003–2020. Remote Sensing of Environment, 331, 115047. https://doi.org/10.1016/j.rse.2025.115047"
-          ]
+          ],
+          "name_zh": "PML_v2 蒸散发产品",
+          "description_zh": "Penman-Monteith-Leuning 蒸散发第二版（PML_V2）产品提供 2000—2023 年 500 m、8 天分辨率的蒸散发及其三个组分和总初级生产力（GPP）。"
         },
         {
           "id": "hbv-pml",
@@ -29,7 +31,9 @@
           "name": "HBV-PML",
           "description": "The HBV-PML model, provides critical data support for global water resource assessments. This innovative model integrates the remote sensing evapotranspiration model PML with the classical hydrological model HBV, significantly improving the accuracy of evapotranspiration simulation through remote sensing observations. It effectively overcomes the limitations of traditional models in representing vegetation dynamics.",
           "image_id": "9b23de9d4f3643a6",
-          "related": []
+          "related": [],
+          "name_zh": "HBV-PML 模型",
+          "description_zh": "HBV-PML 模型将遥感蒸散发模型 PML 与经典水文模型 HBV 相结合，利用遥感观测显著提高蒸散发模拟精度，克服了传统模型难以刻画植被动态的局限，为全球水资源评估提供关键数据支撑。"
         }
       ]
     },
@@ -52,7 +56,9 @@
           "related": [
             "Xu, Z., Zhang, Y., Zhang, X., Ma, N., Tian, J., Kong, D., & Post, D. (2022). Bushfire‐Induced Water Balance Changes Detected by a Modified Paired Catchment Method. Water Resources Research, 58(11). https://doi.org/10.1029/2021wr031013",
             "Xu, Z., Zhang, Y., Blöschl, G., & Piao, S. (2023). Mega Forest Fires Intensify Flood Magnitudes in Southeast Australia. Geophysical Research Letters, 50(12). https://doi.org/10.1029/2023gl103812"
-          ]
+          ],
+          "name_zh": "林火与洪水的生态水文效应",
+          "description_zh": "研究关注澳大利亚东南部林火对水文过程的影响，特别是水量平衡和洪水量级的变化。其中一项研究分析 2009 年维多利亚州林火对 8 个森林流域水量平衡的影响，发现火后蒸散发减少、径流增加，过火区水储量长期下降；另一项研究表明，2019—2020 年特大林火显著放大了洪水量级，在冬季降雨主导的地区尤为明显。"
         }
       ]
     },
@@ -74,7 +80,9 @@
           "image_id": "b31b5f27e3866661",
           "related": [
             "Wang, L., & Zhang, Y. (2024). Filling GRACE data gap using an innovative transformer-based deep learning approach. Remote Sensing of Environment, 315, 114465. https://doi.org/10.1016/j.rse.2024.114465"
-          ]
+          ],
+          "name_zh": "人工智能水文建模",
+          "description_zh": "我们提出基于 Transformer 的人工智能深度学习模型，用于填补 GRACE 与 GRACE Follow-On 卫星观测之间的数据缺口。模型融合气温、降水和蒸散发等气象水文要素，有效填补约 11 个月的观测空缺，精度优于传统方法，在干旱区表现尤为突出，展示了人工智能在提升卫星数据连续性与可靠性方面的潜力。"
         },
         {
           "id": "cas-canglong",
@@ -84,7 +92,9 @@
           "image_id": "7904f1af69b15ed4",
           "related": [
             "Wang, L., Zhang, X., Leung, L. R., Chiew, F. H. S., AghaKouchak, A., Ying, K., & Zhang, Y. (2024). CAS-Canglong: A skillful 3D Transformer model for sub-seasonal to seasonal global sea surface temperature prediction (No. arXiv:2409.05369). arXiv. https://doi.org/10.48550/arXiv.2409.05369"
-          ]
+          ],
+          "name_zh": "中科苍龙",
+          "description_zh": "我们提出面向全球海表温度次季节至季节（S2S）预测的人工智能方法——三维 Transformer 模型“中科苍龙”（CAS-Canglong）。模型利用自注意力机制刻画复杂的海气相互作用，与传统物理模式相比，在最长三个月的提前期内具有更高的海温预测技巧和计算效率，可为干旱、洪水等极端事件预报和未来气候研究提供支撑。"
         }
       ]
     }

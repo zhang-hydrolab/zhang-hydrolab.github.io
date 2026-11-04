@@ -21,7 +21,10 @@ function collectUsage(api) {
   };
 
   for (const group of api.people.groups) for (const p of group.members) use(p.photo_id, 'portrait');
-  for (const c of api.collaborators.items) use(c.photo_id, 'portrait');
+  for (const c of api.collaborators.items) {
+    use(c.photo_id, 'portrait');
+    for (const id of c.gallery ?? []) use(id, 'card');
+  }
   for (const n of api.news.items) {
     use(n.cover_id, 'card');
     for (const match of n.body_md.matchAll(/\(media:([0-9a-f]{16})\)/g)) use(match[1], 'figure');
@@ -38,6 +41,7 @@ function collectUsage(api) {
   use(assets.cover, 'full');
   use(assets.group_photo, 'full');
   use(assets.group_photo_alt, 'full');
+  for (const f of api.site['site.featured_research'] ?? []) use(f.image_id, 'figure');
   return usage;
 }
 

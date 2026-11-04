@@ -74,6 +74,20 @@ export async function loadTexture(gl, url, { repeat = false } = {}) {
   return { texture, ...size };
 }
 
+/** The first channel of an image, as bytes, for reading values on the processor. */
+export async function readChannel(url) {
+  const bitmap = await createImageBitmap(new Blob([await loadBytes(url)]), { colorSpaceConversion: 'none', premultiplyAlpha: 'none' });
+  const canvas = new OffscreenCanvas(bitmap.width, bitmap.height);
+  const context = canvas.getContext('2d');
+  context.drawImage(bitmap, 0, 0);
+  const { data } = context.getImageData(0, 0, bitmap.width, bitmap.height);
+  const values = new Uint8Array(bitmap.width * bitmap.height);
+  for (let i = 0; i < values.length; i += 1) values[i] = data[i * 4];
+  const size = { width: bitmap.width, height: bitmap.height };
+  bitmap.close();
+  return { values, ...size };
+}
+
 /**
  * Rivers as written by tools/build_earth.py: one record per reach, each ready to be an
  * instance of a line. Rivers come largest first.

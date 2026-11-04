@@ -11,8 +11,11 @@ const MODULES = {
   earth: () => import('./modules/earth.js'),
   block: () => import('./modules/block.js'),
   watercycle: () => import('./modules/watercycle.js'),
-  swell: () => import('./modules/swell.js'),
-  collabglobe: () => import('./modules/collabglobe.js'),
+  contours: () => import('./modules/contours.js'),
+  theme: () => import('./modules/theme.js'),
+  pubring: () => import('./modules/pubring.js'),
+  etglobe: () => import('./modules/etglobe.js'),
+  newsring: () => import('./modules/newsring.js'),
 };
 
 function loadModules() {
@@ -44,23 +47,64 @@ function syncPlaceholders() {
   });
 }
 
+/**
+ * The language switch in the header. The choice is kept in a session cookie (see LANG_BOOT in
+ * views/layout.mjs), so every page, dialog and tab of the visit follows it, and other open tabs
+ * change with it.
+ */
 function setupLanguage() {
-  syncPlaceholders();
-  document.querySelectorAll('[data-lang-toggle]').forEach((button) => {
+  const root = document.documentElement;
+  const buttons = [...document.querySelectorAll('[data-lang-set]')];
+  const channel = 'BroadcastChannel' in window ? new BroadcastChannel('lab-lang') : null;
+
+  const remember = (lang) => {
+    document.cookie = `lab-lang=${lang}; path=/; SameSite=Lax`;
+    try {
+      sessionStorage.setItem('lab-lang', lang);
+    } catch {
+      /* Private mode: the cookie still carries the choice. */
+    }
+  };
+
+  const sync = () => {
+    const lang = root.dataset.lang === 'zh' ? 'zh' : 'en';
+    for (const button of buttons) button.setAttribute('aria-pressed', String(button.dataset.langSet === lang));
+    document.title = (lang === 'zh' ? root.dataset.titleZh : root.dataset.titleEn) || document.title;
+    syncPlaceholders();
+  };
+
+  const apply = (lang, { share = true } = {}) => {
+    if ((root.dataset.lang === 'zh' ? 'zh' : 'en') === lang) return;
+    root.dataset.lang = lang;
+    root.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    sync();
+    window.dispatchEvent(new CustomEvent('lab:lang', { detail: lang }));
+    if (share) channel?.postMessage(lang);
+  };
+
+  for (const button of buttons) {
     button.addEventListener('click', () => {
-      const root = document.documentElement;
-      const next = root.dataset.lang === 'zh' ? 'en' : 'zh';
-      root.dataset.lang = next;
-      root.lang = next === 'zh' ? 'zh-CN' : 'en';
-      try {
-        sessionStorage.setItem('lab-lang', next);
-      } catch {
-        /* Private mode: the choice just lasts for this page. */
+      const lang = button.dataset.langSet;
+      remember(lang);
+      // A ?lang= in the address would undo the choice on reload.
+      const url = new URL(location.href);
+      if (url.searchParams.has('lang')) {
+        url.searchParams.delete('lang');
+        history.replaceState(history.state, '', url);
       }
-      syncPlaceholders();
-      window.dispatchEvent(new CustomEvent('lab:lang', { detail: next }));
+      apply(lang);
     });
+  }
+  channel?.addEventListener('message', (event) => {
+    if (event.data === 'zh' || event.data === 'en') apply(event.data, { share: false });
   });
+  // A page brought back from the history cache shows the language chosen since.
+  addEventListener('pageshow', (event) => {
+    if (!event.persisted) return;
+    const saved = document.cookie.match(/(?:^|; )lab-lang=(zh|en)/)?.[1];
+    if (saved) apply(saved, { share: false });
+  });
+  sync();
 }
 
 /** Marks the theme being read in the contents list. */
@@ -164,7 +208,7 @@ function setupSearch() {
     const matches = index
       .filter((item) => words.every((w) => item.text.includes(w)))
       .map((item) => {
-        const title = item.title.toLowerCase();
+        const title = `${item.title} ${item.title_zh ?? ''}`.toLowerCase();
         return { item, score: (title.startsWith(query) ? 3 : 0) + (title.includes(query) ? 2 : 0) + (item.type === 'Person' ? 0.5 : 0) };
       })
       .sort((a, b) => b.score - a.score)
@@ -186,10 +230,10 @@ function setupSearch() {
       type.textContent = zh ? SEARCH_TYPES_ZH[item.type] : item.type;
       const title = document.createElement('span');
       title.className = 'search__title';
-      title.textContent = item.title;
+      title.textContent = (zh && item.title_zh) || item.title;
       const sub = document.createElement('span');
       sub.className = 'search__sub';
-      sub.textContent = item.sub;
+      sub.textContent = (zh && item.sub_zh) || item.sub;
       a.append(type, title, sub);
       li.append(a);
       list.append(li);

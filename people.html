@@ -1,4 +1,4 @@
-<!doctype html><html lang="en" data-lang="en">
+<!doctype html><html lang="en" data-lang="en" data-title-en="People · Large Scale Hydrology Group" data-title-zh="团队成员 · 大尺度水文学团队">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,10 +13,10 @@
 <meta property="og:url" content="https://zhang-hydrolab.github.io/people.html">
 <meta property="og:image" content="https://zhang-hydrolab.github.io/media/e40a2308e73d60dd-2400.webp">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<script>(function(){var d=document.documentElement;d.classList.add('js');try{var l=sessionStorage.getItem('lab-lang');if(l==='zh'){d.dataset.lang='zh';d.lang='zh-CN'}}catch(e){}})();</script>
+<script>(function(){var d=document.documentElement,l=null;d.classList.add('js');try{l=new URLSearchParams(location.search).get('lang')}catch(e){}if(l!=='zh'&&l!=='en'){var m=document.cookie.match(/(?:^|; )lab-lang=(zh|en)/);l=m?m[1]:null}if(!l){try{l=sessionStorage.getItem('lab-lang')}catch(e){}}if(l==='zh'||l==='en'){document.cookie='lab-lang='+l+'; path=/; SameSite=Lax';try{sessionStorage.setItem('lab-lang',l)}catch(e){}}if(l==='zh'){d.dataset.lang='zh';d.lang='zh-CN';if(d.dataset.titleZh)document.title=d.dataset.titleZh}})();</script>
 <link rel="preload" href="/assets/fonts/source-serif-4-latin-wght-normal-EUO3YR6J.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/source-sans-3-latin-wght-normal-ILI3Y2TR.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style-62GKUPI4.css">
-<script type="module" src="/assets/main-IPNGBZNL.js"></script>
+<link rel="stylesheet" href="/assets/style-GCNGNJTV.css">
+<script type="module" src="/assets/main-QB4ZHOO5.js"></script>
 </head>
 <body id="top" data-page="people">
 <a class="skip" href="#main">Skip to content</a>
@@ -34,7 +34,10 @@
       </nav>
       <div class="nav__tools">
         <button class="tool" type="button" data-search-open aria-label="Search the site" title="Search (Ctrl K)"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m14 14 4 4" stroke="currentColor" stroke-width="1.5"/></svg></button>
-        <button class="tool tool--text" type="button" data-lang-toggle aria-label="Switch language: English or Chinese"><span class="t-en">中文</span><span class="t-zh">English</span></button>
+        <div class="langswitch" role="group" aria-label="Language / 语言">
+          <button type="button" data-lang-set="en" lang="en" aria-pressed="true" title="English">EN</button>
+          <button type="button" data-lang-set="zh" lang="zh-CN" aria-pressed="false" title="中文">中文</button>
+        </div>
         <button class="tool tool--menu" type="button" data-menu-open aria-label="Open menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.5"/></svg></button>
       </div>
     </div>
@@ -51,23 +54,25 @@
   </dialog>
 <main id="main">
 
-    <header class="people-head">
-      <div class="wrap">
-        <p class="kicker"><span class="t-en">Large Scale Hydrology · IGSNRR, CAS</span><span class="t-zh" lang="zh-CN">大尺度水文学团队 · 中国科学院地理科学与资源研究所</span></p>
-        <div class="people-head__row">
+    <header class="crew-head">
+      <div class="wrap crew-head__grid">
+        <div class="crew-head__text">
+          <p class="kicker"><a href="/"><span class="t-en">Home</span><span class="t-zh" lang="zh-CN">首页</span></a> / <span class="t-en">People</span><span class="t-zh" lang="zh-CN">团队成员</span></p>
           <h1><span class="t-en">People</span><span class="t-zh" lang="zh-CN">团队成员</span></h1>
-          <p><span class="t-en">The people behind our research into water, climate and a changing world.</span><span class="t-zh" lang="zh-CN">探索水循环、气候与变化世界的科研伙伴。</span></p>
+          <p class="pagehead__lead"><span class="t-en">30 researchers and students at the Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences, in Beijing, and 15 alumni.</span><span class="t-zh" lang="zh-CN">中国科学院地理科学与资源研究所（北京）的 30 位科研人员与研究生，以及 15 位校友。</span></p>
+          <ul class="crew-stats">
+            <li><a href="#co_pi"><b>5</b><span><span class="t-en">Research staff</span><span class="t-zh" lang="zh-CN">科研人员</span></span></a></li><li><a href="#postdoc"><b>5</b><span><span class="t-en">Postdocs</span><span class="t-zh" lang="zh-CN">博士后</span></span></a></li><li><a href="#phd"><b>10</b><span><span class="t-en">Ph.D. students</span><span class="t-zh" lang="zh-CN">博士研究生</span></span></a></li><li><a href="#master"><b>6</b><span><span class="t-en">Master students</span><span class="t-zh" lang="zh-CN">硕士研究生</span></span></a></li><li><a href="#alumni"><b>15</b><span><span class="t-en">Alumni</span><span class="t-zh" lang="zh-CN">校友</span></span></a></li>
+          </ul>
         </div>
-        <div class="people-head__meta">
-          <span><span class="t-en">30 researchers &amp; students</span><span class="t-zh" lang="zh-CN">30 位科研人员与学生</span></span>
-          <span><span class="t-en">15 alumni</span><span class="t-zh" lang="zh-CN">15 位校友</span></span>
-          <span><span class="t-en">Beijing, China</span><span class="t-zh" lang="zh-CN">中国 · 北京</span></span>
-        </div>
+        <figure class="crew-head__photo">
+          <img class="" src="/media/0fa088b6f51e1484-2400.webp" srcset="/media/0fa088b6f51e1484-800.webp 800w, /media/0fa088b6f51e1484-1600.webp 1600w, /media/0fa088b6f51e1484-2400.webp 2400w" sizes="(max-width: 1000px) 100vw, 640px" width="6240" height="4160" alt="Group photo at the 2026 graduation ceremony" loading="eager" decoding="async">
+          <figcaption><span class="t-en">Group photo at the 2026 graduation ceremony.</span><span class="t-zh" lang="zh-CN">2026 年毕业典礼团队合影。</span></figcaption>
+        </figure>
       </div>
     </header>
     <section class="wrap pi" id="pi">
           <div class="pi__side">
-            <img class="pi__photo" src="/media/4f8a103932b0f798-800.webp" srcset="/media/4f8a103932b0f798-240.webp 240w, /media/4f8a103932b0f798-480.webp 480w, /media/4f8a103932b0f798-800.webp 800w" sizes="(max-width: 560px) 120px, (max-width: 760px) 160px, 240px" width="5429" height="5462" alt="Portrait of Prof. Yongqiang Zhang" loading="lazy" decoding="async" style="object-position:50% 25%">
+            <img class="pi__photo" src="/media/4f8a103932b0f798-800.webp" srcset="/media/4f8a103932b0f798-240.webp 240w, /media/4f8a103932b0f798-480.webp 480w, /media/4f8a103932b0f798-800.webp 800w" sizes="(max-width: 560px) 120px, (max-width: 760px) 160px, 260px" width="5429" height="5462" alt="Portrait of Prof. Yongqiang Zhang" loading="lazy" decoding="async" style="object-position:50% 25%">
             <ul class="person-links">
     <li><a class="person-links__link person-links__link--scholar" href="https://scholar.google.com/citations?hl=en&amp;user=t5iGFeAAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269ZM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14Z"/></svg>
@@ -83,33 +88,39 @@
           <div class="pi__text">
             <p class="kicker"><span class="t-en">Principal Investigator</span><span class="t-zh" lang="zh-CN">团队负责人</span></p>
             <h2><span class="t-en">Prof. Yongqiang Zhang</span><span class="t-zh" lang="zh-CN">张永强研究员</span></h2>
-            <p class="pi__role"><span class="t-en">Distinguished Professor, Hydrology and Water Resources</span><span class="t-zh" lang="zh-CN">二级研究员，水文与水资源</span></p>
-            <p class="t-en" >Prof. Yongqiang Zhang is a hydrologist specializing in hydrology and water resources. His research focuses on understanding the mechanisms and processes of global evapotranspiration, exploring eco-hydrological processes, and advancing hydrological modeling, prediction, and projection through remote sensing techniques. In 2026, he received the AGU Joanne Simpson Medal and became an AGU Fellow.</p>
-            <p class="t-zh" lang="zh-CN">张永强研究员从事全球与区域水文及水资源研究，关注蒸散发机制、生态水文过程以及遥感支持的水文模拟、预测与预估。2026 年荣获 AGU Joanne Simpson 奖章并当选 AGU 会士。</p>
+            <p class="pi__role"><span class="t-en">Senior Research Fellow (Grade II), Hydrology and Water Resources</span><span class="t-zh" lang="zh-CN">二级研究员，水文与水资源</span></p>
+            <ul class="honours pi__honours"><li><span class="t-en">Senior Research Fellow (Grade II), Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences</span><span class="t-zh" lang="zh-CN">中国科学院地理科学与资源研究所二级研究员</span></li><li><span class="t-en">Foreign Member of the European Academy of Sciences</span><span class="t-zh" lang="zh-CN">欧洲科学院外籍院士</span></li><li><span class="t-en">National Leading Talent in Scientific and Technological Innovation</span><span class="t-zh" lang="zh-CN">国家科技创新领军人才</span></li><li><span class="t-en">Chair of the Hydrological Geography Professional Committee, Geographical Society of China</span><span class="t-zh" lang="zh-CN">中国地理学会水文地理专业委员会主任</span></li><li><span class="t-en">Fellow of the Modelling and Simulation Society of Australia and New Zealand</span><span class="t-zh" lang="zh-CN">澳大利亚和新西兰模型模拟学会会士</span></li><li><span class="t-en">Head of the Hydrometeorology Division, International Modelling and Simulation Society</span><span class="t-zh" lang="zh-CN">国际模型模拟学会水文气象部主席</span></li><li><span class="t-en">Alexander von Humboldt Fellow (Germany)</span><span class="t-zh" lang="zh-CN">德国洪堡学者</span></li><li><span class="t-en">Appointed Chinese Expert for the World Meteorological Organization</span><span class="t-zh" lang="zh-CN">世界气象组织聘任中国专家</span></li></ul>
+            <p class="t-en" >Prof. Yongqiang Zhang is a Senior Research Fellow (Grade II) at the Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences, specializing in hydrology and water resources. His research focuses on understanding the mechanisms and processes of global evapotranspiration, exploring eco-hydrological processes, and advancing hydrological modeling, prediction, and projection through remote sensing techniques. In 2026, he received the AGU Joanne Simpson Medal and became an AGU Fellow.</p>
+            <p class="t-zh" lang="zh-CN">张永强研究员为中国科学院地理科学与资源研究所二级研究员，从事全球与区域水文及水资源研究，关注蒸散发机制、生态水文过程以及遥感支持的水文模拟、预测与预估。2026 年荣获 AGU Joanne Simpson 奖章并当选 AGU 会士。</p>
             <details class="pi__more">
-              <summary><span class="t-en">More about the group &amp; principal investigator</span><span class="t-zh" lang="zh-CN">了解更多团队与负责人介绍</span></summary>
-              <p class="t-en" >Dr. Yongqiang Zhang is a Distinguished Professor in Hydrology and Water Resources at the Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences. He is a Non-European Fellow of the European Academy of Sciences (elected 2026) and also serves as the Deputy Director of the Key Laboratory of Land Water Cycle and Surface Processes. Professor Zhang is a Fellow of the Modelling and Simulation Society of Australia and New Zealand and a Fellow of the Alexander von Humboldt Foundation in Germany. He currently holds leadership roles as the Director of the Hydro-Geography Committee of the Geographical Society of China and chairs the Hydrometeorology Stream of the Modelling and Simulation Society of Australia and New Zealand. In addition, Professor Zhang serves on the editorial boards of five major international journals, including Journal of Geophysical Research: Atmospheres, Journal of Hydrology, and Remote Sensing of Environment. Over the past five years, he has led seven key research projects, including grants from the National Key Research and Development Program, a key project of the National Natural Science Foundation, and the Talent Program of the Chinese Academy of Sciences. In 2026, he received the AGU Joanne Simpson Medal and became an AGU Fellow.</p><p class="t-en" >Professor Zhang has devoted his career to large scale hydrology, with a special focus on evapotranspiration mechanisms and their eco-hydrological effects. He has published 260 papers in peer-reviewed journals, including prestigious titles such as Science, Nature Water, and Nature Communications. In the past five years alone, he has authored or co-authored 70 papers as first or corresponding author in top-tier journals. His research has been cited more than 24,000 times, and he has an H-index of 75. His most cited first-authored paper has accumulated over 700 citations. In addition, Professor Zhang has ten ESI Highly Cited Papers and has been recognized as an Elsevier Highly Cited Chinese Researcher for five consecutive years.</p><p class="t-en" >The team led by Professor Zhang comprises professors, associate professors, postdoc fellows, doctoral candidates, and master&#39;s students, totaling about 30 members. Students in the team are primarily recruited from leading universities such as Tsinghua University, Beijing Normal University, Northwest A&amp;F University, and Hohai University. The team actively collaborates with top researchers both in China and abroad and has established long-term academic partnerships with internationally renowned institutions, including Ghent University, Vienna University of Technology, Pacific Northwest National Laboratory in the United States, and the Commonwealth Scientific and Industrial Research Organisation (CSIRO) in Australia.</p><p class="t-en" >Under Professor Zhang&#39;s supervision, students and young researchers from both China and abroad have thrived in a dynamic, interdisciplinary research environment. Domestically, team members regularly present at major national conferences and have received numerous awards for young scientists. International students and visiting scholars contribute diverse perspectives, with many going on to secure positions at leading global institutions. This cultivation of next-generation talent underscores the team&#39;s lasting impact on the hydrological sciences worldwide.</p>
-              <p class="t-zh" lang="zh-CN">张永强研究员是中国科学院地理科学与资源研究所水文与水资源学科的二级研究员，欧洲科学院外籍院士（2026 年当选），同时担任陆地水循环及地表过程重点实验室副主任。张永强研究员是澳大利亚和新西兰模型模拟学会会士，德国洪堡基金会学者。他目前担任中国地理学会水文地理专业委员会主任，以及澳大利亚和新西兰模型模拟学会水文气象部主席。此外，张永强研究员还担任五个主要国际期刊的编委，包括Journal of Geophysical Research: Atmospheres、Journal of Hydrology和Remote Sensing of Environment。在过去五年中，他主持了七个重点科研项目，包括国家重点研发计划、国家自然科学基金重点项目和中国科学院人才计划等。2026 年，张永强研究员荣获 AGU Joanne Simpson 奖章并当选 AGU 会士。</p><p class="t-zh" lang="zh-CN">张永强研究员致力于大尺度水文学研究，特别关注蒸散发机制及其生态水文效应。他在同行评审期刊上发表了260篇论文，包括Science、Nature Water和Nature Communications等著名期刊。仅在过去五年，他就以第一作者或通讯作者身份在顶级期刊发表了70篇论文。他的研究已被引用超过24,000次，H指数为75。他的被引次数最多的第一作者论文累计引用超过700次。此外，张永强研究员拥有10篇ESI高被引论文，并连续五年被评为爱思唯尔中国高被引学者。</p><p class="t-zh" lang="zh-CN">张永强研究员领导的团队由教授、副教授、博士后、博士研究生和硕士研究生组成，共有约30名成员。团队学生主要来自清华大学、北京师范大学、西北农林科技大学和河海大学等国内一流大学。团队积极与国内外顶尖研究人员合作，并与国际知名机构建立了长期学术合作关系，包括根特大学、维也纳工业大学、美国西北太平洋国家实验室和澳大利亚联邦科学与工业研究组织（CSIRO）。</p><p class="t-zh" lang="zh-CN">在张永强研究员的指导下，来自中国和国外的学生和青年研究人员在一个充满活力的跨学科研究环境中茁壮成长。在国内，团队成员定期在主要的全国性会议上发表演讲，并获得了众多青年科学家奖项。国际学生和访问学者贡献了多元化的视角，许多人随后在全球领先机构获得了职位。这种对下一代人才的培养凸显了该团队对全球水文科学的持久影响。</p>
+              <summary><span class="t-en">More about the group and the principal investigator</span><span class="t-zh" lang="zh-CN">了解更多团队与负责人介绍</span></summary>
+              <p class="t-en" >Dr. Yongqiang Zhang is a Senior Research Fellow (Grade II) in Hydrology and Water Resources at the Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences, and Deputy Director of the Key Laboratory of Land Water Cycle and Surface Processes. He is a Foreign Member of the European Academy of Sciences (elected 2026) and a National Leading Talent in Scientific and Technological Innovation. Professor Zhang is a Fellow of the Modelling and Simulation Society of Australia and New Zealand and an Alexander von Humboldt Fellow (Germany). He chairs the Hydrological Geography Professional Committee of the Geographical Society of China, heads the Hydrometeorology Division of the International Modelling and Simulation Society, and is an appointed Chinese expert for the World Meteorological Organization. In addition, Professor Zhang serves on the editorial boards of five major international journals, including Journal of Geophysical Research: Atmospheres, Journal of Hydrology, and Remote Sensing of Environment. Over the past five years, he has led seven key research projects, including grants from the National Key Research and Development Program, a key project of the National Natural Science Foundation, and the Talent Program of the Chinese Academy of Sciences. In 2026, he received the AGU Joanne Simpson Medal and became an AGU Fellow.</p><p class="t-en" >Professor Zhang has devoted his career to large scale hydrology, with a special focus on evapotranspiration mechanisms and their eco-hydrological effects. He has published 260 papers in peer-reviewed journals, including prestigious titles such as Science, Nature Water, and Nature Communications. In the past five years alone, he has authored or co-authored 70 papers as first or corresponding author in top-tier journals. His research has been cited more than 24,000 times, and he has an H-index of 75. His most cited first-authored paper has accumulated over 700 citations. In addition, Professor Zhang has ten ESI Highly Cited Papers and has been recognized as an Elsevier Highly Cited Chinese Researcher for five consecutive years.</p><p class="t-en" >The team led by Professor Zhang comprises professors, associate professors, postdoc fellows, doctoral candidates, and master&#39;s students, totaling about 30 members. Students in the team come mainly from top-tier Chinese universities, including Tsinghua University, the University of Science and Technology of China, Beijing Normal University, and Hohai University. The team actively collaborates with top researchers both in China and abroad and has established long-term academic partnerships with internationally renowned institutions, including Ghent University, Vienna University of Technology, Pacific Northwest National Laboratory in the United States, and the Commonwealth Scientific and Industrial Research Organisation (CSIRO) in Australia.</p><p class="t-en" >Under Professor Zhang&#39;s supervision, students and young researchers from both China and abroad have thrived in a dynamic, interdisciplinary research environment. Domestically, team members regularly present at major national conferences and have received numerous awards for young scientists. International students and visiting scholars contribute diverse perspectives, with many going on to secure positions at leading global institutions. This cultivation of next-generation talent underscores the team&#39;s lasting impact on the hydrological sciences worldwide.</p>
+              <p class="t-zh" lang="zh-CN">张永强研究员是中国科学院地理科学与资源研究所水文与水资源学科二级研究员，同时担任陆地水循环及地表过程重点实验室副主任。他是欧洲科学院外籍院士（2026 年当选）、国家科技创新领军人才、澳大利亚和新西兰模型模拟学会会士和德国洪堡学者，现任中国地理学会水文地理专业委员会主任、国际模型模拟学会水文气象部主席，并受聘为世界气象组织中国专家。此外，张永强研究员还担任五个主要国际期刊的编委，包括Journal of Geophysical Research: Atmospheres、Journal of Hydrology和Remote Sensing of Environment。在过去五年中，他主持了七个重点科研项目，包括国家重点研发计划、国家自然科学基金重点项目和中国科学院人才计划等。2026 年，张永强研究员荣获 AGU Joanne Simpson 奖章并当选 AGU 会士。</p><p class="t-zh" lang="zh-CN">张永强研究员致力于大尺度水文学研究，特别关注蒸散发机制及其生态水文效应。他在同行评审期刊上发表了260篇论文，包括Science、Nature Water和Nature Communications等著名期刊。仅在过去五年，他就以第一作者或通讯作者身份在顶级期刊发表了70篇论文。他的研究已被引用超过24,000次，H指数为75。他的被引次数最多的第一作者论文累计引用超过700次。此外，张永强研究员拥有10篇ESI高被引论文，并连续五年被评为爱思唯尔中国高被引学者。</p><p class="t-zh" lang="zh-CN">张永强研究员领导的团队由教授、副教授、博士后、博士研究生和硕士研究生组成，共有约30名成员。团队学生主要来自清华大学、中国科学技术大学、北京师范大学和河海大学等国内一流高校。团队积极与国内外顶尖研究人员合作，并与国际知名机构建立了长期学术合作关系，包括根特大学、维也纳工业大学、美国西北太平洋国家实验室和澳大利亚联邦科学与工业研究组织（CSIRO）。</p><p class="t-zh" lang="zh-CN">在张永强研究员的指导下，来自中国和国外的学生和青年研究人员在一个充满活力的跨学科研究环境中茁壮成长。在国内，团队成员定期在主要的全国性会议上发表演讲，并获得了众多青年科学家奖项。国际学生和访问学者贡献了多元化的视角，许多人随后在全球领先机构获得了职位。这种对下一代人才的培养凸显了该团队对全球水文科学的持久影响。</p>
             </details>
+            <dl class="pi__stats"><div><dd>24,000+</dd><dt><span class="t-en">Citations</span><span class="t-zh" lang="zh-CN">谷歌学术引用</span></dt></div><div><dd>75</dd><dt><span class="t-en">H-index</span><span class="t-zh" lang="zh-CN">H 指数</span></dt></div><div><dd>260</dd><dt><span class="t-en">Peer-reviewed papers</span><span class="t-zh" lang="zh-CN">同行评审论文</span></dt></div><div><dd>10</dd><dt><span class="t-en">ESI highly cited papers</span><span class="t-zh" lang="zh-CN">ESI 高被引论文</span></dt></div></dl>
           </div>
-          <dl class="pi__stats"><div><dt><span class="t-en">Citations</span><span class="t-zh" lang="zh-CN">谷歌学术引用</span></dt><dd>24,000+</dd></div><div><dt><span class="t-en">H-index</span><span class="t-zh" lang="zh-CN">H 指数</span></dt><dd>75</dd></div><div><dt><span class="t-en">Peer-reviewed papers</span><span class="t-zh" lang="zh-CN">同行评审论文</span></dt><dd>260</dd></div><div><dt><span class="t-en">ESI highly cited papers</span><span class="t-zh" lang="zh-CN">ESI 高被引论文</span></dt><dd>10</dd></div></dl>
         </section>
-    <section class="wrap people-directory" data-module="peoplefilter">
-      <div class="filters">
-        <label class="field"><span class="sr-only">Search people</span><input type="search" data-people-q placeholder="Search name or research field" data-placeholder-zh="搜索姓名或研究方向" autocomplete="off"></label>
-        <div class="tags" role="group" aria-label="Filter by role">
-          <button type="button" class="tag is-on" data-people-role="" aria-pressed="true"><span class="t-en">Everyone</span><span class="t-zh" lang="zh-CN">全部</span></button>
-          <button type="button" class="tag" data-people-role="co_pi" aria-pressed="false"><span class="t-en">Co-PI</span><span class="t-zh" lang="zh-CN">科研人员</span> (4)</button><button type="button" class="tag" data-people-role="postdoc" aria-pressed="false"><span class="t-en">Postdoc</span><span class="t-zh" lang="zh-CN">博士后</span> (5)</button><button type="button" class="tag" data-people-role="phd" aria-pressed="false"><span class="t-en">Ph.D. Students</span><span class="t-zh" lang="zh-CN">博士研究生</span> (10)</button><button type="button" class="tag" data-people-role="master" aria-pressed="false"><span class="t-en">Master Students</span><span class="t-zh" lang="zh-CN">硕士研究生</span> (6)</button><button type="button" class="tag" data-people-role="assistant" aria-pressed="false"><span class="t-en">Research Assistants</span><span class="t-zh" lang="zh-CN">科研助理</span> (1)</button><button type="button" class="tag" data-people-role="visiting" aria-pressed="false"><span class="t-en">Visiting Students</span><span class="t-zh" lang="zh-CN">访问学生</span> (3)</button><button type="button" class="tag" data-people-role="alumni" aria-pressed="false"><span class="t-en">Alumni</span><span class="t-zh" lang="zh-CN">校友</span> (15)</button>
-          <button type="button" class="tag" data-people-role="talent" aria-pressed="false"><span class="t-en">Talent programmes</span><span class="t-zh" lang="zh-CN">人才计划</span> (5)</button>
+    <section class="people-directory" data-module="peoplefilter">
+      <div class="crew-bar">
+        <div class="wrap crew-bar__inner">
+          <label class="field"><span class="sr-only"><span class="t-en">Search people</span><span class="t-zh" lang="zh-CN">搜索成员</span></span><input type="search" data-people-q placeholder="Search name or research field" data-placeholder-zh="搜索姓名或研究方向" autocomplete="off"></label>
+          <div class="tags" role="group" aria-label="Filter by role">
+            <button type="button" class="tag is-on" data-people-role="" aria-pressed="true"><span class="t-en">Everyone</span><span class="t-zh" lang="zh-CN">全部</span></button>
+            <button type="button" class="tag" data-people-role="co_pi" aria-pressed="false"><span class="t-en">Co-PI</span><span class="t-zh" lang="zh-CN">科研人员</span> <span class="tag__n">4</span></button><button type="button" class="tag" data-people-role="postdoc" aria-pressed="false"><span class="t-en">Postdoc</span><span class="t-zh" lang="zh-CN">博士后</span> <span class="tag__n">5</span></button><button type="button" class="tag" data-people-role="phd" aria-pressed="false"><span class="t-en">Ph.D. Students</span><span class="t-zh" lang="zh-CN">博士研究生</span> <span class="tag__n">10</span></button><button type="button" class="tag" data-people-role="master" aria-pressed="false"><span class="t-en">Master Students</span><span class="t-zh" lang="zh-CN">硕士研究生</span> <span class="tag__n">6</span></button><button type="button" class="tag" data-people-role="assistant" aria-pressed="false"><span class="t-en">Research Assistants</span><span class="t-zh" lang="zh-CN">科研助理</span> <span class="tag__n">1</span></button><button type="button" class="tag" data-people-role="visiting" aria-pressed="false"><span class="t-en">Visiting Students</span><span class="t-zh" lang="zh-CN">访问学生</span> <span class="tag__n">3</span></button><button type="button" class="tag" data-people-role="alumni" aria-pressed="false"><span class="t-en">Alumni</span><span class="t-zh" lang="zh-CN">校友</span> <span class="tag__n">15</span></button>
+            <button type="button" class="tag" data-people-role="talent" aria-pressed="false"><span class="t-en">Talent programmes</span><span class="t-zh" lang="zh-CN">人才计划</span> <span class="tag__n">5</span></button>
+          </div>
         </div>
       </div>
-      <section class="group" data-group="co_pi" id="co_pi">
-          <div class="group__heading"><h2><span class="t-en">Co-PI</span><span class="t-zh" lang="zh-CN">科研人员</span></h2><span class="group__count"><span class="t-en">4 members</span><span class="t-zh" lang="zh-CN">4 位成员</span></span></div>
-          <ul class="people-grid"><li class="person" data-search="jing tian 田静 ecohydrology 生态水文学 ecohydrology 生态水文学" id="p-jing-tian">
+      <div class="wrap">
+        <section class="group group--row" data-group="co_pi" id="co_pi">
+            <div class="group__heading"><h2><span class="t-en">Co-PI</span><span class="t-zh" lang="zh-CN">科研人员</span></h2><span class="group__count">4</span></div>
+            <ul class="people-grid people-grid--row"><li class="person person--row" data-search="jing tian 田静 ecohydrology 生态水文学 " id="p-jing-tian">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/b4000a086beafc40-800.webp" srcset="/media/b4000a086beafc40-240.webp 240w, /media/b4000a086beafc40-480.webp 480w, /media/b4000a086beafc40-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1064" height="1047" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/b4000a086beafc40-800.webp" srcset="/media/b4000a086beafc40-240.webp 240w, /media/b4000a086beafc40-480.webp 480w, /media/b4000a086beafc40-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="1064" height="1047" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Jing Tian</span><span class="t-zh" lang="zh-CN">田静</span></span>
+        <span class="person__alt"><span class="t-en">田静</span><span class="t-zh" lang="zh-CN">Jing Tian</span></span>
         <span class="person__field"><span class="t-en">Ecohydrology</span><span class="t-zh" lang="zh-CN">生态水文学</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -132,11 +143,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="xuanze zhang 张选泽 land surface modeling; ecoclimatology 陆面模拟；生态气候学 land surface modeling; ecoclimatology 陆面模拟；生态气候学" id="p-xuanze-zhang">
+  </li><li class="person person--row" data-search="xuanze zhang 张选泽 land surface modeling; ecoclimatology 陆面模拟；生态气候学 " id="p-xuanze-zhang">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/a9ca943b67cc0e7c-358.webp" srcset="/media/a9ca943b67cc0e7c-240.webp 240w, /media/a9ca943b67cc0e7c-358.webp 358w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="358" height="441" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/a9ca943b67cc0e7c-358.webp" srcset="/media/a9ca943b67cc0e7c-240.webp 240w, /media/a9ca943b67cc0e7c-358.webp 358w" sizes="(max-width: 560px) 112px, 132px" width="358" height="441" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Xuanze Zhang</span><span class="t-zh" lang="zh-CN">张选泽</span></span>
+        <span class="person__alt"><span class="t-en">张选泽</span><span class="t-zh" lang="zh-CN">Xuanze Zhang</span></span>
         <span class="person__field"><span class="t-en">Land surface modeling; Ecoclimatology</span><span class="t-zh" lang="zh-CN">陆面模拟；生态气候学</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -167,11 +180,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="ning ma 马宁 hydrological processes 水文过程 hydrological processes 水文过程" id="p-ning-ma">
+  </li><li class="person person--row" data-search="ning ma 马宁 hydrological processes 水文过程 " id="p-ning-ma">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/e249b075b6508178-800.webp" srcset="/media/e249b075b6508178-240.webp 240w, /media/e249b075b6508178-480.webp 480w, /media/e249b075b6508178-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="2611" height="3315" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/e249b075b6508178-800.webp" srcset="/media/e249b075b6508178-240.webp 240w, /media/e249b075b6508178-480.webp 480w, /media/e249b075b6508178-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="2611" height="3315" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Ning Ma</span><span class="t-zh" lang="zh-CN">马宁</span></span>
+        <span class="person__alt"><span class="t-en">马宁</span><span class="t-zh" lang="zh-CN">Ning Ma</span></span>
         <span class="person__field"><span class="t-en">Hydrological Processes</span><span class="t-zh" lang="zh-CN">水文过程</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -197,7 +212,7 @@
       <img class="" src="/media/e249b075b6508178-800.webp" srcset="/media/e249b075b6508178-240.webp 240w, /media/e249b075b6508178-480.webp 480w, /media/e249b075b6508178-800.webp 800w" sizes="220px" width="2611" height="3315" alt="Portrait of Dr. Ning Ma" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
         <h3><span class="t-en">Dr. Ning Ma</span><span class="t-zh" lang="zh-CN">马宁</span></h3>
-        <p class="meta"><span class="t-en">Hydrological Processes</span><span class="t-zh" lang="zh-CN">水文过程</span></p><div class="person__bio"><p class="t-en" >Dr. Ning Ma focuses on surface hydrological processes, with a particular emphasis on the mechanisms and dynamics of evapotranspiration. In 2026, Ning Ma received NSFC Young Scientists Fund (Category B).</p><p class="t-zh" lang="zh-CN">马宁为中国科学院地理科学与资源研究所副研究员。他关注地表水文过程，结合观测、模型与遥感方法研究陆气水热交换及水循环对气候变化的响应。</p><p class="t-zh" lang="zh-CN">研究方向：蒸散发过程与机理、陆面过程观测与模拟、生态水文和遥感水文。2026 年获青年科学基金项目（B 类）资助。</p></div><ul class="person-links">
+        <p class="meta"><span class="t-en">Hydrological Processes</span><span class="t-zh" lang="zh-CN">水文过程</span></p><div class="person__bio"><p class="t-en" >Dr. Ning Ma focuses on surface hydrological processes, with a particular emphasis on the mechanisms and dynamics of evapotranspiration. In 2026, Ning Ma received the NSFC Young Scientists Fund (Category B, formerly the Excellent Young Scientists Fund).</p><p class="t-zh" lang="zh-CN">马宁为中国科学院地理科学与资源研究所副研究员。他关注地表水文过程，结合观测、模型与遥感方法研究陆气水热交换及水循环对气候变化的响应。</p><p class="t-zh" lang="zh-CN">研究方向：蒸散发过程与机理、陆面过程观测与模拟、生态水文和遥感水文。2026 年获国家自然科学基金青年科学基金项目（B 类，原优秀青年科学基金项目）资助。</p></div><ul class="person-links">
     <li><a class="person-links__link person-links__link--scholar" href="https://scholar.google.com/citations?user=ldc1RYwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269ZM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14Z"/></svg>
         <span class="sr-only"><span class="t-en">Ning Ma: Google Scholar</span><span class="t-zh" lang="zh-CN">马宁：Google Scholar</span></span>
@@ -218,11 +233,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="xiaojie li 李晓婕 agricultural hydrology 农业水文学 agricultural hydrology 农业水文学" id="p-xiaojie-li">
+  </li><li class="person person--row" data-search="xiaojie li 李晓婕 agricultural hydrology 农业水文学 " id="p-xiaojie-li">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/f3b5e658fbfecf82-800.webp" srcset="/media/f3b5e658fbfecf82-240.webp 240w, /media/f3b5e658fbfecf82-480.webp 480w, /media/f3b5e658fbfecf82-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1166" height="1098" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/f3b5e658fbfecf82-800.webp" srcset="/media/f3b5e658fbfecf82-240.webp 240w, /media/f3b5e658fbfecf82-480.webp 480w, /media/f3b5e658fbfecf82-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="1166" height="1098" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Xiaojie Li</span><span class="t-zh" lang="zh-CN">李晓婕</span></span>
+        <span class="person__alt"><span class="t-en">李晓婕</span><span class="t-zh" lang="zh-CN">Xiaojie Li</span></span>
         <span class="person__field"><span class="t-en">Agricultural hydrology</span><span class="t-zh" lang="zh-CN">农业水文学</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -254,13 +271,15 @@
       </div>
     </div>
   </li></ul>
-        </section><section class="group" data-group="postdoc" id="postdoc">
-          <div class="group__heading"><h2><span class="t-en">Postdoc</span><span class="t-zh" lang="zh-CN">博士后</span></h2><span class="group__count"><span class="t-en">5 members</span><span class="t-zh" lang="zh-CN">5 位成员</span></span></div>
-          <ul class="people-grid"><li class="person" data-search="xian wang 王显 ai for hydrology 人工智能水文学 ai for hydrology 人工智能水文学" id="p-xian-wang">
+          </section><section class="group group--row" data-group="postdoc" id="postdoc">
+            <div class="group__heading"><h2><span class="t-en">Postdoc</span><span class="t-zh" lang="zh-CN">博士后</span></h2><span class="group__count">5</span></div>
+            <ul class="people-grid people-grid--row"><li class="person person--row" data-search="xian wang 王显 ai for hydrology 人工智能水文学 " id="p-xian-wang">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/8f5e4945ec1ad89d-800.webp" srcset="/media/8f5e4945ec1ad89d-240.webp 240w, /media/8f5e4945ec1ad89d-480.webp 480w, /media/8f5e4945ec1ad89d-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1706" height="1279" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/8f5e4945ec1ad89d-800.webp" srcset="/media/8f5e4945ec1ad89d-240.webp 240w, /media/8f5e4945ec1ad89d-480.webp 480w, /media/8f5e4945ec1ad89d-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="1706" height="1279" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Xian Wang</span><span class="t-zh" lang="zh-CN">王显</span></span>
+        <span class="person__alt"><span class="t-en">王显</span><span class="t-zh" lang="zh-CN">Xian Wang</span></span>
         <span class="person__field"><span class="t-en">AI for Hydrology</span><span class="t-zh" lang="zh-CN">人工智能水文学</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -283,11 +302,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="haoshan wei 魏豪杉 ecohydrology 生态水文学 ecohydrology 生态水文学" id="p-haoshan-wei">
+  </li><li class="person person--row" data-search="haoshan wei 魏豪杉 ecohydrology 生态水文学 " id="p-haoshan-wei">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/3d730d035589eace-800.webp" srcset="/media/3d730d035589eace-240.webp 240w, /media/3d730d035589eace-480.webp 480w, /media/3d730d035589eace-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="944" height="908" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/3d730d035589eace-800.webp" srcset="/media/3d730d035589eace-240.webp 240w, /media/3d730d035589eace-480.webp 480w, /media/3d730d035589eace-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="944" height="908" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Haoshan Wei</span><span class="t-zh" lang="zh-CN">魏豪杉</span></span>
+        <span class="person__alt"><span class="t-en">魏豪杉</span><span class="t-zh" lang="zh-CN">Haoshan Wei</span></span>
         <span class="person__field"><span class="t-en">Ecohydrology</span><span class="t-zh" lang="zh-CN">生态水文学</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -310,11 +331,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="zhen huang 黄振 hydrological modeling; water resources 水文模拟；水资源 hydrological modeling; water resources 水文模拟；水资源" id="p-zhen-huang">
+  </li><li class="person person--row" data-search="zhen huang 黄振 hydrological modeling; water resources 水文模拟；水资源 " id="p-zhen-huang">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/fa2d8a1c25206e50-358.webp" srcset="/media/fa2d8a1c25206e50-240.webp 240w, /media/fa2d8a1c25206e50-358.webp 358w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="358" height="441" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/fa2d8a1c25206e50-358.webp" srcset="/media/fa2d8a1c25206e50-240.webp 240w, /media/fa2d8a1c25206e50-358.webp 358w" sizes="(max-width: 560px) 112px, 132px" width="358" height="441" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Zhen Huang</span><span class="t-zh" lang="zh-CN">黄振</span></span>
+        <span class="person__alt"><span class="t-en">黄振</span><span class="t-zh" lang="zh-CN">Zhen Huang</span></span>
         <span class="person__field"><span class="t-en">Hydrological modeling; water resources</span><span class="t-zh" lang="zh-CN">水文模拟；水资源</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -337,11 +360,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="congcong li 李聪聪 water availability 水资源可利用性 water availability 水资源可利用性" id="p-congcong-li">
+  </li><li class="person person--row" data-search="congcong li 李聪聪 water availability 水资源可利用性 " id="p-congcong-li">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/1ee9a1e8e8748dad-800.webp" srcset="/media/1ee9a1e8e8748dad-240.webp 240w, /media/1ee9a1e8e8748dad-480.webp 480w, /media/1ee9a1e8e8748dad-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1765" height="1692" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/1ee9a1e8e8748dad-800.webp" srcset="/media/1ee9a1e8e8748dad-240.webp 240w, /media/1ee9a1e8e8748dad-480.webp 480w, /media/1ee9a1e8e8748dad-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="1765" height="1692" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Congcong Li</span><span class="t-zh" lang="zh-CN">李聪聪</span></span>
+        <span class="person__alt"><span class="t-en">李聪聪</span><span class="t-zh" lang="zh-CN">Congcong Li</span></span>
         <span class="person__field"><span class="t-en">Water availability</span><span class="t-zh" lang="zh-CN">水资源可利用性</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -364,11 +389,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="zhenwu xu 许振武 hydroclimate; ecohydrology 水文气候；生态水文学 hydroclimate; ecohydrology 水文气候；生态水文学" id="p-zhenwu-xu">
+  </li><li class="person person--row" data-search="zhenwu xu 许振武 hydroclimate; ecohydrology 水文气候；生态水文学 " id="p-zhenwu-xu">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/a41f260ea75d6adf-800.webp" srcset="/media/a41f260ea75d6adf-240.webp 240w, /media/a41f260ea75d6adf-480.webp 480w, /media/a41f260ea75d6adf-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1795" height="1737" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/a41f260ea75d6adf-800.webp" srcset="/media/a41f260ea75d6adf-240.webp 240w, /media/a41f260ea75d6adf-480.webp 480w, /media/a41f260ea75d6adf-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="1795" height="1737" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Zhenwu Xu</span><span class="t-zh" lang="zh-CN">许振武</span></span>
+        <span class="person__alt"><span class="t-en">许振武</span><span class="t-zh" lang="zh-CN">Zhenwu Xu</span></span>
         <span class="person__field"><span class="t-en">Hydroclimate; Ecohydrology</span><span class="t-zh" lang="zh-CN">水文气候；生态水文学</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -400,13 +427,15 @@
       </div>
     </div>
   </li></ul>
-        </section><section class="group" data-group="phd" id="phd">
-          <div class="group__heading"><h2><span class="t-en">Ph.D. Students</span><span class="t-zh" lang="zh-CN">博士研究生</span></h2><span class="group__count"><span class="t-en">10 members</span><span class="t-zh" lang="zh-CN">10 位成员</span></span></div>
-          <ul class="people-grid"><li class="person" data-search="xuening yang 杨雪宁 agricultural hydrology 农业水文学 agricultural hydrology 农业水文学" id="p-xuening-yang">
+          </section><section class="group group--row" data-group="phd" id="phd">
+            <div class="group__heading"><h2><span class="t-en">Ph.D. Students</span><span class="t-zh" lang="zh-CN">博士研究生</span></h2><span class="group__count">10</span></div>
+            <ul class="people-grid people-grid--row"><li class="person person--row" data-search="xuening yang 杨雪宁 agricultural hydrology 农业水文学 " id="p-xuening-yang">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/e0a417e22ccd2b81-619.webp" srcset="/media/e0a417e22ccd2b81-240.webp 240w, /media/e0a417e22ccd2b81-480.webp 480w, /media/e0a417e22ccd2b81-619.webp 619w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="619" height="613" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/e0a417e22ccd2b81-619.webp" srcset="/media/e0a417e22ccd2b81-240.webp 240w, /media/e0a417e22ccd2b81-480.webp 480w, /media/e0a417e22ccd2b81-619.webp 619w" sizes="(max-width: 560px) 112px, 132px" width="619" height="613" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Xuening Yang</span><span class="t-zh" lang="zh-CN">杨雪宁</span></span>
+        <span class="person__alt"><span class="t-en">杨雪宁</span><span class="t-zh" lang="zh-CN">Xuening Yang</span></span>
         <span class="person__field"><span class="t-en">Agricultural hydrology</span><span class="t-zh" lang="zh-CN">农业水文学</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -437,11 +466,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="longhao wang 王龙浩 ai for hydrology 人工智能水文学 ai for hydrology 人工智能水文学" id="p-longhao-wang">
+  </li><li class="person person--row" data-search="longhao wang 王龙浩 ai for hydrology 人工智能水文学 " id="p-longhao-wang">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/cefd1e3570c10512-800.webp" srcset="/media/cefd1e3570c10512-240.webp 240w, /media/cefd1e3570c10512-480.webp 480w, /media/cefd1e3570c10512-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="2708" height="2941" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/cefd1e3570c10512-800.webp" srcset="/media/cefd1e3570c10512-240.webp 240w, /media/cefd1e3570c10512-480.webp 480w, /media/cefd1e3570c10512-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="2708" height="2941" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Longhao Wang</span><span class="t-zh" lang="zh-CN">王龙浩</span></span>
+        <span class="person__alt"><span class="t-en">王龙浩</span><span class="t-zh" lang="zh-CN">Longhao Wang</span></span>
         <span class="person__field"><span class="t-en">AI for hydrology</span><span class="t-zh" lang="zh-CN">人工智能水文学</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -488,11 +519,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="yizhe ma 马亦哲 hydrological extremes; evapotranspiration 水文极端事件；蒸散发 hydrological extremes; evapotranspiration 水文极端事件；蒸散发" id="p-yizhe-ma">
+  </li><li class="person person--row" data-search="yizhe ma 马亦哲 hydrological extremes; evapotranspiration 水文极端事件；蒸散发 " id="p-yizhe-ma">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/ae5210f1dfd2f31b-800.webp" srcset="/media/ae5210f1dfd2f31b-240.webp 240w, /media/ae5210f1dfd2f31b-480.webp 480w, /media/ae5210f1dfd2f31b-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1495" height="1363" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/ae5210f1dfd2f31b-800.webp" srcset="/media/ae5210f1dfd2f31b-240.webp 240w, /media/ae5210f1dfd2f31b-480.webp 480w, /media/ae5210f1dfd2f31b-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="1495" height="1363" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Yizhe Ma</span><span class="t-zh" lang="zh-CN">马亦哲</span></span>
+        <span class="person__alt"><span class="t-en">马亦哲</span><span class="t-zh" lang="zh-CN">Yizhe Ma</span></span>
         <span class="person__field"><span class="t-en">Hydrological Extremes; Evapotranspiration</span><span class="t-zh" lang="zh-CN">水文极端事件；蒸散发</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -523,11 +556,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="wenjie hou 侯文杰 remote sensing evapotranspiration 遥感蒸散发 remote sensing evapotranspiration 遥感蒸散发" id="p-wenjie-hou">
+  </li><li class="person person--row" data-search="wenjie hou 侯文杰 remote sensing evapotranspiration 遥感蒸散发 " id="p-wenjie-hou">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/7f92bf3932bad4d1-800.webp" srcset="/media/7f92bf3932bad4d1-240.webp 240w, /media/7f92bf3932bad4d1-480.webp 480w, /media/7f92bf3932bad4d1-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="862" height="794" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/7f92bf3932bad4d1-800.webp" srcset="/media/7f92bf3932bad4d1-240.webp 240w, /media/7f92bf3932bad4d1-480.webp 480w, /media/7f92bf3932bad4d1-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="862" height="794" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Wenjie Hou</span><span class="t-zh" lang="zh-CN">侯文杰</span></span>
+        <span class="person__alt"><span class="t-en">侯文杰</span><span class="t-zh" lang="zh-CN">Wenjie Hou</span></span>
         <span class="person__field"><span class="t-en">Remote Sensing Evapotranspiration</span><span class="t-zh" lang="zh-CN">遥感蒸散发</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -558,11 +593,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="yushi zheng 郑雨诗 hydrometeorology 水文气象学 hydrometeorology 水文气象学" id="p-yushi-zheng">
+  </li><li class="person person--row" data-search="yushi zheng 郑雨诗 hydrometeorology 水文气象学 " id="p-yushi-zheng">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/1b2e0c0b740917a6-800.webp" srcset="/media/1b2e0c0b740917a6-240.webp 240w, /media/1b2e0c0b740917a6-480.webp 480w, /media/1b2e0c0b740917a6-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="2256" height="2190" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/1b2e0c0b740917a6-800.webp" srcset="/media/1b2e0c0b740917a6-240.webp 240w, /media/1b2e0c0b740917a6-480.webp 480w, /media/1b2e0c0b740917a6-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="2256" height="2190" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Yushi Zheng</span><span class="t-zh" lang="zh-CN">郑雨诗</span></span>
+        <span class="person__alt"><span class="t-en">郑雨诗</span><span class="t-zh" lang="zh-CN">Yushi Zheng</span></span>
         <span class="person__field"><span class="t-en">Hydrometeorology</span><span class="t-zh" lang="zh-CN">水文气象学</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -585,11 +622,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="daniel geletaw  changes in hydrological regimes 水文情势变化 changes in hydrological regimes 水文情势变化" id="p-daniel-geletaw">
+  </li><li class="person person--row" data-search="daniel geletaw  changes in hydrological regimes 水文情势变化 " id="p-daniel-geletaw">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/57997852ae2eed99-800.webp" srcset="/media/57997852ae2eed99-240.webp 240w, /media/57997852ae2eed99-480.webp 480w, /media/57997852ae2eed99-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1279" height="1544" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/57997852ae2eed99-800.webp" srcset="/media/57997852ae2eed99-240.webp 240w, /media/57997852ae2eed99-480.webp 480w, /media/57997852ae2eed99-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="1279" height="1544" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name">Daniel Geletaw</span>
+        
         <span class="person__field"><span class="t-en">Changes in Hydrological regimes</span><span class="t-zh" lang="zh-CN">水文情势变化</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -620,11 +659,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="yuxuan xie 谢宇轩 evapotranspiration; ecohydrology 蒸散发；生态水文学 evapotranspiration; ecohydrology 蒸散发；生态水文学" id="p-yuxuan-xie">
+  </li><li class="person person--row" data-search="yuxuan xie 谢宇轩 evapotranspiration; ecohydrology 蒸散发；生态水文学 " id="p-yuxuan-xie">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/94db538d96089b87-800.webp" srcset="/media/94db538d96089b87-240.webp 240w, /media/94db538d96089b87-480.webp 480w, /media/94db538d96089b87-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="3600" height="4800" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/94db538d96089b87-800.webp" srcset="/media/94db538d96089b87-240.webp 240w, /media/94db538d96089b87-480.webp 480w, /media/94db538d96089b87-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="3600" height="4800" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Yuxuan Xie</span><span class="t-zh" lang="zh-CN">谢宇轩</span></span>
+        <span class="person__alt"><span class="t-en">谢宇轩</span><span class="t-zh" lang="zh-CN">Yuxuan Xie</span></span>
         <span class="person__field"><span class="t-en">Evapotranspiration; Ecohydrology</span><span class="t-zh" lang="zh-CN">蒸散发；生态水文学</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -655,11 +696,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="wenwen zhang 张雯雯 runoff change attribution 径流变化归因 runoff change attribution 径流变化归因" id="p-wenwen-zhang">
+  </li><li class="person person--row" data-search="wenwen zhang 张雯雯 runoff change attribution 径流变化归因 " id="p-wenwen-zhang">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/f829d5b5309afa39-322.webp" srcset="/media/f829d5b5309afa39-240.webp 240w, /media/f829d5b5309afa39-322.webp 322w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="322" height="295" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/f829d5b5309afa39-322.webp" srcset="/media/f829d5b5309afa39-240.webp 240w, /media/f829d5b5309afa39-322.webp 322w" sizes="(max-width: 560px) 112px, 132px" width="322" height="295" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Wenwen Zhang</span><span class="t-zh" lang="zh-CN">张雯雯</span></span>
+        <span class="person__alt"><span class="t-en">张雯雯</span><span class="t-zh" lang="zh-CN">Wenwen Zhang</span></span>
         <span class="person__field"><span class="t-en">runoff change attribution</span><span class="t-zh" lang="zh-CN">径流变化归因</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -682,11 +725,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="shengyu zou 邹圣羽 remote sensing; hydrology 遥感；水文学 remote sensing; hydrology 遥感；水文学" id="p-shengyu-zou">
+  </li><li class="person person--row" data-search="shengyu zou 邹圣羽 remote sensing; hydrology 遥感；水文学 " id="p-shengyu-zou">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/b5261178478f49b8-800.webp" srcset="/media/b5261178478f49b8-240.webp 240w, /media/b5261178478f49b8-480.webp 480w, /media/b5261178478f49b8-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="4896" height="6528" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/b5261178478f49b8-800.webp" srcset="/media/b5261178478f49b8-240.webp 240w, /media/b5261178478f49b8-480.webp 480w, /media/b5261178478f49b8-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="4896" height="6528" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Shengyu Zou</span><span class="t-zh" lang="zh-CN">邹圣羽</span></span>
+        <span class="person__alt"><span class="t-en">邹圣羽</span><span class="t-zh" lang="zh-CN">Shengyu Zou</span></span>
         <span class="person__field"><span class="t-en">Remote sensing; Hydrology</span><span class="t-zh" lang="zh-CN">遥感；水文学</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -717,11 +762,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="jingyi tian 田婧宜 hydrology and water resources 水文与水资源 hydrology and water resources 水文与水资源" id="p-jingyi-tian">
+  </li><li class="person person--row" data-search="jingyi tian 田婧宜 hydrology and water resources 水文与水资源 " id="p-jingyi-tian">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/f0db5ebcf5de8bf5-800.webp" srcset="/media/f0db5ebcf5de8bf5-240.webp 240w, /media/f0db5ebcf5de8bf5-480.webp 480w, /media/f0db5ebcf5de8bf5-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1855" height="2474" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/f0db5ebcf5de8bf5-800.webp" srcset="/media/f0db5ebcf5de8bf5-240.webp 240w, /media/f0db5ebcf5de8bf5-480.webp 480w, /media/f0db5ebcf5de8bf5-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="1855" height="2474" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Jingyi Tian</span><span class="t-zh" lang="zh-CN">田婧宜</span></span>
+        <span class="person__alt"><span class="t-en">田婧宜</span><span class="t-zh" lang="zh-CN">Jingyi Tian</span></span>
         <span class="person__field"><span class="t-en">Hydrology and Water Resources</span><span class="t-zh" lang="zh-CN">水文与水资源</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -745,13 +792,15 @@
       </div>
     </div>
   </li></ul>
-        </section><section class="group" data-group="master" id="master">
-          <div class="group__heading"><h2><span class="t-en">Master Students</span><span class="t-zh" lang="zh-CN">硕士研究生</span></h2><span class="group__count"><span class="t-en">6 members</span><span class="t-zh" lang="zh-CN">6 位成员</span></span></div>
-          <ul class="people-grid"><li class="person" data-search="yalin xie 谢雅琳 ecohydrology 生态水文学 ecohydrology 生态水文学" id="p-yalin-xie">
+          </section><section class="group group--row" data-group="master" id="master">
+            <div class="group__heading"><h2><span class="t-en">Master Students</span><span class="t-zh" lang="zh-CN">硕士研究生</span></h2><span class="group__count">6</span></div>
+            <ul class="people-grid people-grid--row"><li class="person person--row" data-search="yalin xie 谢雅琳 ecohydrology 生态水文学 " id="p-yalin-xie">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/728f18c729412972-615.webp" srcset="/media/728f18c729412972-240.webp 240w, /media/728f18c729412972-480.webp 480w, /media/728f18c729412972-615.webp 615w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="615" height="657" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/728f18c729412972-615.webp" srcset="/media/728f18c729412972-240.webp 240w, /media/728f18c729412972-480.webp 480w, /media/728f18c729412972-615.webp 615w" sizes="(max-width: 560px) 112px, 132px" width="615" height="657" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Yalin Xie</span><span class="t-zh" lang="zh-CN">谢雅琳</span></span>
+        <span class="person__alt"><span class="t-en">谢雅琳</span><span class="t-zh" lang="zh-CN">Yalin Xie</span></span>
         <span class="person__field"><span class="t-en">Ecohydrology</span><span class="t-zh" lang="zh-CN">生态水文学</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -774,11 +823,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="yiwen luo 罗洢雯 evapotranspiration; ecohydrology 蒸散发；生态水文学 evapotranspiration; ecohydrology 蒸散发；生态水文学" id="p-yiwen-luo">
+  </li><li class="person person--row" data-search="yiwen luo 罗洢雯 evapotranspiration; ecohydrology 蒸散发；生态水文学 " id="p-yiwen-luo">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/fd1070d43e3a01df-800.webp" srcset="/media/fd1070d43e3a01df-240.webp 240w, /media/fd1070d43e3a01df-480.webp 480w, /media/fd1070d43e3a01df-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="2356" height="2163" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/fd1070d43e3a01df-800.webp" srcset="/media/fd1070d43e3a01df-240.webp 240w, /media/fd1070d43e3a01df-480.webp 480w, /media/fd1070d43e3a01df-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="2356" height="2163" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Yiwen Luo</span><span class="t-zh" lang="zh-CN">罗洢雯</span></span>
+        <span class="person__alt"><span class="t-en">罗洢雯</span><span class="t-zh" lang="zh-CN">Yiwen Luo</span></span>
         <span class="person__field"><span class="t-en">Evapotranspiration; Ecohydrology</span><span class="t-zh" lang="zh-CN">蒸散发；生态水文学</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -801,11 +852,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="zhiye cao 曹致业 agricultural hydrology 农业水文学 agricultural hydrology 农业水文学" id="p-zhiye-cao">
+  </li><li class="person person--row" data-search="zhiye cao 曹致业 agricultural hydrology 农业水文学 " id="p-zhiye-cao">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/c0a3f0fff6c7abac-396.webp" srcset="/media/c0a3f0fff6c7abac-240.webp 240w, /media/c0a3f0fff6c7abac-396.webp 396w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="396" height="344" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/c0a3f0fff6c7abac-396.webp" srcset="/media/c0a3f0fff6c7abac-240.webp 240w, /media/c0a3f0fff6c7abac-396.webp 396w" sizes="(max-width: 560px) 112px, 132px" width="396" height="344" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Zhiye Cao</span><span class="t-zh" lang="zh-CN">曹致业</span></span>
+        <span class="person__alt"><span class="t-en">曹致业</span><span class="t-zh" lang="zh-CN">Zhiye Cao</span></span>
         <span class="person__field"><span class="t-en">Agricultural hydrology</span><span class="t-zh" lang="zh-CN">农业水文学</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -828,11 +881,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="xudong zhang 张旭东 hydrological model 水文模型 hydrological model 水文模型" id="p-xudong-zhang">
+  </li><li class="person person--row" data-search="xudong zhang 张旭东 hydrological model 水文模型 " id="p-xudong-zhang">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/968c757942d0eff3-800.webp" srcset="/media/968c757942d0eff3-240.webp 240w, /media/968c757942d0eff3-480.webp 480w, /media/968c757942d0eff3-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1839" height="2451" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/968c757942d0eff3-800.webp" srcset="/media/968c757942d0eff3-240.webp 240w, /media/968c757942d0eff3-480.webp 480w, /media/968c757942d0eff3-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="1839" height="2451" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Xudong Zhang</span><span class="t-zh" lang="zh-CN">张旭东</span></span>
+        <span class="person__alt"><span class="t-en">张旭东</span><span class="t-zh" lang="zh-CN">Xudong Zhang</span></span>
         <span class="person__field"><span class="t-en">Hydrological model</span><span class="t-zh" lang="zh-CN">水文模型</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -855,11 +910,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="qiaoxue peng 彭巧雪 climate extreme 气候极端事件 climate extreme 气候极端事件" id="p-qiaoxue-peng">
+  </li><li class="person person--row" data-search="qiaoxue peng 彭巧雪 climate extreme 气候极端事件 " id="p-qiaoxue-peng">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/8d58dbddca180aaa-800.webp" srcset="/media/8d58dbddca180aaa-240.webp 240w, /media/8d58dbddca180aaa-480.webp 480w, /media/8d58dbddca180aaa-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1783" height="1450" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/8d58dbddca180aaa-800.webp" srcset="/media/8d58dbddca180aaa-240.webp 240w, /media/8d58dbddca180aaa-480.webp 480w, /media/8d58dbddca180aaa-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="1783" height="1450" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Qiaoxue Peng</span><span class="t-zh" lang="zh-CN">彭巧雪</span></span>
+        <span class="person__alt"><span class="t-en">彭巧雪</span><span class="t-zh" lang="zh-CN">Qiaoxue Peng</span></span>
         <span class="person__field"><span class="t-en">Climate extreme</span><span class="t-zh" lang="zh-CN">气候极端事件</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -882,11 +939,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="xinhai wei 韦鑫海 ecohydrology 生态水文学 ecohydrology 生态水文学" id="p-xinhai-wei">
+  </li><li class="person person--row" data-search="xinhai wei 韦鑫海 ecohydrology 生态水文学 " id="p-xinhai-wei">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/ff935326fee876fc-800.webp" srcset="/media/ff935326fee876fc-240.webp 240w, /media/ff935326fee876fc-480.webp 480w, /media/ff935326fee876fc-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="944" height="1076" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/ff935326fee876fc-800.webp" srcset="/media/ff935326fee876fc-240.webp 240w, /media/ff935326fee876fc-480.webp 480w, /media/ff935326fee876fc-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="944" height="1076" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Xinhai Wei</span><span class="t-zh" lang="zh-CN">韦鑫海</span></span>
+        <span class="person__alt"><span class="t-en">韦鑫海</span><span class="t-zh" lang="zh-CN">Xinhai Wei</span></span>
         <span class="person__field"><span class="t-en">Ecohydrology</span><span class="t-zh" lang="zh-CN">生态水文学</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -910,13 +969,15 @@
       </div>
     </div>
   </li></ul>
-        </section><section class="group" data-group="assistant" id="assistant">
-          <div class="group__heading"><h2><span class="t-en">Research Assistants</span><span class="t-zh" lang="zh-CN">科研助理</span></h2><span class="group__count"><span class="t-en">1 member</span><span class="t-zh" lang="zh-CN">1 位成员</span></span></div>
-          <ul class="people-grid"><li class="person" data-search="jingyi fang 方靖怡 data analysis 数据分析 data analysis 数据分析" id="p-jingyi-fang">
+          </section><section class="group group--row" data-group="assistant" id="assistant">
+            <div class="group__heading"><h2><span class="t-en">Research Assistants</span><span class="t-zh" lang="zh-CN">科研助理</span></h2><span class="group__count">1</span></div>
+            <ul class="people-grid people-grid--row"><li class="person person--row" data-search="jingyi fang 方靖怡 data analysis 数据分析 " id="p-jingyi-fang">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/f2b4f3bb4a4d367e-800.webp" srcset="/media/f2b4f3bb4a4d367e-240.webp 240w, /media/f2b4f3bb4a4d367e-480.webp 480w, /media/f2b4f3bb4a4d367e-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1644" height="1540" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/f2b4f3bb4a4d367e-800.webp" srcset="/media/f2b4f3bb4a4d367e-240.webp 240w, /media/f2b4f3bb4a4d367e-480.webp 480w, /media/f2b4f3bb4a4d367e-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="1644" height="1540" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Jingyi Fang</span><span class="t-zh" lang="zh-CN">方靖怡</span></span>
+        <span class="person__alt"><span class="t-en">方靖怡</span><span class="t-zh" lang="zh-CN">Jingyi Fang</span></span>
         <span class="person__field"><span class="t-en">Data analysis</span><span class="t-zh" lang="zh-CN">数据分析</span></span>
       </span>
     </button><div class="person__footer"></div>
@@ -928,13 +989,15 @@
       </div>
     </div>
   </li></ul>
-        </section><section class="group" data-group="visiting" id="visiting">
-          <div class="group__heading"><h2><span class="t-en">Visiting Students</span><span class="t-zh" lang="zh-CN">访问学生</span></h2><span class="group__count"><span class="t-en">3 members</span><span class="t-zh" lang="zh-CN">3 位成员</span></span></div>
-          <ul class="people-grid"><li class="person" data-search="jiangmeng li 李江萌 ecohydrology 生态水文学 ecohydrology 生态水文学" id="p-jiangmeng-li">
+          </section><section class="group group--row" data-group="visiting" id="visiting">
+            <div class="group__heading"><h2><span class="t-en">Visiting Students</span><span class="t-zh" lang="zh-CN">访问学生</span></h2><span class="group__count">3</span></div>
+            <ul class="people-grid people-grid--row"><li class="person person--row" data-search="jiangmeng li 李江萌 ecohydrology 生态水文学 " id="p-jiangmeng-li">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/8e71da69c9b62d77-720.webp" srcset="/media/8e71da69c9b62d77-240.webp 240w, /media/8e71da69c9b62d77-480.webp 480w, /media/8e71da69c9b62d77-720.webp 720w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="720" height="604" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/8e71da69c9b62d77-720.webp" srcset="/media/8e71da69c9b62d77-240.webp 240w, /media/8e71da69c9b62d77-480.webp 480w, /media/8e71da69c9b62d77-720.webp 720w" sizes="(max-width: 560px) 112px, 132px" width="720" height="604" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Jiangmeng Li</span><span class="t-zh" lang="zh-CN">李江萌</span></span>
+        <span class="person__alt"><span class="t-en">李江萌</span><span class="t-zh" lang="zh-CN">Jiangmeng Li</span></span>
         <span class="person__field"><span class="t-en">Ecohydrology</span><span class="t-zh" lang="zh-CN">生态水文学</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -957,11 +1020,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="liwen zhang 张力文 lake drought 湖泊干旱 lake drought 湖泊干旱" id="p-liwen-zhang">
+  </li><li class="person person--row" data-search="liwen zhang 张力文 lake drought 湖泊干旱 " id="p-liwen-zhang">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/3c179356ffead352-646.webp" srcset="/media/3c179356ffead352-240.webp 240w, /media/3c179356ffead352-480.webp 480w, /media/3c179356ffead352-646.webp 646w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="646" height="905" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/3c179356ffead352-646.webp" srcset="/media/3c179356ffead352-240.webp 240w, /media/3c179356ffead352-480.webp 480w, /media/3c179356ffead352-646.webp 646w" sizes="(max-width: 560px) 112px, 132px" width="646" height="905" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Liwen Zhang</span><span class="t-zh" lang="zh-CN">张力文</span></span>
+        <span class="person__alt"><span class="t-en">张力文</span><span class="t-zh" lang="zh-CN">Liwen Zhang</span></span>
         <span class="person__field"><span class="t-en">Lake drought</span><span class="t-zh" lang="zh-CN">湖泊干旱</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -984,11 +1049,13 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="jiayi ding 丁佳怡 evapotranspiration 蒸散发 evapotranspiration 蒸散发" id="p-jiayi-ding">
+  </li><li class="person person--row" data-search="jiayi ding 丁佳怡 evapotranspiration 蒸散发 " id="p-jiayi-ding">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/6edc78d007d87d9b-800.webp" srcset="/media/6edc78d007d87d9b-240.webp 240w, /media/6edc78d007d87d9b-480.webp 480w, /media/6edc78d007d87d9b-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1932" height="1636" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/6edc78d007d87d9b-800.webp" srcset="/media/6edc78d007d87d9b-240.webp 240w, /media/6edc78d007d87d9b-480.webp 480w, /media/6edc78d007d87d9b-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="1932" height="1636" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Jiayi Ding</span><span class="t-zh" lang="zh-CN">丁佳怡</span></span>
+        <span class="person__alt"><span class="t-en">丁佳怡</span><span class="t-zh" lang="zh-CN">Jiayi Ding</span></span>
         <span class="person__field"><span class="t-en">Evapotranspiration</span><span class="t-zh" lang="zh-CN">蒸散发</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
@@ -1012,16 +1079,18 @@
       </div>
     </div>
   </li></ul>
-        </section><section class="group" data-group="alumni" id="alumni">
-          <div class="group__heading"><h2><span class="t-en">Alumni</span><span class="t-zh" lang="zh-CN">校友</span></h2><span class="group__count"><span class="t-en">15 members</span><span class="t-zh" lang="zh-CN">15 位成员</span></span></div>
-          <ul class="people-grid"><li class="person" data-search="peilin song 宋佩林 remote sensing 遥感 remote sensing 遥感" id="p-peilin-song">
+          </section><section class="group group--mini" data-group="alumni" id="alumni">
+            <div class="group__heading"><h2><span class="t-en">Alumni</span><span class="t-zh" lang="zh-CN">校友</span></h2><span class="group__count">15</span></div>
+            <ul class="people-grid people-grid--mini"><li class="person person--mini" data-search="peilin song 宋佩林 remote sensing 遥感 " id="p-peilin-song">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/0d7e145474bf9e10-800.webp" srcset="/media/0d7e145474bf9e10-240.webp 240w, /media/0d7e145474bf9e10-480.webp 480w, /media/0d7e145474bf9e10-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="906" height="919" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/0d7e145474bf9e10-800.webp" srcset="/media/0d7e145474bf9e10-240.webp 240w, /media/0d7e145474bf9e10-480.webp 480w, /media/0d7e145474bf9e10-800.webp 800w" sizes="72px" width="906" height="919" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Peilin Song</span><span class="t-zh" lang="zh-CN">宋佩林</span></span>
+        <span class="person__alt"><span class="t-en">宋佩林</span><span class="t-zh" lang="zh-CN">Peilin Song</span></span>
         <span class="person__field"><span class="t-en">Remote Sensing</span><span class="t-zh" lang="zh-CN">遥感</span></span>
       </span>
-    </button><div class="person__footer"></div>
+    </button>
     <div class="person__detail">
       <img class="" src="/media/0d7e145474bf9e10-800.webp" srcset="/media/0d7e145474bf9e10-240.webp 240w, /media/0d7e145474bf9e10-480.webp 480w, /media/0d7e145474bf9e10-800.webp 800w" sizes="220px" width="906" height="919" alt="Portrait of Dr. Peilin Song" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
@@ -1029,24 +1098,16 @@
         <p class="meta"><span class="t-en">Remote Sensing</span><span class="t-zh" lang="zh-CN">遥感</span></p>
       </div>
     </div>
-  </li><li class="person" data-search="dongdong kong 孔冬冬 evapotranspiration; land surface processes 蒸散发；陆面过程 evapotranspiration; land surface processes 蒸散发；陆面过程" id="p-dongdong-kong">
+  </li><li class="person person--mini" data-search="dongdong kong 孔冬冬 evapotranspiration; land surface processes 蒸散发；陆面过程 " id="p-dongdong-kong">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/991165f57ae14730-800.webp" srcset="/media/991165f57ae14730-240.webp 240w, /media/991165f57ae14730-480.webp 480w, /media/991165f57ae14730-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1080" height="1080" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/991165f57ae14730-800.webp" srcset="/media/991165f57ae14730-240.webp 240w, /media/991165f57ae14730-480.webp 480w, /media/991165f57ae14730-800.webp 800w" sizes="72px" width="1080" height="1080" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Dongdong Kong</span><span class="t-zh" lang="zh-CN">孔冬冬</span></span>
+        <span class="person__alt"><span class="t-en">孔冬冬</span><span class="t-zh" lang="zh-CN">Dongdong Kong</span></span>
         <span class="person__field"><span class="t-en">Evapotranspiration; Land Surface Processes</span><span class="t-zh" lang="zh-CN">蒸散发；陆面过程</span></span>
       </span>
-    </button><div class="person__footer"><ul class="person-links">
-    <li><a class="person-links__link person-links__link--scholar" href="https://scholar.google.com/citations?user=B5OpmAoAAAAJ" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269ZM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14Z"/></svg>
-        <span class="sr-only"><span class="t-en">Dongdong Kong: Google Scholar</span><span class="t-zh" lang="zh-CN">孔冬冬：Google Scholar</span></span>
-        <span class="person-links__tooltip" aria-hidden="true">Google Scholar</span>
-      </a></li><li><a class="person-links__link person-links__link--email" href="mailto:kongdd.sysu@gmail.com" >
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></g></svg>
-        <span class="sr-only"><span class="t-en">Dongdong Kong: Email (kongdd.sysu@gmail.com)</span><span class="t-zh" lang="zh-CN">孔冬冬：邮箱（kongdd.sysu@gmail.com）</span></span>
-        <span class="person-links__tooltip" aria-hidden="true"><span class="t-en">Email</span><span class="t-zh" lang="zh-CN">邮箱</span></span>
-      </a></li>
-  </ul></div>
+    </button>
     <div class="person__detail">
       <img class="" src="/media/991165f57ae14730-800.webp" srcset="/media/991165f57ae14730-240.webp 240w, /media/991165f57ae14730-480.webp 480w, /media/991165f57ae14730-800.webp 800w" sizes="220px" width="1080" height="1080" alt="Portrait of Dr. Dongdong Kong" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
@@ -1064,24 +1125,16 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="junlong zhang 张军龙 water resources, ecohydrology 水资源；生态水文学 water resources, ecohydrology 水资源；生态水文学" id="p-junlong-zhang">
+  </li><li class="person person--mini" data-search="junlong zhang 张军龙 water resources, ecohydrology 水资源；生态水文学 " id="p-junlong-zhang">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/16074fc7d9037f2c-800.webp" srcset="/media/16074fc7d9037f2c-240.webp 240w, /media/16074fc7d9037f2c-480.webp 480w, /media/16074fc7d9037f2c-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="2769" height="4154" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/16074fc7d9037f2c-800.webp" srcset="/media/16074fc7d9037f2c-240.webp 240w, /media/16074fc7d9037f2c-480.webp 480w, /media/16074fc7d9037f2c-800.webp 800w" sizes="72px" width="2769" height="4154" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Junlong Zhang</span><span class="t-zh" lang="zh-CN">张军龙</span></span>
+        <span class="person__alt"><span class="t-en">张军龙</span><span class="t-zh" lang="zh-CN">Junlong Zhang</span></span>
         <span class="person__field"><span class="t-en">water resources, ecohydrology</span><span class="t-zh" lang="zh-CN">水资源；生态水文学</span></span>
       </span>
-    </button><div class="person__footer"><ul class="person-links">
-    <li><a class="person-links__link person-links__link--homepage" href="http://www.pre.sdnu.edu.cn/info/1029/13119.htm" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 7h14M5 17h14"/></g></svg>
-        <span class="sr-only"><span class="t-en">Junlong Zhang: Personal homepage</span><span class="t-zh" lang="zh-CN">张军龙：个人主页</span></span>
-        <span class="person-links__tooltip" aria-hidden="true"><span class="t-en">Personal homepage</span><span class="t-zh" lang="zh-CN">个人主页</span></span>
-      </a></li><li><a class="person-links__link person-links__link--email" href="mailto:Junlong.Zhang@sdnu.edu.cn" >
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></g></svg>
-        <span class="sr-only"><span class="t-en">Junlong Zhang: Email (Junlong.Zhang@sdnu.edu.cn)</span><span class="t-zh" lang="zh-CN">张军龙：邮箱（Junlong.Zhang@sdnu.edu.cn）</span></span>
-        <span class="person-links__tooltip" aria-hidden="true"><span class="t-en">Email</span><span class="t-zh" lang="zh-CN">邮箱</span></span>
-      </a></li>
-  </ul></div>
+    </button>
     <div class="person__detail">
       <img class="" src="/media/16074fc7d9037f2c-800.webp" srcset="/media/16074fc7d9037f2c-240.webp 240w, /media/16074fc7d9037f2c-480.webp 480w, /media/16074fc7d9037f2c-800.webp 800w" sizes="220px" width="2769" height="4154" alt="Portrait of Dr. Junlong Zhang" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
@@ -1099,24 +1152,16 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="muhammad abrar faiz 费辞 hydro-climate extremes 水文气候极端事件 hydro-climate extremes 水文气候极端事件" id="p-muhammad-abrar-faiz">
+  </li><li class="person person--mini" data-search="muhammad abrar faiz 费辞 hydro-climate extremes 水文气候极端事件 " id="p-muhammad-abrar-faiz">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/3042469c0a131f5b-800.webp" srcset="/media/3042469c0a131f5b-240.webp 240w, /media/3042469c0a131f5b-480.webp 480w, /media/3042469c0a131f5b-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="959" height="1210" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/3042469c0a131f5b-800.webp" srcset="/media/3042469c0a131f5b-240.webp 240w, /media/3042469c0a131f5b-480.webp 480w, /media/3042469c0a131f5b-800.webp 800w" sizes="72px" width="959" height="1210" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Muhammad Abrar Faiz</span><span class="t-zh" lang="zh-CN">费辞</span></span>
+        <span class="person__alt"><span class="t-en">费辞</span><span class="t-zh" lang="zh-CN">Muhammad Abrar Faiz</span></span>
         <span class="person__field"><span class="t-en">Hydro-climate extremes</span><span class="t-zh" lang="zh-CN">水文气候极端事件</span></span>
       </span>
-    </button><div class="person__footer"><ul class="person-links">
-    <li><a class="person-links__link person-links__link--scholar" href="https://scholar.google.com/citations?user=2OjzFaEAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269ZM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14Z"/></svg>
-        <span class="sr-only"><span class="t-en">Muhammad Abrar Faiz: Google Scholar</span><span class="t-zh" lang="zh-CN">费辞：Google Scholar</span></span>
-        <span class="person-links__tooltip" aria-hidden="true">Google Scholar</span>
-      </a></li><li><a class="person-links__link person-links__link--email" href="mailto:faiz_ma@neau.edu.cn" >
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></g></svg>
-        <span class="sr-only"><span class="t-en">Muhammad Abrar Faiz: Email (faiz_ma@neau.edu.cn)</span><span class="t-zh" lang="zh-CN">费辞：邮箱（faiz_ma@neau.edu.cn）</span></span>
-        <span class="person-links__tooltip" aria-hidden="true"><span class="t-en">Email</span><span class="t-zh" lang="zh-CN">邮箱</span></span>
-      </a></li>
-  </ul></div>
+    </button>
     <div class="person__detail">
       <img class="" src="/media/3042469c0a131f5b-800.webp" srcset="/media/3042469c0a131f5b-240.webp 240w, /media/3042469c0a131f5b-480.webp 480w, /media/3042469c0a131f5b-800.webp 800w" sizes="220px" width="959" height="1210" alt="Portrait of Dr. Muhammad Abrar Faiz" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
@@ -1134,24 +1179,16 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="jinkai luan 栾金凯 eco-hydrological effects of human activities 人类活动的生态水文效应 eco-hydrological effects of human activities 人类活动的生态水文效应" id="p-jinkai-luan">
+  </li><li class="person person--mini" data-search="jinkai luan 栾金凯 eco-hydrological effects of human activities 人类活动的生态水文效应 " id="p-jinkai-luan">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/301e1b5a1cfd0e5b-800.webp" srcset="/media/301e1b5a1cfd0e5b-240.webp 240w, /media/301e1b5a1cfd0e5b-480.webp 480w, /media/301e1b5a1cfd0e5b-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1947" height="2706" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/301e1b5a1cfd0e5b-800.webp" srcset="/media/301e1b5a1cfd0e5b-240.webp 240w, /media/301e1b5a1cfd0e5b-480.webp 480w, /media/301e1b5a1cfd0e5b-800.webp 800w" sizes="72px" width="1947" height="2706" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Jinkai Luan</span><span class="t-zh" lang="zh-CN">栾金凯</span></span>
+        <span class="person__alt"><span class="t-en">栾金凯</span><span class="t-zh" lang="zh-CN">Jinkai Luan</span></span>
         <span class="person__field"><span class="t-en">eco-hydrological effects of human activities</span><span class="t-zh" lang="zh-CN">人类活动的生态水文效应</span></span>
       </span>
-    </button><div class="person__footer"><ul class="person-links">
-    <li><a class="person-links__link person-links__link--email" href="mailto:luanjk@nuist.edu.cn" >
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></g></svg>
-        <span class="sr-only"><span class="t-en">Jinkai Luan: Email (luanjk@nuist.edu.cn)</span><span class="t-zh" lang="zh-CN">栾金凯：邮箱（luanjk@nuist.edu.cn）</span></span>
-        <span class="person-links__tooltip" aria-hidden="true"><span class="t-en">Email</span><span class="t-zh" lang="zh-CN">邮箱</span></span>
-      </a></li><li><a class="person-links__link person-links__link--researchgate" href="https://www.researchgate.net/profile/Jinkai-Luan-2/research" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="24" height="24" rx="5" fill="#00A99A"/><text x="4" y="19" fill="#fff" font-family="Georgia,serif" font-size="17">R</text><text x="14" y="10" fill="#fff" font-family="Georgia,serif" font-size="10">G</text></svg>
-        <span class="sr-only"><span class="t-en">Jinkai Luan: ResearchGate</span><span class="t-zh" lang="zh-CN">栾金凯：ResearchGate</span></span>
-        <span class="person-links__tooltip" aria-hidden="true">ResearchGate</span>
-      </a></li>
-  </ul></div>
+    </button>
     <div class="person__detail">
       <img class="" src="/media/301e1b5a1cfd0e5b-800.webp" srcset="/media/301e1b5a1cfd0e5b-240.webp 240w, /media/301e1b5a1cfd0e5b-480.webp 480w, /media/301e1b5a1cfd0e5b-800.webp 800w" sizes="220px" width="1947" height="2706" alt="Portrait of Dr. Jinkai Luan" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
@@ -1169,14 +1206,16 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="xingmin shao 邵杏敏 drought 干旱 drought 干旱" id="p-xingmin-shao">
+  </li><li class="person person--mini" data-search="xingmin shao 邵杏敏 drought 干旱 " id="p-xingmin-shao">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/db85c9c7b737aec6-763.webp" srcset="/media/db85c9c7b737aec6-240.webp 240w, /media/db85c9c7b737aec6-480.webp 480w, /media/db85c9c7b737aec6-763.webp 763w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="763" height="684" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/db85c9c7b737aec6-763.webp" srcset="/media/db85c9c7b737aec6-240.webp 240w, /media/db85c9c7b737aec6-480.webp 480w, /media/db85c9c7b737aec6-763.webp 763w" sizes="72px" width="763" height="684" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Xingmin Shao</span><span class="t-zh" lang="zh-CN">邵杏敏</span></span>
+        <span class="person__alt"><span class="t-en">邵杏敏</span><span class="t-zh" lang="zh-CN">Xingmin Shao</span></span>
         <span class="person__field"><span class="t-en">Drought</span><span class="t-zh" lang="zh-CN">干旱</span></span>
       </span>
-    </button><div class="person__footer"></div>
+    </button>
     <div class="person__detail">
       <img class="" src="/media/db85c9c7b737aec6-763.webp" srcset="/media/db85c9c7b737aec6-240.webp 240w, /media/db85c9c7b737aec6-480.webp 480w, /media/db85c9c7b737aec6-763.webp 763w" sizes="220px" width="763" height="684" alt="Portrait of Dr. Xingmin Shao" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
@@ -1184,14 +1223,16 @@
         <p class="meta"><span class="t-en">Drought</span><span class="t-zh" lang="zh-CN">干旱</span></p><div class="person__bio"><p class="t-en" >Dr. Xingmin Shao, completed Ph.D. in 2024, is currently employed at China-Singapore Guangzhou Knowledge City Collaboration Affairs Office, working in urban planning.</p><p class="t-zh" lang="zh-CN">邵杏敏博士于 2024 年获得博士学位，现就职于中新广州知识城合作事务办公室，从事城市规划工作。</p></div>
       </div>
     </div>
-  </li><li class="person" data-search="shaoyang he 何韶阳 evapotranspiration 蒸散发 evapotranspiration 蒸散发" id="p-shaoyang-he">
+  </li><li class="person person--mini" data-search="shaoyang he 何韶阳 evapotranspiration 蒸散发 " id="p-shaoyang-he">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/cca997c4f0a7964d-800.webp" srcset="/media/cca997c4f0a7964d-240.webp 240w, /media/cca997c4f0a7964d-480.webp 480w, /media/cca997c4f0a7964d-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="2828" height="2493" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/cca997c4f0a7964d-800.webp" srcset="/media/cca997c4f0a7964d-240.webp 240w, /media/cca997c4f0a7964d-480.webp 480w, /media/cca997c4f0a7964d-800.webp 800w" sizes="72px" width="2828" height="2493" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Shaoyang He</span><span class="t-zh" lang="zh-CN">何韶阳</span></span>
+        <span class="person__alt"><span class="t-en">何韶阳</span><span class="t-zh" lang="zh-CN">Shaoyang He</span></span>
         <span class="person__field"><span class="t-en">Evapotranspiration</span><span class="t-zh" lang="zh-CN">蒸散发</span></span>
       </span>
-    </button><div class="person__footer"></div>
+    </button>
     <div class="person__detail">
       <img class="" src="/media/cca997c4f0a7964d-800.webp" srcset="/media/cca997c4f0a7964d-240.webp 240w, /media/cca997c4f0a7964d-480.webp 480w, /media/cca997c4f0a7964d-800.webp 800w" sizes="220px" width="2828" height="2493" alt="Portrait of Dr. Shaoyang He" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
@@ -1199,20 +1240,16 @@
         <p class="meta"><span class="t-en">Evapotranspiration</span><span class="t-zh" lang="zh-CN">蒸散发</span></p><div class="person__bio"><p class="t-en" >Dr. Shaoyang He, completed Ph.D. in 2025. She has published papers in journals such as Earth System Science Data and is currently engaged in entrepreneurial work.</p><p class="t-zh" lang="zh-CN">何韶阳博士于 2025 年获得博士学位，曾在 Earth System Science Data 等期刊发表论文，目前从事创业工作。</p></div>
       </div>
     </div>
-  </li><li class="person" data-search="qi huang 黄琦 changes on hydrological regimes 水文情势变化 changes on hydrological regimes 水文情势变化" id="p-qi-huang">
+  </li><li class="person person--mini" data-search="qi huang 黄琦 changes on hydrological regimes 水文情势变化 " id="p-qi-huang">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/17151e13263ad263-800.webp" srcset="/media/17151e13263ad263-240.webp 240w, /media/17151e13263ad263-480.webp 480w, /media/17151e13263ad263-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="2281" height="2182" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/17151e13263ad263-800.webp" srcset="/media/17151e13263ad263-240.webp 240w, /media/17151e13263ad263-480.webp 480w, /media/17151e13263ad263-800.webp 800w" sizes="72px" width="2281" height="2182" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Qi Huang</span><span class="t-zh" lang="zh-CN">黄琦</span></span>
+        <span class="person__alt"><span class="t-en">黄琦</span><span class="t-zh" lang="zh-CN">Qi Huang</span></span>
         <span class="person__field"><span class="t-en">Changes on hydrological regimes</span><span class="t-zh" lang="zh-CN">水文情势变化</span></span>
       </span>
-    </button><div class="person__footer"><ul class="person-links">
-    <li><a class="person-links__link person-links__link--researchgate" href="https://www.researchgate.net/profile/Qi-Huang-75?ev=hdr_xprf" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="24" height="24" rx="5" fill="#00A99A"/><text x="4" y="19" fill="#fff" font-family="Georgia,serif" font-size="17">R</text><text x="14" y="10" fill="#fff" font-family="Georgia,serif" font-size="10">G</text></svg>
-        <span class="sr-only"><span class="t-en">Qi Huang: ResearchGate</span><span class="t-zh" lang="zh-CN">黄琦：ResearchGate</span></span>
-        <span class="person-links__tooltip" aria-hidden="true">ResearchGate</span>
-      </a></li>
-  </ul></div>
+    </button>
     <div class="person__detail">
       <img class="" src="/media/17151e13263ad263-800.webp" srcset="/media/17151e13263ad263-240.webp 240w, /media/17151e13263ad263-480.webp 480w, /media/17151e13263ad263-800.webp 800w" sizes="220px" width="2281" height="2182" alt="Portrait of Dr. Qi Huang" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
@@ -1226,24 +1263,16 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="muhammad naeem  hydrology and lake water resources 水文学与湖泊水资源 hydrology and lake water resources 水文学与湖泊水资源" id="p-muhammad-naeem">
+  </li><li class="person person--mini" data-search="muhammad naeem  hydrology and lake water resources 水文学与湖泊水资源 " id="p-muhammad-naeem">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/3f42969f595c8bf9-800.webp" srcset="/media/3f42969f595c8bf9-240.webp 240w, /media/3f42969f595c8bf9-480.webp 480w, /media/3f42969f595c8bf9-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1378" height="1772" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/3f42969f595c8bf9-800.webp" srcset="/media/3f42969f595c8bf9-240.webp 240w, /media/3f42969f595c8bf9-480.webp 480w, /media/3f42969f595c8bf9-800.webp 800w" sizes="72px" width="1378" height="1772" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name">Muhammad Naeem</span>
+        
         <span class="person__field"><span class="t-en">Hydrology and Lake water resources</span><span class="t-zh" lang="zh-CN">水文学与湖泊水资源</span></span>
       </span>
-    </button><div class="person__footer"><ul class="person-links">
-    <li><a class="person-links__link person-links__link--scholar" href="https://scholar.google.com/citations?user=zpNxMoAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269ZM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14Z"/></svg>
-        <span class="sr-only"><span class="t-en">Muhammad Naeem: Google Scholar</span><span class="t-zh" lang="zh-CN">Muhammad Naeem：Google Scholar</span></span>
-        <span class="person-links__tooltip" aria-hidden="true">Google Scholar</span>
-      </a></li><li><a class="person-links__link person-links__link--email" href="mailto:Mnaeem2025@szu.edu.cn" >
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></g></svg>
-        <span class="sr-only"><span class="t-en">Muhammad Naeem: Email (Mnaeem2025@szu.edu.cn)</span><span class="t-zh" lang="zh-CN">Muhammad Naeem：邮箱（Mnaeem2025@szu.edu.cn）</span></span>
-        <span class="person-links__tooltip" aria-hidden="true"><span class="t-en">Email</span><span class="t-zh" lang="zh-CN">邮箱</span></span>
-      </a></li>
-  </ul></div>
+    </button>
     <div class="person__detail">
       <img class="" src="/media/3f42969f595c8bf9-800.webp" srcset="/media/3f42969f595c8bf9-240.webp 240w, /media/3f42969f595c8bf9-480.webp 480w, /media/3f42969f595c8bf9-800.webp 800w" sizes="220px" width="1378" height="1772" alt="Portrait of Dr. Muhammad Naeem" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
@@ -1261,14 +1290,16 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="yuyin chen 陈昱吟 ground water 地下水 ground water 地下水" id="p-yuyin-chen">
+  </li><li class="person person--mini" data-search="yuyin chen 陈昱吟 ground water 地下水 " id="p-yuyin-chen">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/f7cd3bf19b353b71-748.webp" srcset="/media/f7cd3bf19b353b71-240.webp 240w, /media/f7cd3bf19b353b71-480.webp 480w, /media/f7cd3bf19b353b71-748.webp 748w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="748" height="711" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/f7cd3bf19b353b71-748.webp" srcset="/media/f7cd3bf19b353b71-240.webp 240w, /media/f7cd3bf19b353b71-480.webp 480w, /media/f7cd3bf19b353b71-748.webp 748w" sizes="72px" width="748" height="711" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Yuyin Chen</span><span class="t-zh" lang="zh-CN">陈昱吟</span></span>
+        <span class="person__alt"><span class="t-en">陈昱吟</span><span class="t-zh" lang="zh-CN">Yuyin Chen</span></span>
         <span class="person__field"><span class="t-en">Ground water</span><span class="t-zh" lang="zh-CN">地下水</span></span>
       </span>
-    </button><div class="person__footer"></div>
+    </button>
     <div class="person__detail">
       <img class="" src="/media/f7cd3bf19b353b71-748.webp" srcset="/media/f7cd3bf19b353b71-240.webp 240w, /media/f7cd3bf19b353b71-480.webp 480w, /media/f7cd3bf19b353b71-748.webp 748w" sizes="220px" width="748" height="711" alt="Portrait of Yuyin Chen" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
@@ -1276,14 +1307,16 @@
         <p class="meta"><span class="t-en">Ground water</span><span class="t-zh" lang="zh-CN">地下水</span></p><div class="person__bio"><p class="t-en" >Yuyin Chen completed her master’s degree in 2024 and is currently working at ByteDance.</p><p class="t-zh" lang="zh-CN">陈昱吟于 2024 年获得硕士学位，现就职于字节跳动。</p></div>
       </div>
     </div>
-  </li><li class="person" data-search="shijia wang 王世佳 agricultural hydrology 农业水文学 agricultural hydrology 农业水文学" id="p-shijia-wang">
+  </li><li class="person person--mini" data-search="shijia wang 王世佳 agricultural hydrology 农业水文学 " id="p-shijia-wang">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/665f140f6abd10f7-800.webp" srcset="/media/665f140f6abd10f7-240.webp 240w, /media/665f140f6abd10f7-480.webp 480w, /media/665f140f6abd10f7-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="802" height="850" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/665f140f6abd10f7-800.webp" srcset="/media/665f140f6abd10f7-240.webp 240w, /media/665f140f6abd10f7-480.webp 480w, /media/665f140f6abd10f7-800.webp 800w" sizes="72px" width="802" height="850" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Shijia Wang</span><span class="t-zh" lang="zh-CN">王世佳</span></span>
+        <span class="person__alt"><span class="t-en">王世佳</span><span class="t-zh" lang="zh-CN">Shijia Wang</span></span>
         <span class="person__field"><span class="t-en">Agricultural hydrology</span><span class="t-zh" lang="zh-CN">农业水文学</span></span>
       </span>
-    </button><div class="person__footer"></div>
+    </button>
     <div class="person__detail">
       <img class="" src="/media/665f140f6abd10f7-800.webp" srcset="/media/665f140f6abd10f7-240.webp 240w, /media/665f140f6abd10f7-480.webp 480w, /media/665f140f6abd10f7-800.webp 800w" sizes="220px" width="802" height="850" alt="Portrait of Shijia Wang" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
@@ -1291,14 +1324,16 @@
         <p class="meta"><span class="t-en">Agricultural hydrology</span><span class="t-zh" lang="zh-CN">农业水文学</span></p><div class="person__bio"><p class="t-en" >Shijia Wang completed his master’s degree in 2025.</p><p class="t-zh" lang="zh-CN">王世佳于 2025 年获得硕士学位。</p></div>
       </div>
     </div>
-  </li><li class="person" data-search="yijing cao 曹一晶 agricultural hydrology 农业水文学 agricultural hydrology 农业水文学" id="p-yijing-cao">
+  </li><li class="person person--mini" data-search="yijing cao 曹一晶 agricultural hydrology 农业水文学 " id="p-yijing-cao">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/148dbc6ee7572af7-800.webp" srcset="/media/148dbc6ee7572af7-240.webp 240w, /media/148dbc6ee7572af7-480.webp 480w, /media/148dbc6ee7572af7-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1392" height="1209" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/148dbc6ee7572af7-800.webp" srcset="/media/148dbc6ee7572af7-240.webp 240w, /media/148dbc6ee7572af7-480.webp 480w, /media/148dbc6ee7572af7-800.webp 800w" sizes="72px" width="1392" height="1209" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Yijing Cao</span><span class="t-zh" lang="zh-CN">曹一晶</span></span>
+        <span class="person__alt"><span class="t-en">曹一晶</span><span class="t-zh" lang="zh-CN">Yijing Cao</span></span>
         <span class="person__field"><span class="t-en">Agricultural hydrology</span><span class="t-zh" lang="zh-CN">农业水文学</span></span>
       </span>
-    </button><div class="person__footer"></div>
+    </button>
     <div class="person__detail">
       <img class="" src="/media/148dbc6ee7572af7-800.webp" srcset="/media/148dbc6ee7572af7-240.webp 240w, /media/148dbc6ee7572af7-480.webp 480w, /media/148dbc6ee7572af7-800.webp 800w" sizes="220px" width="1392" height="1209" alt="Portrait of Dr. Yijing Cao" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
@@ -1306,28 +1341,16 @@
         <p class="meta"><span class="t-en">Agricultural hydrology</span><span class="t-zh" lang="zh-CN">农业水文学</span></p><div class="person__bio"><p class="t-en" >Dr. Yijing Cao completed her postdoctoral research.</p><p class="t-zh" lang="zh-CN">曹一晶博士已完成博士后研究。</p></div>
       </div>
     </div>
-  </li><li class="person" data-search="zixuan tang 唐子轩 hydrological extremes; anthropogenic impacts 水文极端事件；人类活动影响 hydrological extremes; anthropogenic impacts 水文极端事件；人类活动影响" id="p-zixuan-tang">
+  </li><li class="person person--mini" data-search="zixuan tang 唐子轩 hydrological extremes; anthropogenic impacts 水文极端事件；人类活动影响 " id="p-zixuan-tang">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/3eb91cc909bb604d-800.webp" srcset="/media/3eb91cc909bb604d-240.webp 240w, /media/3eb91cc909bb604d-480.webp 480w, /media/3eb91cc909bb604d-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="2329" height="2141" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/3eb91cc909bb604d-800.webp" srcset="/media/3eb91cc909bb604d-240.webp 240w, /media/3eb91cc909bb604d-480.webp 480w, /media/3eb91cc909bb604d-800.webp 800w" sizes="72px" width="2329" height="2141" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Zixuan Tang</span><span class="t-zh" lang="zh-CN">唐子轩</span></span>
+        <span class="person__alt"><span class="t-en">唐子轩</span><span class="t-zh" lang="zh-CN">Zixuan Tang</span></span>
         <span class="person__field"><span class="t-en">Hydrological Extremes; Anthropogenic impacts</span><span class="t-zh" lang="zh-CN">水文极端事件；人类活动影响</span></span>
       </span>
-    </button><div class="person__footer"><ul class="person-links">
-    <li><a class="person-links__link person-links__link--scholar" href="https://scholar.google.com/citations?user=Z2k1N4MAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269ZM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14Z"/></svg>
-        <span class="sr-only"><span class="t-en">Zixuan Tang: Google Scholar</span><span class="t-zh" lang="zh-CN">唐子轩：Google Scholar</span></span>
-        <span class="person-links__tooltip" aria-hidden="true">Google Scholar</span>
-      </a></li><li><a class="person-links__link person-links__link--email" href="mailto:tangzx.20s@igsnrr.ac.cn" >
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></g></svg>
-        <span class="sr-only"><span class="t-en">Zixuan Tang: Email (tangzx.20s@igsnrr.ac.cn)</span><span class="t-zh" lang="zh-CN">唐子轩：邮箱（tangzx.20s@igsnrr.ac.cn）</span></span>
-        <span class="person-links__tooltip" aria-hidden="true"><span class="t-en">Email</span><span class="t-zh" lang="zh-CN">邮箱</span></span>
-      </a></li><li><a class="person-links__link person-links__link--orcid" href="https://orcid.org/0000-0003-2911-0775" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#A6CE39" d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0Zm-4.631 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947Zm-.722 3.038h1.444v10.041H6.647V7.416Zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416Zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222Z"/></svg>
-        <span class="sr-only"><span class="t-en">Zixuan Tang: ORCID</span><span class="t-zh" lang="zh-CN">唐子轩：ORCID</span></span>
-        <span class="person-links__tooltip" aria-hidden="true">ORCID</span>
-      </a></li>
-  </ul></div>
+    </button>
     <div class="person__detail">
       <img class="" src="/media/3eb91cc909bb604d-800.webp" srcset="/media/3eb91cc909bb604d-240.webp 240w, /media/3eb91cc909bb604d-480.webp 480w, /media/3eb91cc909bb604d-800.webp 800w" sizes="220px" width="2329" height="2141" alt="Portrait of Dr. Zixuan Tang" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
@@ -1349,24 +1372,16 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="jiao wang 王姣 ai for hydrology 人工智能水文学 ai for hydrology 人工智能水文学" id="p-jiao-wang">
+  </li><li class="person person--mini" data-search="jiao wang 王姣 ai for hydrology 人工智能水文学 " id="p-jiao-wang">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/b7a1be6a147f95a3-800.webp" srcset="/media/b7a1be6a147f95a3-240.webp 240w, /media/b7a1be6a147f95a3-480.webp 480w, /media/b7a1be6a147f95a3-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1052" height="1725" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/b7a1be6a147f95a3-800.webp" srcset="/media/b7a1be6a147f95a3-240.webp 240w, /media/b7a1be6a147f95a3-480.webp 480w, /media/b7a1be6a147f95a3-800.webp 800w" sizes="72px" width="1052" height="1725" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Jiao Wang</span><span class="t-zh" lang="zh-CN">王姣</span></span>
+        <span class="person__alt"><span class="t-en">王姣</span><span class="t-zh" lang="zh-CN">Jiao Wang</span></span>
         <span class="person__field"><span class="t-en">AI for hydrology</span><span class="t-zh" lang="zh-CN">人工智能水文学</span></span>
       </span>
-    </button><div class="person__footer"><ul class="person-links">
-    <li><a class="person-links__link person-links__link--email" href="mailto:wangjiao0523@igsnrr.ac.cn" >
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></g></svg>
-        <span class="sr-only"><span class="t-en">Jiao Wang: Email (wangjiao0523@igsnrr.ac.cn)</span><span class="t-zh" lang="zh-CN">王姣：邮箱（wangjiao0523@igsnrr.ac.cn）</span></span>
-        <span class="person-links__tooltip" aria-hidden="true"><span class="t-en">Email</span><span class="t-zh" lang="zh-CN">邮箱</span></span>
-      </a></li><li><a class="person-links__link person-links__link--orcid" href="https://orcid.org/0009-0007-2514-275X" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#A6CE39" d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0Zm-4.631 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947Zm-.722 3.038h1.444v10.041H6.647V7.416Zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416Zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222Z"/></svg>
-        <span class="sr-only"><span class="t-en">Jiao Wang: ORCID</span><span class="t-zh" lang="zh-CN">王姣：ORCID</span></span>
-        <span class="person-links__tooltip" aria-hidden="true">ORCID</span>
-      </a></li>
-  </ul></div>
+    </button>
     <div class="person__detail">
       <img class="" src="/media/b7a1be6a147f95a3-800.webp" srcset="/media/b7a1be6a147f95a3-240.webp 240w, /media/b7a1be6a147f95a3-480.webp 480w, /media/b7a1be6a147f95a3-800.webp 800w" sizes="220px" width="1052" height="1725" alt="Portrait of Jiao Wang" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
@@ -1384,24 +1399,16 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="chanyue ren 任婵月 hydrological drought 水文干旱 hydrological drought 水文干旱" id="p-chanyue-ren">
+  </li><li class="person person--mini" data-search="chanyue ren 任婵月 hydrological drought 水文干旱 " id="p-chanyue-ren">
+    
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/fa4fbeee11fcecd9-800.webp" srcset="/media/fa4fbeee11fcecd9-240.webp 240w, /media/fa4fbeee11fcecd9-480.webp 480w, /media/fa4fbeee11fcecd9-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="885" height="857" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/fa4fbeee11fcecd9-800.webp" srcset="/media/fa4fbeee11fcecd9-240.webp 240w, /media/fa4fbeee11fcecd9-480.webp 480w, /media/fa4fbeee11fcecd9-800.webp 800w" sizes="72px" width="885" height="857" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Chanyue Ren</span><span class="t-zh" lang="zh-CN">任婵月</span></span>
+        <span class="person__alt"><span class="t-en">任婵月</span><span class="t-zh" lang="zh-CN">Chanyue Ren</span></span>
         <span class="person__field"><span class="t-en">Hydrological drought</span><span class="t-zh" lang="zh-CN">水文干旱</span></span>
       </span>
-    </button><div class="person__footer"><ul class="person-links">
-    <li><a class="person-links__link person-links__link--email" href="mailto:renchanyue@igsnrr.ac.cn" >
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></g></svg>
-        <span class="sr-only"><span class="t-en">Chanyue Ren: Email (renchanyue@igsnrr.ac.cn)</span><span class="t-zh" lang="zh-CN">任婵月：邮箱（renchanyue@igsnrr.ac.cn）</span></span>
-        <span class="person-links__tooltip" aria-hidden="true"><span class="t-en">Email</span><span class="t-zh" lang="zh-CN">邮箱</span></span>
-      </a></li><li><a class="person-links__link person-links__link--orcid" href="https://orcid.org/0000-0003-0969-8882" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#A6CE39" d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0Zm-4.631 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947Zm-.722 3.038h1.444v10.041H6.647V7.416Zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416Zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222Z"/></svg>
-        <span class="sr-only"><span class="t-en">Chanyue Ren: ORCID</span><span class="t-zh" lang="zh-CN">任婵月：ORCID</span></span>
-        <span class="person-links__tooltip" aria-hidden="true">ORCID</span>
-      </a></li>
-  </ul></div>
+    </button>
     <div class="person__detail">
       <img class="" src="/media/fa4fbeee11fcecd9-800.webp" srcset="/media/fa4fbeee11fcecd9-240.webp 240w, /media/fa4fbeee11fcecd9-480.webp 480w, /media/fa4fbeee11fcecd9-800.webp 800w" sizes="220px" width="885" height="857" alt="Portrait of Chanyue Ren" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
@@ -1420,15 +1427,17 @@
       </div>
     </div>
   </li></ul>
-        </section>
-      <section class="group group--talent" data-group="talent" id="talent">
-        <div class="group__heading"><h2><span class="t-en">Talent programmes</span><span class="t-zh" lang="zh-CN">人才计划</span></h2><span class="group__count"><span class="t-en">5 members</span><span class="t-zh" lang="zh-CN">5 位成员</span></span></div>
-        <ul class="people-grid"><li class="person" data-search="yongqiang zhang 张永强 global and regional hydrology and water resources 全球与区域水文及水资源 ten thousand talents programme 万人计划" id="p-talent-yongqiang-zhang">
+          </section>
+        <section class="group group--talent" data-group="talent" id="talent">
+              <div class="group__heading"><h2><span class="t-en">Talent programmes and grants for young scientists</span><span class="t-zh" lang="zh-CN">人才计划与青年科学基金</span></h2><span class="group__count">5</span></div>
+              <ul class="people-grid people-grid--row"><li class="person person--row person--award" data-search="yongqiang zhang 张永强 global and regional hydrology and water resources 全球与区域水文及水资源 national leading talent in scientific and technological innovation 国家科技创新领军人才" id="p-talent-yongqiang-zhang">
+    <p class="person__award"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="7.5" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6.6 11.4-1.6 6 5-2.4 5 2.4-1.6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span><span class="t-en">National Leading Talent in Scientific and Technological Innovation</span><span class="t-zh" lang="zh-CN">国家科技创新领军人才</span></span></p>
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/4f8a103932b0f798-800.webp" srcset="/media/4f8a103932b0f798-240.webp 240w, /media/4f8a103932b0f798-480.webp 480w, /media/4f8a103932b0f798-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="5429" height="5462" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/4f8a103932b0f798-800.webp" srcset="/media/4f8a103932b0f798-240.webp 240w, /media/4f8a103932b0f798-480.webp 480w, /media/4f8a103932b0f798-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="5429" height="5462" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Yongqiang Zhang</span><span class="t-zh" lang="zh-CN">张永强</span></span>
-        <span class="person__field"><span class="t-en">Ten Thousand Talents Programme</span><span class="t-zh" lang="zh-CN">万人计划</span></span>
+        <span class="person__alt"><span class="t-en">张永强</span><span class="t-zh" lang="zh-CN">Yongqiang Zhang</span></span>
+        <span class="person__field"><span class="t-en">Global and regional hydrology and water resources</span><span class="t-zh" lang="zh-CN">全球与区域水文及水资源</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
     <li><a class="person-links__link person-links__link--scholar" href="https://scholar.google.com/citations?hl=en&amp;user=t5iGFeAAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener noreferrer">
@@ -1444,8 +1453,8 @@
     <div class="person__detail">
       <img class="" src="/media/4f8a103932b0f798-800.webp" srcset="/media/4f8a103932b0f798-240.webp 240w, /media/4f8a103932b0f798-480.webp 480w, /media/4f8a103932b0f798-800.webp 800w" sizes="220px" width="5429" height="5462" alt="Portrait of Prof. Yongqiang Zhang" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
-        <h3><span class="t-en">Prof. Yongqiang Zhang</span><span class="t-zh" lang="zh-CN">张永强</span></h3><p class="person__recognition"><span class="t-en">Ten Thousand Talents Programme</span><span class="t-zh" lang="zh-CN">万人计划</span></p>
-        <p class="meta"><span class="t-en">Global and regional hydrology and water resources</span><span class="t-zh" lang="zh-CN">全球与区域水文及水资源</span></p><div class="person__bio"><p class="t-en" >Prof. Yongqiang Zhang is a hydrologist specializing in hydrology and water resources. His research focuses on understanding the mechanisms and processes of global evapotranspiration, exploring eco-hydrological processes, and advancing hydrological modeling, prediction, and projection through remote sensing techniques. In 2026, he received the AGU Joanne Simpson Medal and became an AGU Fellow.</p><p class="t-zh" lang="zh-CN">张永强研究员从事全球与区域水文及水资源研究，关注蒸散发机制、生态水文过程以及遥感支持的水文模拟、预测与预估。2026 年荣获 AGU Joanne Simpson 奖章并当选 AGU 会士。</p></div><ul class="person-links">
+        <h3><span class="t-en">Prof. Yongqiang Zhang</span><span class="t-zh" lang="zh-CN">张永强</span></h3><p class="person__recognition"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="7.5" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6.6 11.4-1.6 6 5-2.4 5 2.4-1.6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span class="t-en">National Leading Talent in Scientific and Technological Innovation</span><span class="t-zh" lang="zh-CN">国家科技创新领军人才</span></p>
+        <p class="meta"><span class="t-en">Global and regional hydrology and water resources</span><span class="t-zh" lang="zh-CN">全球与区域水文及水资源</span></p><div class="person__bio"><p class="t-en" >Prof. Yongqiang Zhang is a Senior Research Fellow (Grade II) at the Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences, specializing in hydrology and water resources. His research focuses on understanding the mechanisms and processes of global evapotranspiration, exploring eco-hydrological processes, and advancing hydrological modeling, prediction, and projection through remote sensing techniques. In 2026, he received the AGU Joanne Simpson Medal and became an AGU Fellow.</p><p class="t-zh" lang="zh-CN">张永强研究员为中国科学院地理科学与资源研究所二级研究员，从事全球与区域水文及水资源研究，关注蒸散发机制、生态水文过程以及遥感支持的水文模拟、预测与预估。2026 年荣获 AGU Joanne Simpson 奖章并当选 AGU 会士。</p></div><ul class="person-links">
     <li><a class="person-links__link person-links__link--scholar" href="https://scholar.google.com/citations?hl=en&amp;user=t5iGFeAAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269ZM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14Z"/></svg>
         <span class="sr-only"><span class="t-en">Yongqiang Zhang: Google Scholar</span><span class="t-zh" lang="zh-CN">张永强：Google Scholar</span></span>
@@ -1458,12 +1467,14 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="ning ma 马宁 hydrological processes 水文过程 nsfc young scientists fund (category b) · 2026 国家自然科学基金青年科学基金项目（b 类） · 2026" id="p-talent-ning-ma">
+  </li><li class="person person--row person--award" data-search="ning ma 马宁 hydrological processes 水文过程 nsfc young scientists fund (category b, formerly the excellent young scientists fund) · 2026 国家自然科学基金青年科学基金项目（b 类，原优秀青年科学基金项目） · 2026" id="p-talent-ning-ma">
+    <p class="person__award"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="7.5" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6.6 11.4-1.6 6 5-2.4 5 2.4-1.6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span><span class="t-en">NSFC Young Scientists Fund (Category B, formerly the Excellent Young Scientists Fund) · 2026</span><span class="t-zh" lang="zh-CN">国家自然科学基金青年科学基金项目（B 类，原优秀青年科学基金项目） · 2026</span></span></p>
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/e249b075b6508178-800.webp" srcset="/media/e249b075b6508178-240.webp 240w, /media/e249b075b6508178-480.webp 480w, /media/e249b075b6508178-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="2611" height="3315" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/e249b075b6508178-800.webp" srcset="/media/e249b075b6508178-240.webp 240w, /media/e249b075b6508178-480.webp 480w, /media/e249b075b6508178-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="2611" height="3315" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Ning Ma</span><span class="t-zh" lang="zh-CN">马宁</span></span>
-        <span class="person__field"><span class="t-en">NSFC Young Scientists Fund (Category B) · 2026</span><span class="t-zh" lang="zh-CN">国家自然科学基金青年科学基金项目（B 类） · 2026</span></span>
+        <span class="person__alt"><span class="t-en">马宁</span><span class="t-zh" lang="zh-CN">Ning Ma</span></span>
+        <span class="person__field"><span class="t-en">Hydrological Processes</span><span class="t-zh" lang="zh-CN">水文过程</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
     <li><a class="person-links__link person-links__link--scholar" href="https://scholar.google.com/citations?user=ldc1RYwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">
@@ -1487,8 +1498,8 @@
     <div class="person__detail">
       <img class="" src="/media/e249b075b6508178-800.webp" srcset="/media/e249b075b6508178-240.webp 240w, /media/e249b075b6508178-480.webp 480w, /media/e249b075b6508178-800.webp 800w" sizes="220px" width="2611" height="3315" alt="Portrait of Dr. Ning Ma" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
-        <h3><span class="t-en">Dr. Ning Ma</span><span class="t-zh" lang="zh-CN">马宁</span></h3><p class="person__recognition"><span class="t-en">NSFC Young Scientists Fund (Category B) · 2026</span><span class="t-zh" lang="zh-CN">国家自然科学基金青年科学基金项目（B 类） · 2026</span></p>
-        <p class="meta"><span class="t-en">Hydrological Processes</span><span class="t-zh" lang="zh-CN">水文过程</span></p><div class="person__bio"><p class="t-en" >Dr. Ning Ma focuses on surface hydrological processes, with a particular emphasis on the mechanisms and dynamics of evapotranspiration. In 2026, Ning Ma received NSFC Young Scientists Fund (Category B).</p><p class="t-zh" lang="zh-CN">马宁为中国科学院地理科学与资源研究所副研究员。他关注地表水文过程，结合观测、模型与遥感方法研究陆气水热交换及水循环对气候变化的响应。</p><p class="t-zh" lang="zh-CN">研究方向：蒸散发过程与机理、陆面过程观测与模拟、生态水文和遥感水文。2026 年获青年科学基金项目（B 类）资助。</p></div><ul class="person-links">
+        <h3><span class="t-en">Dr. Ning Ma</span><span class="t-zh" lang="zh-CN">马宁</span></h3><p class="person__recognition"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="7.5" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6.6 11.4-1.6 6 5-2.4 5 2.4-1.6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span class="t-en">NSFC Young Scientists Fund (Category B, formerly the Excellent Young Scientists Fund) · 2026</span><span class="t-zh" lang="zh-CN">国家自然科学基金青年科学基金项目（B 类，原优秀青年科学基金项目） · 2026</span></p>
+        <p class="meta"><span class="t-en">Hydrological Processes</span><span class="t-zh" lang="zh-CN">水文过程</span></p><div class="person__bio"><p class="t-en" >Dr. Ning Ma focuses on surface hydrological processes, with a particular emphasis on the mechanisms and dynamics of evapotranspiration. In 2026, Ning Ma received the NSFC Young Scientists Fund (Category B, formerly the Excellent Young Scientists Fund).</p><p class="t-zh" lang="zh-CN">马宁为中国科学院地理科学与资源研究所副研究员。他关注地表水文过程，结合观测、模型与遥感方法研究陆气水热交换及水循环对气候变化的响应。</p><p class="t-zh" lang="zh-CN">研究方向：蒸散发过程与机理、陆面过程观测与模拟、生态水文和遥感水文。2026 年获国家自然科学基金青年科学基金项目（B 类，原优秀青年科学基金项目）资助。</p></div><ul class="person-links">
     <li><a class="person-links__link person-links__link--scholar" href="https://scholar.google.com/citations?user=ldc1RYwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269ZM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14Z"/></svg>
         <span class="sr-only"><span class="t-en">Ning Ma: Google Scholar</span><span class="t-zh" lang="zh-CN">马宁：Google Scholar</span></span>
@@ -1509,12 +1520,14 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="muhammad abrar faiz 费辞 hydro-climate extremes 水文气候极端事件 nsfc funding for foreign young scholars (category b) · 2026 外国青年 b 类项目 · 2026" id="p-talent-muhammad-abrar-faiz">
+  </li><li class="person person--row person--award" data-search="muhammad abrar faiz 费辞 hydro-climate extremes 水文气候极端事件 nsfc funding for foreign young scholars (category b) · 2026 外国青年 b 类项目 · 2026" id="p-talent-muhammad-abrar-faiz">
+    <p class="person__award"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="7.5" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6.6 11.4-1.6 6 5-2.4 5 2.4-1.6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span><span class="t-en">NSFC funding for foreign young scholars (Category B) · 2026</span><span class="t-zh" lang="zh-CN">外国青年 B 类项目 · 2026</span></span></p>
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/3042469c0a131f5b-800.webp" srcset="/media/3042469c0a131f5b-240.webp 240w, /media/3042469c0a131f5b-480.webp 480w, /media/3042469c0a131f5b-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="959" height="1210" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/3042469c0a131f5b-800.webp" srcset="/media/3042469c0a131f5b-240.webp 240w, /media/3042469c0a131f5b-480.webp 480w, /media/3042469c0a131f5b-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="959" height="1210" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Muhammad Abrar Faiz</span><span class="t-zh" lang="zh-CN">费辞</span></span>
-        <span class="person__field"><span class="t-en">NSFC funding for foreign young scholars (Category B) · 2026</span><span class="t-zh" lang="zh-CN">外国青年 B 类项目 · 2026</span></span>
+        <span class="person__alt"><span class="t-en">费辞</span><span class="t-zh" lang="zh-CN">Muhammad Abrar Faiz</span></span>
+        <span class="person__field"><span class="t-en">Hydro-climate extremes</span><span class="t-zh" lang="zh-CN">水文气候极端事件</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
     <li><a class="person-links__link person-links__link--scholar" href="https://scholar.google.com/citations?user=2OjzFaEAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">
@@ -1530,7 +1543,7 @@
     <div class="person__detail">
       <img class="" src="/media/3042469c0a131f5b-800.webp" srcset="/media/3042469c0a131f5b-240.webp 240w, /media/3042469c0a131f5b-480.webp 480w, /media/3042469c0a131f5b-800.webp 800w" sizes="220px" width="959" height="1210" alt="Portrait of Dr. Muhammad Abrar Faiz" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
-        <h3><span class="t-en">Dr. Muhammad Abrar Faiz</span><span class="t-zh" lang="zh-CN">费辞</span></h3><p class="person__recognition"><span class="t-en">NSFC funding for foreign young scholars (Category B) · 2026</span><span class="t-zh" lang="zh-CN">外国青年 B 类项目 · 2026</span></p>
+        <h3><span class="t-en">Dr. Muhammad Abrar Faiz</span><span class="t-zh" lang="zh-CN">费辞</span></h3><p class="person__recognition"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="7.5" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6.6 11.4-1.6 6 5-2.4 5 2.4-1.6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span class="t-en">NSFC funding for foreign young scholars (Category B) · 2026</span><span class="t-zh" lang="zh-CN">外国青年 B 类项目 · 2026</span></p>
         <p class="meta"><span class="t-en">Hydro-climate extremes</span><span class="t-zh" lang="zh-CN">水文气候极端事件</span></p><div class="person__bio"><p class="t-en" >Dr. Muhammad Abrar Faiz, completed his Ph.D. in 2018 and is currently a Professor at Northeast Agricultural University in Harbin, China. His research focuses on ecosystem responses to regional climate change, streamflow variability, precipitation time-series fluctuations, drought monitoring, hydrological modeling, and drought indices. His work has appeared in journals such as the Journal of Advanced Research, Journal of Hydrology, Journal of Cleaner Production, and Agricultural Water Management, among others. He aims to improve early warning of climate-driven vegetation stress through coupled hydrological models and drought-index analytics. In 2026, Muhammad Abrar Faiz received NSFC funding for foreign young scholars (Category B).</p><p class="t-zh" lang="zh-CN">费辞为课题组校友，现任东北农业大学教授。他的研究围绕区域气候变化下的水文响应、径流变异、干旱指数及生态系统响应展开，并持续与团队开展合作。</p><p class="t-zh" lang="zh-CN">研究方向：水文气候极端事件、径流变化、干旱监测与水文模拟。2026 年获外国青年 B 类项目资助。</p></div><ul class="person-links">
     <li><a class="person-links__link person-links__link--scholar" href="https://scholar.google.com/citations?user=2OjzFaEAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269ZM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14Z"/></svg>
@@ -1544,12 +1557,14 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="xian wang 王显 ai for hydrology 人工智能水文学 nsfc young scientists fund (category c) · 2026 国家自然科学基金青年科学基金项目（c 类） · 2026" id="p-talent-xian-wang">
+  </li><li class="person person--row person--award" data-search="xian wang 王显 ai for hydrology 人工智能水文学 nsfc young scientists fund (category c) · 2026 国家自然科学基金青年科学基金项目（c 类） · 2026" id="p-talent-xian-wang">
+    <p class="person__award"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="7.5" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6.6 11.4-1.6 6 5-2.4 5 2.4-1.6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span><span class="t-en">NSFC Young Scientists Fund (Category C) · 2026</span><span class="t-zh" lang="zh-CN">国家自然科学基金青年科学基金项目（C 类） · 2026</span></span></p>
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/8f5e4945ec1ad89d-800.webp" srcset="/media/8f5e4945ec1ad89d-240.webp 240w, /media/8f5e4945ec1ad89d-480.webp 480w, /media/8f5e4945ec1ad89d-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1706" height="1279" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/8f5e4945ec1ad89d-800.webp" srcset="/media/8f5e4945ec1ad89d-240.webp 240w, /media/8f5e4945ec1ad89d-480.webp 480w, /media/8f5e4945ec1ad89d-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="1706" height="1279" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Xian Wang</span><span class="t-zh" lang="zh-CN">王显</span></span>
-        <span class="person__field"><span class="t-en">NSFC Young Scientists Fund (Category C) · 2026</span><span class="t-zh" lang="zh-CN">国家自然科学基金青年科学基金项目（C 类） · 2026</span></span>
+        <span class="person__alt"><span class="t-en">王显</span><span class="t-zh" lang="zh-CN">Xian Wang</span></span>
+        <span class="person__field"><span class="t-en">AI for Hydrology</span><span class="t-zh" lang="zh-CN">人工智能水文学</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
     <li><a class="person-links__link person-links__link--email" href="mailto:xianwang@igsnrr.ac.cn" >
@@ -1561,7 +1576,7 @@
     <div class="person__detail">
       <img class="" src="/media/8f5e4945ec1ad89d-800.webp" srcset="/media/8f5e4945ec1ad89d-240.webp 240w, /media/8f5e4945ec1ad89d-480.webp 480w, /media/8f5e4945ec1ad89d-800.webp 800w" sizes="220px" width="1706" height="1279" alt="Portrait of Dr. Xian Wang" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
-        <h3><span class="t-en">Dr. Xian Wang</span><span class="t-zh" lang="zh-CN">王显</span></h3><p class="person__recognition"><span class="t-en">NSFC Young Scientists Fund (Category C) · 2026</span><span class="t-zh" lang="zh-CN">国家自然科学基金青年科学基金项目（C 类） · 2026</span></p>
+        <h3><span class="t-en">Dr. Xian Wang</span><span class="t-zh" lang="zh-CN">王显</span></h3><p class="person__recognition"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="7.5" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6.6 11.4-1.6 6 5-2.4 5 2.4-1.6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span class="t-en">NSFC Young Scientists Fund (Category C) · 2026</span><span class="t-zh" lang="zh-CN">国家自然科学基金青年科学基金项目（C 类） · 2026</span></p>
         <p class="meta"><span class="t-en">AI for Hydrology</span><span class="t-zh" lang="zh-CN">人工智能水文学</span></p><div class="person__bio"><p class="t-en" >Dr. Xian Wang focuses on integrating artificial intelligence with hydrology to enhance the simulation and prediction of hydrological processes. In 2026, Xian Wang received NSFC Young Scientists Fund (Category C).</p><p class="t-zh" lang="zh-CN">王显为中国科学院地理科学与资源研究所博士后，聚焦人工智能与水文学的融合，研究如何提升水文过程模拟与预测能力。</p><p class="t-zh" lang="zh-CN">研究方向：人工智能水文学、水文过程模拟与预测。2026 年获青年科学基金项目（C 类）资助。</p></div><ul class="person-links">
     <li><a class="person-links__link person-links__link--email" href="mailto:xianwang@igsnrr.ac.cn" >
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></g></svg>
@@ -1571,12 +1586,14 @@
   </ul>
       </div>
     </div>
-  </li><li class="person" data-search="zhenwu xu 许振武 hydroclimate; ecohydrology 水文气候；生态水文学 nsfc young scientists fund (category c) · 2026 国家自然科学基金青年科学基金项目（c 类） · 2026" id="p-talent-zhenwu-xu">
+  </li><li class="person person--row person--award" data-search="zhenwu xu 许振武 hydroclimate; ecohydrology 水文气候；生态水文学 nsfc young scientists fund (category c) · 2026 国家自然科学基金青年科学基金项目（c 类） · 2026" id="p-talent-zhenwu-xu">
+    <p class="person__award"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="7.5" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6.6 11.4-1.6 6 5-2.4 5 2.4-1.6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span><span class="t-en">NSFC Young Scientists Fund (Category C) · 2026</span><span class="t-zh" lang="zh-CN">国家自然科学基金青年科学基金项目（C 类） · 2026</span></span></p>
     <button class="person__btn" type="button" data-person aria-haspopup="dialog">
-      <span class="person__media"><img class="" src="/media/a41f260ea75d6adf-800.webp" srcset="/media/a41f260ea75d6adf-240.webp 240w, /media/a41f260ea75d6adf-480.webp 480w, /media/a41f260ea75d6adf-800.webp 800w" sizes="(max-width: 760px) 46vw, (max-width: 1080px) 30vw, 282px" width="1795" height="1737" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+      <span class="person__media"><img class="" src="/media/a41f260ea75d6adf-800.webp" srcset="/media/a41f260ea75d6adf-240.webp 240w, /media/a41f260ea75d6adf-480.webp 480w, /media/a41f260ea75d6adf-800.webp 800w" sizes="(max-width: 560px) 112px, 132px" width="1795" height="1737" alt="" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
       <span class="person__copy">
         <span class="person__name"><span class="t-en">Zhenwu Xu</span><span class="t-zh" lang="zh-CN">许振武</span></span>
-        <span class="person__field"><span class="t-en">NSFC Young Scientists Fund (Category C) · 2026</span><span class="t-zh" lang="zh-CN">国家自然科学基金青年科学基金项目（C 类） · 2026</span></span>
+        <span class="person__alt"><span class="t-en">许振武</span><span class="t-zh" lang="zh-CN">Zhenwu Xu</span></span>
+        <span class="person__field"><span class="t-en">Hydroclimate; Ecohydrology</span><span class="t-zh" lang="zh-CN">水文气候；生态水文学</span></span>
       </span>
     </button><div class="person__footer"><ul class="person-links">
     <li><a class="person-links__link person-links__link--homepage" href="https://xuzhenwu.github.io/" target="_blank" rel="noopener noreferrer">
@@ -1592,7 +1609,7 @@
     <div class="person__detail">
       <img class="" src="/media/a41f260ea75d6adf-800.webp" srcset="/media/a41f260ea75d6adf-240.webp 240w, /media/a41f260ea75d6adf-480.webp 480w, /media/a41f260ea75d6adf-800.webp 800w" sizes="220px" width="1795" height="1737" alt="Portrait of Dr. Zhenwu Xu" loading="lazy" decoding="async" style="object-position:50% 25%">
       <div>
-        <h3><span class="t-en">Dr. Zhenwu Xu</span><span class="t-zh" lang="zh-CN">许振武</span></h3><p class="person__recognition"><span class="t-en">NSFC Young Scientists Fund (Category C) · 2026</span><span class="t-zh" lang="zh-CN">国家自然科学基金青年科学基金项目（C 类） · 2026</span></p>
+        <h3><span class="t-en">Dr. Zhenwu Xu</span><span class="t-zh" lang="zh-CN">许振武</span></h3><p class="person__recognition"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="7.5" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m6.6 11.4-1.6 6 5-2.4 5 2.4-1.6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span class="t-en">NSFC Young Scientists Fund (Category C) · 2026</span><span class="t-zh" lang="zh-CN">国家自然科学基金青年科学基金项目（C 类） · 2026</span></p>
         <p class="meta"><span class="t-en">Hydroclimate; Ecohydrology</span><span class="t-zh" lang="zh-CN">水文气候；生态水文学</span></p><div class="person__bio"><p class="t-en" >Dr. Zhenwu Xu specializes in hydroclimate extremes. His research focuses on hydrological responses to disturbances caused by droughts, wildfires, and human activities, aiming to advance understanding of the resilience and evolution of Earth’s water resources and ecosystems. In 2026, Zhenwu Xu received NSFC Young Scientists Fund (Category C).</p><p class="t-zh" lang="zh-CN">许振武为中国科学院地理科学与资源研究所博士后，2024 年于中国科学院大学获得博士学位，博士期间曾赴维也纳工业大学接受联合研究训练。他整合卫星观测、实测资料与分布式生态水文模型，研究干旱、野火及人类活动扰动下的水文响应，并参与 PML 蒸散发与生产力模型的数据和方法开发。</p><p class="t-zh" lang="zh-CN">研究方向：水文气候极端事件、生态水文与水文系统韧性。2026 年获青年科学基金项目（C 类）资助。</p></div><ul class="person-links">
     <li><a class="person-links__link person-links__link--homepage" href="https://xuzhenwu.github.io/" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 7h14M5 17h14"/></g></svg>
@@ -1607,17 +1624,11 @@
       </div>
     </div>
   </li></ul>
-      </section>
-    </section>
-    <section class="wrap">
-      <figure class="plate plate--wide">
-        <img class="" src="/media/0fa088b6f51e1484-2400.webp" srcset="/media/0fa088b6f51e1484-800.webp 800w, /media/0fa088b6f51e1484-1600.webp 1600w, /media/0fa088b6f51e1484-2400.webp 2400w" sizes="(max-width: 1240px) 100vw, 1200px" width="6240" height="4160" alt="Group photo at the 2026 graduation ceremony" loading="lazy" decoding="async">
-        <figcaption><span class="t-en">Group photo at the 2026 graduation ceremony.</span><span class="t-zh" lang="zh-CN">2026 年毕业典礼团队合影。</span></figcaption>
-      </figure>
+            </section>
+      </div>
     </section>
     <dialog class="sheet" data-person-dialog aria-labelledby="person-dialog-title">
       <div class="sheet__tools">
-        <button class="tool tool--text" type="button" data-lang-toggle aria-label="Switch language: English or Chinese"><span class="t-en">中文</span><span class="t-zh">English</span></button>
         <button class="tool" type="button" data-dialog-close><span class="sr-only"><span class="t-en">Close</span><span class="t-zh" lang="zh-CN">关闭</span></span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 4 12 12M16 4 4 16" stroke="currentColor" stroke-width="1.5"/></svg></button>
       </div>
       <div data-person-slot></div>
@@ -1650,7 +1661,7 @@
     </div>
     <div class="wrap footer__legal">
       <span>© 2026 <span class="t-en">Large Scale Hydrology Group</span><span class="t-zh" lang="zh-CN">大尺度水文学团队</span></span>
-      <span><span class="t-en">Content updated</span><span class="t-zh" lang="zh-CN">内容更新于</span> 2026-11-02</span>
+      <span><span class="t-en">Content updated</span><span class="t-zh" lang="zh-CN">内容更新于</span> 2026-11-04</span>
     </div>
     </div>
   </footer>

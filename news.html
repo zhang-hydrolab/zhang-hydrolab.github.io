@@ -1,4 +1,4 @@
-<!doctype html><html lang="en" data-lang="en">
+<!doctype html><html lang="en" data-lang="en" data-title-en="News · Large Scale Hydrology Group" data-title-zh="新闻动态 · 大尺度水文学团队">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,10 +13,10 @@
 <meta property="og:url" content="https://zhang-hydrolab.github.io/news.html">
 <meta property="og:image" content="https://zhang-hydrolab.github.io/media/e40a2308e73d60dd-2400.webp">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<script>(function(){var d=document.documentElement;d.classList.add('js');try{var l=sessionStorage.getItem('lab-lang');if(l==='zh'){d.dataset.lang='zh';d.lang='zh-CN'}}catch(e){}})();</script>
+<script>(function(){var d=document.documentElement,l=null;d.classList.add('js');try{l=new URLSearchParams(location.search).get('lang')}catch(e){}if(l!=='zh'&&l!=='en'){var m=document.cookie.match(/(?:^|; )lab-lang=(zh|en)/);l=m?m[1]:null}if(!l){try{l=sessionStorage.getItem('lab-lang')}catch(e){}}if(l==='zh'||l==='en'){document.cookie='lab-lang='+l+'; path=/; SameSite=Lax';try{sessionStorage.setItem('lab-lang',l)}catch(e){}}if(l==='zh'){d.dataset.lang='zh';d.lang='zh-CN';if(d.dataset.titleZh)document.title=d.dataset.titleZh}})();</script>
 <link rel="preload" href="/assets/fonts/source-serif-4-latin-wght-normal-EUO3YR6J.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/source-sans-3-latin-wght-normal-ILI3Y2TR.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style-62GKUPI4.css">
-<script type="module" src="/assets/main-IPNGBZNL.js"></script>
+<link rel="stylesheet" href="/assets/style-GCNGNJTV.css">
+<script type="module" src="/assets/main-QB4ZHOO5.js"></script>
 </head>
 <body id="top" data-page="news">
 <a class="skip" href="#main">Skip to content</a>
@@ -34,7 +34,10 @@
       </nav>
       <div class="nav__tools">
         <button class="tool" type="button" data-search-open aria-label="Search the site" title="Search (Ctrl K)"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m14 14 4 4" stroke="currentColor" stroke-width="1.5"/></svg></button>
-        <button class="tool tool--text" type="button" data-lang-toggle aria-label="Switch language: English or Chinese"><span class="t-en">中文</span><span class="t-zh">English</span></button>
+        <div class="langswitch" role="group" aria-label="Language / 语言">
+          <button type="button" data-lang-set="en" lang="en" aria-pressed="true" title="English">EN</button>
+          <button type="button" data-lang-set="zh" lang="zh-CN" aria-pressed="false" title="中文">中文</button>
+        </div>
         <button class="tool tool--menu" type="button" data-menu-open aria-label="Open menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.5"/></svg></button>
       </div>
     </div>
@@ -56,13 +59,122 @@
       <div>
         <p class="kicker"><a href="/"><span class="t-en">Home</span><span class="t-zh" lang="zh-CN">首页</span></a> / <span class="t-en">News</span><span class="t-zh" lang="zh-CN">新闻动态</span></p>
         <h1><span class="t-en">News</span><span class="t-zh" lang="zh-CN">新闻动态</span></h1>
-        
+        <p class="pagehead__lead"><span class="t-en">Papers, honours, events and news from the group, newest first.</span><span class="t-zh" lang="zh-CN">课题组的论文、荣誉、活动与新闻，按时间由近及远排列。</span></p>
       </div>
-      <figure class="block" data-module="block" data-scene="gorges" data-contour="150">
-    <img class="block__still" src="/earth/gorges-still.webp" width="960" height="640" alt="Terrain of Three Gorges and the middle Yangtze" decoding="async">
-    <canvas class="block__canvas" aria-hidden="true"></canvas>
-    <figcaption><span class="t-en">Three Gorges and the middle Yangtze</span><span class="t-zh" lang="zh-CN">三峡与长江中游</span></figcaption>
-    <button class="pause" type="button" data-pause aria-pressed="false" aria-label="Pause the animation" title="Pause or resume" hidden><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3 1.5h2v9H3zM7 1.5h2v9H7z"/></svg></button>
+      <figure class="nring" data-module="newsring" style="--n:12;--step:30.000deg;--reach:1.8660">
+    <div class="nring__stage" data-ring-stage>
+      <div class="nring__ring" data-ring>
+        <div class="nring__floor" aria-hidden="true"><svg class="nring__dial" viewBox="-100 -100 200 200">
+    <defs><radialGradient id="nring-water"><stop offset="0" stop-color="#d9eaf8"/><stop offset="0.7" stop-color="#eaf3fb"/><stop offset="1" stop-color="#f4f9fd" stop-opacity="0"/></radialGradient></defs>
+    <circle r="99" fill="url(#nring-water)"/>
+    <circle class="nring__rim" r="96"/>
+    <circle class="nring__rim nring__rim--inner" r="88"/>
+    <circle class="nring__rim nring__rim--faint" r="62"/>
+    <g class="nring__ticks"><line x1="0.0" y1="88.0" x2="0.0" y2="96.0"/><line x1="44.0" y1="76.2" x2="48.0" y2="83.1"/><line x1="76.2" y1="44.0" x2="83.1" y2="48.0"/><line x1="88.0" y1="0.0" x2="96.0" y2="0.0"/><line x1="76.2" y1="-44.0" x2="83.1" y2="-48.0"/><line x1="44.0" y1="-76.2" x2="48.0" y2="-83.1"/><line x1="0.0" y1="-88.0" x2="0.0" y2="-96.0"/><line x1="-44.0" y1="-76.2" x2="-48.0" y2="-83.1"/><line x1="-76.2" y1="-44.0" x2="-83.1" y2="-48.0"/><line x1="-88.0" y1="-0.0" x2="-96.0" y2="-0.0"/><line x1="-76.2" y1="44.0" x2="-83.1" y2="48.0"/><line x1="-44.0" y1="76.2" x2="-48.0" y2="83.1"/></g>
+    <g data-ripples></g>
+  </svg></div>
+        <ol class="nring__cards">
+          <li class="nring__card nring__card--award is-front" style="--i:0" data-card>
+              <a class="nring__face" href="/news/2026-ai4climate-best-climate-solution.html" >
+                <span class="nring__fig"><img class="" src="/media/42e75a8ccb60b52b-1020.webp" srcset="/media/42e75a8ccb60b52b-480.webp 480w, /media/42e75a8ccb60b52b-960.webp 960w, /media/42e75a8ccb60b52b-1020.webp 1020w" sizes="180px" width="1020" height="275" alt="" loading="lazy" decoding="async"></span>
+                <span class="nring__meta"><i class="nring__dot nring__dot--award"></i>2026-10-27 · <span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></span>
+                <span class="nring__title"><span class="t-en">CAS-Canglong wins the AI4Climate 2026 Best Climate Solution Award</span><span class="t-zh" lang="zh-CN">中科苍龙获 AI4Climate 2026 最佳气候解决方案奖</span></span>
+              </a>
+              <span class="nring__back" aria-hidden="true"><b>2026</b><span><span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></span></span>
+            </li><li class="nring__card nring__card--award" style="--i:1" data-card>
+              <a class="nring__face" href="/news/2026-longhao-wang-cast-doctoral-program.html" >
+                <span class="nring__fig"><img class="" src="/media/cefd1e3570c10512-800.webp" srcset="/media/cefd1e3570c10512-240.webp 240w, /media/cefd1e3570c10512-480.webp 480w, /media/cefd1e3570c10512-800.webp 800w" sizes="180px" width="2708" height="2941" alt="" loading="lazy" decoding="async"></span>
+                <span class="nring__meta"><i class="nring__dot nring__dot--award"></i>2026-10-22 · <span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></span>
+                <span class="nring__title"><span class="t-en">Longhao Wang selected for the CAST 2026 doctoral student talent development program</span><span class="t-zh" lang="zh-CN">王龙浩入选 2026 年中国科协青年科技人才培育工程博士生专项计划</span></span>
+              </a>
+              <span class="nring__back" aria-hidden="true"><b>2026</b><span><span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></span></span>
+            </li><li class="nring__card nring__card--event" style="--i:2" data-card>
+              <a class="nring__face" href="/news/2026-nanjing-physical-geography-conference.html" >
+                <span class="nring__fig"><img class="" src="/media/de5b71f6ecf5d398-1440.webp" srcset="/media/de5b71f6ecf5d398-480.webp 480w, /media/de5b71f6ecf5d398-960.webp 960w, /media/de5b71f6ecf5d398-1440.webp 1440w" sizes="180px" width="1707" height="1280" alt="" loading="lazy" decoding="async"></span>
+                <span class="nring__meta"><i class="nring__dot nring__dot--event"></i>2026-10-22 · <span class="t-en">Event</span><span class="t-zh" lang="zh-CN">活动</span></span>
+                <span class="nring__title"><span class="t-en">Group members attend the 2026 China National Conference on Physical Geography in Nanjing</span><span class="t-zh" lang="zh-CN">课题组成员参加 2026 年全国自然地理学大会（南京）</span></span>
+              </a>
+              <span class="nring__back" aria-hidden="true"><b>2026</b><span><span class="t-en">Event</span><span class="t-zh" lang="zh-CN">活动</span></span></span>
+            </li><li class="nring__card nring__card--publication" style="--i:3" data-card>
+              <a class="nring__face" href="/news/2026-advanced-science-canglong-sst.html" >
+                <span class="nring__fig"><img class="" src="/media/de15314d5fee4d13-922.webp" srcset="/media/de15314d5fee4d13-480.webp 480w, /media/de15314d5fee4d13-922.webp 922w" sizes="180px" width="922" height="464" alt="" loading="lazy" decoding="async"></span>
+                <span class="nring__meta"><i class="nring__dot nring__dot--publication"></i>2026-10-18 · <span class="t-en">Publication</span><span class="t-zh" lang="zh-CN">论文</span></span>
+                <span class="nring__title"><span class="t-en">Advanced Science: CAS-Canglong improves sub-seasonal to seasonal sea surface temperature prediction</span><span class="t-zh" lang="zh-CN">Advanced Science：中科苍龙提升全球海温次季节—季节预报能力</span></span>
+              </a>
+              <span class="nring__back" aria-hidden="true"><b>2026</b><span><span class="t-en">Publication</span><span class="t-zh" lang="zh-CN">论文</span></span></span>
+            </li><li class="nring__card nring__card--publication" style="--i:4" data-card>
+              <a class="nring__face" href="/news/2026-nsr-drought-recovery.html" >
+                <span class="nring__fig"><img class="" src="/media/f92101e0be5423da-1080.webp" srcset="/media/f92101e0be5423da-480.webp 480w, /media/f92101e0be5423da-960.webp 960w, /media/f92101e0be5423da-1080.webp 1080w" sizes="180px" width="1080" height="623" alt="" loading="lazy" decoding="async"></span>
+                <span class="nring__meta"><i class="nring__dot nring__dot--publication"></i>2026-10-13 · <span class="t-en">Publication</span><span class="t-zh" lang="zh-CN">论文</span></span>
+                <span class="nring__title"><span class="t-en">National Science Review: unequal basin-scale recovery after severe droughts</span><span class="t-zh" lang="zh-CN">National Science Review：揭示干旱后全球大流域水储量恢复的不均衡性</span></span>
+              </a>
+              <span class="nring__back" aria-hidden="true"><b>2026</b><span><span class="t-en">Publication</span><span class="t-zh" lang="zh-CN">论文</span></span></span>
+            </li><li class="nring__card nring__card--award" style="--i:5" data-card>
+              <a class="nring__face" href="/news/2026-yongqiang-zhang-agu-joanne-simpson.html" >
+                <span class="nring__fig"><img class="" src="/media/4f8a103932b0f798-800.webp" srcset="/media/4f8a103932b0f798-240.webp 240w, /media/4f8a103932b0f798-480.webp 480w, /media/4f8a103932b0f798-800.webp 800w" sizes="180px" width="5429" height="5462" alt="" loading="lazy" decoding="async"></span>
+                <span class="nring__meta"><i class="nring__dot nring__dot--award"></i>2026-09-23 · <span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></span>
+                <span class="nring__title"><span class="t-en">Yongqiang Zhang receives the AGU Joanne Simpson Medal and becomes an AGU Fellow</span><span class="t-zh" lang="zh-CN">张永强荣获 AGU Joanne Simpson 奖章并当选 AGU 会士</span></span>
+              </a>
+              <span class="nring__back" aria-hidden="true"><b>2026</b><span><span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></span></span>
+            </li><li class="nring__card nring__card--publication" style="--i:6" data-card>
+              <a class="nring__face" href="/news/2026-science-advances-et-asymmetry.html" >
+                <span class="nring__fig"><img class="" src="/media/b44e882cb97a6cce-1080.webp" srcset="/media/b44e882cb97a6cce-480.webp 480w, /media/b44e882cb97a6cce-960.webp 960w, /media/b44e882cb97a6cce-1080.webp 1080w" sizes="180px" width="1080" height="536" alt="" loading="lazy" decoding="async"></span>
+                <span class="nring__meta"><i class="nring__dot nring__dot--publication"></i>2026-08-27 · <span class="t-en">Publication</span><span class="t-zh" lang="zh-CN">论文</span></span>
+                <span class="nring__title"><span class="t-en">Science Advances: hemispheric asymmetry reveals a redistribution of terrestrial water fluxes</span><span class="t-zh" lang="zh-CN">Science Advances：揭示全球陆地蒸散发的半球不对称性与水通量重分配</span></span>
+              </a>
+              <span class="nring__back" aria-hidden="true"><b>2026</b><span><span class="t-en">Publication</span><span class="t-zh" lang="zh-CN">论文</span></span></span>
+            </li><li class="nring__card nring__card--award" style="--i:7" data-card>
+              <a class="nring__face" href="/news/2026-ning-ma-nsfc-category-b.html" >
+                <span class="nring__fig"><img class="" src="/media/e249b075b6508178-800.webp" srcset="/media/e249b075b6508178-240.webp 240w, /media/e249b075b6508178-480.webp 480w, /media/e249b075b6508178-800.webp 800w" sizes="180px" width="2611" height="3315" alt="" loading="lazy" decoding="async"></span>
+                <span class="nring__meta"><i class="nring__dot nring__dot--award"></i>2026-08-26 · <span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></span>
+                <span class="nring__title"><span class="t-en">Ning Ma receives NSFC Young Scientists Fund (Category B)</span><span class="t-zh" lang="zh-CN">马宁获青年科学基金项目（B 类）资助</span></span>
+              </a>
+              <span class="nring__back" aria-hidden="true"><b>2026</b><span><span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></span></span>
+            </li><li class="nring__card nring__card--award" style="--i:8" data-card>
+              <a class="nring__face" href="/news/2026-faiz-foreign-young-scientists-category-b.html" >
+                <span class="nring__fig"><img class="" src="/media/3042469c0a131f5b-800.webp" srcset="/media/3042469c0a131f5b-240.webp 240w, /media/3042469c0a131f5b-480.webp 480w, /media/3042469c0a131f5b-800.webp 800w" sizes="180px" width="959" height="1210" alt="" loading="lazy" decoding="async"></span>
+                <span class="nring__meta"><i class="nring__dot nring__dot--award"></i>2026-08-26 · <span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></span>
+                <span class="nring__title"><span class="t-en">Muhammad Abrar Faiz receives NSFC funding for foreign young scholars (Category B)</span><span class="t-zh" lang="zh-CN">费辞获外国青年 B 类项目资助</span></span>
+              </a>
+              <span class="nring__back" aria-hidden="true"><b>2026</b><span><span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></span></span>
+            </li><li class="nring__card nring__card--award" style="--i:9" data-card>
+              <a class="nring__face" href="/news/2026-xian-wang-nsfc-category-c.html" >
+                <span class="nring__fig"><img class="" src="/media/8f5e4945ec1ad89d-800.webp" srcset="/media/8f5e4945ec1ad89d-240.webp 240w, /media/8f5e4945ec1ad89d-480.webp 480w, /media/8f5e4945ec1ad89d-800.webp 800w" sizes="180px" width="1706" height="1279" alt="" loading="lazy" decoding="async"></span>
+                <span class="nring__meta"><i class="nring__dot nring__dot--award"></i>2026-08-26 · <span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></span>
+                <span class="nring__title"><span class="t-en">Xian Wang receives NSFC Young Scientists Fund (Category C)</span><span class="t-zh" lang="zh-CN">王显获青年科学基金项目（C 类）资助</span></span>
+              </a>
+              <span class="nring__back" aria-hidden="true"><b>2026</b><span><span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></span></span>
+            </li><li class="nring__card nring__card--award" style="--i:10" data-card>
+              <a class="nring__face" href="/news/2026-zhenwu-xu-nsfc-category-c.html" >
+                <span class="nring__fig"><img class="" src="/media/a41f260ea75d6adf-800.webp" srcset="/media/a41f260ea75d6adf-240.webp 240w, /media/a41f260ea75d6adf-480.webp 480w, /media/a41f260ea75d6adf-800.webp 800w" sizes="180px" width="1795" height="1737" alt="" loading="lazy" decoding="async"></span>
+                <span class="nring__meta"><i class="nring__dot nring__dot--award"></i>2026-08-26 · <span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></span>
+                <span class="nring__title"><span class="t-en">Zhenwu Xu receives NSFC Young Scientists Fund (Category C)</span><span class="t-zh" lang="zh-CN">许振武获青年科学基金项目（C 类）资助</span></span>
+              </a>
+              <span class="nring__back" aria-hidden="true"><b>2026</b><span><span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></span></span>
+            </li><li class="nring__card nring__card--news" style="--i:11" data-card>
+              <a class="nring__face" href="/news/2026-xuanze-zhang-afm-editor.html" >
+                <span class="nring__fig"><img class="" src="/media/a9ca943b67cc0e7c-358.webp" srcset="/media/a9ca943b67cc0e7c-240.webp 240w, /media/a9ca943b67cc0e7c-358.webp 358w" sizes="180px" width="358" height="441" alt="" loading="lazy" decoding="async"></span>
+                <span class="nring__meta"><i class="nring__dot nring__dot--news"></i>2026-07-04 · <span class="t-en">News</span><span class="t-zh" lang="zh-CN">新闻</span></span>
+                <span class="nring__title"><span class="t-en">Xuanze Zhang appointed Editor of Agricultural and Forest Meteorology</span><span class="t-zh" lang="zh-CN">张选泽担任 Agricultural and Forest Meteorology 编辑</span></span>
+              </a>
+              <span class="nring__back" aria-hidden="true"><b>2026</b><span><span class="t-en">News</span><span class="t-zh" lang="zh-CN">新闻</span></span></span>
+            </li>
+        </ol>
+      </div>
+    </div>
+    <figcaption class="nring__key">
+      <div class="nring__now">
+        <p class="meta" data-now-meta><i class="nring__dot nring__dot--award"></i>2026-10-27 · <span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></p>
+        <a class="nring__headline" data-now-title href="/news/2026-ai4climate-best-climate-solution.html" ><span class="t-en">CAS-Canglong wins the AI4Climate 2026 Best Climate Solution Award</span><span class="t-zh" lang="zh-CN">中科苍龙获 AI4Climate 2026 最佳气候解决方案奖</span></a>
+      </div>
+      <div class="nring__tools">
+        <button class="nring__turn" type="button" data-turn="-1" aria-label="Newer item"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4.5 7 10l5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <span class="nring__count" data-now-count>1 / 12</span>
+        <button class="nring__turn" type="button" data-turn="1" aria-label="Older item"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <button class="pause" type="button" data-pause aria-pressed="false" aria-label="Pause the animation" title="Pause or resume" hidden><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3 1.5h2v9H3zM7 1.5h2v9H7z"/></svg></button>
+      </div>
+      <p class="nring__legend"><span><i class="nring__dot nring__dot--news"></i><span class="t-en">News</span><span class="t-zh" lang="zh-CN">新闻</span></span><span><i class="nring__dot nring__dot--publication"></i><span class="t-en">Publication</span><span class="t-zh" lang="zh-CN">论文</span></span><span><i class="nring__dot nring__dot--award"></i><span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></span><span><i class="nring__dot nring__dot--event"></i><span class="t-en">Event</span><span class="t-zh" lang="zh-CN">活动</span></span></p>
+    </figcaption>
   </figure>
     </div>
   </header>
@@ -139,7 +251,7 @@
                   <span>
                     <span class="meta">2026-08-26 · <span class="t-en">Honour</span><span class="t-zh" lang="zh-CN">荣誉</span></span>
                     <span class="newslist__title"><span class="t-en">Ning Ma receives NSFC Young Scientists Fund (Category B)</span><span class="t-zh" lang="zh-CN">马宁获青年科学基金项目（B 类）资助</span></span>
-                    <span class="newslist__summary"><span class="t-en">The 2026 award supports a researcher working on hydrological processes.</span><span class="t-zh" lang="zh-CN">2026 年获青年科学基金项目（B 类）资助，研究聚焦蒸散发过程与机理、陆面过程观测与模拟、生态水文和遥感水文。</span></span>
+                    <span class="newslist__summary"><span class="t-en">The 2026 award (Category B, formerly the Excellent Young Scientists Fund) supports a researcher working on hydrological processes.</span><span class="t-zh" lang="zh-CN">2026 年获国家自然科学基金青年科学基金项目（B 类，原优秀青年科学基金项目）资助，研究聚焦蒸散发过程与机理、陆面过程观测与模拟、生态水文和遥感水文。</span></span>
                   </span>
                 </a>
               </li><li>
@@ -297,7 +409,7 @@
     </div>
     <div class="wrap footer__legal">
       <span>© 2026 <span class="t-en">Large Scale Hydrology Group</span><span class="t-zh" lang="zh-CN">大尺度水文学团队</span></span>
-      <span><span class="t-en">Content updated</span><span class="t-zh" lang="zh-CN">内容更新于</span> 2026-11-02</span>
+      <span><span class="t-en">Content updated</span><span class="t-zh" lang="zh-CN">内容更新于</span> 2026-11-04</span>
     </div>
     </div>
   </footer>

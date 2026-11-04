@@ -41,7 +41,7 @@ const BLOCKS = [
   '.theme > h2',
   '.project > *',
   '.dataset > *',
-  '.group > h2',
+  '.group__heading',
   '.collab',
 ].join(', ');
 

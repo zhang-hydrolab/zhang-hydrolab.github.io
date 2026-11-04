@@ -95,7 +95,7 @@ for (const page of pages) {
   for (const [canvas] of source.matchAll(/<canvas\b[^>]*>/g)) {
     if (!canvas.includes('aria-hidden="true"')) problems.push(`${name}: canvas not hidden from screen readers`);
   }
-  for (const [, module] of source.matchAll(/data-module="(earth|block|watercycle|collabglobe)"/g)) {
+  for (const [, module] of source.matchAll(/data-module="(earth|block|watercycle|theme|etglobe)"/g)) {
     if (!/-still\.webp/.test(source)) problems.push(`${name}: ${module} has no still image`);
   }
 }

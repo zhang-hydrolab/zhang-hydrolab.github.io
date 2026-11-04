@@ -108,10 +108,35 @@
   height: 18px;
 }
 
-.tool--text {
-  padding: 0 10px;
-  font-size: 15px;
+/* The language switch. The current language is read from <html>, so it is right before any script runs. */
+.langswitch {
+  display: inline-flex;
+  height: 36px;
+  border: 1px solid var(--rule-2);
+}
+
+.langswitch button {
+  min-width: 44px;
+  padding: 0 9px;
+  color: var(--ink-2);
+  font-size: 14.5px;
+  font-weight: 600;
   white-space: nowrap;
+}
+
+.langswitch button + button {
+  border-left: 1px solid var(--rule-2);
+}
+
+.langswitch button:hover {
+  color: var(--blue);
+}
+
+html:not([data-lang='zh']) .langswitch [data-lang-set='en'],
+html[data-lang='zh'] .langswitch [data-lang-set='zh'] {
+  background: var(--blue);
+  color: var(--paper);
+  cursor: default;
 }
 
 .tool--menu {
@@ -211,7 +236,8 @@
   gap: 24px clamp(28px, 4.5vw, 64px);
 }
 
-.sec__head h2 {
+.sec__head h2,
+.sec__head .h2 {
   margin-bottom: 12px;
   font-size: clamp(25px, 2.5vw, 30px);
 }
@@ -671,4 +697,585 @@ html[data-lang='zh'] .pagehead__lead {
 
 .toast.is-on {
   visibility: visible;
+}
+
+/* Journal labels. The journal leads each entry; its metrics sit beside it as small graphics. */
+.pub__journal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin-bottom: 8px;
+}
+
+.jname {
+  color: var(--blue-dark);
+  font-family: var(--serif);
+  font-size: 17.5px;
+  font-style: italic;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+/* Flagship journals carry their name on a band of soft blue, ruled on the left. */
+.pub--flag .jname {
+  padding: 1px 10px 2px;
+  border-left: 3px solid var(--bright);
+  background: var(--soft);
+  color: var(--blue-dark);
+}
+
+.jm-row {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.jm {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 24px;
+  padding: 0 8px;
+  border: 1px solid #c9dbea;
+  border-radius: 3px;
+  background: #f3f8fc;
+  color: var(--blue-dark);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+html[data-lang='zh'] .jm {
+  font-size: 12.5px;
+}
+
+.jm__k {
+  color: var(--ink-3);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+}
+
+/* Impact factor as a short logarithmic meter. */
+.jm__meter {
+  position: relative;
+  width: 40px;
+  height: 5px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #d9e6f1;
+}
+
+.jm__meter::after {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: calc(var(--f, 0) * 100%);
+  border-radius: 3px;
+  background: linear-gradient(90deg, #6da4d0, var(--blue));
+}
+
+/* CAS quartile as four rising bars: Q1 lights all four. */
+.jm__bars {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 12px;
+}
+
+.jm__bars i {
+  width: 3px;
+  border-radius: 1px;
+  background: #c9d6e2;
+}
+
+.jm__bars i:nth-child(1) { height: 5px; }
+.jm__bars i:nth-child(2) { height: 7px; }
+.jm__bars i:nth-child(3) { height: 9.5px; }
+.jm__bars i:nth-child(4) { height: 12px; }
+
+.jm__bars i.on {
+  background: var(--blue);
+}
+
+.jm--q1 {
+  border-color: #8dbbe2;
+  background: var(--soft);
+  color: var(--blue);
+}
+
+.jm--q1 .jm__bars i.on {
+  background: var(--bright);
+}
+
+.jm--q2 {
+  background: #e4eef7;
+}
+
+.jm--q3,
+.jm--q4 {
+  border-color: var(--rule-2);
+  background: var(--paper);
+  color: var(--ink-2);
+}
+
+.jm__top {
+  padding: 3px 5px 2px;
+  border-radius: 2px;
+  background: var(--bright);
+  color: var(--paper);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+}
+
+.jm--note {
+  border-color: var(--rule);
+  background: var(--paper-2);
+  color: var(--ink-3);
+  font-weight: 400;
+  white-space: normal;
+}
+
+.pub__authors .au-m {
+  color: var(--ink);
+  text-decoration: underline dotted #6da4d0;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+
+/* Summary figures and the badge key above the list. */
+.pubsummary {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 20px clamp(24px, 4vw, 48px);
+  align-items: stretch;
+  padding-top: 28px;
+}
+
+.pubstats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+  border-top: 3px solid var(--blue);
+}
+
+.pubstats > div {
+  padding: 16px 16px 14px 0;
+}
+
+.pubstats > div + div {
+  padding-left: 16px;
+  border-left: 1px solid var(--rule);
+}
+
+.pubstats dd {
+  margin: 0;
+  color: var(--blue-dark);
+  font-family: var(--serif);
+  font-size: clamp(30px, 3vw, 40px);
+  line-height: 1.1;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.pubstats dt {
+  margin-top: 4px;
+  color: var(--ink-3);
+  font-size: 14.5px;
+  line-height: 1.35;
+}
+
+.badgekey {
+  padding: 14px 16px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: #f7fafc;
+  font-size: 14px;
+}
+
+.badgekey ul {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 8px 12px;
+  align-items: center;
+  color: var(--ink-2);
+}
+
+/* The sample IF and CAS badges share one cell; their two notes stack beside it. */
+.badgekey li:first-child {
+  grid-row: span 2;
+  display: grid;
+  gap: 6px;
+  justify-items: start;
+}
+
+.badgekey__src {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-3);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1000px) {
+  .pubsummary {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .pubstats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pubstats > div:nth-child(3) {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .pubstats > div:nth-child(n + 3) {
+    border-top: 1px solid var(--rule);
+  }
+}
+
+.tag--key[aria-pressed='true'] {
+  border-color: var(--blue-dark);
+  background: var(--blue-dark);
+  color: var(--paper);
+}
+
+/* Flagship papers lead the list, set apart by a tinted band. */
+.year--flag {
+  margin-top: 28px;
+  padding: 24px 20px;
+  border: 1px solid #d3e2ef;
+  border-top: 3px solid var(--blue);
+  background: linear-gradient(180deg, #f2f7fc, #fff 320px);
+}
+
+.year--flag h2 {
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.year__sub {
+  display: block;
+  margin-top: 6px;
+  color: var(--ink-3);
+  font-family: var(--sans);
+  font-size: 13.5px;
+  font-weight: 400;
+}
+
+.year--flag .pub {
+  border-top-color: #dbe6f0;
+}
+
+/* ---------- Representative achievements (home) ---------- */
+.feat__head {
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 8px 28px;
+  margin-bottom: 28px;
+}
+
+.feat__head h2 {
+  font-size: clamp(25px, 2.5vw, 30px);
+}
+
+.feat__head .note {
+  margin: 0;
+}
+
+.feat__lead {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: 20px clamp(24px, 3.5vw, 48px);
+  align-items: center;
+  padding: clamp(18px, 2.4vw, 30px);
+  border: 1px solid #d3e2ef;
+  border-top: 3px solid var(--blue);
+  background: linear-gradient(180deg, #f2f7fc, var(--paper) 70%);
+}
+
+.feat__lead .fig {
+  margin: 0;
+}
+
+.feat__lead .fig__zoom {
+  background: var(--paper);
+}
+
+.feat__journal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin: 0 0 8px;
+}
+
+.feat__journal .jname {
+  font-size: 19px;
+}
+
+.feat__lead .feat__journal .jname {
+  font-size: 23px;
+}
+
+.feat__title {
+  margin: 12px 0 10px;
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+.feat__lead .feat__title {
+  font-size: clamp(21px, 2vw, 26px);
+}
+
+.feat__title a:hover {
+  color: var(--blue);
+}
+
+.feat__finding {
+  margin: 0 0 12px;
+  color: var(--ink-2);
+  font-size: 16px;
+}
+
+.feat__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin: 0;
+  font-size: 15px;
+}
+
+.feat__grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 26px);
+  margin: clamp(16px, 2vw, 26px) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Three to a row; a last row of two shares the width. */
+.feat__card {
+  grid-column: span 2;
+}
+
+.feat__card:nth-child(3n + 1):nth-last-child(2),
+.feat__card:nth-child(3n + 2):last-child {
+  grid-column: span 3;
+}
+
+.feat__lead .feat__figure .fig img {
+  width: 100%;
+  height: auto;
+}
+
+.feat__card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 18px 18px;
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--blue-tint);
+  background: var(--paper);
+  transition: border-color 0.2s, box-shadow 0.25s;
+}
+
+.feat__card:hover {
+  border-color: #b9d0e5;
+  border-top-color: var(--blue);
+  box-shadow: 0 16px 30px -24px rgb(10 53 89 / 45%);
+}
+
+.feat__card .feat__links {
+  margin-top: auto;
+}
+
+/* The whole figure shows in a fixed box: contained, never cropped. */
+.feat__thumb {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  margin-bottom: 14px;
+  padding: 6px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  cursor: zoom-in;
+}
+
+.feat__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.feat__thumb--type {
+  align-content: center;
+  gap: 4px;
+  border-color: #c9dbea;
+  background: linear-gradient(160deg, #f2f7fc, #dbe8f4);
+  color: var(--blue-dark);
+  cursor: default;
+}
+
+.feat__thumb--type span:first-child {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 650;
+}
+
+.feat__thumb--type span:last-child {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 1000px) {
+  .feat__head {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .feat__head .note {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .feat__lead {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .feat__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .feat__card,
+  .feat__card:nth-child(3n + 1):nth-last-child(2),
+  .feat__card:nth-child(3n + 2):last-child {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .feat__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---------- Featured research (home) ---------- */
+/* The study under its journal's name, set in type, then the water budget it measured. */
+.spot {
+  margin-top: var(--section);
+  border-top: 1px solid var(--sky-rule);
+  background: linear-gradient(180deg, var(--soft) 0%, #fff 340px);
+}
+
+.spot > .wrap {
+  padding-block: clamp(36px, 5vw, 64px) 0;
+}
+
+.spot__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  gap: 28px clamp(28px, 4.5vw, 64px);
+  align-items: start;
+}
+
+.spot__kicker {
+  margin-bottom: 18px;
+}
+
+.masthead {
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--ink);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(40px, 5.4vw, 66px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.masthead b {
+  font-weight: 700;
+}
+
+.masthead__issue {
+  margin: 8px 0 22px;
+  letter-spacing: 0.04em;
+}
+
+.spot__title {
+  margin-bottom: 10px;
+  font-size: clamp(24px, 2.5vw, 32px);
+  line-height: 1.22;
+}
+
+.spot__title a:hover {
+  color: var(--blue);
+}
+
+.spot__authors {
+  margin-bottom: 14px;
+  color: var(--ink-2);
+  font-size: 15.5px;
+}
+
+.spot__finding {
+  max-width: 60ch;
+  margin-bottom: 14px;
+  padding-left: 14px;
+  border-left: 3px solid var(--bright);
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.spot__doi {
+  margin: 12px 0 0;
+}
+
+.spot__figure .fig {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid var(--sky-rule);
+  background: #fff;
+}
+
+.spot__figure .fig img {
+  width: 100%;
+  height: auto;
+}
+
+/* The explorer below continues the section without a rule of its own. */
+.spot .sec--budget {
+  margin-top: 0;
+}
+
+.spot .sec--budget > .wrap::before {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .spot__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.feat__links .link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.feat__links .arrow {
+  width: 14px;
+  height: 14px;
 }

@@ -11,3 +11,6 @@ frontend/.cache/
 
 # Local database and private files. Rebuilt from backend/content/ when missing.
 backend/var/
+
+# Python bytecode from the build tools
+__pycache__/

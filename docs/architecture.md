@@ -82,7 +82,16 @@ are unreliable from mainland China. Source Serif 4 and Source Sans 3 are self-ho
 uses system fonts, since a CJK webfont would add megabytes. The build needs only esbuild and sharp.
 
 Pages are complete HTML with both languages present. `html[data-lang]` picks one, so content works
-without JavaScript. Behaviour lives in `src/client/modules/`, one file for each `data-module` value.
+without JavaScript. The language is one choice for the whole site: a visit starts in English, and the
+EN / 中文 switch in the header, or `?lang=zh|en` in a link, sets a session cookie `lab-lang` that an
+inline script reads before the page is drawn (`LANG_BOOT` in `src/views/layout.mjs`). Dialogs clone
+bilingual markup, so they follow the page. Other open tabs follow through a `BroadcastChannel`, and
+`document.title` switches with `data-title-en` / `data-title-zh` on `<html>`.
+
+`src/lib/scholarly.mjs` works out at build time what the publication list shows: journal metrics and
+flagship order from `site.journal_metrics`, group papers (two or more author slots matching current
+members or alumni, by family name and first initial, plus each person's `author_names`), and each
+collaborator's joint papers (by `author_name`). Behaviour lives in `src/client/modules/`, one file for each `data-module` value.
 A press that lands before its module has arrived is repeated once the module is running.
 `src/client/motion.js` runs on every page and handles scroll entrances.
 
@@ -97,44 +106,89 @@ of it honours `prefers-reduced-motion`.
 
 ### 3D views
 
-The Earth on the home page, the water-cycle block in the budget section, the terrain blocks in the
-page headers and the collaboration globe are raw WebGL2, with no library. `src/client/gl/core.js`
-holds the shared parts, `globe.js` and `terrain.js` the two scene types, and each view is a lazy
-module in `src/client/modules/`. The site's only continuous motion is here, and it follows these
-rules:
+The Earth on the home page, the contour band behind the group's figures, the research views, the
+water-cycle block in the budget section, the evapotranspiration globe on the data page and the
+terrain block on the research page are raw WebGL2, with no library. `src/client/gl/core.js` holds the
+shared parts, `globe.js` and `terrain.js` the two scene types, `drops.js` the rain and vapour, and
+each view is a lazy module in `src/client/modules/`:
 
-- Each view sits on a still image of itself, `<name>-still.webp`. No JavaScript, no WebGL, a software
-  renderer, reduced motion and print all end on that image.
+| Module | Where | What moves |
+| --- | --- | --- |
+| `earth` | Home hero | The globe turns; rivers pulse downstream |
+| `contours` | Home metrics band | Contours of the 1 km relief drift east; offshore lines move seaward |
+| `theme` (`flow`) | Home card, research page | Hengduan Mountains: rain, rising vapour, river pulses |
+| `theme` (`flood`) | Home card, research page | Middle Yangtze in three acts: storm rain and lightning over the upper catchment; a water level over HAND rising to 24 m, with the share of land under water read from the same grid; a drought that dries the smaller streams first. A gauge near Shashi shows the level against flood and low-flow warning lines |
+| `theme` (`scan`) | Home card, research page | Loess Plateau in three acts: a satellite reveals PML-V2.2 ET cell by cell; a neural network takes in values from the map; its forecast runs down the rivers |
+| `watercycle` | Home, featured research | The budget's rain and vapour, scaled to the period shown |
+| `etglobe` | Data page head | PML-V2.2 ET month by month on a turning globe |
+| `pubring` | Publications page head | SVG: an arm turns round every paper and names it |
+| `newsring` | News page head | CSS 3D: the latest twelve items as cards on a ring over a dial of water; it turns one card at a time and names the card in front |
+
+`terrain.js` draws rivers with pulses of light water that travel towards the mouth, at a spacing of
+about a seventh of the block. A view can draw over the ground with `scene.ground(program)`, which
+redraws the same mesh; the flood and scan layers use it. In its `before` pass a view can set
+`state.dry`, which dries the land towards pale sand and removes streams from the smallest up, and
+`state.boost`, which brightens the river pulses. The research views draw their gauge, clouds,
+lightning, satellite and network on a second, 2D canvas (`tv__overlay`), placed with
+`scene.project`; their numbered acts are HTML, so they follow the language switch. The SVG views
+and the news ring are complete without scripts; their modules only animate them.
+
+The site's only continuous motion is in these views, and it follows these rules:
+
+- Each WebGL view sits on a still image of itself, `<name>-still.webp` (the contour band, being
+  decoration, sits on its gradient). No JavaScript, no WebGL, a software renderer, reduced motion
+  and print all end on that image. The SVG views are their own still.
 - The loop runs only while the view is on screen, the tab is visible and it is not paused. Every view
   has a pause button.
 - A view starts when it comes within 500 px of the window, and resolution steps down if frames run
   slow. A machine that is still too slow at the lowest setting rests on the current frame.
-- Scenes are drawn in white and blue. No view hides or recolours a photograph or a figure.
+- Scenes are drawn in white and blue. Red and amber mark only the gauge's warning lines, and pale
+  sand only a drought. No view hides or recolours a photograph or a figure; the news ring turns its
+  cards but never fades them, and shows each cover whole.
 
-Everything drawn is measured or computed. Stills are made by `frontend/tools/render_stills.py`,
+Everything drawn is measured or computed, or the caption says it is an illustration: rain, the
+flood stage, the drought, the satellite, the network and the forecast are. Stills are made by `frontend/tools/render_stills.py`,
 which needs the preview server running and Playwright with Edge. The data comes from
 `frontend/tools/build_earth.py`:
 
 | File in `src/public/earth/` | Source |
 | --- | --- |
-| `relief.webp` | Land elevation from a 1 km DEM, sea shade from distance to the coast |
-| `rivers.bin` | Least-cost routing at 0.1°, with Natural Earth 50 m rivers burned in; size is P − ET accumulated downstream |
+| `relief.webp` | Land elevation from a 1 km DEM, Antarctica from GEBCO 2023, sea shade from distance to the coast |
+| `rivers.bin` | Priority-flood routing at 0.1° over the filled 1 km DEM; size is P − ET accumulated downstream |
 | `<scene>.webp`, `<scene>.bin` | Elevation and routed rivers for one region, routed past its edges and cut there |
+| `gorges-hand.webp` | Height above the nearest drainage (Nobre et al., 2011) for the flood view, as √(HAND / 120 m) |
+| `loess-et.webp` | PML-V2.2 mean ET, 2001–2020, on 0.1° cells, for the scan view, as ET / 900 mm |
+| `et-months.webp` | PML-V2.2 mean ET of each calendar month, 2001–2020, at 0.5°, four maps across and three down |
 | `layer-*.webp` | The inputs on the home page: DEM, CRU TS 4.09 precipitation, PML-V2.2 ET, river flow |
 
-Precipitation and ET are 2001–2020 means. PML-V2.2 file names for 1980, 1981 and 2025 repeat other
-years, so the script selects by the time axis. Terminal basins are a curated list, `CLOSED_BASINS`,
-because pit detection also finds false ones on the main stems.
+Precipitation (CRU TS 4.09) and ET (PML-V2.2c, the official copy under
+`M:/Public/Public/Data/Global/PML-V2.2/V2.2c`) are 2001–2020 means. PML-V2.2 file names for 1980,
+1981 and 2025 repeat other years, so the script selects by the time axis. Terminal basins are a
+curated list, `CLOSED_BASINS`, because pit detection also finds false ones on the main stems.
+
+No coastline, lake or river dataset is used. Land and sea come from the DEM: the sea is where it has
+no value, which inland is only the Caspian, and large lakes are their surface. Taking the lowest 1 km
+cell of each 0.1° cell closes narrow gorges, such as the lower Congo and the Danube's Iron Gates,
+because the channel zig-zags between coarse cells. So the 1 km DEM is first filled with a priority
+flood (Barnes et al., 2014; `priority_fill`), and only then reduced to the lowest cell of each block
+(`routing_surface`). Every cell then has a path to the sea that never climbs, and the network follows
+the real valleys.
 
 River size is an estimate, not gauged discharge, and the page says so. Global P − ET comes to
-44.5 × 10³ km³/yr, against 39.1 ± 5.4 in the group's own budget. Mouth flows are close for the Congo,
-Yangtze, Yenisei, Mekong and Danube, and low for the Amazon and Lena. The Nile is far too high (541
-against about 40 km³/yr), since channel losses and abstraction are not modelled. The Ob mouth lookup
-returns 17 km³/yr against about 410. The lookup box probably misses the estuary, but this has not
-been checked.
+46.5 × 10³ km³/yr, against 39.1 ± 5.4 in the group's own budget. Mouth flows against published
+values, km³/yr: Congo 1386 / 1300, Danube 243 / 210, Yangtze 933 / 900, Yenisei 623 / 620, Orinoco
+1050 / 1100. They are low for the Amazon (5324 / 6600), Ganges–Brahmaputra (781 / 1100), Lena
+(363 / 530) and Mekong (337 / 470), and high for the Paraná (1077 / 570), Mississippi (800 / 610) and
+Ob (557 / 410). The Nile is far too high (541 against about 40), since P − ET is clipped at zero, so
+evaporation from the Sudd and the reservoirs, channel losses and abstraction are not subtracted.
 
-Natural Earth is public domain. CRU TS is credited with Harris et al. (2020, Sci. Data 7, 109) in
-the figure caption on the home page. The inputs are large and local, so the outputs are committed;
+The collaboration map is flat and static: an Equal Earth projection centred on 150° E
+(`src/lib/equal-earth.mjs`), so that every line from Beijing stays inside the frame. Land is Natural
+Earth 1:110 m, cut at 30° W by `frontend/tools/build_worldmap.py` into `src/data/land.json`.
+Coastlines only; the map draws no country borders.
+
+Natural Earth, public domain, is used only for the collaboration map. CRU TS is credited with Harris
+et al. (2020, Sci. Data 7, 109) in the figure caption on the home page. The inputs are large and local, so the outputs are committed;
 rerun the scripts only to change them.
 
 Images always show their true colours. CSS filters and blend modes are not used on anything, and

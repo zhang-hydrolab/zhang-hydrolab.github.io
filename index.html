@@ -1,4 +1,4 @@
-<!doctype html><html lang="en" data-lang="en">
+<!doctype html><html lang="en" data-lang="en" data-title-en="Large Scale Hydrology Group · IGSNRR, CAS" data-title-zh="大尺度水文学团队 · 中国科学院地理科学与资源研究所">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,10 +13,10 @@
 <meta property="og:url" content="https://zhang-hydrolab.github.io/">
 <meta property="og:image" content="https://zhang-hydrolab.github.io/media/e40a2308e73d60dd-2400.webp">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<script>(function(){var d=document.documentElement;d.classList.add('js');try{var l=sessionStorage.getItem('lab-lang');if(l==='zh'){d.dataset.lang='zh';d.lang='zh-CN'}}catch(e){}})();</script>
+<script>(function(){var d=document.documentElement,l=null;d.classList.add('js');try{l=new URLSearchParams(location.search).get('lang')}catch(e){}if(l!=='zh'&&l!=='en'){var m=document.cookie.match(/(?:^|; )lab-lang=(zh|en)/);l=m?m[1]:null}if(!l){try{l=sessionStorage.getItem('lab-lang')}catch(e){}}if(l==='zh'||l==='en'){document.cookie='lab-lang='+l+'; path=/; SameSite=Lax';try{sessionStorage.setItem('lab-lang',l)}catch(e){}}if(l==='zh'){d.dataset.lang='zh';d.lang='zh-CN';if(d.dataset.titleZh)document.title=d.dataset.titleZh}})();</script>
 <link rel="preload" href="/assets/fonts/source-serif-4-latin-wght-normal-EUO3YR6J.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/source-sans-3-latin-wght-normal-ILI3Y2TR.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style-62GKUPI4.css">
-<script type="module" src="/assets/main-IPNGBZNL.js"></script>
+<link rel="stylesheet" href="/assets/style-GCNGNJTV.css">
+<script type="module" src="/assets/main-QB4ZHOO5.js"></script>
 </head>
 <body id="top" data-page="home">
 <a class="skip" href="#main">Skip to content</a>
@@ -34,7 +34,10 @@
       </nav>
       <div class="nav__tools">
         <button class="tool" type="button" data-search-open aria-label="Search the site" title="Search (Ctrl K)"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m14 14 4 4" stroke="currentColor" stroke-width="1.5"/></svg></button>
-        <button class="tool tool--text" type="button" data-lang-toggle aria-label="Switch language: English or Chinese"><span class="t-en">中文</span><span class="t-zh">English</span></button>
+        <div class="langswitch" role="group" aria-label="Language / 语言">
+          <button type="button" data-lang-set="en" lang="en" aria-pressed="true" title="English">EN</button>
+          <button type="button" data-lang-set="zh" lang="zh-CN" aria-pressed="false" title="中文">中文</button>
+        </div>
         <button class="tool tool--menu" type="button" data-menu-open aria-label="Open menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.5"/></svg></button>
       </div>
     </div>
@@ -82,20 +85,22 @@
       </header>
       <div class="sec__body"><div class="about">
       <div class="about__text">
-        <p class="t-en" >The team led by Professor Zhang comprises professors, associate professors, postdoc fellows, doctoral candidates, and master&#39;s students, totaling about 30 members. Students in the team are primarily recruited from leading universities such as Tsinghua University, Beijing Normal University, Northwest A&amp;F University, and Hohai University. The team actively collaborates with top researchers both in China and abroad and has established long-term academic partnerships with internationally renowned institutions, including Ghent University, Vienna University of Technology, Pacific Northwest National Laboratory in the United States, and the Commonwealth Scientific and Industrial Research Organisation (CSIRO) in Australia.</p><p class="t-en" >Under Professor Zhang&#39;s supervision, students and young researchers from both China and abroad have thrived in a dynamic, interdisciplinary research environment. Domestically, team members regularly present at major national conferences and have received numerous awards for young scientists. International students and visiting scholars contribute diverse perspectives, with many going on to secure positions at leading global institutions. This cultivation of next-generation talent underscores the team&#39;s lasting impact on the hydrological sciences worldwide.</p>
-        <p class="t-zh" lang="zh-CN">张永强研究员领导的团队由教授、副教授、博士后、博士研究生和硕士研究生组成，共有约30名成员。团队学生主要来自清华大学、北京师范大学、西北农林科技大学和河海大学等国内一流大学。团队积极与国内外顶尖研究人员合作，并与国际知名机构建立了长期学术合作关系，包括根特大学、维也纳工业大学、美国西北太平洋国家实验室和澳大利亚联邦科学与工业研究组织（CSIRO）。</p><p class="t-zh" lang="zh-CN">在张永强研究员的指导下，来自中国和国外的学生和青年研究人员在一个充满活力的跨学科研究环境中茁壮成长。在国内，团队成员定期在主要的全国性会议上发表演讲，并获得了众多青年科学家奖项。国际学生和访问学者贡献了多元化的视角，许多人随后在全球领先机构获得了职位。这种对下一代人才的培养凸显了该团队对全球水文科学的持久影响。</p>
+        <p class="t-en" >The team led by Professor Zhang comprises professors, associate professors, postdoc fellows, doctoral candidates, and master&#39;s students, totaling about 30 members. Students in the team come mainly from top-tier Chinese universities, including Tsinghua University, the University of Science and Technology of China, Beijing Normal University, and Hohai University. The team actively collaborates with top researchers both in China and abroad and has established long-term academic partnerships with internationally renowned institutions, including Ghent University, Vienna University of Technology, Pacific Northwest National Laboratory in the United States, and the Commonwealth Scientific and Industrial Research Organisation (CSIRO) in Australia.</p><p class="t-en" >Under Professor Zhang&#39;s supervision, students and young researchers from both China and abroad have thrived in a dynamic, interdisciplinary research environment. Domestically, team members regularly present at major national conferences and have received numerous awards for young scientists. International students and visiting scholars contribute diverse perspectives, with many going on to secure positions at leading global institutions. This cultivation of next-generation talent underscores the team&#39;s lasting impact on the hydrological sciences worldwide.</p>
+        <p class="t-zh" lang="zh-CN">张永强研究员领导的团队由教授、副教授、博士后、博士研究生和硕士研究生组成，共有约30名成员。团队学生主要来自清华大学、中国科学技术大学、北京师范大学和河海大学等国内一流高校。团队积极与国内外顶尖研究人员合作，并与国际知名机构建立了长期学术合作关系，包括根特大学、维也纳工业大学、美国西北太平洋国家实验室和澳大利亚联邦科学与工业研究组织（CSIRO）。</p><p class="t-zh" lang="zh-CN">在张永强研究员的指导下，来自中国和国外的学生和青年研究人员在一个充满活力的跨学科研究环境中茁壮成长。在国内，团队成员定期在主要的全国性会议上发表演讲，并获得了众多青年科学家奖项。国际学生和访问学者贡献了多元化的视角，许多人随后在全球领先机构获得了职位。这种对下一代人才的培养凸显了该团队对全球水文科学的持久影响。</p>
       </div>
       <figure class="about__photo"><img class="" src="/media/e40a2308e73d60dd-2400.webp" srcset="/media/e40a2308e73d60dd-800.webp 800w, /media/e40a2308e73d60dd-1600.webp 1600w, /media/e40a2308e73d60dd-2400.webp 2400w" sizes="(max-width: 1000px) 100vw, 420px" width="5712" height="3213" alt="A wide river valley beneath mountains" loading="lazy" decoding="async"></figure>
       <details class="about__more">
         <summary><span class="t-en">About the Principal Investigator</span><span class="t-zh" lang="zh-CN">团队负责人简介</span></summary>
-        <p class="t-en" >Dr. Yongqiang Zhang is a Distinguished Professor in Hydrology and Water Resources at the Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences. He is a Non-European Fellow of the European Academy of Sciences (elected 2026) and also serves as the Deputy Director of the Key Laboratory of Land Water Cycle and Surface Processes. Professor Zhang is a Fellow of the Modelling and Simulation Society of Australia and New Zealand and a Fellow of the Alexander von Humboldt Foundation in Germany. He currently holds leadership roles as the Director of the Hydro-Geography Committee of the Geographical Society of China and chairs the Hydrometeorology Stream of the Modelling and Simulation Society of Australia and New Zealand. In addition, Professor Zhang serves on the editorial boards of five major international journals, including Journal of Geophysical Research: Atmospheres, Journal of Hydrology, and Remote Sensing of Environment. Over the past five years, he has led seven key research projects, including grants from the National Key Research and Development Program, a key project of the National Natural Science Foundation, and the Talent Program of the Chinese Academy of Sciences. In 2026, he received the AGU Joanne Simpson Medal and became an AGU Fellow.</p><p class="t-en" >Professor Zhang has devoted his career to large scale hydrology, with a special focus on evapotranspiration mechanisms and their eco-hydrological effects. He has published 260 papers in peer-reviewed journals, including prestigious titles such as Science, Nature Water, and Nature Communications. In the past five years alone, he has authored or co-authored 70 papers as first or corresponding author in top-tier journals. His research has been cited more than 24,000 times, and he has an H-index of 75. His most cited first-authored paper has accumulated over 700 citations. In addition, Professor Zhang has ten ESI Highly Cited Papers and has been recognized as an Elsevier Highly Cited Chinese Researcher for five consecutive years.</p>
-        <p class="t-zh" lang="zh-CN">张永强研究员是中国科学院地理科学与资源研究所水文与水资源学科的二级研究员，欧洲科学院外籍院士（2026 年当选），同时担任陆地水循环及地表过程重点实验室副主任。张永强研究员是澳大利亚和新西兰模型模拟学会会士，德国洪堡基金会学者。他目前担任中国地理学会水文地理专业委员会主任，以及澳大利亚和新西兰模型模拟学会水文气象部主席。此外，张永强研究员还担任五个主要国际期刊的编委，包括Journal of Geophysical Research: Atmospheres、Journal of Hydrology和Remote Sensing of Environment。在过去五年中，他主持了七个重点科研项目，包括国家重点研发计划、国家自然科学基金重点项目和中国科学院人才计划等。2026 年，张永强研究员荣获 AGU Joanne Simpson 奖章并当选 AGU 会士。</p><p class="t-zh" lang="zh-CN">张永强研究员致力于大尺度水文学研究，特别关注蒸散发机制及其生态水文效应。他在同行评审期刊上发表了260篇论文，包括Science、Nature Water和Nature Communications等著名期刊。仅在过去五年，他就以第一作者或通讯作者身份在顶级期刊发表了70篇论文。他的研究已被引用超过24,000次，H指数为75。他的被引次数最多的第一作者论文累计引用超过700次。此外，张永强研究员拥有10篇ESI高被引论文，并连续五年被评为爱思唯尔中国高被引学者。</p>
+        <ul class="honours "><li><span class="t-en">Senior Research Fellow (Grade II), Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences</span><span class="t-zh" lang="zh-CN">中国科学院地理科学与资源研究所二级研究员</span></li><li><span class="t-en">Foreign Member of the European Academy of Sciences</span><span class="t-zh" lang="zh-CN">欧洲科学院外籍院士</span></li><li><span class="t-en">National Leading Talent in Scientific and Technological Innovation</span><span class="t-zh" lang="zh-CN">国家科技创新领军人才</span></li><li><span class="t-en">Chair of the Hydrological Geography Professional Committee, Geographical Society of China</span><span class="t-zh" lang="zh-CN">中国地理学会水文地理专业委员会主任</span></li><li><span class="t-en">Fellow of the Modelling and Simulation Society of Australia and New Zealand</span><span class="t-zh" lang="zh-CN">澳大利亚和新西兰模型模拟学会会士</span></li><li><span class="t-en">Head of the Hydrometeorology Division, International Modelling and Simulation Society</span><span class="t-zh" lang="zh-CN">国际模型模拟学会水文气象部主席</span></li><li><span class="t-en">Alexander von Humboldt Fellow (Germany)</span><span class="t-zh" lang="zh-CN">德国洪堡学者</span></li><li><span class="t-en">Appointed Chinese Expert for the World Meteorological Organization</span><span class="t-zh" lang="zh-CN">世界气象组织聘任中国专家</span></li></ul>
+        <p class="t-en" >Dr. Yongqiang Zhang is a Senior Research Fellow (Grade II) in Hydrology and Water Resources at the Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences, and Deputy Director of the Key Laboratory of Land Water Cycle and Surface Processes. He is a Foreign Member of the European Academy of Sciences (elected 2026) and a National Leading Talent in Scientific and Technological Innovation. Professor Zhang is a Fellow of the Modelling and Simulation Society of Australia and New Zealand and an Alexander von Humboldt Fellow (Germany). He chairs the Hydrological Geography Professional Committee of the Geographical Society of China, heads the Hydrometeorology Division of the International Modelling and Simulation Society, and is an appointed Chinese expert for the World Meteorological Organization. In addition, Professor Zhang serves on the editorial boards of five major international journals, including Journal of Geophysical Research: Atmospheres, Journal of Hydrology, and Remote Sensing of Environment. Over the past five years, he has led seven key research projects, including grants from the National Key Research and Development Program, a key project of the National Natural Science Foundation, and the Talent Program of the Chinese Academy of Sciences. In 2026, he received the AGU Joanne Simpson Medal and became an AGU Fellow.</p><p class="t-en" >Professor Zhang has devoted his career to large scale hydrology, with a special focus on evapotranspiration mechanisms and their eco-hydrological effects. He has published 260 papers in peer-reviewed journals, including prestigious titles such as Science, Nature Water, and Nature Communications. In the past five years alone, he has authored or co-authored 70 papers as first or corresponding author in top-tier journals. His research has been cited more than 24,000 times, and he has an H-index of 75. His most cited first-authored paper has accumulated over 700 citations. In addition, Professor Zhang has ten ESI Highly Cited Papers and has been recognized as an Elsevier Highly Cited Chinese Researcher for five consecutive years.</p>
+        <p class="t-zh" lang="zh-CN">张永强研究员是中国科学院地理科学与资源研究所水文与水资源学科二级研究员，同时担任陆地水循环及地表过程重点实验室副主任。他是欧洲科学院外籍院士（2026 年当选）、国家科技创新领军人才、澳大利亚和新西兰模型模拟学会会士和德国洪堡学者，现任中国地理学会水文地理专业委员会主任、国际模型模拟学会水文气象部主席，并受聘为世界气象组织中国专家。此外，张永强研究员还担任五个主要国际期刊的编委，包括Journal of Geophysical Research: Atmospheres、Journal of Hydrology和Remote Sensing of Environment。在过去五年中，他主持了七个重点科研项目，包括国家重点研发计划、国家自然科学基金重点项目和中国科学院人才计划等。2026 年，张永强研究员荣获 AGU Joanne Simpson 奖章并当选 AGU 会士。</p><p class="t-zh" lang="zh-CN">张永强研究员致力于大尺度水文学研究，特别关注蒸散发机制及其生态水文效应。他在同行评审期刊上发表了260篇论文，包括Science、Nature Water和Nature Communications等著名期刊。仅在过去五年，他就以第一作者或通讯作者身份在顶级期刊发表了70篇论文。他的研究已被引用超过24,000次，H指数为75。他的被引次数最多的第一作者论文累计引用超过700次。此外，张永强研究员拥有10篇ESI高被引论文，并连续五年被评为爱思唯尔中国高被引学者。</p>
       </details>
     </div></div>
     </div>
   </section>
-    <section class="band" aria-label="Group metrics" data-module="swell">
-    <canvas class="band__sea" aria-hidden="true"></canvas>
+    <section class="band" aria-label="Group metrics" data-module="contours">
+    <canvas class="band__field" aria-hidden="true"></canvas>
+    <button class="pause" type="button" data-pause aria-pressed="false" aria-label="Pause the animation" title="Pause or resume" hidden><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3 1.5h2v9H3zM7 1.5h2v9H7z"/></svg></button>
     <div class="wrap">
       <dl class="metrics">
         <div>
@@ -173,34 +178,288 @@
       </header>
       <ol class="cards">
         <li class="card" data-tilt>
-            <a href="/research.html#water-cycle">
-              <img class="card__block" src="/earth/hengduan-still.webp" width="960" height="640" alt="" loading="lazy" decoding="async">
-              <h3><span class="t-en">Water Cycle and Ecohydrology</span><span class="t-zh" lang="zh-CN">水循环和生态水文</span></h3>
+            <figure class="tv card__block" data-module="theme" data-view="flow">
+    <div class="tv__stage">
+      <img class="tv__still" src="/earth/theme-flow-still.webp" width="960" height="640" alt="Terrain of the Hengduan Mountains with its river network, rain and rising vapour" loading="lazy" decoding="async">
+      <canvas class="tv__canvas" aria-hidden="true"></canvas>
+      
+      
+      <button class="pause" type="button" data-pause aria-pressed="false" aria-label="Pause the animation" title="Pause or resume" hidden><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3 1.5h2v9H3zM7 1.5h2v9H7z"/></svg></button>
+    </div>
+    
+    
+  </figure>
+            <div class="card__text">
+              <h3><a class="card__link" href="/research.html#water-cycle"><span class="t-en">Water Cycle and Ecohydrology</span><span class="t-zh" lang="zh-CN">水循环和生态水文</span></a></h3>
               <p><span class="t-en">The team investigates how global warming and human activities are altering fundamental water cycle processes. They seek to reconcile different data sources (like satellite, model (such as PML-V2 evapotranspiration and HBV-PML hydrological models), and ground observations) to better quantify these changes, asking critical questions such as why parts of the water cycle appear to be stagnating despite warming, and how human actions reshape water availability and ecosystem functions—like the roles of forests as “sponges” or “pumps”—at regional and global scales.</span><span class="t-zh" lang="zh-CN">团队研究全球变暖和人类活动如何改变水循环的基本过程，融合卫星、模型（如 PML-V2 蒸散发模型与 HBV-PML 水文模型）和地面观测以更好地量化这些变化，并回答关键问题：为何升温背景下部分水循环过程反而趋于停滞，人类活动又如何在区域和全球尺度上重塑水资源可用性和生态系统功能，例如森林究竟扮演“海绵”还是“水泵”的角色。</span></p>
-              <p class="meta">PML_v2 · HBV-PML</p>
-            </a>
+              <p class="meta"><span class="t-en">PML_v2 · HBV-PML</span><span class="t-zh" lang="zh-CN">PML_v2 蒸散发产品 · HBV-PML 模型</span></p>
+            </div>
           </li><li class="card" data-tilt>
-            <a href="/research.html#water-security">
-              <img class="card__block" src="/earth/gorges-still.webp" width="960" height="640" alt="" loading="lazy" decoding="async">
-              <h3><span class="t-en">Water-Related Disasters and Security</span><span class="t-zh" lang="zh-CN">水灾害和水安全</span></h3>
+            <figure class="tv card__block" data-module="theme" data-view="flood">
+    <div class="tv__stage">
+      <img class="tv__still" src="/earth/theme-flood-still.webp" width="960" height="640" alt="Terrain of the Three Gorges and the middle Yangtze in a storm and a flood, with a river gauge above its flood warning line; in motion, a drought follows and dries the smaller streams" loading="lazy" decoding="async">
+      <canvas class="tv__canvas" aria-hidden="true"></canvas>
+      <canvas class="tv__overlay" aria-hidden="true"></canvas>
+      <ol class="tv__steps"><li data-step><span class="t-en">Storm</span><span class="t-zh" lang="zh-CN">暴雨</span></li><li data-step><span class="t-en">Flood</span><span class="t-zh" lang="zh-CN">洪水</span></li><li data-step><span class="t-en">Drought</span><span class="t-zh" lang="zh-CN">干旱</span></li></ol>
+      <button class="pause" type="button" data-pause aria-pressed="false" aria-label="Pause the animation" title="Pause or resume" hidden><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3 1.5h2v9H3zM7 1.5h2v9H7z"/></svg></button>
+    </div>
+    
+    
+  </figure>
+            <div class="card__text">
+              <h3><a class="card__link" href="/research.html#water-security"><span class="t-en">Water-Related Disasters and Security</span><span class="t-zh" lang="zh-CN">水灾害和水安全</span></a></h3>
               <p><span class="t-en">This theme focuses on the mechanisms and impacts of extreme hydrological events, including droughts and floods. The group studies how droughts develop and propagate through different environmental layers, how flood patterns have evolved in China over decades, and how to enhance societal and ecological resilience to water-related extremes in a changing climate.</span><span class="t-zh" lang="zh-CN">这一方向聚焦干旱和洪水等极端水文事件的机理与影响，研究干旱如何在不同环境圈层中发展和传播，中国洪水格局在数十年间如何演变，以及如何在气候变化下增强社会和生态系统对水相关极端事件的韧性。</span></p>
-              <p class="meta">Forest Fire &amp; Flood Ecological-Hydrological Effects</p>
-            </a>
+              <p class="meta"><span class="t-en">Forest Fire &amp; Flood Ecological-Hydrological Effects</span><span class="t-zh" lang="zh-CN">林火与洪水的生态水文效应</span></p>
+            </div>
           </li><li class="card" data-tilt>
-            <a href="/research.html#water-innovation">
-              <img class="card__block" src="/earth/alps-still.webp" width="960" height="640" alt="" loading="lazy" decoding="async">
-              <h3><span class="t-en">Innovating Water Science</span><span class="t-zh" lang="zh-CN">水文水资源与新技术</span></h3>
+            <figure class="tv card__block" data-module="theme" data-view="scan">
+    <div class="tv__stage">
+      <img class="tv__still" src="/earth/theme-scan-still.webp" width="960" height="640" alt="Terrain of the Loess Plateau with a satellite retrieving evapotranspiration pixel by pixel and a neural network above the map; in motion, the network takes in the map and its forecast runs down the rivers" loading="lazy" decoding="async">
+      <canvas class="tv__canvas" aria-hidden="true"></canvas>
+      <canvas class="tv__overlay" aria-hidden="true"></canvas>
+      <ol class="tv__steps"><li data-step><span class="t-en">Satellite</span><span class="t-zh" lang="zh-CN">卫星遥感</span></li><li data-step><span class="t-en">AI model</span><span class="t-zh" lang="zh-CN">人工智能</span></li><li data-step><span class="t-en">Forecast</span><span class="t-zh" lang="zh-CN">预报</span></li></ol>
+      <button class="pause" type="button" data-pause aria-pressed="false" aria-label="Pause the animation" title="Pause or resume" hidden><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3 1.5h2v9H3zM7 1.5h2v9H7z"/></svg></button>
+    </div>
+    
+    
+  </figure>
+            <div class="card__text">
+              <h3><a class="card__link" href="/research.html#water-innovation"><span class="t-en">Innovating Water Science</span><span class="t-zh" lang="zh-CN">水文水资源与新技术</span></a></h3>
               <p><span class="t-en">The group leverages advanced technologies such as high-resolution remote sensing and artificial intelligence (AI) to improve the monitoring and prediction of hydrological processes. They develop fine-scale datasets for evapotranspiration and vegetation productivity, integrate AI with physical models to enable better forecasting in ungauged basins, and work toward real-time flood prediction systems that support water resources management under climate change.</span><span class="t-zh" lang="zh-CN">团队利用高分辨率遥感和人工智能等先进技术改进水文过程的监测与预测：研发蒸散发和植被生产力的精细尺度数据集，融合人工智能与物理模型以提升无资料流域的预报能力，并致力于发展实时洪水预报系统，为气候变化下的水资源管理提供支撑。</span></p>
-              <p class="meta">AI for Hydrology Modeling · CAS-Canglong</p>
-            </a>
+              <p class="meta"><span class="t-en">AI for Hydrology Modeling · CAS-Canglong</span><span class="t-zh" lang="zh-CN">人工智能水文建模 · 中科苍龙</span></p>
+            </div>
           </li>
       </ol>
     </div>
   </section>
+    <section class="sec feat" id="achievements">
+    <div class="wrap">
+      <header class="feat__head">
+        <h2><span class="t-en">Representative achievements</span><span class="t-zh" lang="zh-CN">代表性成果</span></h2>
+        <p class="note"><span class="t-en">Key results of the group, with the journal, impact factor and CAS quartile of each paper.</span><span class="t-zh" lang="zh-CN">课题组代表性研究成果，并标注期刊、影响因子与中科院分区。</span></p>
+        <a class="more" href="/publications.html?only=flag" ><span class="t-en">All flagship papers</span><span class="t-zh" lang="zh-CN">全部旗舰期刊论文</span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+      </header>
+      <article class="feat__lead">
+        <div class="feat__figure"><figure class="fig">
+    <button class="fig__zoom" type="button" data-zoom aria-label="Enlarge: Global sea surface temperature prediction with CAS-Canglong, from the laboratory research news"><img class="" src="/media/de15314d5fee4d13-922.webp" srcset="/media/de15314d5fee4d13-480.webp 480w, /media/de15314d5fee4d13-922.webp 922w" sizes="(max-width: 1000px) 100vw, 720px" width="922" height="464" alt="Global sea surface temperature prediction with CAS-Canglong, from the laboratory research news" loading="lazy" decoding="async"></button>
+    
+  </figure></div>
+        <div class="feat__text">
+          <p class="feat__journal">
+      <cite class="jname">Advanced Science</cite>
+      <span class="meta">2026</span>
+    </p>
+    <span class="jm-row"><span class="jm jm--if" style="--f:0.61"><span class="jm__k">IF</span><span class="jm__v">14.1</span><span class="jm__meter" aria-hidden="true"></span><span class="sr-only"><span class="t-en">Journal impact factor 2025</span><span class="t-zh" lang="zh-CN">2025 年度期刊影响因子</span></span></span><span class="jm jm--cas jm--q1"><span class="jm__bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="jm__v"><span class="t-en">CAS Q1</span><span class="t-zh" lang="zh-CN">中科院1区</span></span><span class="jm__top">Top</span><span class="sr-only"><span class="t-en">, Multidisciplinary, CAS journal ranking 2025</span><span class="t-zh" lang="zh-CN">，综合性期刊，中科院分区 2025 年升级版</span></span></span></span>
+          <h3 class="feat__title"><a href="https://doi.org/10.1002/advs.78271" target="_blank" rel="noopener">Improved Skills for Predicting Sub‐Seasonal to Seasonal Global Sea Surface Temperature</a></h3>
+          <p class="feat__finding"><span class="t-en">CAS-Canglong, a 3D Swin Transformer, predicts global sea surface temperature at 0.25° resolution, with forecast lead times up to 16 months.</span><span class="t-zh" lang="zh-CN">“中科苍龙”基于三维 Swin Transformer，在 0.25° 分辨率下开展全球海温预报，最长预报提前期可达 16 个月。</span></p>
+          <p class="feat__links">
+    <a class="link" href="https://doi.org/10.1002/advs.78271" target="_blank" rel="noopener"><span class="t-en">Read the paper</span><span class="t-zh" lang="zh-CN">阅读论文</span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    <a class="link" href="/news/2026-advanced-science-canglong-sst.html" ><span class="t-en">News story</span><span class="t-zh" lang="zh-CN">新闻报道</span></a>
+  </p>
+        </div>
+      </article>
+      <ol class="feat__grid">
+        <li class="feat__card">
+            <button class="feat__thumb" type="button" data-zoom aria-label="Enlarge: Basin-scale recovery of water storage after severe droughts, from the laboratory research news"><img class="" src="/media/f92101e0be5423da-1080.webp" srcset="/media/f92101e0be5423da-480.webp 480w, /media/f92101e0be5423da-960.webp 960w, /media/f92101e0be5423da-1080.webp 1080w" sizes="(max-width: 760px) 100vw, 380px" width="1080" height="623" alt="Basin-scale recovery of water storage after severe droughts, from the laboratory research news" loading="lazy" decoding="async"></button>
+            <p class="feat__journal">
+      <cite class="jname">National Science Review</cite>
+      <span class="meta">2026</span>
+    </p>
+    <span class="jm-row"><span class="jm jm--if" style="--f:0.67"><span class="jm__k">IF</span><span class="jm__v">18.1</span><span class="jm__meter" aria-hidden="true"></span><span class="sr-only"><span class="t-en">Journal impact factor 2025</span><span class="t-zh" lang="zh-CN">2025 年度期刊影响因子</span></span></span><span class="jm jm--cas jm--q1"><span class="jm__bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="jm__v"><span class="t-en">CAS Q1</span><span class="t-zh" lang="zh-CN">中科院1区</span></span><span class="jm__top">Top</span><span class="sr-only"><span class="t-en">, Multidisciplinary, CAS journal ranking 2025</span><span class="t-zh" lang="zh-CN">，综合性期刊，中科院分区 2025 年升级版</span></span></span></span>
+            <h3 class="feat__title"><a href="https://doi.org/10.1093/nsr/nwag624" target="_blank" rel="noopener">Satellite evidence of unequal basin-scale recovery from severe droughts</a></h3>
+            <p class="feat__finding"><span class="t-en">Satellite observations of 468 severe drought events show that recovery of basin water storage depends on water availability, recurring drought and human water use.</span><span class="t-zh" lang="zh-CN">基于 468 次严重干旱事件的卫星观测，揭示旱后水分可利用性、干旱反复发生与人类用水压力对流域水储量恢复的影响。</span></p>
+            <p class="feat__links">
+    <a class="link" href="https://doi.org/10.1093/nsr/nwag624" target="_blank" rel="noopener"><span class="t-en">Read the paper</span><span class="t-zh" lang="zh-CN">阅读论文</span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    <a class="link" href="/news/2026-nsr-drought-recovery.html" ><span class="t-en">News story</span><span class="t-zh" lang="zh-CN">新闻报道</span></a>
+  </p>
+          </li><li class="feat__card">
+            <button class="feat__thumb" type="button" data-zoom aria-label="Enlarge: Global and hemispheric evapotranspiration anomalies and trends, from the laboratory research news"><img class="" src="/media/b44e882cb97a6cce-1080.webp" srcset="/media/b44e882cb97a6cce-480.webp 480w, /media/b44e882cb97a6cce-960.webp 960w, /media/b44e882cb97a6cce-1080.webp 1080w" sizes="(max-width: 760px) 100vw, 380px" width="1080" height="536" alt="Global and hemispheric evapotranspiration anomalies and trends, from the laboratory research news" loading="lazy" decoding="async"></button>
+            <p class="feat__journal">
+      <cite class="jname">Science Advances</cite>
+      <span class="meta">2026</span>
+    </p>
+    <span class="jm-row"><span class="jm jm--if" style="--f:0.61"><span class="jm__k">IF</span><span class="jm__v">13.9</span><span class="jm__meter" aria-hidden="true"></span><span class="sr-only"><span class="t-en">Journal impact factor 2025</span><span class="t-zh" lang="zh-CN">2025 年度期刊影响因子</span></span></span><span class="jm jm--cas jm--q1"><span class="jm__bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="jm__v"><span class="t-en">CAS Q1</span><span class="t-zh" lang="zh-CN">中科院1区</span></span><span class="jm__top">Top</span><span class="sr-only"><span class="t-en">, Multidisciplinary, CAS journal ranking 2025</span><span class="t-zh" lang="zh-CN">，综合性期刊，中科院分区 2025 年升级版</span></span></span></span>
+            <h3 class="feat__title"><a href="https://doi.org/10.1126/sciadv.aeg1633" target="_blank" rel="noopener">Hemispheric asymmetry in evapotranspiration reveals terrestrial water-flux redistribution</a></h3>
+            <p class="feat__finding"><span class="t-en">Observations from 183 large basins reveal opposing evapotranspiration trends in the Northern and Southern Hemispheres during 2000–2022.</span><span class="t-zh" lang="zh-CN">结合全球 183 个大型流域的水文观测，揭示 2000—2022 年北半球蒸散发增加、南半球蒸散发下降的相反趋势。</span></p>
+            <p class="feat__links">
+    <a class="link" href="https://doi.org/10.1126/sciadv.aeg1633" target="_blank" rel="noopener"><span class="t-en">Read the paper</span><span class="t-zh" lang="zh-CN">阅读论文</span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    <a class="link" href="/news/2026-science-advances-et-asymmetry.html" ><span class="t-en">News story</span><span class="t-zh" lang="zh-CN">新闻报道</span></a>
+  </p>
+          </li><li class="feat__card">
+            <button class="feat__thumb" type="button" data-zoom aria-label="Enlarge: Figure from the Nature Communications paper"><img class="" src="/media/ee60fccabbf1f46a-1274.webp" srcset="/media/ee60fccabbf1f46a-480.webp 480w, /media/ee60fccabbf1f46a-960.webp 960w, /media/ee60fccabbf1f46a-1274.webp 1274w" sizes="(max-width: 760px) 100vw, 380px" width="1274" height="601" alt="Figure from the Nature Communications paper" loading="lazy" decoding="async"></button>
+            <p class="feat__journal">
+      <cite class="jname">Nature Communications</cite>
+      <span class="meta">2024</span>
+    </p>
+    <span class="jm-row"><span class="jm jm--if" style="--f:0.67"><span class="jm__k">IF</span><span class="jm__v">18.1</span><span class="jm__meter" aria-hidden="true"></span><span class="sr-only"><span class="t-en">Journal impact factor 2025</span><span class="t-zh" lang="zh-CN">2025 年度期刊影响因子</span></span></span><span class="jm jm--cas jm--q1"><span class="jm__bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="jm__v"><span class="t-en">CAS Q1</span><span class="t-zh" lang="zh-CN">中科院1区</span></span><span class="jm__top">Top</span><span class="sr-only"><span class="t-en">, Multidisciplinary, CAS journal ranking 2025</span><span class="t-zh" lang="zh-CN">，综合性期刊，中科院分区 2025 年升级版</span></span></span></span>
+            <h3 class="feat__title"><a href="https://doi.org/10.1038/s41467-024-53879-x" target="_blank" rel="noopener">Direct vegetation response to recent CO2 rise shows limited effect on global streamflow</a></h3>
+            <p class="feat__finding"><span class="t-en">The direct response of vegetation to the recent rise in CO₂ has had only a limited effect on global streamflow.</span><span class="t-zh" lang="zh-CN">近期 CO₂ 浓度上升引起的植被直接响应对全球径流的影响有限。</span></p>
+            <p class="feat__links">
+    <a class="link" href="https://doi.org/10.1038/s41467-024-53879-x" target="_blank" rel="noopener"><span class="t-en">Read the paper</span><span class="t-zh" lang="zh-CN">阅读论文</span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    <a class="link" href="https://mp.weixin.qq.com/s/qyGU64fDShVqHpm4NgYmkA" target="_blank" rel="noopener"><span class="t-en">News story</span><span class="t-zh" lang="zh-CN">新闻报道</span></a>
+  </p>
+          </li><li class="feat__card">
+            <button class="feat__thumb" type="button" data-zoom aria-label="Enlarge: Maps and time series of terrestrial water availability"><img class="" src="/media/4bcc8eaac61af942-933.webp" srcset="/media/4bcc8eaac61af942-480.webp 480w, /media/4bcc8eaac61af942-933.webp 933w" sizes="(max-width: 760px) 100vw, 380px" width="933" height="833" alt="Maps and time series of terrestrial water availability" loading="lazy" decoding="async"></button>
+            <p class="feat__journal">
+      <cite class="jname">Science</cite>
+      <span class="meta">2023</span>
+    </p>
+    <span class="jm-row"><span class="jm jm--if" style="--f:0.89"><span class="jm__k">IF</span><span class="jm__v">47.3</span><span class="jm__meter" aria-hidden="true"></span><span class="sr-only"><span class="t-en">Journal impact factor 2025</span><span class="t-zh" lang="zh-CN">2025 年度期刊影响因子</span></span></span><span class="jm jm--cas jm--q1"><span class="jm__bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="jm__v"><span class="t-en">CAS Q1</span><span class="t-zh" lang="zh-CN">中科院1区</span></span><span class="jm__top">Top</span><span class="sr-only"><span class="t-en">, Multidisciplinary, CAS journal ranking 2025</span><span class="t-zh" lang="zh-CN">，综合性期刊，中科院分区 2025 年升级版</span></span></span></span>
+            <h3 class="feat__title"><a href="https://doi.org/10.1126/science.adh0716" target="_blank" rel="noopener">Southern Hemisphere dominates recent decline in global water availability</a></h3>
+            <p class="feat__finding"><span class="t-en">Satellite and ground observations show that the decline in global land water availability over the past two decades was concentrated in the Southern Hemisphere.</span><span class="t-zh" lang="zh-CN">结合卫星与地面观测，揭示近二十年全球陆地水资源可用性的下降主要集中在南半球。</span></p>
+            <p class="feat__links">
+    <a class="link" href="https://doi.org/10.1126/science.adh0716" target="_blank" rel="noopener"><span class="t-en">Read the paper</span><span class="t-zh" lang="zh-CN">阅读论文</span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    <a class="link" href="https://mp.weixin.qq.com/s/OF8j3oksXzmWIxFg55V9Fg" target="_blank" rel="noopener"><span class="t-en">News story</span><span class="t-zh" lang="zh-CN">新闻报道</span></a>
+  </p>
+          </li><li class="feat__card">
+            <button class="feat__thumb" type="button" data-zoom aria-label="Enlarge: Bar charts of projected streamflow change by continent under three observation-constrained estimates (A, B, C), for two future periods"><img class="" src="/media/db452f72bb97dd7c-1254.webp" srcset="/media/db452f72bb97dd7c-640.webp 640w, /media/db452f72bb97dd7c-1254.webp 1254w" sizes="(max-width: 760px) 100vw, 380px" width="1254" height="1044" alt="Bar charts of projected streamflow change by continent under three observation-constrained estimates (A, B, C), for two future periods" loading="lazy" decoding="async"></button>
+            <p class="feat__journal">
+      <cite class="jname">Nature Water</cite>
+      <span class="meta">2023</span>
+    </p>
+    <span class="jm-row"><span class="jm jm--if" style="--f:0.79"><span class="jm__k">IF</span><span class="jm__v">30.7</span><span class="jm__meter" aria-hidden="true"></span><span class="sr-only"><span class="t-en">Journal impact factor 2025</span><span class="t-zh" lang="zh-CN">2025 年度期刊影响因子</span></span></span></span>
+            <h3 class="feat__title"><a href="https://doi.org/10.1038/s44221-023-00030-7" target="_blank" rel="noopener">Future global streamflow declines are probably more severe than previously estimated</a></h3>
+            <p class="feat__finding"><span class="t-en">Projections constrained by observations indicate that future declines in global streamflow are probably more severe than previously estimated.</span><span class="t-zh" lang="zh-CN">基于观测约束的预估表明，未来全球径流减少可能比以往估计的更为严重。</span></p>
+            <p class="feat__links">
+    <a class="link" href="https://doi.org/10.1038/s44221-023-00030-7" target="_blank" rel="noopener"><span class="t-en">Read the paper</span><span class="t-zh" lang="zh-CN">阅读论文</span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    
+  </p>
+          </li>
+      </ol>
+    </div>
+  </section>
+    <section class="sec " >
+    <div class="wrap sec__grid">
+      <header class="sec__head">
+        <h2><span class="t-en">Data products</span><span class="t-zh" lang="zh-CN">数据产品</span></h2>
+        <a class="more" href="/data.html" ><span class="t-en">Download and cite</span><span class="t-zh" lang="zh-CN">下载与引用</span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+      </header>
+      <div class="sec__body"><figure class="layers">
+      <ol class="layers__stack">
+        <li style="--i:0">
+            <div class="layers__map"><img src="/earth/layer-river.webp" width="720" height="280" alt="Global map of river flow" loading="lazy" decoding="async"></div>
+            <p><b><span class="t-en">River flow</span><span class="t-zh" lang="zh-CN">河川径流</span></b> <span class="t-en">Accumulated downstream</span><span class="t-zh" lang="zh-CN">沿河网累加</span></p>
+          </li><li style="--i:1">
+            <div class="layers__map"><img src="/earth/layer-et.webp" width="720" height="280" alt="Global map of evapotranspiration" loading="lazy" decoding="async"></div>
+            <p><b><span class="t-en">Evapotranspiration</span><span class="t-zh" lang="zh-CN">蒸散发</span></b> <span class="t-en">PML-V2.2, 2001–2020</span><span class="t-zh" lang="zh-CN">PML-V2.2，2001–2020 年</span></p>
+          </li><li style="--i:2">
+            <div class="layers__map"><img src="/earth/layer-pre.webp" width="720" height="280" alt="Global map of precipitation" loading="lazy" decoding="async"></div>
+            <p><b><span class="t-en">Precipitation</span><span class="t-zh" lang="zh-CN">降水</span></b> <span class="t-en">CRU TS 4.09, 2001–2020</span><span class="t-zh" lang="zh-CN">CRU TS 4.09，2001–2020 年</span></p>
+          </li><li style="--i:3">
+            <div class="layers__map"><img src="/earth/layer-dem.webp" width="720" height="280" alt="Global map of elevation" loading="lazy" decoding="async"></div>
+            <p><b><span class="t-en">Elevation</span><span class="t-zh" lang="zh-CN">高程</span></b> <span class="t-en">1 km terrain model</span><span class="t-zh" lang="zh-CN">1 km 地形模型</span></p>
+          </li>
+      </ol>
+      <figcaption><span class="t-en">How the rivers on the globe were computed: precipitation minus evapotranspiration from our PML-V2.2 product, routed over the 1 km terrain model. Precipitation: CRU TS 4.09 (Harris et al., 2020). No coastline, lake or river dataset is used: land, sea and channels all come from the terrain.</span><span class="t-zh" lang="zh-CN">地球上的河流由此算得：降水减去本组 PML-V2.2 产品的蒸散发，再沿 1 km 地形模型汇流。降水来自 CRU TS 4.09（Harris 等，2020）。未使用任何海岸线、湖泊或河道数据，陆地、海洋与河道均由地形得到。</span></figcaption>
+    </figure>
+    <div class="table-scroll"><table class="table">
+      <thead><tr>
+        <th scope="col"><span class="t-en">Product</span><span class="t-zh" lang="zh-CN">产品</span></th>
+        <th scope="col"><span class="t-en">Variables</span><span class="t-zh" lang="zh-CN">变量</span></th>
+        <th scope="col"><span class="t-en">Scope</span><span class="t-zh" lang="zh-CN">范围</span></th>
+        <th scope="col"><span class="t-en">Time step</span><span class="t-zh" lang="zh-CN">时间分辨率</span></th>
+        <th scope="col"><span class="t-en">Grid</span><span class="t-zh" lang="zh-CN">空间分辨率</span></th>
+        <th scope="col"><span class="t-en">Period</span><span class="t-zh" lang="zh-CN">时段</span></th>
+      </tr></thead>
+      <tbody>
+        <tr>
+            <th scope="row"><a class="link" href="/data.html#pml-v2-2">PML_v2.2</a></th>
+            <td>ET, GPP</td>
+            <td>Global</td>
+            <td>8-day · half-month</td>
+            <td>500 m · 0.1°</td>
+            <td>1982 – near present</td>
+          </tr><tr>
+            <th scope="row"><a class="link" href="/data.html#pml-v2">PML_v2</a></th>
+            <td>ET, ET components, GPP</td>
+            <td>Global</td>
+            <td>8-day</td>
+            <td>500 m · 0.05°</td>
+            <td>2002.07 – near present</td>
+          </tr><tr>
+            <th scope="row"><a class="link" href="/data.html#pml-v2-china">PML_v2-China</a></th>
+            <td>ET, GPP</td>
+            <td>China</td>
+            <td>Daily</td>
+            <td>500 m</td>
+            <td>2000.02.26 – 2020.12.31</td>
+          </tr><tr>
+            <th scope="row"><a class="link" href="/data.html#grace-transformer-gap">GRACE-Transformer-Gap</a></th>
+            <td>Terrestrial water storage</td>
+            <td>Global</td>
+            <td>Monthly</td>
+            <td>0.25°</td>
+            <td>2002 – near present</td>
+          </tr>
+      </tbody>
+    </table></div></div>
+    </div>
+  </section>
+    <section class="sec " >
+    <div class="wrap sec__grid">
+      <header class="sec__head">
+        <h2><span class="t-en">People</span><span class="t-zh" lang="zh-CN">团队成员</span></h2>
+        <a class="more" href="/people.html" ><span class="t-en">All members</span><span class="t-zh" lang="zh-CN">全部成员</span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+      <p class="note"><span class="t-en">30 members and 15 alumni.</span><span class="t-zh" lang="zh-CN">现有成员 30 人，校友 15 人。</span></p>
+      </header>
+      <div class="sec__body">
+      <div class="pi-card">
+            <img class="" src="/media/4f8a103932b0f798-800.webp" srcset="/media/4f8a103932b0f798-240.webp 240w, /media/4f8a103932b0f798-480.webp 480w, /media/4f8a103932b0f798-800.webp 800w" sizes="180px" width="5429" height="5462" alt="Portrait of Prof. Yongqiang Zhang" loading="lazy" decoding="async" style="object-position:50% 25%">
+            <div>
+              <h3><a href="/people.html#pi"><span class="t-en">Prof. Yongqiang Zhang</span><span class="t-zh" lang="zh-CN">张永强研究员</span></a></h3>
+              <p class="pi-card__role"><span class="t-en">Senior Research Fellow (Grade II), Hydrology and Water Resources</span><span class="t-zh" lang="zh-CN">二级研究员，水文与水资源</span></p>
+              <p><a class="link" href="mailto:zhangyq@igsnrr.ac.cn">zhangyq@igsnrr.ac.cn</a></p>
+              <ul class="counts"><li><span class="t-en">Co-PI</span><span class="t-zh" lang="zh-CN">科研人员</span>: 4</li><li><span class="t-en">Postdoc</span><span class="t-zh" lang="zh-CN">博士后</span>: 5</li><li><span class="t-en">Ph.D. Students</span><span class="t-zh" lang="zh-CN">博士研究生</span>: 10</li><li><span class="t-en">Master Students</span><span class="t-zh" lang="zh-CN">硕士研究生</span>: 6</li><li><span class="t-en">Research Assistants</span><span class="t-zh" lang="zh-CN">科研助理</span>: 1</li><li><span class="t-en">Visiting Students</span><span class="t-zh" lang="zh-CN">访问学生</span>: 3</li></ul>
+            </div>
+          </div>
+      <figure class="plate">
+        <img class="" src="/media/e6eb0df126408c12-2400.webp" srcset="/media/e6eb0df126408c12-800.webp 800w, /media/e6eb0df126408c12-1600.webp 1600w, /media/e6eb0df126408c12-2400.webp 2400w" sizes="(max-width: 1000px) 100vw, 860px" width="6240" height="3504" alt="Group photo" loading="lazy" decoding="async">
+        <figcaption><span class="t-en">Group photo.</span><span class="t-zh" lang="zh-CN">团队合影。</span></figcaption>
+      </figure></div>
+    </div>
+  </section>
+    <section class="sec sec--sky" id="join">
+    <div class="wrap sec__grid">
+      <header class="sec__head">
+        <h2><span class="t-en">Open positions</span><span class="t-zh" lang="zh-CN">招生与招聘</span></h2>
+        
+      </header>
+      <div class="sec__body">
+      <p class="prose-lead"><span class="t-en">We are expanding our team now. If you are interested in research topics related to water, climate, hydrology, natural resources and natural disasters, and you also happen to love hydrological modelling, big data analysis, machine learning, data science or simply programming and algorithm development, we have MPhil/PhD Student and Postdoc Researcher positions available in our group.</span><span class="t-zh" lang="zh-CN">我们正在扩充团队。如果你对水、气候、水文学、自然资源与自然灾害等研究主题感兴趣，并且热爱水文模型、大数据分析、机器学习、数据科学或编程算法开发，我们团队长期招收硕士/博士研究生和博士后研究人员。</span></p>
+      <div class="positions">
+        <div><h3><span class="t-en">Openings</span><span class="t-zh" lang="zh-CN">招收</span></h3><ul><li><span class="t-en">MPhil / Ph.D. students</span><span class="t-zh" lang="zh-CN">硕士 / 博士研究生</span></li><li><span class="t-en">Postdoc researchers</span><span class="t-zh" lang="zh-CN">博士后研究人员</span></li></ul></div>
+        <div><h3><span class="t-en">Topics</span><span class="t-zh" lang="zh-CN">研究方向</span></h3><ul><li><span class="t-en">Water, climate and hydrology</span><span class="t-zh" lang="zh-CN">水、气候与水文</span></li><li><span class="t-en">Natural resources and disasters</span><span class="t-zh" lang="zh-CN">自然资源与自然灾害</span></li></ul></div>
+        <div><h3><span class="t-en">Skills</span><span class="t-zh" lang="zh-CN">技能</span></h3><ul><li><span class="t-en">Hydrological modelling</span><span class="t-zh" lang="zh-CN">水文模型</span></li><li><span class="t-en">Big data and machine learning</span><span class="t-zh" lang="zh-CN">大数据与机器学习</span></li><li><span class="t-en">Programming and algorithms</span><span class="t-zh" lang="zh-CN">编程与算法开发</span></li></ul></div>
+      </div>
+      <p><span class="t-en">Applications and enquiries:</span><span class="t-zh" lang="zh-CN">申请与咨询：</span> <a class="link" href="mailto:zhangyq@igsnrr.ac.cn">zhangyq@igsnrr.ac.cn</a></p></div>
+    </div>
+  </section>
+    <section class="spot" id="featured" aria-labelledby="featured-title">
+    <div class="wrap">
+      <div class="spot__grid">
+        <header class="spot__head">
+          <p class="kicker spot__kicker"><span class="t-en">Featured research</span><span class="t-zh" lang="zh-CN">重点研究</span></p>
+          <p class="masthead" aria-label="Nature Geoscience"><b>nature</b> geoscience</p>
+          <p class="masthead__issue meta"><span class="t-en">Volume 19 · Issue 3 · 2026 · pp. 311–316</span><span class="t-zh" lang="zh-CN">2026 年 · 第 19 卷第 3 期 · 311–316 页</span></p>
+          <h2 class="spot__title" id="featured-title"><a href="https://doi.org/10.1038/s41561-025-01897-9" target="_blank" rel="noopener">Overestimation of past and future increases in global river flow by Earth system models</a></h2>
+          <p class="spot__authors">Zhang, Y., Blöschl, G., Wei, H. et al.</p>
+          <p class="spot__finding"><span class="t-en">Constraining Earth system models with river flow from 50 large basins puts global river flow at 39.1 ± 5.4 × 10³ km³ per year, lower than most earlier estimates, and updates the textbook diagram of the global water cycle.</span><span class="t-zh" lang="zh-CN">结合全球 50 条大型河流的实测径流约束地球系统模型，将全球河川流量修正为 39.1 ± 5.4 × 10³ km³/年，低于以往多数估计，并更新了经典的全球水循环示意图。</span></p>
+          <p class="feat__links">
+    <a class="link" href="https://doi.org/10.1038/s41561-025-01897-9" target="_blank" rel="noopener"><span class="t-en">Read the paper</span><span class="t-zh" lang="zh-CN">阅读论文</span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6 14 14 6M7 6h7v7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+    <a class="link" href="/news/2026-nature-geoscience-water-cycle.html" ><span class="t-en">News story</span><span class="t-zh" lang="zh-CN">新闻报道</span></a>
+  </p>
+          <p class="spot__doi meta">DOI <a class="link" href="https://doi.org/10.1038/s41561-025-01897-9" target="_blank" rel="noopener">10.1038/s41561-025-01897-9</a></p>
+        </header>
+        <div class="spot__figure"><figure class="fig">
+    <button class="fig__zoom" type="button" data-zoom aria-label="Enlarge: Updated diagram of the global water cycle with historical and future fluxes"><img class="" src="/media/1f65a86024c625cd-1080.webp" srcset="/media/1f65a86024c625cd-480.webp 480w, /media/1f65a86024c625cd-960.webp 960w, /media/1f65a86024c625cd-1080.webp 1080w" sizes="(max-width: 1000px) 100vw, 560px" width="1080" height="655" alt="Updated diagram of the global water cycle with historical and future fluxes" loading="lazy" decoding="async"></button>
+    <figcaption><span class="t-en">The global water cycle as updated by the study, with fluxes for the historical and future periods.</span><span class="t-zh" lang="zh-CN">该研究更新的全球水循环图，含历史与未来时期的通量。</span></figcaption>
+  </figure></div>
+      </div>
+    </div>
     <section class="sec sec--budget" id="water-budget" data-module="budget">
     <div class="wrap">
       <div class="sec__grid sec__grid--tight">
-        <header class="sec__head"><h2><span class="t-en">Global water budget</span><span class="t-zh" lang="zh-CN">全球水量收支</span></h2></header>
+        <header class="sec__head"><h3 class="h2"><span class="t-en">Global water budget</span><span class="t-zh" lang="zh-CN">全球水量收支</span></h3></header>
         <div class="sec__body">
           <p class="prose-lead"><span class="t-en">Our 2026 Nature Geoscience study constrained Earth system models with river-flow observations from 50 large basins to quantify the global water budget for the historical period and a future scenario.</span><span class="t-zh" lang="zh-CN">我们 2026 年发表于 Nature Geoscience 的研究利用全球 50 条大型河流的实测径流约束地球系统模型，量化了历史时期和未来情景下的全球水量收支。</span></p>
           <div class="switch" role="radiogroup" aria-label="Period">
@@ -272,10 +531,7 @@
                 <li><span class="t-en">River flow rises by 7.8 ± 5.5 mm per year for each 1 °C of warming.</span><span class="t-zh" lang="zh-CN">每升温 1 °C，河川径流增加 7.8 ± 5.5 毫米/年。</span></li>
               </ul>
               <p class="note"><span class="t-en">Source:</span><span class="t-zh" lang="zh-CN">来源：</span> <a class="link" href="https://doi.org/10.1038/s41561-025-01897-9" target="_blank" rel="noopener">Zhang et al. (2026), Nature Geoscience</a></p>
-              <figure class="fig">
-    <button class="fig__zoom" type="button" data-zoom aria-label="Enlarge: Diagram of the global water cycle with fluxes for the historical and future periods"><img class="" src="/media/1f65a86024c625cd-1080.webp" srcset="/media/1f65a86024c625cd-480.webp 480w, /media/1f65a86024c625cd-960.webp 960w, /media/1f65a86024c625cd-1080.webp 1080w" sizes="(max-width: 1000px) 100vw, 480px" width="1080" height="655" alt="Diagram of the global water cycle with fluxes for the historical and future periods" loading="lazy" decoding="async"></button>
-    <figcaption><span class="t-en">Figure 3. The global water cycle diagram from the study.</span><span class="t-zh" lang="zh-CN">图 3 该研究更新的全球水循环示意图。</span></figcaption>
-  </figure>
+              
             </div>
           </div>
         </div>
@@ -283,166 +539,6 @@
     </div>
     <script type="application/json" id="budget-data">{"unit_en":"10³ km³ per year","unit_zh":"10³ km³/年","periods":{"historical":{"label_en":"Historical","label_zh":"历史时期","range":"1980–2014"},"future":{"label_en":"Future","label_zh":"未来时期","range":"2051–2100, SSP2-4.5"}},"flows":{"land_precipitation":{"en":"Land precipitation","zh":"陆地降水","historical":[112.4,4.2],"future":[117.8,5.3]},"land_et":{"en":"Land evapotranspiration","zh":"陆地蒸散发","historical":[73.4,6.2],"future":[75.7,6.5]},"river_flow":{"en":"Total river flow","zh":"河川总流量","historical":[39.1,5.4],"future":[42.1,5.7]},"surface_flow":{"en":"Surface flow","zh":"地表流","historical":[13.2,3.6],"future":null},"subsurface_flow":{"en":"Subsurface flow","zh":"地下流","historical":[25.9,5.1],"future":null},"ocean_precipitation":{"en":"Ocean precipitation","zh":"海洋降水","historical":[395.5,20.6],"future":[404.7,21.7]},"ocean_evaporation":{"en":"Ocean evaporation","zh":"海洋蒸发","historical":[434.6,21.3],"future":[445.5,22.9]}},"et_shares":[{"en":"Shrubland","zh":"灌丛","share":31.7,"error":1.2},{"en":"Forest","zh":"森林","share":29.6,"error":1.9},{"en":"Grassland","zh":"草地","share":19,"error":1},{"en":"Cropland","zh":"农田","share":12.3,"error":0.9},{"en":"Others","zh":"其他","share":3.9,"error":0.3},{"en":"Wetland","zh":"湿地","share":1.7,"error":0.3},{"en":"Water","zh":"水体","share":1.7,"error":0.6}],"warming":{"per_degree":[7.8,5.5],"unit":"mm/yr per °C"},"source":{"citation":"Zhang et al. (2026), Nature Geoscience","url":"https://doi.org/10.1038/s41561-025-01897-9"}}</script>
   </section>
-    <section class="sec " >
-    <div class="wrap sec__grid">
-      <header class="sec__head">
-        <h2><span class="t-en">Selected publications</span><span class="t-zh" lang="zh-CN">代表性论文</span></h2>
-        <a class="more" href="/publications.html" ><span class="t-en">All publications</span><span class="t-zh" lang="zh-CN">全部论文</span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
-      <p class="note"><span class="t-en">Recent work appears in</span><span class="t-zh" lang="zh-CN">近期成果发表于</span> Science, Nature Geoscience, Nature Water, Nature Communications, Remote Sensing of Environment, Water Resources Research.</p>
-      </header>
-      <div class="sec__body"><ul class="pubs"><li class="pub" data-year="2026" data-topics="Prediction" data-search="improved skills for predicting sub‐seasonal to seasonal global sea surface temperature wang, l., zhang, x., leung, r. l., chiew, f. h. s., aghakouchak, a., ying, k., &amp; zhang, y. advanced science 2026 10.1002/advs.78271">
-    <h3 class="pub__title"><a href="https://doi.org/10.1002/advs.78271" target="_blank" rel="noopener">Improved Skills for Predicting Sub‐Seasonal to Seasonal Global Sea Surface Temperature</a></h3>
-    <p class="pub__authors">Wang, L., Zhang, X., Leung, R. L., Chiew, F. H. S., AghaKouchak, A., Ying, K., &amp; <b>Zhang, Y.</b></p>
-    <p class="pub__venue"><cite>Advanced Science</cite>, e78271 (2026)</p>
-    <p class="pub__actions">
-      <a class="link" href="https://doi.org/10.1002/advs.78271" target="_blank" rel="noopener">DOI: 10.1002/advs.78271</a>
-      
-      <button class="link" type="button" data-copy="Wang, L., Zhang, X., Leung, R. L., Chiew, F. H. S., AghaKouchak, A., Ying, K., &amp; Zhang, Y. (2026). Improved Skills for Predicting Sub‐Seasonal to Seasonal Global Sea Surface Temperature. Advanced Science, e78271. https://doi.org/10.1002/advs.78271"><span class="t-en">Copy citation</span><span class="t-zh" lang="zh-CN">复制引用</span></button>
-    </p>
-  </li><li class="pub" data-year="2026" data-topics="Drought|Streamflow|Remote sensing" data-search="satellite evidence of unequal basin-scale recovery from severe droughts xu, z., zhang, y., blöschl, g., wagener, t., aghakouchak, a., zhang, x., wang, l., tian, j., ma, n., li, x., li, c., huang, q., tang, z., yang, x., xia, j., &amp; liu, c. national science review 2026 10.1093/nsr/nwag624">
-    <h3 class="pub__title"><a href="https://doi.org/10.1093/nsr/nwag624" target="_blank" rel="noopener">Satellite evidence of unequal basin-scale recovery from severe droughts</a></h3>
-    <p class="pub__authors">Xu, Z., <b>Zhang, Y.</b>, Blöschl, G., Wagener, T., AghaKouchak, A., Zhang, X., Wang, L., Tian, J., Ma, N., Li, X., Li, C., Huang, Q., Tang, Z., Yang, X., Xia, J., &amp; Liu, C.</p>
-    <p class="pub__venue"><cite>National Science Review</cite>, nwag624 (2026)</p>
-    <p class="pub__actions">
-      <a class="link" href="https://doi.org/10.1093/nsr/nwag624" target="_blank" rel="noopener">DOI: 10.1093/nsr/nwag624</a>
-      
-      <button class="link" type="button" data-copy="Xu, Z., Zhang, Y., Blöschl, G., Wagener, T., AghaKouchak, A., Zhang, X., Wang, L., Tian, J., Ma, N., Li, X., Li, C., Huang, Q., Tang, Z., Yang, X., Xia, J., &amp; Liu, C. (2026). Satellite evidence of unequal basin-scale recovery from severe droughts. National Science Review, nwag624. https://doi.org/10.1093/nsr/nwag624"><span class="t-en">Copy citation</span><span class="t-zh" lang="zh-CN">复制引用</span></button>
-    </p>
-  </li><li class="pub" data-year="2026" data-topics="Evapotranspiration" data-search="hemispheric asymmetry in evapotranspiration reveals terrestrial water-flux redistribution zhang, y., li, c., kong, d., xu, z., miralles, d., mcvicar, t. r., tian, j., zhang, x., ma, n., li, x., zhang, y., wei, h., zhao, g., xia, j., huang, y., ai, z., tang, r., sun, g., uhlenbrook, s., &amp; destouni, g. science advances 2026 10.1126/sciadv.aeg1633">
-    <h3 class="pub__title"><a href="https://doi.org/10.1126/sciadv.aeg1633" target="_blank" rel="noopener">Hemispheric asymmetry in evapotranspiration reveals terrestrial water-flux redistribution</a></h3>
-    <p class="pub__authors"><b>Zhang, Y.</b>, Li, C., Kong, D., Xu, Z., Miralles, D., McVicar, T. R., Tian, J., Zhang, X., Ma, N., Li, X., <b>Zhang, Y.</b>, Wei, H., Zhao, G., Xia, J., Huang, Y., Ai, Z., Tang, R., Sun, G., Uhlenbrook, S., &amp; Destouni, G.</p>
-    <p class="pub__venue"><cite>Science Advances</cite>, 12(35), eaeg1633 (2026)</p>
-    <p class="pub__actions">
-      <a class="link" href="https://doi.org/10.1126/sciadv.aeg1633" target="_blank" rel="noopener">DOI: 10.1126/sciadv.aeg1633</a>
-      
-      <button class="link" type="button" data-copy="Zhang, Y., Li, C., Kong, D., Xu, Z., Miralles, D., McVicar, T. R., Tian, J., Zhang, X., Ma, N., Li, X., Zhang, Y., Wei, H., Zhao, G., Xia, J., Huang, Y., Ai, Z., Tang, R., Sun, G., Uhlenbrook, S., &amp; Destouni, G. (2026). Hemispheric asymmetry in evapotranspiration reveals terrestrial water-flux redistribution. Science Advances, 12(35), eaeg1633. https://doi.org/10.1126/sciadv.aeg1633"><span class="t-en">Copy citation</span><span class="t-zh" lang="zh-CN">复制引用</span></button>
-    </p>
-  </li><li class="pub" data-year="2024" data-topics="Streamflow|Vegetation &amp; CO₂" data-search="direct vegetation response to recent co2 rise shows limited effect on global streamflow wei, h., zhang, y., huang, q., chiew, f. h. s., luan, j., xia, j., &amp; liu, c. nature communications 2024 10.1038/s41467-024-53879-x">
-    <h3 class="pub__title"><a href="https://doi.org/10.1038/s41467-024-53879-x" target="_blank" rel="noopener">Direct vegetation response to recent CO2 rise shows limited effect on global streamflow</a></h3>
-    <p class="pub__authors">Wei, H., <b>Zhang, Y.</b>, Huang, Q., Chiew, F. H. S., Luan, J., Xia, J., &amp; Liu, C.</p>
-    <p class="pub__venue"><cite>Nature Communications</cite>, 15(1) (2024)</p>
-    <p class="pub__actions">
-      <a class="link" href="https://doi.org/10.1038/s41467-024-53879-x" target="_blank" rel="noopener">DOI: 10.1038/s41467-024-53879-x</a>
-      <a class="link" href="/media/25389ebe9540d7a3.pdf" target="_blank" rel="noopener">PDF</a>
-      <button class="link" type="button" data-copy="Wei, H., Zhang, Y., Huang, Q., Chiew, F. H. S., Luan, J., Xia, J., &amp; Liu, C. (2024). Direct vegetation response to recent CO2 rise shows limited effect on global streamflow. Nature Communications, 15(1). https://doi.org/10.1038/s41467-024-53879-x"><span class="t-en">Copy citation</span><span class="t-zh" lang="zh-CN">复制引用</span></button>
-    </p>
-  </li><li class="pub" data-year="2023" data-topics="" data-search="southern hemisphere dominates recent decline in global water availability zhang, y., li, c., chiew, f. h. s., post, d. a., zhang, x., ma, n., tian, j., kong, d., leung, l. r., yu, q., shi, j., &amp; liu, c. science 2023 10.1126/science.adh0716">
-    <h3 class="pub__title"><a href="https://doi.org/10.1126/science.adh0716" target="_blank" rel="noopener">Southern Hemisphere dominates recent decline in global water availability</a></h3>
-    <p class="pub__authors"><b>Zhang, Y.</b>, Li, C., Chiew, F. H. S., Post, D. A., Zhang, X., Ma, N., Tian, J., Kong, D., Leung, L. R., Yu, Q., Shi, J., &amp; Liu, C.</p>
-    <p class="pub__venue"><cite>Science</cite>, 382(6670), 579–584 (2023)</p>
-    <p class="pub__actions">
-      <a class="link" href="https://doi.org/10.1126/science.adh0716" target="_blank" rel="noopener">DOI: 10.1126/science.adh0716</a>
-      
-      <button class="link" type="button" data-copy="Zhang, Y., Li, C., Chiew, F. H. S., Post, D. A., Zhang, X., Ma, N., Tian, J., Kong, D., Leung, L. R., Yu, Q., Shi, J., &amp; Liu, C. (2023). Southern Hemisphere dominates recent decline in global water availability. Science, 382(6670), 579–584. https://doi.org/10.1126/science.adh0716"><span class="t-en">Copy citation</span><span class="t-zh" lang="zh-CN">复制引用</span></button>
-    </p>
-  </li></ul></div>
-    </div>
-  </section>
-    <section class="sec " >
-    <div class="wrap sec__grid">
-      <header class="sec__head">
-        <h2><span class="t-en">Data products</span><span class="t-zh" lang="zh-CN">数据产品</span></h2>
-        <a class="more" href="/data.html" ><span class="t-en">Download and cite</span><span class="t-zh" lang="zh-CN">下载与引用</span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
-      </header>
-      <div class="sec__body"><figure class="layers">
-      <ol class="layers__stack">
-        <li style="--i:0">
-            <div class="layers__map"><img src="/earth/layer-river.webp" width="720" height="280" alt="Global map of river flow" loading="lazy" decoding="async"></div>
-            <p><b><span class="t-en">River flow</span><span class="t-zh" lang="zh-CN">河川径流</span></b> <span class="t-en">Accumulated downstream</span><span class="t-zh" lang="zh-CN">沿河网累加</span></p>
-          </li><li style="--i:1">
-            <div class="layers__map"><img src="/earth/layer-et.webp" width="720" height="280" alt="Global map of evapotranspiration" loading="lazy" decoding="async"></div>
-            <p><b><span class="t-en">Evapotranspiration</span><span class="t-zh" lang="zh-CN">蒸散发</span></b> <span class="t-en">PML-V2.2, 2001–2020</span><span class="t-zh" lang="zh-CN">PML-V2.2，2001–2020 年</span></p>
-          </li><li style="--i:2">
-            <div class="layers__map"><img src="/earth/layer-pre.webp" width="720" height="280" alt="Global map of precipitation" loading="lazy" decoding="async"></div>
-            <p><b><span class="t-en">Precipitation</span><span class="t-zh" lang="zh-CN">降水</span></b> <span class="t-en">CRU TS 4.09, 2001–2020</span><span class="t-zh" lang="zh-CN">CRU TS 4.09，2001–2020 年</span></p>
-          </li><li style="--i:3">
-            <div class="layers__map"><img src="/earth/layer-dem.webp" width="720" height="280" alt="Global map of elevation" loading="lazy" decoding="async"></div>
-            <p><b><span class="t-en">Elevation</span><span class="t-zh" lang="zh-CN">高程</span></b> <span class="t-en">1 km terrain model</span><span class="t-zh" lang="zh-CN">1 km 地形模型</span></p>
-          </li>
-      </ol>
-      <figcaption><span class="t-en">How the rivers on the globe were computed: precipitation minus evapotranspiration from our PML-V2.2 product, routed over elevation. Precipitation: CRU TS 4.09 (Harris et al., 2020). Coastlines, lakes and main river courses: Natural Earth.</span><span class="t-zh" lang="zh-CN">地球上的河流由此算得：降水减去本组 PML-V2.2 产品的蒸散发，再沿地形汇流。降水来自 CRU TS 4.09（Harris 等，2020），海岸线、湖泊和主要河道来自 Natural Earth。</span></figcaption>
-    </figure>
-    <div class="table-scroll"><table class="table">
-      <thead><tr>
-        <th scope="col"><span class="t-en">Product</span><span class="t-zh" lang="zh-CN">产品</span></th>
-        <th scope="col"><span class="t-en">Variables</span><span class="t-zh" lang="zh-CN">变量</span></th>
-        <th scope="col"><span class="t-en">Scope</span><span class="t-zh" lang="zh-CN">范围</span></th>
-        <th scope="col"><span class="t-en">Time step</span><span class="t-zh" lang="zh-CN">时间分辨率</span></th>
-        <th scope="col"><span class="t-en">Grid</span><span class="t-zh" lang="zh-CN">空间分辨率</span></th>
-        <th scope="col"><span class="t-en">Period</span><span class="t-zh" lang="zh-CN">时段</span></th>
-      </tr></thead>
-      <tbody>
-        <tr>
-            <th scope="row"><a class="link" href="/data.html#pml-v2-2">PML_v2.2</a></th>
-            <td>ET, GPP</td>
-            <td>Global</td>
-            <td>8-day · half-month</td>
-            <td>500 m · 0.1°</td>
-            <td>1982 – near present</td>
-          </tr><tr>
-            <th scope="row"><a class="link" href="/data.html#pml-v2">PML_v2</a></th>
-            <td>ET, ET components, GPP</td>
-            <td>Global</td>
-            <td>8-day</td>
-            <td>500 m · 0.05°</td>
-            <td>2002.07 – near present</td>
-          </tr><tr>
-            <th scope="row"><a class="link" href="/data.html#pml-v2-china">PML_v2-China</a></th>
-            <td>ET, GPP</td>
-            <td>China</td>
-            <td>Daily</td>
-            <td>500 m</td>
-            <td>2000.02.26 – 2020.12.31</td>
-          </tr><tr>
-            <th scope="row"><a class="link" href="/data.html#grace-transformer-gap">GRACE-Transformer-Gap</a></th>
-            <td>Terrestrial water storage</td>
-            <td>Global</td>
-            <td>Monthly</td>
-            <td>0.25°</td>
-            <td>2002 – near present</td>
-          </tr>
-      </tbody>
-    </table></div></div>
-    </div>
-  </section>
-    <section class="sec " >
-    <div class="wrap sec__grid">
-      <header class="sec__head">
-        <h2><span class="t-en">People</span><span class="t-zh" lang="zh-CN">团队成员</span></h2>
-        <a class="more" href="/people.html" ><span class="t-en">All members</span><span class="t-zh" lang="zh-CN">全部成员</span><svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 10h11M10.5 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
-      <p class="note"><span class="t-en">30 members and 15 alumni.</span><span class="t-zh" lang="zh-CN">现有成员 30 人，校友 15 人。</span></p>
-      </header>
-      <div class="sec__body">
-      <div class="pi-card">
-            <img class="" src="/media/4f8a103932b0f798-800.webp" srcset="/media/4f8a103932b0f798-240.webp 240w, /media/4f8a103932b0f798-480.webp 480w, /media/4f8a103932b0f798-800.webp 800w" sizes="180px" width="5429" height="5462" alt="Portrait of Prof. Yongqiang Zhang" loading="lazy" decoding="async" style="object-position:50% 25%">
-            <div>
-              <h3><a href="/people.html#pi"><span class="t-en">Prof. Yongqiang Zhang</span><span class="t-zh" lang="zh-CN">张永强研究员</span></a></h3>
-              <p class="pi-card__role"><span class="t-en">Distinguished Professor, Hydrology and Water Resources</span><span class="t-zh" lang="zh-CN">二级研究员，水文与水资源</span></p>
-              <p><a class="link" href="mailto:zhangyq@igsnrr.ac.cn">zhangyq@igsnrr.ac.cn</a></p>
-              <ul class="counts"><li><span class="t-en">Co-PI</span><span class="t-zh" lang="zh-CN">科研人员</span>: 4</li><li><span class="t-en">Postdoc</span><span class="t-zh" lang="zh-CN">博士后</span>: 5</li><li><span class="t-en">Ph.D. Students</span><span class="t-zh" lang="zh-CN">博士研究生</span>: 10</li><li><span class="t-en">Master Students</span><span class="t-zh" lang="zh-CN">硕士研究生</span>: 6</li><li><span class="t-en">Research Assistants</span><span class="t-zh" lang="zh-CN">科研助理</span>: 1</li><li><span class="t-en">Visiting Students</span><span class="t-zh" lang="zh-CN">访问学生</span>: 3</li></ul>
-            </div>
-          </div>
-      <figure class="plate">
-        <img class="" src="/media/e6eb0df126408c12-2400.webp" srcset="/media/e6eb0df126408c12-800.webp 800w, /media/e6eb0df126408c12-1600.webp 1600w, /media/e6eb0df126408c12-2400.webp 2400w" sizes="(max-width: 1000px) 100vw, 860px" width="6240" height="3504" alt="Group photo" loading="lazy" decoding="async">
-        <figcaption><span class="t-en">Group photo.</span><span class="t-zh" lang="zh-CN">团队合影。</span></figcaption>
-      </figure></div>
-    </div>
-  </section>
-    <section class="sec sec--sky" id="join">
-    <div class="wrap sec__grid">
-      <header class="sec__head">
-        <h2><span class="t-en">Open positions</span><span class="t-zh" lang="zh-CN">招生与招聘</span></h2>
-        
-      </header>
-      <div class="sec__body">
-      <p class="prose-lead"><span class="t-en">We are expanding our team now. If you are interested in research topics related to water, climate, hydrology, natural resources and natural disasters, and you also happen to love hydrological modelling, big data analysis, machine learning, data science or simply programming and algorithm development, we have MPhil/PhD Student and Postdoc Researcher positions available in our group.</span><span class="t-zh" lang="zh-CN">我们正在扩充团队。如果你对水、气候、水文学、自然资源与自然灾害等研究主题感兴趣，并且热爱水文模型、大数据分析、机器学习、数据科学或编程算法开发，我们团队长期招收硕士/博士研究生和博士后研究人员。</span></p>
-      <div class="positions">
-        <div><h3><span class="t-en">Openings</span><span class="t-zh" lang="zh-CN">招收</span></h3><ul><li><span class="t-en">MPhil / Ph.D. students</span><span class="t-zh" lang="zh-CN">硕士 / 博士研究生</span></li><li><span class="t-en">Postdoc researchers</span><span class="t-zh" lang="zh-CN">博士后研究人员</span></li></ul></div>
-        <div><h3><span class="t-en">Topics</span><span class="t-zh" lang="zh-CN">研究方向</span></h3><ul><li><span class="t-en">Water, climate and hydrology</span><span class="t-zh" lang="zh-CN">水、气候与水文</span></li><li><span class="t-en">Natural resources and disasters</span><span class="t-zh" lang="zh-CN">自然资源与自然灾害</span></li></ul></div>
-        <div><h3><span class="t-en">Skills</span><span class="t-zh" lang="zh-CN">技能</span></h3><ul><li><span class="t-en">Hydrological modelling</span><span class="t-zh" lang="zh-CN">水文模型</span></li><li><span class="t-en">Big data and machine learning</span><span class="t-zh" lang="zh-CN">大数据与机器学习</span></li><li><span class="t-en">Programming and algorithms</span><span class="t-zh" lang="zh-CN">编程与算法开发</span></li></ul></div>
-      </div>
-      <p><span class="t-en">Applications and enquiries:</span><span class="t-zh" lang="zh-CN">申请与咨询：</span> <a class="link" href="mailto:zhangyq@igsnrr.ac.cn">zhangyq@igsnrr.ac.cn</a></p></div>
-    </div>
   </section>
 </main>
 <footer class="footer">
@@ -472,7 +568,7 @@
     </div>
     <div class="wrap footer__legal">
       <span>© 2026 <span class="t-en">Large Scale Hydrology Group</span><span class="t-zh" lang="zh-CN">大尺度水文学团队</span></span>
-      <span><span class="t-en">Content updated</span><span class="t-zh" lang="zh-CN">内容更新于</span> 2026-11-02</span>
+      <span><span class="t-en">Content updated</span><span class="t-zh" lang="zh-CN">内容更新于</span> 2026-11-04</span>
     </div>
     </div>
   </footer>

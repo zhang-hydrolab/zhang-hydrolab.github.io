@@ -15,8 +15,8 @@
           "honorific": "Prof.",
           "role": "pi",
           "research_field": "Global and regional hydrology and water resources",
-          "bio_en": "Prof. Yongqiang Zhang is a hydrologist specializing in hydrology and water resources. His research focuses on understanding the mechanisms and processes of global evapotranspiration, exploring eco-hydrological processes, and advancing hydrological modeling, prediction, and projection through remote sensing techniques. In 2026, he received the AGU Joanne Simpson Medal and became an AGU Fellow.",
-          "bio_zh": "张永强研究员从事全球与区域水文及水资源研究，关注蒸散发机制、生态水文过程以及遥感支持的水文模拟、预测与预估。2026 年荣获 AGU Joanne Simpson 奖章并当选 AGU 会士。",
+          "bio_en": "Prof. Yongqiang Zhang is a Senior Research Fellow (Grade II) at the Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences, specializing in hydrology and water resources. His research focuses on understanding the mechanisms and processes of global evapotranspiration, exploring eco-hydrological processes, and advancing hydrological modeling, prediction, and projection through remote sensing techniques. In 2026, he received the AGU Joanne Simpson Medal and became an AGU Fellow.",
+          "bio_zh": "张永强研究员为中国科学院地理科学与资源研究所二级研究员，从事全球与区域水文及水资源研究，关注蒸散发机制、生态水文过程以及遥感支持的水文模拟、预测与预估。2026 年荣获 AGU Joanne Simpson 奖章并当选 AGU 会士。",
           "email": "zhangyq@igsnrr.ac.cn",
           "links": [
             {
@@ -26,7 +26,8 @@
           ],
           "photo_id": "4f8a103932b0f798",
           "photo_focus": "50% 25%",
-          "research_field_zh": "全球与区域水文及水资源"
+          "research_field_zh": "全球与区域水文及水资源",
+          "author_names": []
         }
       ]
     },
@@ -50,7 +51,8 @@
           "links": [],
           "photo_id": "b4000a086beafc40",
           "photo_focus": "50% 25%",
-          "research_field_zh": "生态水文学"
+          "research_field_zh": "生态水文学",
+          "author_names": []
         },
         {
           "id": "xuanze-zhang",
@@ -70,7 +72,8 @@
           ],
           "photo_id": "a9ca943b67cc0e7c",
           "photo_focus": "50% 25%",
-          "research_field_zh": "陆面模拟；生态气候学"
+          "research_field_zh": "陆面模拟；生态气候学",
+          "author_names": []
         },
         {
           "id": "ning-ma",
@@ -79,8 +82,8 @@
           "honorific": "Dr.",
           "role": "co_pi",
           "research_field": "Hydrological Processes",
-          "bio_en": "Dr. Ning Ma focuses on surface hydrological processes, with a particular emphasis on the mechanisms and dynamics of evapotranspiration. In 2026, Ning Ma received NSFC Young Scientists Fund (Category B).",
-          "bio_zh": "马宁为中国科学院地理科学与资源研究所副研究员。他关注地表水文过程，结合观测、模型与遥感方法研究陆气水热交换及水循环对气候变化的响应。\n\n研究方向：蒸散发过程与机理、陆面过程观测与模拟、生态水文和遥感水文。2026 年获青年科学基金项目（B 类）资助。",
+          "bio_en": "Dr. Ning Ma focuses on surface hydrological processes, with a particular emphasis on the mechanisms and dynamics of evapotranspiration. In 2026, Ning Ma received the NSFC Young Scientists Fund (Category B, formerly the Excellent Young Scientists Fund).",
+          "bio_zh": "马宁为中国科学院地理科学与资源研究所副研究员。他关注地表水文过程，结合观测、模型与遥感方法研究陆气水热交换及水循环对气候变化的响应。\n\n研究方向：蒸散发过程与机理、陆面过程观测与模拟、生态水文和遥感水文。2026 年获国家自然科学基金青年科学基金项目（B 类，原优秀青年科学基金项目）资助。",
           "email": "ningma@igsnrr.ac.cn",
           "links": [
             {
@@ -98,7 +101,8 @@
           ],
           "photo_id": "e249b075b6508178",
           "photo_focus": "50% 25%",
-          "research_field_zh": "水文过程"
+          "research_field_zh": "水文过程",
+          "author_names": []
         },
         {
           "id": "xiaojie-li",
@@ -118,7 +122,8 @@
           ],
           "photo_id": "f3b5e658fbfecf82",
           "photo_focus": "50% 25%",
-          "research_field_zh": "农业水文学"
+          "research_field_zh": "农业水文学",
+          "author_names": []
         }
       ]
     },
@@ -142,7 +147,8 @@
           "links": [],
           "photo_id": "8f5e4945ec1ad89d",
           "photo_focus": "50% 25%",
-          "research_field_zh": "人工智能水文学"
+          "research_field_zh": "人工智能水文学",
+          "author_names": []
         },
         {
           "id": "haoshan-wei",
@@ -157,7 +163,8 @@
           "links": [],
           "photo_id": "3d730d035589eace",
           "photo_focus": "50% 25%",
-          "research_field_zh": "生态水文学"
+          "research_field_zh": "生态水文学",
+          "author_names": []
         },
         {
           "id": "zhen-huang",
@@ -172,7 +179,8 @@
           "links": [],
           "photo_id": "fa2d8a1c25206e50",
           "photo_focus": "50% 25%",
-          "research_field_zh": "水文模拟；水资源"
+          "research_field_zh": "水文模拟；水资源",
+          "author_names": []
         },
         {
           "id": "congcong-li",
@@ -187,7 +195,8 @@
           "links": [],
           "photo_id": "1ee9a1e8e8748dad",
           "photo_focus": "50% 25%",
-          "research_field_zh": "水资源可利用性"
+          "research_field_zh": "水资源可利用性",
+          "author_names": []
         },
         {
           "id": "zhenwu-xu",
@@ -207,7 +216,8 @@
           ],
           "photo_id": "a41f260ea75d6adf",
           "photo_focus": "50% 25%",
-          "research_field_zh": "水文气候；生态水文学"
+          "research_field_zh": "水文气候；生态水文学",
+          "author_names": []
         }
       ]
     },
@@ -236,7 +246,8 @@
           ],
           "photo_id": "e0a417e22ccd2b81",
           "photo_focus": "50% 25%",
-          "research_field_zh": "农业水文学"
+          "research_field_zh": "农业水文学",
+          "author_names": []
         },
         {
           "id": "longhao-wang",
@@ -264,7 +275,8 @@
           ],
           "photo_id": "cefd1e3570c10512",
           "photo_focus": "50% 25%",
-          "research_field_zh": "人工智能水文学"
+          "research_field_zh": "人工智能水文学",
+          "author_names": []
         },
         {
           "id": "yizhe-ma",
@@ -284,7 +296,8 @@
           ],
           "photo_id": "ae5210f1dfd2f31b",
           "photo_focus": "50% 25%",
-          "research_field_zh": "水文极端事件；蒸散发"
+          "research_field_zh": "水文极端事件；蒸散发",
+          "author_names": []
         },
         {
           "id": "wenjie-hou",
@@ -304,7 +317,8 @@
           ],
           "photo_id": "7f92bf3932bad4d1",
           "photo_focus": "50% 25%",
-          "research_field_zh": "遥感蒸散发"
+          "research_field_zh": "遥感蒸散发",
+          "author_names": []
         },
         {
           "id": "yushi-zheng",
@@ -319,7 +333,8 @@
           "links": [],
           "photo_id": "1b2e0c0b740917a6",
           "photo_focus": "50% 25%",
-          "research_field_zh": "水文气象学"
+          "research_field_zh": "水文气象学",
+          "author_names": []
         },
         {
           "id": "daniel-geletaw",
@@ -339,7 +354,10 @@
           ],
           "photo_id": "57997852ae2eed99",
           "photo_focus": "50% 25%",
-          "research_field_zh": "水文情势变化"
+          "research_field_zh": "水文情势变化",
+          "author_names": [
+            "Eshete, D. G."
+          ]
         },
         {
           "id": "yuxuan-xie",
@@ -359,7 +377,8 @@
           ],
           "photo_id": "94db538d96089b87",
           "photo_focus": "50% 25%",
-          "research_field_zh": "蒸散发；生态水文学"
+          "research_field_zh": "蒸散发；生态水文学",
+          "author_names": []
         },
         {
           "id": "wenwen-zhang",
@@ -374,7 +393,8 @@
           "links": [],
           "photo_id": "f829d5b5309afa39",
           "photo_focus": "50% 25%",
-          "research_field_zh": "径流变化归因"
+          "research_field_zh": "径流变化归因",
+          "author_names": []
         },
         {
           "id": "shengyu-zou",
@@ -394,7 +414,8 @@
           ],
           "photo_id": "b5261178478f49b8",
           "photo_focus": "50% 25%",
-          "research_field_zh": "遥感；水文学"
+          "research_field_zh": "遥感；水文学",
+          "author_names": []
         },
         {
           "id": "jingyi-tian",
@@ -409,7 +430,8 @@
           "links": [],
           "photo_id": "f0db5ebcf5de8bf5",
           "photo_focus": "50% 25%",
-          "research_field_zh": "水文与水资源"
+          "research_field_zh": "水文与水资源",
+          "author_names": []
         }
       ]
     },
@@ -433,7 +455,8 @@
           "links": [],
           "photo_id": "728f18c729412972",
           "photo_focus": "50% 25%",
-          "research_field_zh": "生态水文学"
+          "research_field_zh": "生态水文学",
+          "author_names": []
         },
         {
           "id": "yiwen-luo",
@@ -448,7 +471,8 @@
           "links": [],
           "photo_id": "fd1070d43e3a01df",
           "photo_focus": "50% 25%",
-          "research_field_zh": "蒸散发；生态水文学"
+          "research_field_zh": "蒸散发；生态水文学",
+          "author_names": []
         },
         {
           "id": "zhiye-cao",
@@ -463,7 +487,8 @@
           "links": [],
           "photo_id": "c0a3f0fff6c7abac",
           "photo_focus": "50% 25%",
-          "research_field_zh": "农业水文学"
+          "research_field_zh": "农业水文学",
+          "author_names": []
         },
         {
           "id": "xudong-zhang",
@@ -478,7 +503,8 @@
           "links": [],
           "photo_id": "968c757942d0eff3",
           "photo_focus": "50% 25%",
-          "research_field_zh": "水文模型"
+          "research_field_zh": "水文模型",
+          "author_names": []
         },
         {
           "id": "qiaoxue-peng",
@@ -493,7 +519,8 @@
           "links": [],
           "photo_id": "8d58dbddca180aaa",
           "photo_focus": "50% 25%",
-          "research_field_zh": "气候极端事件"
+          "research_field_zh": "气候极端事件",
+          "author_names": []
         },
         {
           "id": "xinhai-wei",
@@ -508,7 +535,8 @@
           "links": [],
           "photo_id": "ff935326fee876fc",
           "photo_focus": "50% 25%",
-          "research_field_zh": "生态水文学"
+          "research_field_zh": "生态水文学",
+          "author_names": []
         }
       ]
     },
@@ -532,7 +560,8 @@
           "links": [],
           "photo_id": "f2b4f3bb4a4d367e",
           "photo_focus": "50% 25%",
-          "research_field_zh": "数据分析"
+          "research_field_zh": "数据分析",
+          "author_names": []
         }
       ]
     },
@@ -556,7 +585,8 @@
           "links": [],
           "photo_id": "8e71da69c9b62d77",
           "photo_focus": "50% 25%",
-          "research_field_zh": "生态水文学"
+          "research_field_zh": "生态水文学",
+          "author_names": []
         },
         {
           "id": "liwen-zhang",
@@ -571,7 +601,8 @@
           "links": [],
           "photo_id": "3c179356ffead352",
           "photo_focus": "50% 25%",
-          "research_field_zh": "湖泊干旱"
+          "research_field_zh": "湖泊干旱",
+          "author_names": []
         },
         {
           "id": "jiayi-ding",
@@ -586,7 +617,8 @@
           "links": [],
           "photo_id": "6edc78d007d87d9b",
           "photo_focus": "50% 25%",
-          "research_field_zh": "蒸散发"
+          "research_field_zh": "蒸散发",
+          "author_names": []
         }
       ]
     },
@@ -610,7 +642,8 @@
           "links": [],
           "photo_id": "0d7e145474bf9e10",
           "photo_focus": "50% 25%",
-          "research_field_zh": "遥感"
+          "research_field_zh": "遥感",
+          "author_names": []
         },
         {
           "id": "dongdong-kong",
@@ -630,7 +663,8 @@
           ],
           "photo_id": "991165f57ae14730",
           "photo_focus": "50% 25%",
-          "research_field_zh": "蒸散发；陆面过程"
+          "research_field_zh": "蒸散发；陆面过程",
+          "author_names": []
         },
         {
           "id": "junlong-zhang",
@@ -650,7 +684,8 @@
           ],
           "photo_id": "16074fc7d9037f2c",
           "photo_focus": "50% 25%",
-          "research_field_zh": "水资源；生态水文学"
+          "research_field_zh": "水资源；生态水文学",
+          "author_names": []
         },
         {
           "id": "muhammad-abrar-faiz",
@@ -670,7 +705,8 @@
           ],
           "photo_id": "3042469c0a131f5b",
           "photo_focus": "50% 25%",
-          "research_field_zh": "水文气候极端事件"
+          "research_field_zh": "水文气候极端事件",
+          "author_names": []
         },
         {
           "id": "jinkai-luan",
@@ -690,7 +726,8 @@
           ],
           "photo_id": "301e1b5a1cfd0e5b",
           "photo_focus": "50% 25%",
-          "research_field_zh": "人类活动的生态水文效应"
+          "research_field_zh": "人类活动的生态水文效应",
+          "author_names": []
         },
         {
           "id": "xingmin-shao",
@@ -705,7 +742,8 @@
           "links": [],
           "photo_id": "db85c9c7b737aec6",
           "photo_focus": "50% 25%",
-          "research_field_zh": "干旱"
+          "research_field_zh": "干旱",
+          "author_names": []
         },
         {
           "id": "shaoyang-he",
@@ -720,7 +758,8 @@
           "links": [],
           "photo_id": "cca997c4f0a7964d",
           "photo_focus": "50% 25%",
-          "research_field_zh": "蒸散发"
+          "research_field_zh": "蒸散发",
+          "author_names": []
         },
         {
           "id": "qi-huang",
@@ -740,7 +779,8 @@
           ],
           "photo_id": "17151e13263ad263",
           "photo_focus": "50% 25%",
-          "research_field_zh": "水文情势变化"
+          "research_field_zh": "水文情势变化",
+          "author_names": []
         },
         {
           "id": "muhammad-naeem",
@@ -760,7 +800,8 @@
           ],
           "photo_id": "3f42969f595c8bf9",
           "photo_focus": "50% 25%",
-          "research_field_zh": "水文学与湖泊水资源"
+          "research_field_zh": "水文学与湖泊水资源",
+          "author_names": []
         },
         {
           "id": "yuyin-chen",
@@ -775,7 +816,8 @@
           "links": [],
           "photo_id": "f7cd3bf19b353b71",
           "photo_focus": "50% 25%",
-          "research_field_zh": "地下水"
+          "research_field_zh": "地下水",
+          "author_names": []
         },
         {
           "id": "shijia-wang",
@@ -790,7 +832,8 @@
           "links": [],
           "photo_id": "665f140f6abd10f7",
           "photo_focus": "50% 25%",
-          "research_field_zh": "农业水文学"
+          "research_field_zh": "农业水文学",
+          "author_names": []
         },
         {
           "id": "yijing-cao",
@@ -805,7 +848,8 @@
           "links": [],
           "photo_id": "148dbc6ee7572af7",
           "photo_focus": "50% 25%",
-          "research_field_zh": "农业水文学"
+          "research_field_zh": "农业水文学",
+          "author_names": []
         },
         {
           "id": "zixuan-tang",
@@ -829,7 +873,8 @@
           ],
           "photo_id": "3eb91cc909bb604d",
           "photo_focus": "50% 25%",
-          "research_field_zh": "水文极端事件；人类活动影响"
+          "research_field_zh": "水文极端事件；人类活动影响",
+          "author_names": []
         },
         {
           "id": "jiao-wang",
@@ -849,7 +894,8 @@
           ],
           "photo_id": "b7a1be6a147f95a3",
           "photo_focus": "50% 25%",
-          "research_field_zh": "人工智能水文学"
+          "research_field_zh": "人工智能水文学",
+          "author_names": []
         },
         {
           "id": "chanyue-ren",
@@ -869,7 +915,8 @@
           ],
           "photo_id": "fa4fbeee11fcecd9",
           "photo_focus": "50% 25%",
-          "research_field_zh": "水文干旱"
+          "research_field_zh": "水文干旱",
+          "author_names": []
         }
       ]
     }

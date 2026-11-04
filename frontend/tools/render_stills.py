@@ -21,12 +21,11 @@ ARGS = ["--use-angle=d3d11", "--ignore-gpu-blocklist", "--enable-gpu-rasterizati
 VIEWS = {
     "earth": ("/", ".earth", 1200, 900, 2, 700, 74),
     "water": ("/", ".wc", 1200, 800, 1.2, 700, 78),
-    "hengduan": ("/research.html", ".block", 1200, 800, 2, 700, 80),
-    "loess": ("/publications.html", ".block", 1200, 800, 2, 700, 80),
-    "qilian": ("/data.html", ".block", 1200, 800, 2, 700, 80),
-    "snowy": ("/people.html", ".block", 1200, 800, 2, 700, 80),
-    "gorges": ("/news.html", ".block", 1200, 800, 2, 700, 80),
-    "alps": ("/collaboration.html", ".block", 1200, 800, 2, 700, 80),
+    "qilian": ("/research.html", ".block", 1200, 800, 2, 700, 80),
+    "theme-flow": ("/research.html", "#water-cycle .tv", 1200, 800, 1.3, 900, 80),
+    "theme-flood": ("/research.html", "#water-security .tv", 1200, 800, 1.3, 900, 80),
+    "theme-scan": ("/research.html", "#water-innovation .tv", 1200, 800, 1.3, 900, 80),
+    "etglobe": ("/data.html", ".etg", 1200, 800, 2, 700, 82),
 }
 
 # Everything but the picture goes, and the page's background with it, so it sits on any colour.
@@ -56,7 +55,14 @@ def main():
             page.wait_for_timeout(wait)
             page.add_style_tag(content=CLEAN)
             page.wait_for_timeout(300)
-            picture = Image.open(io.BytesIO(element.locator("canvas").screenshot(omit_background=True)))
+            # Research views draw their gauge, storm, satellite and network on a second canvas over
+            # the terrain, so the still is taken of the stage that holds both.
+            if name.startswith("theme-"):
+                box = element.locator(".tv__stage").bounding_box()
+                shot = page.screenshot(clip=box, omit_background=True)
+            else:
+                shot = element.locator("canvas").screenshot(omit_background=True)
+            picture = Image.open(io.BytesIO(shot))
             target = OUT / f"{name}-still.webp"
             picture.save(target, "WEBP", quality=quality, alpha_quality=80, method=6)
             print(name, picture.size, f"{target.stat().st_size / 1024:.0f} KB")

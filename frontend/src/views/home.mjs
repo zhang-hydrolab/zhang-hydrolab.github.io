@@ -1,7 +1,7 @@
 import { html, raw, safeHref, t } from '../lib/html.mjs';
 import { budgetSection } from './charts.mjs';
 import { layout } from './layout.mjs';
-import { more, paragraphs, pauseButton, picture, pubItem, section } from './parts.mjs';
+import { external, fig, journalMetrics, more, paragraphs, pauseButton, picture, piHonours, section, themeView } from './parts.mjs';
 
 export const newsHref = (n) => (n.body_md ? `/news/${encodeURIComponent(n.id)}.html` : n.source_url || '/news.html');
 export const newsTarget = (n) => (n.body_md ? '' : raw('target="_blank" rel="noopener"'));
@@ -85,6 +85,7 @@ function about(ctx) {
       <figure class="about__photo">${picture(ctx, cover, { sizes: '(max-width: 1000px) 100vw, 420px' })}</figure>
       <details class="about__more">
         <summary>${t('About the Principal Investigator', '团队负责人简介')}</summary>
+        ${piHonours(ctx)}
         ${paragraphs(en.slice(0, 2), 'en')}
         ${paragraphs(zh.slice(0, 2), 'zh')}
       </details>
@@ -94,8 +95,9 @@ function about(ctx) {
 
 function metrics(ctx) {
   const stats = ctx.api.site['site.stats'];
-  return html`<section class="band" aria-label="Group metrics" data-module="swell">
-    <canvas class="band__sea" aria-hidden="true"></canvas>
+  return html`<section class="band" aria-label="Group metrics" data-module="contours">
+    <canvas class="band__field" aria-hidden="true"></canvas>
+    ${pauseButton()}
     <div class="wrap">
       <dl class="metrics">
         ${stats.map(
@@ -143,13 +145,6 @@ function news(ctx) {
   });
 }
 
-/** Each programme is shown with a place its work is about. */
-const THEME_BLOCK = {
-  'water-cycle': 'hengduan',
-  'water-security': 'gorges',
-  'water-innovation': 'alps',
-};
-
 function research(ctx) {
   const { themes } = ctx.api.research;
   return html`<section class="sky" id="research">
@@ -161,12 +156,12 @@ function research(ctx) {
       <ol class="cards">
         ${themes.map(
           (theme) => html`<li class="card" data-tilt>
-            <a href="/research.html#${theme.id}">
-              <img class="card__block" src="/earth/${THEME_BLOCK[theme.id] ?? 'hengduan'}-still.webp" width="960" height="640" alt="" loading="lazy" decoding="async">
-              <h3>${t(theme.title_en, theme.title_zh)}</h3>
+            ${themeView(theme.id, { cls: 'card__block', readout: false })}
+            <div class="card__text">
+              <h3><a class="card__link" href="/research.html#${theme.id}">${t(theme.title_en, theme.title_zh)}</a></h3>
               <p>${t(theme.summary_en, theme.summary_zh)}</p>
-              <p class="meta">${theme.projects.map((p) => p.name).join(' · ')}</p>
-            </a>
+              <p class="meta">${t(theme.projects.map((p) => p.name).join(' · '), theme.projects.map((p) => p.name_zh || p.name).join(' · '))}</p>
+            </div>
           </li>`,
         )}
       </ol>
@@ -174,16 +169,112 @@ function research(ctx) {
   </section>`;
 }
 
-function publications(ctx) {
-  const { site, publications: pubs } = ctx.api;
-  const selected = pubs.items.filter((p) => p.featured).slice(0, 5);
-  return section({
-    en: 'Selected publications',
-    zh: '代表性论文',
-    aside: html`${more('/publications.html', 'All publications', '全部论文')}
-      <p class="note">${t('Recent work appears in', '近期成果发表于')} ${site['site.journals'].slice(0, 6).join(', ')}.</p>`,
-    body: html`<ul class="pubs">${selected.map((p) => pubItem(p, ctx))}</ul>`,
-  });
+/** The DOI of the study that the water budget comes from, which is featured on its own. */
+const budgetDoi = (ctx) => (ctx.api.site['site.water_budget']?.source?.url ?? '').replace(/^https?:\/\/(dx\.)?doi\.org\//, '').toLowerCase();
+
+function chosen(ctx) {
+  const list = ctx.api.site['site.featured_research'] ?? [];
+  const byDoi = new Map(ctx.api.publications.items.map((p) => [p.doi?.toLowerCase(), p]));
+  return list
+    .map((f) => ({ ...f, pub: byDoi.get(f.doi.toLowerCase()), story: f.news_id ? ctx.api.news.items.find((n) => n.id === f.news_id) : null }))
+    .filter((f) => f.pub);
+}
+
+const paperLinks = (f) => html`<p class="feat__links">
+    <a class="link" href="https://doi.org/${f.pub.doi}" target="_blank" rel="noopener">${t('Read the paper', '阅读论文')}${external}</a>
+    ${f.story ? html`<a class="link" href="${safeHref(newsHref(f.story))}" ${newsTarget(f.story)}>${t('News story', '新闻报道')}</a>` : ''}
+  </p>`;
+
+/**
+ * Newest first. Papers carry only a year, so within a year the date of the paper's news story
+ * decides, and a paper without one follows the dated ones, as in the news list.
+ */
+const newestFirst = (a, b) => b.pub.year - a.pub.year || (b.story?.date ?? '').localeCompare(a.story?.date ?? '');
+
+/** The group's key results, chosen in the site.featured_research setting, newest first. */
+function achievements(ctx) {
+  const spotlight = budgetDoi(ctx);
+  const items = chosen(ctx)
+    .filter((f) => f.doi.toLowerCase() !== spotlight)
+    .sort(newestFirst);
+  if (!items.length) return '';
+
+  const head = (f) => html`<p class="feat__journal">
+      <cite class="jname">${f.pub.venue}</cite>
+      <span class="meta">${f.pub.year}</span>
+    </p>
+    <span class="jm-row">${journalMetrics(ctx, f.pub.venue)}</span>`;
+  const [lead, ...rest] = items;
+
+  return html`<section class="sec feat" id="achievements">
+    <div class="wrap">
+      <header class="feat__head">
+        <h2>${t('Representative achievements', '代表性成果')}</h2>
+        <p class="note">${t('Key results of the group, with the journal, impact factor and CAS quartile of each paper.', '课题组代表性研究成果，并标注期刊、影响因子与中科院分区。')}</p>
+        ${more('/publications.html?only=flag', 'All flagship papers', '全部旗舰期刊论文')}
+      </header>
+      <article class="feat__lead">
+        <div class="feat__figure">${lead.image_id ? fig(ctx, lead.image_id, { sizes: '(max-width: 1000px) 100vw, 720px' }) : ''}</div>
+        <div class="feat__text">
+          ${head(lead)}
+          <h3 class="feat__title"><a href="https://doi.org/${lead.pub.doi}" target="_blank" rel="noopener">${lead.pub.title}</a></h3>
+          <p class="feat__finding">${t(lead.finding_en, lead.finding_zh)}</p>
+          ${paperLinks(lead)}
+        </div>
+      </article>
+      <ol class="feat__grid">
+        ${rest.map(
+          (f) => html`<li class="feat__card">
+            ${f.image_id && ctx.images[f.image_id]
+              ? html`<button class="feat__thumb" type="button" data-zoom aria-label="Enlarge: ${ctx.mediaById.get(f.image_id)?.alt_en ?? f.pub.title}">${picture(ctx, f.image_id, { sizes: '(max-width: 760px) 100vw, 380px' })}</button>`
+              : html`<div class="feat__thumb feat__thumb--type" aria-hidden="true"><span>${f.pub.venue}</span><span>${f.pub.year}</span></div>`}
+            ${head(f)}
+            <h3 class="feat__title"><a href="https://doi.org/${f.pub.doi}" target="_blank" rel="noopener">${f.pub.title}</a></h3>
+            <p class="feat__finding">${t(f.finding_en, f.finding_zh)}</p>
+            ${paperLinks(f)}
+          </li>`,
+        )}
+      </ol>
+    </div>
+  </section>`;
+}
+
+/** "Zhang, Y., Blöschl, G., Wei, H. et al." from a full APA author list. */
+function shortAuthors(authors = '') {
+  const names = authors.match(/[^,&]+?,\s(?:[A-Z][a-z]?\.[\s-]?)+/g)?.map((n) => n.trim()) ?? [];
+  return names.length > 3 ? `${names.slice(0, 3).join(', ')} et al.` : authors;
+}
+
+/**
+ * The featured study, under the journal's own name, with the water budget it measured. The
+ * masthead is set in type, as a journal's name is in a reference list; no logo is copied.
+ */
+function featuredResearch(ctx) {
+  const doi = budgetDoi(ctx);
+  const f = chosen(ctx).find((x) => x.doi.toLowerCase() === doi);
+  const pub = f?.pub ?? ctx.api.publications.items.find((p) => p.doi?.toLowerCase() === doi);
+  if (!pub) return budgetSection(ctx);
+  const [first, ...rest] = pub.venue.toLowerCase().split(' ');
+  const pages = String(pub.pages ?? '').replace('-', '–');
+
+  return html`<section class="spot" id="featured" aria-labelledby="featured-title">
+    <div class="wrap">
+      <div class="spot__grid">
+        <header class="spot__head">
+          <p class="kicker spot__kicker">${t('Featured research', '重点研究')}</p>
+          <p class="masthead" aria-label="${pub.venue}"><b>${first}</b> ${rest.join(' ')}</p>
+          <p class="masthead__issue meta">${t(`Volume ${pub.volume} · Issue ${pub.issue} · ${pub.year} · pp. ${pages}`, `${pub.year} 年 · 第 ${pub.volume} 卷第 ${pub.issue} 期 · ${pages} 页`)}</p>
+          <h2 class="spot__title" id="featured-title"><a href="https://doi.org/${pub.doi}" target="_blank" rel="noopener">${pub.title}</a></h2>
+          <p class="spot__authors">${shortAuthors(pub.authors)}</p>
+          ${f ? html`<p class="spot__finding">${t(f.finding_en, f.finding_zh)}</p>` : ''}
+          ${f ? paperLinks(f) : ''}
+          <p class="spot__doi meta">DOI <a class="link" href="https://doi.org/${pub.doi}" target="_blank" rel="noopener">${pub.doi}</a></p>
+        </header>
+        ${f?.image_id ? html`<div class="spot__figure">${fig(ctx, f.image_id, { sizes: '(max-width: 1000px) 100vw, 560px', en: 'The global water cycle as updated by the study, with fluxes for the historical and future periods.', zh: '该研究更新的全球水循环图，含历史与未来时期的通量。' })}</div>` : ''}
+      </div>
+    </div>
+    ${budgetSection(ctx, { nested: true })}
+  </section>`;
 }
 
 /** The inputs of the river network on the globe, drawn as the stack of maps they are. */
@@ -210,8 +301,8 @@ function data(ctx) {
         )}
       </ol>
       <figcaption>${t(
-        'How the rivers on the globe were computed: precipitation minus evapotranspiration from our PML-V2.2 product, routed over elevation. Precipitation: CRU TS 4.09 (Harris et al., 2020). Coastlines, lakes and main river courses: Natural Earth.',
-        '地球上的河流由此算得：降水减去本组 PML-V2.2 产品的蒸散发，再沿地形汇流。降水来自 CRU TS 4.09（Harris 等，2020），海岸线、湖泊和主要河道来自 Natural Earth。',
+        'How the rivers on the globe were computed: precipitation minus evapotranspiration from our PML-V2.2 product, routed over the 1 km terrain model. Precipitation: CRU TS 4.09 (Harris et al., 2020). No coastline, lake or river dataset is used: land, sea and channels all come from the terrain.',
+        '地球上的河流由此算得：降水减去本组 PML-V2.2 产品的蒸散发，再沿 1 km 地形模型汇流。降水来自 CRU TS 4.09（Harris 等，2020）。未使用任何海岸线、湖泊或河道数据，陆地、海洋与河道均由地形得到。',
       )}</figcaption>
     </figure>
     <div class="table-scroll"><table class="table">
@@ -297,10 +388,10 @@ export function homePage(ctx) {
     ${metrics(ctx)}
     ${news(ctx)}
     ${research(ctx)}
-    ${budgetSection(ctx)}
-    ${publications(ctx)}
+    ${achievements(ctx)}
     ${data(ctx)}
     ${people(ctx)}
-    ${positions(ctx)}`;
+    ${positions(ctx)}
+    ${featuredResearch(ctx)}`;
   return layout(ctx, { page: 'home', description: `${lab.name_en} group at ${lab.institute_en}. ${lab.tagline_en}`, body, path: '/' });
 }

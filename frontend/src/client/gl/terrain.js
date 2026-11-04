@@ -8,7 +8,7 @@
  */
 import { clamp, createContext, createLoop, createProgram, easeOut, loadBytes, loadTexture, reachBuffer, readRivers } from './core.js';
 
-const LIFT = 0.25;
+export const LIFT = 0.25;
 
 export const HEIGHT = /* glsl */ `
 uniform sampler2D uHeight;
@@ -53,6 +53,7 @@ uniform float uBase;
 uniform float uContour;
 uniform float uTime;
 uniform float uRise;
+uniform float uDry;
 
 const vec3 SUN = normalize(vec3(-0.55, 0.72, 0.42));
 
@@ -74,6 +75,8 @@ void main() {
   vec3 bright = vec3(0.998, 0.999, 1.000);
   vec3 colour = mix(shade, bright, smoothstep(0.12, 0.84, lit));
   colour = mix(colour, colour * vec3(0.90, 0.94, 0.985), smoothstep(0.1, 0.9, sqrt(vHeight)));
+  // A view may dry the land, for a drought: pale sand, more so on the lower ground.
+  colour = mix(colour, colour * vec3(1.0, 0.915, 0.79), uDry * (0.42 + 0.3 * (1.0 - sqrt(vHeight))));
 
   // Contours in metres, every fifth one heavier, the way a survey map draws them.
   float metres = uBase + at(vUv) * uMeters;
@@ -129,6 +132,7 @@ uniform mat4 uCamera;
 uniform vec4 uBounds;
 uniform vec2 uCanvas;
 uniform float uThickness;
+uniform float uDry;
 out float vKm;
 out float vEdge;
 out float vHalf;
@@ -148,7 +152,7 @@ void main() {
   float size = length(line);
   vec2 across = size > 1e-4 ? vec2(-line.y, line.x) / size : vec2(0.0, 1.0);
 
-  vHalf = (0.5 + 1.7 * aGrade * aGrade * aGrade + 0.4 * aGrade) * uThickness * 0.5;
+  vHalf = (0.5 + 1.7 * aGrade * aGrade * aGrade + 0.4 * aGrade) * uThickness * 0.5 * (1.0 - 0.45 * uDry);
   vEdge = side * (vHalf + 1.0);
   vKm = mix(aStart.z, aEnd.z, end);
   vGrade = aGrade;
@@ -165,13 +169,22 @@ in float vGrade;
 out vec4 outColor;
 uniform float uTime;
 uniform float uFlow;
+uniform float uWave;
 uniform float uRise;
+uniform float uDry;
+uniform float uBoost;
 void main() {
   float cover = clamp(vHalf + 0.5 - abs(vEdge), 0.0, 1.0);
-  float wave = fract(vKm / 260.0 + uTime * uFlow);
-  float crest = smoothstep(0.0, 0.06, wave) * smoothstep(0.42, 0.06, wave);
-  vec3 colour = mix(vec3(0.085, 0.370, 0.650), vec3(0.000, 0.640, 0.980), crest);
-  outColor = vec4(colour, 1.0) * cover * uRise * min(vHalf * 2.0, 1.0);
+  // Streams dry from the smallest up; reaches above half the largest flow keep running.
+  float dry = min(uDry, 1.0) * 0.5;
+  float running = smoothstep(dry - 0.06, dry + 0.02, vGrade) + step(uDry, 0.001);
+  // Pulses of light water travel down every channel. Distance is counted from the mouth, so a
+  // falling distance is a pulse moving downstream; larger rivers carry brighter ones.
+  float wave = fract(vKm / uWave + uTime * uFlow);
+  float crest = smoothstep(0.0, 0.05, wave) * smoothstep(0.34, 0.05, wave);
+  vec3 colour = mix(vec3(0.075, 0.345, 0.630), vec3(0.560, 0.850, 1.000), min(1.0, crest * (0.6 + 0.4 * vGrade) * (1.0 + 1.6 * uBoost)));
+  colour = mix(colour, vec3(0.600, 0.880, 1.000), uBoost * 0.35);
+  outColor = vec4(colour, 1.0) * cover * uRise * min(vHalf * 2.0, 1.0) * min(running, 1.0);
 }`;
 
 function perspective(fov, aspect, near, far) {
@@ -266,10 +279,13 @@ function wallMesh(gl, columns, rows) {
 const toRad = Math.PI / 180;
 
 /**
- * options: scene (file name), yaw and pitch of the camera in degrees, distance, rise (seconds),
- * contour (metres), and extra(scene, now, delta) to add to the picture.
+ * options: scene (file name), yaw and pitch of the camera in degrees, distance, aim (the height
+ * the camera looks at; higher leaves room above the block), contour
+ * (metres), flow (river pulses per second), and extra(scene, now, delta, pass) to add to the
+ * picture. Passes are 'before' (set state.dry or state.boost; draw nothing), 'ground' and 'air'.
+ * An extra can draw over the ground with scene.ground(program), which draws the same mesh.
  */
-export async function createTerrain(canvas, { scene: name, base = '/earth', yaw = -24, pitch = 32, distance = 3.5, contour = 200, swing = 7, reduceMotion = false, flow = 0.32, extra, onFrame }) {
+export async function createTerrain(canvas, { scene: name, base = '/earth', yaw = -24, pitch = 32, distance = 3.5, aim = -0.03, contour = 200, swing = 7, reduceMotion = false, flow = 0.42, extra, onFrame }) {
   const gl = createContext(canvas, { depth: true });
   if (!gl) return null;
 
@@ -277,6 +293,8 @@ export async function createTerrain(canvas, { scene: name, base = '/earth', yaw 
   const { reaches, count, header } = readRivers(bytes, 6);
   const [lon0, lat0, lon1, lat1, hMin, hMax] = header;
   const depth = height.height / height.width;
+  // About seven pulses across the block, whatever its size.
+  const wave = ((lon1 - lon0) * 111.2 * Math.cos(((lat0 + lat1) / 2) * toRad)) / 7;
 
   const surface = createProgram(gl, SURFACE_VERTEX, SURFACE_FRAGMENT);
   const walls = createProgram(gl, WALL_VERTEX, WALL_FRAGMENT);
@@ -304,6 +322,8 @@ export async function createTerrain(canvas, { scene: name, base = '/earth', yaw 
     aspect: 1,
     camera: new Float32Array(16),
     flow,
+    dry: 0, // 0 to 1: a drought, set by a view.
+    boost: 0, // 0 to 1: brighter river pulses, set by a view.
     paused: false,
   };
 
@@ -332,6 +352,17 @@ export async function createTerrain(canvas, { scene: name, base = '/earth', yaw 
       gl.uniform1f(program.u.uRise, state.rise);
       gl.uniform1f(program.u.uDepth, depth);
     },
+    /** Draws the ground mesh again with another program, over what is there. */
+    ground(program) {
+      scene.heights(program);
+      gl.uniformMatrix4fv(program.u.uCamera, false, state.camera);
+      gl.depthFunc(gl.LEQUAL);
+      gl.depthMask(false);
+      gl.bindVertexArray(mesh.vao);
+      gl.drawElements(gl.TRIANGLES, mesh.count, gl.UNSIGNED_INT, 0);
+      gl.depthMask(true);
+      gl.depthFunc(gl.LESS);
+    },
   };
 
   const resize = (width, heightPx, cssWidth, cssHeight) => {
@@ -357,7 +388,10 @@ export async function createTerrain(canvas, { scene: name, base = '/earth', yaw 
     const eye = [Math.sin(state.yaw) * Math.cos(state.pitch) * distance, Math.sin(state.pitch) * distance, Math.cos(state.yaw) * Math.cos(state.pitch) * distance];
     // A long lens, because a block diagram should not look like a wide-angle photograph.
     const fov = 2 * Math.atan(Math.tan(13.5 * toRad) * Math.max(1, 1.5 / state.aspect));
-    state.camera = multiply(perspective(fov, state.aspect, 0.1, 20), lookAt(eye, [0, -0.03, 0]));
+    state.camera = multiply(perspective(fov, state.aspect, 0.1, 20), lookAt(eye, [0, aim, 0]));
+
+    // A view sets its state for the frame (drought, river brightness) before anything is drawn.
+    extra?.(scene, now, delta, 'before');
 
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
@@ -375,6 +409,7 @@ export async function createTerrain(canvas, { scene: name, base = '/earth', yaw 
     gl.uniform1f(surface.u.uBase, hMin);
     gl.uniform1f(surface.u.uContour, contour);
     gl.uniform1f(surface.u.uTime, state.time);
+    gl.uniform1f(surface.u.uDry, state.dry);
     gl.bindVertexArray(mesh.vao);
     gl.drawElements(gl.TRIANGLES, mesh.count, gl.UNSIGNED_INT, 0);
 
@@ -388,10 +423,16 @@ export async function createTerrain(canvas, { scene: name, base = '/earth', yaw 
     gl.uniform1f(rivers.u.uThickness, clamp(state.height / 620, 0.8, 2.4));
     gl.uniform1f(rivers.u.uTime, state.time);
     gl.uniform1f(rivers.u.uFlow, state.flow);
+    gl.uniform1f(rivers.u.uWave, wave);
+    gl.uniform1f(rivers.u.uDry, state.dry);
+    gl.uniform1f(rivers.u.uBoost, state.boost);
+    // An extra that covers the ground draws first, so the rivers stay on top of it.
+    extra?.(scene, now, delta, 'ground');
+    gl.useProgram(rivers.handle);
     gl.bindVertexArray(reachVao);
     gl.drawArraysInstanced(gl.TRIANGLE_STRIP, 0, 4, count);
 
-    extra?.(scene, now, delta);
+    extra?.(scene, now, delta, 'air');
     gl.disable(gl.BLEND);
     gl.bindVertexArray(null);
     onFrame?.(scene);

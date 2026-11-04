@@ -1,4 +1,4 @@
-<!doctype html><html lang="en" data-lang="en">
+<!doctype html><html lang="en" data-lang="en" data-title-en="Data · Large Scale Hydrology Group" data-title-zh="数据产品 · 大尺度水文学团队">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,10 +13,10 @@
 <meta property="og:url" content="https://zhang-hydrolab.github.io/data.html">
 <meta property="og:image" content="https://zhang-hydrolab.github.io/media/e40a2308e73d60dd-2400.webp">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<script>(function(){var d=document.documentElement;d.classList.add('js');try{var l=sessionStorage.getItem('lab-lang');if(l==='zh'){d.dataset.lang='zh';d.lang='zh-CN'}}catch(e){}})();</script>
+<script>(function(){var d=document.documentElement,l=null;d.classList.add('js');try{l=new URLSearchParams(location.search).get('lang')}catch(e){}if(l!=='zh'&&l!=='en'){var m=document.cookie.match(/(?:^|; )lab-lang=(zh|en)/);l=m?m[1]:null}if(!l){try{l=sessionStorage.getItem('lab-lang')}catch(e){}}if(l==='zh'||l==='en'){document.cookie='lab-lang='+l+'; path=/; SameSite=Lax';try{sessionStorage.setItem('lab-lang',l)}catch(e){}}if(l==='zh'){d.dataset.lang='zh';d.lang='zh-CN';if(d.dataset.titleZh)document.title=d.dataset.titleZh}})();</script>
 <link rel="preload" href="/assets/fonts/source-serif-4-latin-wght-normal-EUO3YR6J.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/source-sans-3-latin-wght-normal-ILI3Y2TR.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style-62GKUPI4.css">
-<script type="module" src="/assets/main-IPNGBZNL.js"></script>
+<link rel="stylesheet" href="/assets/style-GCNGNJTV.css">
+<script type="module" src="/assets/main-QB4ZHOO5.js"></script>
 </head>
 <body id="top" data-page="data">
 <a class="skip" href="#main">Skip to content</a>
@@ -34,7 +34,10 @@
       </nav>
       <div class="nav__tools">
         <button class="tool" type="button" data-search-open aria-label="Search the site" title="Search (Ctrl K)"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m14 14 4 4" stroke="currentColor" stroke-width="1.5"/></svg></button>
-        <button class="tool tool--text" type="button" data-lang-toggle aria-label="Switch language: English or Chinese"><span class="t-en">中文</span><span class="t-zh">English</span></button>
+        <div class="langswitch" role="group" aria-label="Language / 语言">
+          <button type="button" data-lang-set="en" lang="en" aria-pressed="true" title="English">EN</button>
+          <button type="button" data-lang-set="zh" lang="zh-CN" aria-pressed="false" title="中文">中文</button>
+        </div>
         <button class="tool tool--menu" type="button" data-menu-open aria-label="Open menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.5"/></svg></button>
       </div>
     </div>
@@ -58,11 +61,17 @@
         <h1><span class="t-en">Data products</span><span class="t-zh" lang="zh-CN">数据产品</span></h1>
         <p class="pagehead__lead"><span class="t-en">Gridded evapotranspiration, gross primary production and terrestrial water storage products, free to download.</span><span class="t-zh" lang="zh-CN">免费开放的蒸散发、总初级生产力和陆地水储量格点数据产品。</span></p>
       </div>
-      <figure class="block" data-module="block" data-scene="qilian" data-contour="300">
-    <img class="block__still" src="/earth/qilian-still.webp" width="960" height="640" alt="Terrain of Qilian Mountains" decoding="async">
-    <canvas class="block__canvas" aria-hidden="true"></canvas>
-    <figcaption><span class="t-en">Qilian Mountains</span><span class="t-zh" lang="zh-CN">祁连山</span></figcaption>
-    <button class="pause" type="button" data-pause aria-pressed="false" aria-label="Pause the animation" title="Pause or resume" hidden><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3 1.5h2v9H3zM7 1.5h2v9H7z"/></svg></button>
+      <figure class="etg" data-module="etglobe">
+    <div class="etg__stage">
+      <img class="etg__still" src="/earth/etglobe-still.webp" width="900" height="900" alt="Globe of mean July evapotranspiration from PML-V2.2, highest over the forests of the Northern Hemisphere" decoding="async" fetchpriority="high">
+      <canvas class="etg__canvas" aria-hidden="true"></canvas>
+      <button class="pause" type="button" data-pause aria-pressed="false" aria-label="Pause the animation" title="Pause or resume" hidden><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3 1.5h2v9H3zM7 1.5h2v9H7z"/></svg></button>
+    </div>
+    <figcaption class="etg__key">
+      <p class="etg__month"><b data-etg-month><span class="t-en">July</span><span class="t-zh" lang="zh-CN">七月</span></b> <span class="meta"><span class="t-en">PML-V2.2 evapotranspiration, mean of 2001–2020</span><span class="t-zh" lang="zh-CN">PML-V2.2 蒸散发，2001–2020 年平均</span></span></p>
+      <p class="etg__scale"><span>0</span><i class="etg__ramp" aria-hidden="true"></i><span><span class="t-en">150 mm per month</span><span class="t-zh" lang="zh-CN">150 毫米/月</span></span></p>
+    </figcaption>
+    <script type="application/json" id="etg-months">[["January","一月"],["February","二月"],["March","三月"],["April","四月"],["May","五月"],["June","六月"],["July","七月"],["August","八月"],["September","九月"],["October","十月"],["November","十一月"],["December","十二月"]]</script>
   </figure>
     </div>
   </header>
@@ -206,7 +215,7 @@
     </div>
     <div class="wrap footer__legal">
       <span>© 2026 <span class="t-en">Large Scale Hydrology Group</span><span class="t-zh" lang="zh-CN">大尺度水文学团队</span></span>
-      <span><span class="t-en">Content updated</span><span class="t-zh" lang="zh-CN">内容更新于</span> 2026-11-02</span>
+      <span><span class="t-en">Content updated</span><span class="t-zh" lang="zh-CN">内容更新于</span> 2026-11-04</span>
     </div>
     </div>
   </footer>

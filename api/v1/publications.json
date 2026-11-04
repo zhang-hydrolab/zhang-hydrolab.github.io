@@ -1,5 +1,5 @@
 {
-  "count": 97,
+  "count": 125,
   "years": [
     {
       "year": 2018,
@@ -11,27 +11,27 @@
     },
     {
       "year": 2020,
-      "count": 6
-    },
-    {
-      "year": 2021,
-      "count": 10
-    },
-    {
-      "year": 2022,
-      "count": 17
-    },
-    {
-      "year": 2023,
       "count": 11
     },
     {
+      "year": 2021,
+      "count": 16
+    },
+    {
+      "year": 2022,
+      "count": 21
+    },
+    {
+      "year": 2023,
+      "count": 15
+    },
+    {
       "year": 2024,
-      "count": 19
+      "count": 25
     },
     {
       "year": 2025,
-      "count": 16
+      "count": 19
     },
     {
       "year": 2026,
@@ -41,43 +41,43 @@
   "topics": [
     {
       "topic": "Vegetation & CO₂",
-      "count": 30
+      "count": 35
     },
     {
       "topic": "Streamflow",
-      "count": 22
+      "count": 30
     },
     {
       "topic": "Remote sensing",
-      "count": 19
+      "count": 26
     },
     {
       "topic": "Evapotranspiration",
-      "count": 16
+      "count": 19
     },
     {
       "topic": "Drought",
-      "count": 13
+      "count": 18
+    },
+    {
+      "topic": "Floods & extremes",
+      "count": 7
     },
     {
       "topic": "Groundwater & storage",
       "count": 7
     },
     {
+      "topic": "Prediction",
+      "count": 6
+    },
+    {
       "topic": "Soil moisture",
       "count": 6
     },
     {
-      "topic": "Floods & extremes",
-      "count": 5
-    },
-    {
-      "topic": "Prediction",
-      "count": 4
-    },
-    {
       "topic": "Agriculture",
-      "count": 2
+      "count": 5
     },
     {
       "topic": "AI & machine learning",
@@ -453,6 +453,58 @@
       "featured": 0
     },
     {
+      "id": "2025-ban-intensification-of-water-scarcity-threatens",
+      "year": 2025,
+      "title": "Intensification of water scarcity threatens future food security in northwestern China",
+      "authors": "Ban, Y., Tang, Q., Liu, X., Li, X., Ren, Y., Deng, H., Zhao, G., Zhang, Y., Zhang, Y., & Leng, G.",
+      "venue": "Journal of Hydrology: Regional Studies",
+      "volume": "58",
+      "issue": "",
+      "pages": "102177",
+      "doi": "10.1016/j.ejrh.2025.102177",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Agriculture"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2025-faiz-probabilistic-approach-to-monitoring-vegetation",
+      "year": 2025,
+      "title": "Probabilistic approach to monitoring vegetation water stress using solar-induced chlorophyll fluorescence data",
+      "authors": "Faiz, M. A., Wang, Q., Muneer, S., Zhang, Y., Baig, F., & Naz, F.",
+      "venue": "Agricultural Water Management",
+      "volume": "315",
+      "issue": "",
+      "pages": "109559",
+      "doi": "10.1016/j.agwat.2025.109559",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Drought",
+        "Remote sensing"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2025-li-seasonal-agricultural-irrigation-water-deficit",
+      "year": 2025,
+      "title": "Seasonal agricultural irrigation water deficit in northern China: pattern, trend and causality",
+      "authors": "Li, X., Zhang, Y., Tian, J., Zhang, X., & Ma, N.",
+      "venue": "Irrigation Science",
+      "volume": "43",
+      "issue": "4",
+      "pages": "819–841",
+      "doi": "10.1007/s00271-025-01015-y",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Agriculture"
+      ],
+      "featured": 0
+    },
+    {
       "id": "2025-zhang-gap-filling-grace-and-grace-fo-data",
       "year": 2025,
       "title": "Gap-filling GRACE and GRACE-FO data with a climate adjustment scheme using Singular Spectrum analysis",
@@ -541,7 +593,7 @@
       "year": 2025,
       "title": "Hotspots of Global Water Resource Changes and Their Causes",
       "authors": "Lu, J., Kong, D., Zhang, Y., Xie, Y., Gu, X., & Gulakhmadov, A.",
-      "venue": "Earth's Future",
+      "venue": "Earth’s Future",
       "volume": "13",
       "issue": "2",
       "pages": "e2024EF005461",
@@ -905,7 +957,7 @@
       "year": 2024,
       "title": "The Strategic Random Search (SRS) – A new global optimizer for calibrating hydrological models",
       "authors": "Wei, H., Zhang, Y., Liu, C., Huang, Q., Jia, P., Xu, Z., & Guo, Y.",
-      "venue": "Environmental Modelling &amp; Software",
+      "venue": "Environmental Modelling & Software",
       "volume": "172",
       "issue": "",
       "pages": "105914",
@@ -913,6 +965,109 @@
       "url": "",
       "pdf_id": null,
       "topics": [],
+      "featured": 0
+    },
+    {
+      "id": "2024-aryal-drought-propagation-and-recovery-behaviors",
+      "year": 2024,
+      "title": "Drought Propagation and Recovery Behaviors Across 407 Australian Catchments",
+      "authors": "Aryal, S. K., Zheng, H., Zhang, Y., & Faiz, M. A.",
+      "venue": "Earth’s Future",
+      "volume": "12",
+      "issue": "4",
+      "pages": "e2023EF004190",
+      "doi": "10.1029/2023ef004190",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Drought"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2024-song-a-novel-downscaling-approach-based",
+      "year": 2024,
+      "title": "A Novel Downscaling Approach Based on Multifrequency Microwave Radiometry Toward Finer Scale Global Soil Moisture Mapping",
+      "authors": "Song, P., Zhao, T., Shi, J., Zhang, Y., & Zheng, J.",
+      "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+      "volume": "62",
+      "issue": "",
+      "pages": "1–15",
+      "doi": "10.1109/tgrs.2024.3490758",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Remote sensing"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2024-szilagyi-diminishing-control-of-evaporation-on",
+      "year": 2024,
+      "title": "Diminishing control of evaporation on rising land surface temperature of the Earth",
+      "authors": "Szilagyi, J., Zhang, Y., Ma, N., Crago, R. D., Qualls, R. J., & Jozsa, J.",
+      "venue": "Communications Earth & Environment",
+      "volume": "5",
+      "issue": "1",
+      "pages": "613",
+      "doi": "10.1038/s43247-024-01796-8",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Evapotranspiration"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2024-wu-characterizing-vegetation-phenology-shifts-on",
+      "year": 2024,
+      "title": "Characterizing Vegetation Phenology Shifts on the Loess Plateau over Past Two Decades",
+      "authors": "Wu, T., Xu, X., Chen, X., Lyu, S., Zhang, G., Kong, D., Zhang, Y., Tang, Y., Chen, Y., & Zhang, J.",
+      "venue": "Remote Sensing",
+      "volume": "16",
+      "issue": "14",
+      "pages": "2583",
+      "doi": "10.3390/rs16142583",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Vegetation & CO₂",
+        "Remote sensing"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2024-zhang-baseflow-characteristics-and-drivers-in",
+      "year": 2024,
+      "title": "Baseflow characteristics and drivers in headwater catchment of the Yellow River, Tibetan Plateau",
+      "authors": "Zhang, J., Lan, Y., Chen, X., Tan, Y., Wu, T., Lyu, S., Zhou, Y., Zhang, Y., Cheng, L., Chen, Y., & Zhang, J.",
+      "venue": "Journal of Hydrology: Regional Studies",
+      "volume": "56",
+      "issue": "",
+      "pages": "101991",
+      "doi": "10.1016/j.ejrh.2024.101991",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Streamflow"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2024-zhang-changes-in-water-surplus-or",
+      "year": 2024,
+      "title": "Changes in Water Surplus or Deficit and Possible Drivers in the North China Plain During 1961–2022",
+      "authors": "Zhang, J., Ma, N., Zhang, Y., & Guo, Y.",
+      "venue": "International Journal of Climatology",
+      "volume": "44",
+      "issue": "16",
+      "pages": "5761–5772",
+      "doi": "10.1002/joc.8663",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Drought"
+      ],
       "featured": 0
     },
     {
@@ -1101,6 +1256,75 @@
       "featured": 0
     },
     {
+      "id": "2023-li-increased-grain-crop-production-intensifies",
+      "year": 2023,
+      "title": "Increased Grain Crop Production Intensifies the Water Crisis in Northern China",
+      "authors": "Li, X., Zhang, Y., Ma, N., Zhang, X., Tian, J., Zhang, L., McVicar, T. R., Wang, E., & Xu, J.",
+      "venue": "Earth’s Future",
+      "volume": "11",
+      "issue": "9",
+      "pages": "e2023EF003608",
+      "doi": "10.1029/2023ef003608",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Agriculture"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2023-lyu-characterising-baseflow-signature-variability-in",
+      "year": 2023,
+      "title": "Characterising baseflow signature variability in the Yellow River Basin",
+      "authors": "Lyu, S., Guo, C., Zhai, Y., Huang, M., Zhang, G., Zhang, Y., Cheng, L., Liu, Q., Zhou, Y., Woods, R., & Zhang, J.",
+      "venue": "Journal of Environmental Management",
+      "volume": "345",
+      "issue": "",
+      "pages": "118565",
+      "doi": "10.1016/j.jenvman.2023.118565",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Streamflow"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2023-meresa-understanding-the-role-of-catchment",
+      "year": 2023,
+      "title": "Understanding the role of catchment and climate characteristics in the propagation of meteorological to hydrological drought",
+      "authors": "Meresa, H., Zhang, Y., Tian, J., & Abrar Faiz, M.",
+      "venue": "Journal of Hydrology",
+      "volume": "617",
+      "issue": "",
+      "pages": "128967",
+      "doi": "10.1016/j.jhydrol.2022.128967",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Drought"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2023-yang-evapotranspiration-on-a-greening-earth",
+      "year": 2023,
+      "title": "Evapotranspiration on a greening Earth",
+      "authors": "Yang, Y., Roderick, M. L., Guo, H., Miralles, D. G., Zhang, L., Fatichi, S., Luo, X., Zhang, Y., McVicar, T. R., Tu, Z., Keenan, T. F., Fisher, J. B., Gan, R., Zhang, X., Piao, S., Zhang, B., & Yang, D.",
+      "venue": "Nature Reviews Earth & Environment",
+      "volume": "4",
+      "issue": "9",
+      "pages": "626–641",
+      "doi": "10.1038/s43017-023-00464-3",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Evapotranspiration",
+        "Vegetation & CO₂"
+      ],
+      "featured": 0
+    },
+    {
       "id": "2022-tang-anthropogenic-aerosols-dominated-the-decreased",
       "year": 2022,
       "title": "Anthropogenic aerosols dominated the decreased solar radiation in eastern China over the last five decades",
@@ -1204,6 +1428,58 @@
       "featured": 0
     },
     {
+      "id": "2022-lyu-baseflow-signature-behaviour-of-mountainous",
+      "year": 2022,
+      "title": "Baseflow signature behaviour of mountainous catchments around the North China Plain",
+      "authors": "Lyu, S., Zhai, Y., Zhang, Y., Cheng, L., Kumar Paul, P., Song, J., Wang, Y., Huang, M., Fang, H., & Zhang, J.",
+      "venue": "Journal of Hydrology",
+      "volume": "606",
+      "issue": "",
+      "pages": "127450",
+      "doi": "10.1016/j.jhydrol.2022.127450",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Streamflow"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2022-meresa-an-integrated-modeling-framework-in",
+      "year": 2022,
+      "title": "An Integrated Modeling Framework in Projections of Hydrological Extremes",
+      "authors": "Meresa, H., Zhang, Y., Tian, J., Ma, N., Zhang, X., Heidari, H., & Naeem, S.",
+      "venue": "Surveys in Geophysics",
+      "volume": "44",
+      "issue": "2",
+      "pages": "277–322",
+      "doi": "10.1007/s10712-022-09737-w",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Floods & extremes",
+        "Prediction"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2022-meresa-disentangling-aggregated-uncertainty-sources-in",
+      "year": 2022,
+      "title": "Disentangling aggregated uncertainty sources in peak flow projections under different climate scenarios",
+      "authors": "Meresa, H., Zhang, Y., Tian, J., & Faiz, M. A.",
+      "venue": "Journal of Hydrology",
+      "volume": "613",
+      "issue": "",
+      "pages": "128426",
+      "doi": "10.1016/j.jhydrol.2022.128426",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Floods & extremes"
+      ],
+      "featured": 0
+    },
+    {
       "id": "2022-xu-bushfire-induced-water-balance-changes-detected",
       "year": 2022,
       "title": "Bushfire‐Induced Water Balance Changes Detected by a Modified Paired Catchment Method",
@@ -1217,6 +1493,23 @@
       "pdf_id": null,
       "topics": [
         "Floods & extremes"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2022-zhang-long-term-baseflow-responses-to-projected",
+      "year": 2022,
+      "title": "Long-Term Baseflow Responses to Projected Climate Change in the Weihe River Basin, Loess Plateau, China",
+      "authors": "Zhang, J., Zhao, P., Zhang, Y., Cheng, L., Song, J., Fu, G., Wang, Y., Liu, Q., Lyu, S., Qi, S., Huang, C., Ma, M., & Zhang, G.",
+      "venue": "Remote Sensing",
+      "volume": "14",
+      "issue": "20",
+      "pages": "5097",
+      "doi": "10.3390/rs14205097",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Streamflow"
       ],
       "featured": 0
     },
@@ -1391,6 +1684,108 @@
       "featured": 0
     },
     {
+      "id": "2021-dowling-an-improved-cloud-gap-filling-method",
+      "year": 2021,
+      "title": "An Improved Cloud Gap-Filling Method for Longwave Infrared Land Surface Temperatures through Introducing Passive Microwave Techniques",
+      "authors": "Dowling, T. P. F., Song, P., de Jong, M. C., Merbold, L., Wooster, M. J., Huang, J., & Zhang, Y.",
+      "venue": "Remote Sensing",
+      "volume": "13",
+      "issue": "17",
+      "pages": "3522",
+      "doi": "10.3390/rs13173522",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Remote sensing"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2021-faiz-drought-indices-aggregation-is-necessary",
+      "year": 2021,
+      "title": "Drought indices: aggregation is necessary or is it only the researcher's choice?",
+      "authors": "Faiz, M. A., Zhang, Y., Ma, N., Baig, F., Naz, F., & Niaz, Y.",
+      "venue": "Water Supply",
+      "volume": "21",
+      "issue": "8",
+      "pages": "3987–4002",
+      "doi": "10.2166/ws.2021.163",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Drought"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2021-gan-estimating-ecosystem-maximum-light-use",
+      "year": 2021,
+      "title": "Estimating ecosystem maximum light use efficiency based on the water use efficiency principle",
+      "authors": "Gan, R., Zhang, L., Yang, Y., Wang, E., Woodgate, W., Zhang, Y., Haverd, V., Kong, D., Fischer, T., Chiew, F., & Yu, Q.",
+      "venue": "Environmental Research Letters",
+      "volume": "16",
+      "issue": "10",
+      "pages": "104032",
+      "doi": "10.1088/1748-9326/ac263b",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Vegetation & CO₂"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2021-paul-selecting-hydrological-models-for-developing",
+      "year": 2021,
+      "title": "Selecting hydrological models for developing countries: Perspective of global, continental, and country scale models over catchment scale models",
+      "authors": "Paul, P. K., Zhang, Y., Ma, N., Mishra, A., Panigrahy, N., & Singh, R.",
+      "venue": "Journal of Hydrology",
+      "volume": "600",
+      "issue": "",
+      "pages": "126561",
+      "doi": "10.1016/j.jhydrol.2021.126561",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Streamflow"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2021-wang-potential-role-of-permafrost-thaw",
+      "year": 2021,
+      "title": "Potential role of permafrost thaw on increasing Siberian river discharge",
+      "authors": "Wang, P., Huang, Q., Pozdniakov, S. P., Liu, S., Ma, N., Wang, T., Zhang, Y., Yu, J., Xie, J., Fu, G., Frolova, N. L., & Liu, C.",
+      "venue": "Environmental Research Letters",
+      "volume": "16",
+      "issue": "3",
+      "pages": "034046",
+      "doi": "10.1088/1748-9326/abe326",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Streamflow"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2021-you-impacts-of-el-nino-southern-oscillation",
+      "year": 2021,
+      "title": "Impacts of El Niño–southern oscillation on global runoff: Characteristic signatures and potential mechanisms",
+      "authors": "You, Y., Liu, J., Zhang, Y., Beck, H. E., Gu, X., & Kong, D.",
+      "venue": "Hydrological Processes",
+      "volume": "35",
+      "issue": "10",
+      "pages": "e14367",
+      "doi": "10.1002/hyp.14367",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Streamflow"
+      ],
+      "featured": 0
+    },
+    {
       "id": "2021-zhang-greening-induced-increase-in-evapotranspiration-over",
       "year": 2021,
       "title": "Greening-induced increase in evapotranspiration over Eurasia offset by CO2-induced vegetational stomatal closure",
@@ -1553,6 +1948,93 @@
       "topics": [
         "Remote sensing",
         "Soil moisture"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2020-he-verification-and-comparison-of-three",
+      "year": 2020,
+      "title": "Verification and comparison of three high-resolution surface evapotranspiration products in North China",
+      "authors": "He, S., Tian, J., & Zhang, Y.",
+      "venue": "Resources Science",
+      "volume": "42",
+      "issue": "10",
+      "pages": "2035–2046",
+      "doi": "10.18402/resci.2020.10.19",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Evapotranspiration",
+        "Remote sensing"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2020-kong-photoperiod-explains-the-asynchronization-between",
+      "year": 2020,
+      "title": "Photoperiod Explains the Asynchronization Between Vegetation Carbon Phenology and Vegetation Greenness Phenology",
+      "authors": "Kong, D., Zhang, Y., Wang, D., Chen, J., & Gu, X.",
+      "venue": "Journal of Geophysical Research: Biogeosciences",
+      "volume": "125",
+      "issue": "8",
+      "pages": "e2020JG005636",
+      "doi": "10.1029/2020jg005636",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Vegetation & CO₂",
+        "Remote sensing"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2020-ma-ground-observed-climatology-and-trend",
+      "year": 2020,
+      "title": "Ground observed climatology and trend in snow cover phenology across China with consideration of snow-free breaks",
+      "authors": "Ma, N., Yu, K., Zhang, Y., Zhai, J., Zhang, Y., & Zhang, H.",
+      "venue": "Climate Dynamics",
+      "volume": "55",
+      "issue": "9-10",
+      "pages": "2867–2887",
+      "doi": "10.1007/s00382-020-05422-z",
+      "url": "",
+      "pdf_id": null,
+      "topics": [],
+      "featured": 0
+    },
+    {
+      "id": "2020-naeem-quantifying-the-impacts-of-anthropogenic",
+      "year": 2020,
+      "title": "Quantifying the Impacts of Anthropogenic Activities and Climate Variations on Vegetation Productivity Changes in China from 1985 to 2015",
+      "authors": "Naeem, S., Zhang, Y., Tian, J., Qamer, F. M., Latif, A., & Paul, P. K.",
+      "venue": "Remote Sensing",
+      "volume": "12",
+      "issue": "7",
+      "pages": "1113",
+      "doi": "10.3390/rs12071113",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Vegetation & CO₂",
+        "Remote sensing"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2020-zhang-large-scale-baseflow-index-prediction-using",
+      "year": 2020,
+      "title": "Large-scale baseflow index prediction using hydrological modelling, linear and multilevel regression approaches",
+      "authors": "Zhang, J., Zhang, Y., Song, J., Cheng, L., Kumar Paul, P., Gan, R., Shi, X., Luo, Z., & Zhao, P.",
+      "venue": "Journal of Hydrology",
+      "volume": "585",
+      "issue": "",
+      "pages": "124780",
+      "doi": "10.1016/j.jhydrol.2020.124780",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Streamflow",
+        "Prediction"
       ],
       "featured": 0
     },

@@ -1,8 +1,12 @@
 import { html, raw, safeHref, t } from '../lib/html.mjs';
 import { NAV, picture } from './parts.mjs';
 
-// New browsing sessions start in English; keep an explicit choice across pages.
-const LANG_BOOT = `(function(){var d=document.documentElement;d.classList.add('js');try{var l=sessionStorage.getItem('lab-lang');if(l==='zh'){d.dataset.lang='zh';d.lang='zh-CN'}}catch(e){}})();`;
+/*
+ * One language for the whole site. A visit starts in English. A choice made with the switch, or
+ * with ?lang=zh / ?lang=en in a link, is kept in a session cookie, so every page and every tab
+ * opened from it follows until the browser is closed. This runs before the page is drawn.
+ */
+const LANG_BOOT = `(function(){var d=document.documentElement,l=null;d.classList.add('js');try{l=new URLSearchParams(location.search).get('lang')}catch(e){}if(l!=='zh'&&l!=='en'){var m=document.cookie.match(/(?:^|; )lab-lang=(zh|en)/);l=m?m[1]:null}if(!l){try{l=sessionStorage.getItem('lab-lang')}catch(e){}}if(l==='zh'||l==='en'){document.cookie='lab-lang='+l+'; path=/; SameSite=Lax';try{sessionStorage.setItem('lab-lang',l)}catch(e){}}if(l==='zh'){d.dataset.lang='zh';d.lang='zh-CN';if(d.dataset.titleZh)document.title=d.dataset.titleZh}})();`;
 
 const searchIcon = raw(`<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m14 14 4 4" stroke="currentColor" stroke-width="1.5"/></svg>`);
 const closeIcon = raw(`<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 4 12 12M16 4 4 16" stroke="currentColor" stroke-width="1.5"/></svg>`);
@@ -24,7 +28,10 @@ function header(ctx, page) {
       </nav>
       <div class="nav__tools">
         <button class="tool" type="button" data-search-open aria-label="Search the site" title="Search (Ctrl K)">${searchIcon}</button>
-        <button class="tool tool--text" type="button" data-lang-toggle aria-label="Switch language: English or Chinese"><span class="t-en">中文</span><span class="t-zh">English</span></button>
+        <div class="langswitch" role="group" aria-label="Language / 语言">
+          <button type="button" data-lang-set="en" lang="en" aria-pressed="true" title="English">EN</button>
+          <button type="button" data-lang-set="zh" lang="zh-CN" aria-pressed="false" title="中文">中文</button>
+        </div>
         <button class="tool tool--menu" type="button" data-menu-open aria-label="Open menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.5"/></svg></button>
       </div>
     </div>
@@ -93,13 +100,17 @@ function footer(ctx) {
   </footer>`;
 }
 
-export function layout(ctx, { page, title, description, body, path = '', image }) {
+const TITLE_ZH = { ...Object.fromEntries(NAV.map((item) => [item.key, item.zh])), 404: '页面不存在' };
+
+export function layout(ctx, { page, title, titleZh, description, body, path = '', image }) {
   const lab = ctx.api.site['site.lab'];
   const fullTitle = title ? `${title} · ${lab.name_en} Group` : `${lab.name_en} Group · ${lab.institute_short}`;
+  const zhName = titleZh ?? (title ? TITLE_ZH[page] : null);
+  const fullTitleZh = zhName ? `${zhName} · ${lab.name_zh}` : `${lab.name_zh} · 中国科学院地理科学与资源研究所`;
   const canonical = new URL(path, lab.url).href;
   const cover = image ?? ctx.images[ctx.api.site['site.assets']?.cover]?.src;
   const assets = ctx.assets;
-  return `<!doctype html>${html`<html lang="en" data-lang="en">
+  return `<!doctype html>${html`<html lang="en" data-lang="en" data-title-en="${fullTitle}" data-title-zh="${fullTitleZh}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

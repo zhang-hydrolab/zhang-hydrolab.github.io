@@ -2,14 +2,15 @@ import { budgetLayout, budgetSvg } from '../lib/budget.mjs';
 import { html, jsonScript, raw, t } from '../lib/html.mjs';
 import { fig, pauseButton } from './parts.mjs';
 
-export function budgetSection(ctx) {
+/** The water budget explorer. Nested inside the featured study, its heading steps down a level and the study's figure is already shown above it. */
+export function budgetSection(ctx, { nested = false } = {}) {
   const budget = ctx.api.site['site.water_budget'];
   if (!budget) return '';
   const { flows, periods, et_shares: shares, source, warming } = budget;
   const initial = budgetLayout(budget, 0, { width: 1160, height: 560 });
   const subsurfaceShare = Math.round((flows.subsurface_flow.historical[0] / flows.river_flow.historical[0]) * 100);
   const crop = shares.find((s) => s.en === 'Cropland');
-  const diagram = ctx.api.news.items.find((n) => n.id === '2026-nature-geoscience-water-cycle')?.cover_id;
+  const diagram = nested ? null : ctx.api.news.items.find((n) => n.id === '2026-nature-geoscience-water-cycle')?.cover_id;
 
   // Where each term happens on the block: across, height above the surface, down.
   const labels = [
@@ -23,7 +24,7 @@ export function budgetSection(ctx) {
   return html`<section class="sec sec--budget" id="water-budget" data-module="budget">
     <div class="wrap">
       <div class="sec__grid sec__grid--tight">
-        <header class="sec__head"><h2>${t('Global water budget', '全球水量收支')}</h2></header>
+        <header class="sec__head">${nested ? html`<h3 class="h2">${t('Global water budget', '全球水量收支')}</h3>` : html`<h2>${t('Global water budget', '全球水量收支')}</h2>`}</header>
         <div class="sec__body">
           <p class="prose-lead">${t(
             'Our 2026 Nature Geoscience study constrained Earth system models with river-flow observations from 50 large basins to quantify the global water budget for the historical period and a future scenario.',

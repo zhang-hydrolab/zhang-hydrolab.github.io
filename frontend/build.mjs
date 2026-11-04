@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 import esbuild from 'esbuild';
 import { loadApi } from './src/lib/api.mjs';
+import { scholarly } from './src/lib/scholarly.mjs';
 import { buildMedia } from './src/lib/media.mjs';
 import { homePage } from './src/views/home.mjs';
 import { articlePage, collaborationPage, dataPage, newsPage, notFoundPage, peoplePage, publicationsPage, researchPage } from './src/views/pages.mjs';
@@ -41,28 +42,39 @@ export async function bundle(outDir, { dev = false } = {}) {
   return assets;
 }
 
+/** Each entry carries English and, where there is one, Chinese wording; the reader's language picks. */
 function buildSearchIndex(api) {
   const items = [];
   for (const group of api.people.groups) {
     for (const p of group.members) {
-      items.push({ type: 'Person', title: p.name_en, sub: [p.name_zh, group.label.en].filter(Boolean).join(' · '), url: group.key === 'pi' ? '/people.html#pi' : `/people.html#p-${p.id}`, text: `${p.name_en} ${p.name_zh} ${p.research_field}`.toLowerCase() });
+      items.push({
+        type: 'Person',
+        title: p.name_en,
+        title_zh: p.name_zh || p.name_en,
+        sub: [p.name_zh, group.label.en].filter(Boolean).join(' · '),
+        sub_zh: [p.name_en, group.label.zh].filter(Boolean).join(' · '),
+        url: group.key === 'pi' ? '/people.html#pi' : `/people.html#p-${p.id}`,
+        text: `${p.name_en} ${p.name_zh} ${p.research_field} ${p.research_field_zh ?? ''}`.toLowerCase(),
+      });
     }
   }
   for (const p of api.publications.items) {
     items.push({ type: 'Paper', title: p.title, sub: `${p.venue} ${p.year}`, url: p.doi ? `https://doi.org/${p.doi}` : (p.url || '/publications.html'), text: `${p.title} ${p.authors} ${p.venue} ${p.year}`.toLowerCase() });
   }
   for (const d of api.datasets.items) {
-    items.push({ type: 'Dataset', title: d.name, sub: d.coverage_label, url: `/data.html#${d.id}`, text: `${d.name} ${d.summary_en} ${d.variables}`.toLowerCase() });
+    items.push({ type: 'Dataset', title: d.name, sub: d.coverage_label, url: `/data.html#${d.id}`, text: `${d.name} ${d.summary_en} ${d.summary_zh ?? ''} ${d.variables}`.toLowerCase() });
   }
   for (const n of api.news.items) {
-    items.push({ type: 'News', title: n.title_en || n.title_zh, sub: String(n.year), url: n.body_md ? `/news/${encodeURIComponent(n.id)}.html` : (n.source_url || '/news.html'), text: `${n.title_en} ${n.title_zh}`.toLowerCase() });
+    items.push({ type: 'News', title: n.title_en || n.title_zh, title_zh: n.title_zh || n.title_en, sub: String(n.year), url: n.body_md ? `/news/${encodeURIComponent(n.id)}.html` : (n.source_url || '/news.html'), text: `${n.title_en} ${n.title_zh}`.toLowerCase() });
   }
   for (const theme of api.research.themes) {
-    items.push({ type: 'Research', title: theme.title_en, sub: theme.title_zh, url: `/research.html#${theme.id}`, text: `${theme.title_en} ${theme.title_zh} ${theme.summary_en}`.toLowerCase() });
-    for (const p of theme.projects) items.push({ type: 'Research', title: p.name, sub: theme.title_en, url: `/research.html#${theme.id}`, text: `${p.name} ${p.description}`.toLowerCase() });
+    items.push({ type: 'Research', title: theme.title_en, title_zh: theme.title_zh, sub: theme.title_zh, sub_zh: theme.title_en, url: `/research.html#${theme.id}`, text: `${theme.title_en} ${theme.title_zh} ${theme.summary_en} ${theme.summary_zh ?? ''}`.toLowerCase() });
+    for (const p of theme.projects) {
+      items.push({ type: 'Research', title: p.name, title_zh: p.name_zh || p.name, sub: theme.title_en, sub_zh: theme.title_zh, url: `/research.html#${theme.id}`, text: `${p.name} ${p.name_zh ?? ''} ${p.description} ${p.description_zh ?? ''}`.toLowerCase() });
+    }
   }
   for (const c of api.collaborators.items) {
-    items.push({ type: 'Collaborator', title: c.name, sub: c.institute, url: `/collaboration.html#${c.id}`, text: `${c.name} ${c.institute}`.toLowerCase() });
+    items.push({ type: 'Collaborator', title: c.name, sub: c.institute, sub_zh: c.institute_zh || c.institute, url: `/collaboration.html#${c.id}`, text: `${c.name} ${c.institute} ${c.institute_zh ?? ''} ${c.city ?? ''}`.toLowerCase() });
   }
   return items;
 }
@@ -74,7 +86,7 @@ export async function buildSite({ apiSource, mediaSource, outDir, dev = false })
   const api = await loadApi(apiSource);
   const { images, files, generated } = await buildMedia(api, { mediaSource, outDir, cacheDir: path.join(ROOT, '.cache', 'media') });
   const assets = await bundle(outDir, { dev });
-  const ctx = { api, images, files, assets, mediaById: new Map(api.media.items.map((m) => [m.id, m])) };
+  const ctx = { api, images, files, assets, sch: scholarly(api), mediaById: new Map(api.media.items.map((m) => [m.id, m])) };
 
   const pages = {
     'index.html': homePage(ctx),

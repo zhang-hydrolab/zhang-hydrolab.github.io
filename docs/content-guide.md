@@ -50,7 +50,19 @@
 
 请务必核对自动填入的内容，尤其是作者姓名。作者使用 APA 格式，例如 `Zhang, Y., Ma, N., & Tian, J.`。网站会自动加粗 Zhang, Y.。
 
-**Topics** 用英文逗号分隔，决定论文页的主题筛选。请尽量沿用已有主题，例如 `Evapotranspiration, Drought`。勾选 **Highlighted paper** 后，论文可出现在首页。
+**Topics** 用英文逗号分隔，决定论文页的主题筛选。请尽量沿用已有主题，例如 `Evapotranspiration, Drought`。
+
+论文页会自动完成以下几项，无需逐篇设置：
+
+- **成员署名**：作者名中的现有成员和校友加下划线。成员署名与英文姓名不同时，在该成员的 **Other author-list spellings** 中补充署名，例如 `Eshete, D. G.`。
+- **期刊指标**：期刊名后显示影响因子和中科院分区，数据在 **Site settings** 的 `site.journal_metrics`。`journals` 以期刊名为键，填写 `jif`（影响因子）、`cas`（大类分区 1–4）、`top`（是否 Top 期刊）及学科名；每年 JCR 和分区表更新后改这里，并同时改 `jif_en`、`source_en` 等版本说明。新期刊不在表中时不显示指标。
+- **置顶**：`priority` 是两组期刊名，第一组 Nature、Science 及其子刊，第二组 NSR、Science Bulletin、Advanced Science。这些期刊的论文排在列表最前，其余按年份排列。
+
+### 首页代表性成果与重点研究
+
+首页“代表性成果”取自 **Site settings** 的 `site.featured_research`，按时间由近及远排列，最新一项为大图。论文记录只有年份，同年论文按所关联新闻（`news_id`）的日期排序，未关联新闻的排在同年之后，因此请尽量为每项填写 `news_id`。每项填写论文 `doi`（须已在 **Publications** 中）、`finding_en` / `finding_zh`（一句话说明主要发现）、可选的 `news_id`（相关新闻）和 `image_id`（论文图件的媒体 ID）。图件按原比例完整显示，不裁切。
+
+首页最下方的“重点研究”展示全球水量收支所依据的论文，即 `site.water_budget` 中 `source.url` 的 DOI（目前为 2026 年 Nature Geoscience 论文）。该论文在 `site.featured_research` 中的条目（发现、新闻、图件）在此显示，不再重复出现在“代表性成果”中，因此“代表性成果”的大图是其余各项中最新的一项（目前为 Advanced Science）。期刊名以文字排成刊头，卷期页码取自论文记录，不使用期刊标志图片。
 
 ### 发布新闻
 
@@ -68,9 +80,21 @@
 
 进入 **People**，点击 **New**，填写姓名和身份，并上传照片。如果头像被裁切，可调整 **Photo focus**：`50% 25%` 表示水平居中、取偏上的部分，第二个数字越小，画面越靠上。
 
-请同时填写中英文研究方向（**Research field**）和简介（**Bio**）。成员卡片与详情会跟随右上角语言按钮切换。网站在新的浏览会话中默认使用英文，当前会话内保留主动选择的语言。
+请同时填写中英文研究方向（**Research field**）和简介（**Bio**）。成员卡片与详情会跟随右上角语言按钮切换。
+
+### 语言
+
+网站右上角的 EN / 中文 按钮统一切换全站语言，包括各子页面和弹出的成员、合作者卡片。每次打开网站默认英文；切换后，本次浏览中打开的所有页面和标签页都保持所选语言，关闭浏览器后恢复英文。需要直接分享中文页面时，在链接后加 `?lang=zh`，例如 `https://zhang-hydrolab.github.io/people.html?lang=zh`。
 
 邮箱填写在 **Email**；Google Scholar、GitHub、个人主页、ResearchGate 和 ORCID 填写在 **Links**，每条填写名称与真实地址。个人主页名称使用 `Homepage`。已有链接会在照片下方及详情中显示为可单独点击的圆形图标，未填写的链接不会显示；其他类型链接仍会显示为通用链接图标。
+
+### 合作者
+
+进入 **Collaborators** 维护。每位合作者填写姓名、中英文职务（**Position**）、单位（**Institute** / **Institute (中文)**）、所在城市及经纬度、中英文简介，以及至少一条可核实的来源链接（**Links**）。
+
+- **Name in author lists**：论文中的署名，如 `Blöschl, G.`。合作论文由此自动从论文库中找出，显示在合作者卡片中。
+- **Photos with the group**：与团队的合影，填写媒体 ID，每行一个。请先在 **Files** 上传照片并填写中英文说明，说明会显示在照片下方。
+- 地图上的城市由经纬度确定，同一城市的多位合作者共用一个点。
 
 ### 人才计划栏目
 
@@ -84,6 +108,8 @@
 引用量、H 指数等都在 **Site settings** 的 `site.stats` 中。设置项是 JSON 格式，保存时如果格式有误，系统会拒绝并提示。
 
 招生信息在 `site.recruitment`，联系方式在 `site.contact`。
+
+团队负责人的职务与荣誉在 `site.pi` 的 `honours` 中维护，每项填写 `en` 和 `zh`，按列表顺序显示在人员页负责人简介和首页“团队负责人简介”中；负责人职称在 `title_en` / `title_zh`。
 
 首页的“课题组简介”取自 `site.pi` 的 `bio_en` 和 `bio_zh`，这两个列表都按段落顺序读取：前两段介绍团队负责人，在首页折叠显示；第三段起介绍团队，在首页直接显示。修改时请保持这个顺序。人员页默认显示 **People** 中负责人的中英文 **Bio** 简介；完整的 `site.pi` 段落保留在“了解更多团队与负责人介绍”中，展开后阅读。
 
