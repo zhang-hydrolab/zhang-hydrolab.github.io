@@ -21,13 +21,7 @@
           "url": "https://www.tuwien.at/en/all-news/news/wassernobelpreis-fuer-prof-guenter-bloeschl"
         }
       ],
-      "gallery": [
-        "194036ab589184df",
-        "f31f12205fbac6b6",
-        "9974dc6b836527d6",
-        "ce993d8ef1a449ea",
-        "6f224d77ed63bb47"
-      ]
+      "gallery": []
     },
     {
       "id": "thorsten-wagener",
@@ -49,12 +43,7 @@
           "url": "https://uni-potsdam.de/en/headlines-and-featured-stories/detail/2021-07-29-water-is-his-element-alexander-von-humboldt-professor-thorsten-wagener-researches-at-the"
         }
       ],
-      "gallery": [
-        "de2682d169911274",
-        "32df8173a3ceeebe",
-        "b737093820098144",
-        "7d6126c7542bc32d"
-      ]
+      "gallery": []
     },
     {
       "id": "diego-miralles",
@@ -76,9 +65,7 @@
           "url": "https://www.ugent.be/bw/environment/en/research/h-cel/staff/diego-miralles.htm"
         }
       ],
-      "gallery": [
-        "d21656d490978bc1"
-      ]
+      "gallery": []
     },
     {
       "id": "ruby-leung",
@@ -100,10 +87,7 @@
           "url": "https://www.pnnl.gov/news-media/two-pnnl-researchers-elected-membership-national-academy-engineering"
         }
       ],
-      "gallery": [
-        "6671e2d5ed6ee19f",
-        "650e458bb417dbb4"
-      ]
+      "gallery": []
     },
     {
       "id": "francis-chiew",
@@ -125,12 +109,7 @@
           "url": "https://people.csiro.au/C/F/Francis-Chiew"
         }
       ],
-      "gallery": [
-        "32b56366edbb22bc",
-        "bbea37748889c806",
-        "ce993d8ef1a449ea",
-        "6f224d77ed63bb47"
-      ]
+      "gallery": []
     },
     {
       "id": "tim-mcvicar",
@@ -174,11 +153,7 @@
           "url": "https://engineering.uci.edu/node/2983"
         }
       ],
-      "gallery": [
-        "5e0c104c19258e7c",
-        "d27449b972943901",
-        "fdb914afa14e51bf"
-      ]
+      "gallery": []
     }
   ]
 }

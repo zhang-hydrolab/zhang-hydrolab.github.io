@@ -557,7 +557,7 @@ export function collaborationPage(ctx) {
     ${pageHead({
       en: 'Collaboration',
       zh: '合作网络',
-      lead: t('The group works with hydrologists and climate scientists in Europe, North America and Australia. Select a collaborator for a profile, photographs and joint papers.', '团队与欧洲、北美和澳大利亚的水文与气候科学家开展合作。点击合作者可查看简介、合影与合作论文。'),
+      lead: t('The group works with hydrologists and climate scientists in Europe, North America and Australia. Select a collaborator for a profile and joint papers.', '团队与欧洲、北美和澳大利亚的水文与气候科学家开展合作。点击合作者可查看简介与合作论文。'),
     })}
     <section class="wrap" data-module="collabmap">
       <figure class="plate plate--map">
