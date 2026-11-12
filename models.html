@@ -3,13 +3,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Models · Large Scale Hydrology Group</title>
-<meta name="description" content="Process models from the Large Scale Hydrology group, including the calibration-free complementary relationship evapotranspiration model CR_v3.0.">
+<meta name="description" content="Models from the Large Scale Hydrology group, including CAS-Canglong, PML_V2 and the complementary-relationship model CR_v3.0.">
 <link rel="canonical" href="https://zhang-hydrolab.github.io/models.html">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Large Scale Hydrology Group">
 <meta property="og:title" content="Models · Large Scale Hydrology Group">
-<meta property="og:description" content="Process models from the Large Scale Hydrology group, including the calibration-free complementary relationship evapotranspiration model CR_v3.0.">
+<meta property="og:description" content="Models from the Large Scale Hydrology group, including CAS-Canglong, PML_V2 and the complementary-relationship model CR_v3.0.">
 <meta property="og:url" content="https://zhang-hydrolab.github.io/models.html">
 <meta property="og:image" content="https://zhang-hydrolab.github.io/media/e40a2308e73d60dd-2400.webp">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -59,7 +59,7 @@
       <div>
         <p class="kicker"><a href="/"><span class="t-en">Home</span><span class="t-zh" lang="zh-CN">首页</span></a> / <span class="t-en">Models</span><span class="t-zh" lang="zh-CN">模型产品</span></p>
         <h1><span class="t-en">Models</span><span class="t-zh" lang="zh-CN">模型产品</span></h1>
-        <p class="pagehead__lead"><span class="t-en">Process models developed by the group, together with their downloadable products.</span><span class="t-zh" lang="zh-CN">课题组发展的过程模型及其可下载产品。</span></p>
+        <p class="pagehead__lead"><span class="t-en">Models developed by the group, with code, products and related links.</span><span class="t-zh" lang="zh-CN">课题组发展的模型，以及代码、产品与相关链接。</span></p>
       </div>
       <figure class="etg" data-module="etglobe">
     <div class="etg__stage">
@@ -80,6 +80,10 @@
       <figure class="cov">
     <ol class="cov__rows">
       <li>
+          <a class="link cov__name" href="#pml-v2">PML_V2</a>
+          <span class="cov__track"><i style="left:47.83%;width:52.17%"></i></span>
+          <span class="cov__range">2002.07 – near present</span>
+        </li><li>
           <a class="link cov__name" href="#cr-v3">CR_v3.0</a>
           <span class="cov__track"><i style="left:4.35%;width:93.48%"></i></span>
           <span class="cov__range">1982 – 2025</span>
@@ -93,7 +97,47 @@
   </figure>
     </section>
     <div class="wrap datasets">
-      <article class="dataset" id="cr-v3">
+      <article class="dataset" id="cas-canglong">
+          <div>
+            <h2>CAS-Canglong</h2>
+            <p><span class="t-en">CAS-Canglong (中科苍龙) is a 3-D Earth-specific transformer that learns the coupled ocean–atmosphere system from ERA5 and predicts monthly global sea-surface temperature (SST) and ENSO. In the Advanced Science (2026) paper, one-to-three-month SST skill improves by 55.6 ± 14.1 % to 63.4 ± 15.5 % over physics-based seasonal models in six ocean regions that dominate sub-seasonal to seasonal variability over land. The project releases code on GitHub, live 16-month outlooks at canglong.earth, and a 12-month probabilistic SST and ENSO model on Hugging Face.</span><span class="t-zh" lang="zh-CN">“中科苍龙”（CAS-Canglong）是面向全球海表温度（SST）与 ENSO 次季节至季节预测的三维地球 Transformer 模型，由 ERA5 学习海气耦合过程并给出逐月预报。2026 年发表于 Advanced Science 的论文表明，在主导陆地 S2S 变率的六个海区，1–3 个月海温预报技巧相对物理季节模式提高 55.6±14.1% 至 63.4±15.5%。项目在 GitHub 开源，并在 canglong.earth 发布最长 16 个月的业务展望，在 Hugging Face 发布 12 个月概率预报。</span></p>
+            <div class="table-scroll"><table class="table table--spec"><tbody>
+              <tr><th scope="row"><span class="t-en">Scope</span><span class="t-zh" lang="zh-CN">范围</span></th><td>Global</td></tr>
+              <tr><th scope="row"><span class="t-en">Variables</span><span class="t-zh" lang="zh-CN">变量</span></th><td>SST, ENSO</td></tr>
+              <tr><th scope="row"><span class="t-en">Time step</span><span class="t-zh" lang="zh-CN">时间分辨率</span></th><td>Monthly forecasts, leads of 1–16 months</td></tr>
+              <tr><th scope="row"><span class="t-en">Grid</span><span class="t-zh" lang="zh-CN">空间分辨率</span></th><td>0.25°</td></tr>
+              <tr><th scope="row"><span class="t-en">Period</span><span class="t-zh" lang="zh-CN">时段</span></th><td>Forecast leads of 1–16 months</td></tr>
+            </tbody></table></div>
+            <h3><span class="t-en">Links</span><span class="t-zh" lang="zh-CN">相关链接</span></h3>
+            <ul class="plain"><li><a class="link" href="https://github.com/GISWLH/CAS-Canglong" target="_blank" rel="noopener">GitHub: CAS-Canglong</a></li><li><a class="link" href="https://canglong.earth" target="_blank" rel="noopener">Live portal · canglong.earth</a></li><li><a class="link" href="https://huggingface.co/LonghaoWang/CAS-Canglong-SST" target="_blank" rel="noopener">Hugging Face model</a></li><li><a class="link" href="https://huggingface.co/spaces/LonghaoWang/CAS-Canglong" target="_blank" rel="noopener">Hugging Face Space (live forecast)</a></li><li><a class="link" href="https://doi.org/10.1002/advs.78271" target="_blank" rel="noopener">Paper · Advanced Science</a></li><li><a class="link" href="https://doi.org/10.6084/m9.figshare.26779969" target="_blank" rel="noopener">Model weights · figshare</a></li></ul>
+            <h3><span class="t-en">How to cite</span><span class="t-zh" lang="zh-CN">引用方式</span></h3>
+            <ol class="cite"><li><p>Wang, L., Zhang, X., Leung, R. L., Chiew, F. H. S., AghaKouchak, A., Ying, K., &amp; Zhang, Y. (2026). Improved Skills for Predicting Sub-Seasonal to Seasonal Global Sea Surface Temperature. Advanced Science, e78271. https://doi.org/10.1002/advs.78271.</p><button class="link" type="button" data-copy="Wang, L., Zhang, X., Leung, R. L., Chiew, F. H. S., AghaKouchak, A., Ying, K., &amp; Zhang, Y. (2026). Improved Skills for Predicting Sub-Seasonal to Seasonal Global Sea Surface Temperature. Advanced Science, e78271. https://doi.org/10.1002/advs.78271."><span class="t-en">Copy citation</span><span class="t-zh" lang="zh-CN">复制引用</span></button></li></ol>
+          </div>
+          <figure class="fig">
+    <button class="fig__zoom" type="button" data-zoom aria-label="Enlarge: CAS-Canglong figure"><img class="" src="/media/db8d9cf64dcb855f-1920.webp" srcset="/media/db8d9cf64dcb855f-640.webp 640w, /media/db8d9cf64dcb855f-1280.webp 1280w, /media/db8d9cf64dcb855f-1920.webp 1920w" sizes="(max-width: 1000px) 100vw, 520px" width="2200" height="1545" alt="CAS-Canglong figure" loading="lazy" decoding="async"></button>
+    
+  </figure>
+        </article><article class="dataset" id="pml-v2">
+          <div>
+            <h2>PML_V2</h2>
+            <p><span class="t-en">PML_V2 (Penman–Monteith–Leuning Version 2) is a water–carbon coupled diagnostic biophysical model. It couples a photosynthesis scheme and canopy stomatal conductance with the Penman–Monteith equation to estimate vegetation transpiration, soil evaporation, interception, and gross primary production (GPP) together. Zhang et al. (2019, Remote Sensing of Environment) mapped global ET and GPP at 500 m and 8-day resolution, taking MODIS leaf area index, albedo and emissivity together with GLDAS meteorological forcing. Products are available on Google Earth Engine and at the National Tibetan Plateau Data Center; model code is on GitHub.</span><span class="t-zh" lang="zh-CN">PML_V2（Penman–Monteith–Leuning 第二版）是水–碳耦合的诊断生物物理模型，将光合作用与冠层气孔导度耦合到 Penman–Monteith 方程，联合估算植被蒸腾、土壤蒸发、截留蒸发和总初级生产力（GPP）。Zhang 等 2019 年发表于 Remote Sensing of Environment 的研究以 MODIS 叶面积指数、反照率和比辐射率以及 GLDAS 气象强迫为输入，制作了 500 米、8 天分辨率的全球蒸散发与 GPP 产品，数据发布于 Google Earth Engine 和国家青藏高原科学数据中心，模型代码见 GitHub。</span></p>
+            <div class="table-scroll"><table class="table table--spec"><tbody>
+              <tr><th scope="row"><span class="t-en">Scope</span><span class="t-zh" lang="zh-CN">范围</span></th><td>Global</td></tr>
+              <tr><th scope="row"><span class="t-en">Variables</span><span class="t-zh" lang="zh-CN">变量</span></th><td>ET, ET components, GPP</td></tr>
+              <tr><th scope="row"><span class="t-en">Time step</span><span class="t-zh" lang="zh-CN">时间分辨率</span></th><td>8-day</td></tr>
+              <tr><th scope="row"><span class="t-en">Grid</span><span class="t-zh" lang="zh-CN">空间分辨率</span></th><td>500 m · 0.05°</td></tr>
+              <tr><th scope="row"><span class="t-en">Period</span><span class="t-zh" lang="zh-CN">时段</span></th><td>2002.07 – near present</td></tr>
+            </tbody></table></div>
+            <h3><span class="t-en">Links</span><span class="t-zh" lang="zh-CN">相关链接</span></h3>
+            <ul class="plain"><li><a class="link" href="https://developers.google.cn/earth-engine/datasets/catalog/CAS_IGSNRR_PML_V2_v018" target="_blank" rel="noopener">Google Earth Engine (500 m)</a></li><li><a class="link" href="https://data.tpdc.ac.cn/zh-hans/data/48c16a8d-d307-4973-abab-972e9449627c/" target="_blank" rel="noopener">National Tibetan Plateau Data Center (0.05°)</a></li><li><a class="link" href="https://github.com/gee-hydro/gee_PML" target="_blank" rel="noopener">GitHub: gee_PML</a></li><li><a class="link" href="https://doi.org/10.1016/j.rse.2018.12.031" target="_blank" rel="noopener">Paper · Remote Sensing of Environment (2019)</a></li></ul>
+            <h3><span class="t-en">How to cite</span><span class="t-zh" lang="zh-CN">引用方式</span></h3>
+            <ol class="cite"><li><p>Zhang, Y., Kong, D., Gan, R., Chiew, F. H. S., McVicar, T. R., Zhang, Q., &amp; Yang, Y. (2019). Coupled estimation of 500 m and 8-day resolution global evapotranspiration and gross primary production in 2002–2017. Remote Sensing of Environment, 222, 165–182. https://doi.org/10.1016/j.rse.2018.12.031.</p><button class="link" type="button" data-copy="Zhang, Y., Kong, D., Gan, R., Chiew, F. H. S., McVicar, T. R., Zhang, Q., &amp; Yang, Y. (2019). Coupled estimation of 500 m and 8-day resolution global evapotranspiration and gross primary production in 2002–2017. Remote Sensing of Environment, 222, 165–182. https://doi.org/10.1016/j.rse.2018.12.031."><span class="t-en">Copy citation</span><span class="t-zh" lang="zh-CN">复制引用</span></button></li><li><p>Zhang, Y., Peña-Arancibia, J. L., McVicar, T. R., Chiew, F. H. S., Vaze, J., Liu, C., Lu, X., Zheng, H., Wang, Y., Liu, Y. Y., Miralles, D. G., &amp; Pan, M. (2016). Multi-decadal trends in global terrestrial evapotranspiration and its components. Scientific Reports, 6, 19124. https://doi.org/10.1038/srep19124.</p><button class="link" type="button" data-copy="Zhang, Y., Peña-Arancibia, J. L., McVicar, T. R., Chiew, F. H. S., Vaze, J., Liu, C., Lu, X., Zheng, H., Wang, Y., Liu, Y. Y., Miralles, D. G., &amp; Pan, M. (2016). Multi-decadal trends in global terrestrial evapotranspiration and its components. Scientific Reports, 6, 19124. https://doi.org/10.1038/srep19124."><span class="t-en">Copy citation</span><span class="t-zh" lang="zh-CN">复制引用</span></button></li></ol>
+          </div>
+          <figure class="fig">
+    <button class="fig__zoom" type="button" data-zoom aria-label="Enlarge: PML_V2 figure"><img class="" src="/media/d64dce16f1e3e665-1920.webp" srcset="/media/d64dce16f1e3e665-640.webp 640w, /media/d64dce16f1e3e665-1280.webp 1280w, /media/d64dce16f1e3e665-1920.webp 1920w" sizes="(max-width: 1000px) 100vw, 520px" width="2200" height="1219" alt="PML_V2 figure" loading="lazy" decoding="async"></button>
+    
+  </figure>
+        </article><article class="dataset" id="cr-v3">
           <div>
             <h2>CR_v3.0</h2>
             <p><span class="t-en">Global terrestrial evapotranspiration estimated by the calibration-free complementary relationship model (Version 3.0). Forcing includes air temperature and relative humidity from JRA3Q, and net radiation and wind speed from ERA5, with net radiation corrected against CERES. V3 is an upgraded version of V2; earlier versions are deprecated.</span><span class="t-zh" lang="zh-CN">由无需率定的互补关系模型估算的全球陆地蒸散发产品（第 3 版）。驱动数据为 JRA3Q 的气温和相对湿度，以及 ERA5 的净辐射和风速，其中净辐射已对照 CERES 订正。V3 为 V2 的升级版，早期版本不再推荐使用。</span></p>
@@ -104,7 +148,7 @@
               <tr><th scope="row"><span class="t-en">Grid</span><span class="t-zh" lang="zh-CN">空间分辨率</span></th><td>0.25°</td></tr>
               <tr><th scope="row"><span class="t-en">Period</span><span class="t-zh" lang="zh-CN">时段</span></th><td>1982 – 2025</td></tr>
             </tbody></table></div>
-            <h3><span class="t-en">Download</span><span class="t-zh" lang="zh-CN">下载</span></h3>
+            <h3><span class="t-en">Links</span><span class="t-zh" lang="zh-CN">相关链接</span></h3>
             <ul class="plain"><li><a class="link" href="https://www.ncdc.ac.cn/portal/metadata/fb0953e4-2969-4c52-9859-d1715f2c9a69" target="_blank" rel="noopener">National Cryosphere Desert Data Center</a></li><li><a class="link" href="https://doi.org/10.12072/ncdc.et.db4024.2023" target="_blank" rel="noopener">DOI</a></li></ul>
             <h3><span class="t-en">How to cite</span><span class="t-zh" lang="zh-CN">引用方式</span></h3>
             <ol class="cite"><li><p>Ma, N., Szilagyi, J., &amp; Zhang, Y. (2023). Global terrestrial evapotranspiration dataset derived from complementary-relationship method (Version 3.0). National Cryosphere Desert Data Center. https://doi.org/10.12072/ncdc.et.db4024.2023.</p><button class="link" type="button" data-copy="Ma, N., Szilagyi, J., &amp; Zhang, Y. (2023). Global terrestrial evapotranspiration dataset derived from complementary-relationship method (Version 3.0). National Cryosphere Desert Data Center. https://doi.org/10.12072/ncdc.et.db4024.2023."><span class="t-en">Copy citation</span><span class="t-zh" lang="zh-CN">复制引用</span></button></li><li><p>Ma, N., Szilagyi, J., &amp; Zhang, Y. (2021). Calibration-Free Complementary Relationship Estimates Terrestrial Evapotranspiration Globally. Water Resources Research, 57(9), e2021WR029691. https://doi.org/10.1029/2021WR029691.</p><button class="link" type="button" data-copy="Ma, N., Szilagyi, J., &amp; Zhang, Y. (2021). Calibration-Free Complementary Relationship Estimates Terrestrial Evapotranspiration Globally. Water Resources Research, 57(9), e2021WR029691. https://doi.org/10.1029/2021WR029691."><span class="t-en">Copy citation</span><span class="t-zh" lang="zh-CN">复制引用</span></button></li></ol>

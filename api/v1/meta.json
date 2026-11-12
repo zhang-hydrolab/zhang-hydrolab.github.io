@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "contentHash": "a46cd5fdfc660a8407aec5fb4d5acc0bebec4ebfeee20e80e611c6159933af70",
-  "updatedAt": "2026-11-12T06:00:00.000Z",
+  "contentHash": "c0e38a9e6331bb730dc358b7ac884d3c33dec4e776abd4a31053726550daaac1",
+  "updatedAt": "2026-11-12T06:20:00.000Z",
   "counts": {
     "people": 31,
     "alumni": 15,
     "publications": 125,
     "news": 20,
     "datasets": 5,
-    "models": 1,
+    "models": 3,
     "researchThemes": 3,
     "researchProjects": 5,
-    "collaborators": 7
+    "collaborators": 10
   }
 }

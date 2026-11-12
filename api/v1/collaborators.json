@@ -1,5 +1,5 @@
 {
-  "count": 7,
+  "count": 10,
   "items": [
     {
       "id": "gunter-bloschl",
@@ -151,6 +151,76 @@
         {
           "label": "Homepage",
           "url": "https://engineering.uci.edu/node/2983"
+        }
+      ],
+      "gallery": []
+    },
+    {
+      "id": "georgia-destouni",
+      "name": "Georgia Destouni",
+      "institute": "Stockholm University",
+      "city": "Stockholm",
+      "lat": 59.36,
+      "lon": 18.06,
+      "bio": "Georgia Destouni is Professor of Hydrology at the Department of Physical Geography, Stockholm University, and Guest Professor at the Department of Sustainable Development, Environmental Science and Engineering (SEED), KTH Royal Institute of Technology. Her research concerns the flows, storages, availability and quality of water, and their interactions with climate, ecosystems and society, at global and regional scales. She is Editor-in-Chief of Water Resources Research, a member of the Royal Swedish Academy of Sciences and the Royal Swedish Academy of Engineering Sciences, an International Member of the US National Academy of Engineering, and a Fellow of AGU. She received the Henry Darcy Medal of the European Geosciences Union in 2013.",
+      "photo_id": "9f5a3e90356cc575",
+      "institute_zh": "瑞典斯德哥尔摩大学",
+      "title_en": "Professor of Hydrology, Stockholm University",
+      "title_zh": "瑞典斯德哥尔摩大学水文学教授",
+      "bio_zh": "Georgia Destouni 是瑞典斯德哥尔摩大学自然地理系水文学教授，并任瑞典皇家理工学院可持续发展、环境科学与工程系（SEED）客座教授。她的研究关注水体的通量、储量、可用性和水质，以及它们与气候、生态系统和社会在全球与区域尺度上的相互作用。她是《Water Resources Research》主编，瑞典皇家科学院和瑞典皇家工程科学院院士、美国国家工程院国际院士、美国地球物理联合会会士，并于 2013 年获欧洲地球科学联盟 Henry Darcy 奖章。",
+      "author_name": "Destouni, G.",
+      "links": [
+        {
+          "label": "Homepage",
+          "url": "https://www.su.se/english/profiles/g/gdest"
+        }
+      ],
+      "gallery": []
+    },
+    {
+      "id": "pedro-chaffe",
+      "name": "Pedro Luiz Borges Chaffe",
+      "institute": "Federal University of Santa Catarina (UFSC)",
+      "city": "Florianópolis",
+      "lat": -27.6,
+      "lon": -48.52,
+      "bio": "Pedro Luiz Borges Chaffe is Associate Professor in the Sanitary and Environmental Engineering Department at the Federal University of Santa Catarina (UFSC), Florianópolis, Brazil, and supervisor of the Hydrology Laboratory (LabHidro). He studied Sanitary and Environmental Engineering at UFSC and received his PhD in Urban and Environmental Engineering from Kyoto University. His research focuses on the climatic and physiographic controls of streamflow from small to large catchments in Brazil.",
+      "photo_id": "cfc2b5321478c655",
+      "institute_zh": "巴西圣卡塔琳娜联邦大学",
+      "title_en": "Associate Professor, Federal University of Santa Catarina",
+      "title_zh": "巴西圣卡塔琳娜联邦大学副教授",
+      "bio_zh": "Pedro Luiz Borges Chaffe 是巴西圣卡塔琳娜联邦大学（UFSC）卫生与环境工程系副教授，并担任该校水文实验室（LabHidro）负责人。他在 UFSC 修读卫生与环境工程，并于日本京都大学获得城市与环境工程博士学位。研究方向是巴西从小型到大型流域径流的气候与自然地理控制因素。",
+      "author_name": "Chaffe, P. L. B.",
+      "links": [
+        {
+          "label": "Homepage",
+          "url": "https://globalaffairs.ucdavis.edu/fulbright/scholars-visiting/pedro-luis-borges-chaffe"
+        },
+        {
+          "label": "LabHidro",
+          "url": "http://www.labhidro.ufsc.br/en/home"
+        }
+      ],
+      "gallery": []
+    },
+    {
+      "id": "hylke-beck",
+      "name": "Hylke Beck",
+      "institute": "King Abdullah University of Science and Technology (KAUST)",
+      "city": "Thuwal",
+      "lat": 22.31,
+      "lon": 39.1,
+      "bio": "Hylke Beck is Assistant Professor of Environmental Science and Engineering at King Abdullah University of Science and Technology (KAUST). His research uses machine learning, satellite remote sensing and modelling to understand and manage climate hazards such as floods, droughts and heat waves. He developed the MSWEP global precipitation product, and has been recognized by Clarivate as a Highly Cited Researcher (2021–2025).",
+      "photo_id": "6f162f1bacd87f60",
+      "institute_zh": "沙特阿卜杜拉国王科技大学",
+      "title_en": "Assistant Professor, Environmental Science and Engineering, KAUST",
+      "title_zh": "阿卜杜拉国王科技大学环境科学与工程助理教授",
+      "bio_zh": "Hylke Beck 是沙特阿卜杜拉国王科技大学（KAUST）环境科学与工程助理教授。他运用机器学习、卫星遥感和模拟方法，认识并应对洪水、干旱和热浪等气候灾害，主持发展了全球降水产品 MSWEP，并于 2021–2025 年入选 Clarivate 高被引科学家。",
+      "author_name": "Beck, H. E.",
+      "links": [
+        {
+          "label": "Homepage",
+          "url": "https://www.kaust.edu.sa/en/study/faculty/hylke-beck"
         }
       ],
       "gallery": []

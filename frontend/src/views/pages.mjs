@@ -220,7 +220,7 @@ export function modelsPage(ctx) {
       visual: etGlobe(),
       en: 'Models',
       zh: '模型产品',
-      lead: t('Process models developed by the group, together with their downloadable products.', '课题组发展的过程模型及其可下载产品。'),
+      lead: t('Models developed by the group, with code, products and related links.', '课题组发展的模型，以及代码、产品与相关链接。'),
     })}
     <section class="wrap">
       <h2 class="minor">${t('Temporal coverage', '时间覆盖')}</h2>
@@ -239,7 +239,7 @@ export function modelsPage(ctx) {
               <tr><th scope="row">${t('Grid', '空间分辨率')}</th><td>${d.spatial}</td></tr>
               <tr><th scope="row">${t('Period', '时段')}</th><td>${d.coverage_label}</td></tr>
             </tbody></table></div>
-            <h3>${t('Download', '下载')}</h3>
+            <h3>${t('Links', '相关链接')}</h3>
             <ul class="plain">${d.downloads.map((link) => html`<li><a class="link" href="${safeHref(link.url)}" target="_blank" rel="noopener">${link.label}</a></li>`)}</ul>
             <h3>${t('How to cite', '引用方式')}</h3>
             <ol class="cite">${d.citations.map((c) => html`<li><p>${c}</p><button class="link" type="button" data-copy="${c}">${t('Copy citation', '复制引用')}</button></li>`)}</ol>
@@ -248,7 +248,7 @@ export function modelsPage(ctx) {
         </article>`,
       )}
     </div>`;
-  return layout(ctx, { page: 'models', title: 'Models', description: 'Process models from the Large Scale Hydrology group, including the calibration-free complementary relationship evapotranspiration model CR_v3.0.', body, path: '/models.html' });
+  return layout(ctx, { page: 'models', title: 'Models', description: 'Models from the Large Scale Hydrology group, including CAS-Canglong, PML_V2 and the complementary-relationship model CR_v3.0.', body, path: '/models.html' });
 }
 
 /* ---------- People ---------- */
