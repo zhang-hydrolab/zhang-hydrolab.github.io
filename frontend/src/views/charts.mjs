@@ -114,8 +114,8 @@ export function budgetSection(ctx, { nested = false } = {}) {
 }
 
 /** Period of each dataset on one time axis. Static, because the figure is the content. */
-export function coverage(ctx) {
-  const items = ctx.api.datasets.items.filter((d) => d.start_year);
+export function coverage(ctx, source = ctx.api.datasets.items) {
+  const items = source.filter((d) => d.start_year);
   const now = new Date().getFullYear();
   const min = 1980;
   const span = now - min;

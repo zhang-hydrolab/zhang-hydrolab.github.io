@@ -55,7 +55,7 @@ function searchDialog() {
   return html`<dialog class="search" data-search aria-label="Search">
     <form method="dialog" class="search__box">
       ${searchIcon}
-      <input data-search-input type="search" placeholder="People, papers, datasets, news" data-placeholder-zh="成员、论文、数据、新闻" aria-label="Search the site" autocomplete="off">
+      <input data-search-input type="search" placeholder="People, papers, datasets, models, news" data-placeholder-zh="成员、论文、数据、模型、新闻" aria-label="Search the site" autocomplete="off">
       <button class="search__esc" type="submit" aria-label="Close search">Esc</button>
     </form>
     <ul class="search__results" data-search-results aria-live="polite"></ul>

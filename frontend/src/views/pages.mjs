@@ -180,7 +180,7 @@ export function dataPage(ctx) {
       visual: etGlobe(),
       en: 'Data products',
       zh: '数据产品',
-      lead: t('Gridded evapotranspiration, gross primary production and terrestrial water storage products, free to download.', '免费开放的蒸散发、总初级生产力和陆地水储量格点数据产品。'),
+      lead: t('Gridded evapotranspiration, gross primary production and terrestrial water storage products, and a basin-scale water-balance ET benchmark, free to download.', '免费开放的蒸散发、总初级生产力和陆地水储量格点数据产品，以及流域尺度水量平衡蒸散发基准数据。'),
     })}
     <section class="wrap">
       <h2 class="minor">${t('Temporal coverage', '时间覆盖')}</h2>
@@ -208,7 +208,47 @@ export function dataPage(ctx) {
         </article>`,
       )}
     </div>`;
-  return layout(ctx, { page: 'data', title: 'Data', description: 'Open global and regional evapotranspiration, GPP and terrestrial water storage datasets: PML_v2, PML_v2.2, PML_v2-China and GRACE-Transformer-Gap.', body, path: '/data.html' });
+  return layout(ctx, { page: 'data', title: 'Data', description: 'Open global and regional evapotranspiration, GPP and terrestrial water storage datasets: PML_v2, PML_v2.2, PML_v2-China, GRACE-Transformer-Gap and ET-WB.', body, path: '/data.html' });
+}
+
+/* ---------- Models ---------- */
+
+export function modelsPage(ctx) {
+  const { items } = ctx.api.models;
+  const body = html`
+    ${pageHead({
+      visual: etGlobe(),
+      en: 'Models',
+      zh: '模型产品',
+      lead: t('Process models developed by the group, together with their downloadable products.', '课题组发展的过程模型及其可下载产品。'),
+    })}
+    <section class="wrap">
+      <h2 class="minor">${t('Temporal coverage', '时间覆盖')}</h2>
+      ${coverage(ctx, items)}
+    </section>
+    <div class="wrap datasets">
+      ${items.map(
+        (d) => html`<article class="dataset" id="${d.id}">
+          <div>
+            <h2>${d.name}</h2>
+            <p>${t(d.summary_en, d.summary_zh)}</p>
+            <div class="table-scroll"><table class="table table--spec"><tbody>
+              <tr><th scope="row">${t('Scope', '范围')}</th><td>${d.scope}</td></tr>
+              <tr><th scope="row">${t('Variables', '变量')}</th><td>${d.variables}</td></tr>
+              <tr><th scope="row">${t('Time step', '时间分辨率')}</th><td>${d.temporal}</td></tr>
+              <tr><th scope="row">${t('Grid', '空间分辨率')}</th><td>${d.spatial}</td></tr>
+              <tr><th scope="row">${t('Period', '时段')}</th><td>${d.coverage_label}</td></tr>
+            </tbody></table></div>
+            <h3>${t('Download', '下载')}</h3>
+            <ul class="plain">${d.downloads.map((link) => html`<li><a class="link" href="${safeHref(link.url)}" target="_blank" rel="noopener">${link.label}</a></li>`)}</ul>
+            <h3>${t('How to cite', '引用方式')}</h3>
+            <ol class="cite">${d.citations.map((c) => html`<li><p>${c}</p><button class="link" type="button" data-copy="${c}">${t('Copy citation', '复制引用')}</button></li>`)}</ol>
+          </div>
+          ${d.image_id ? fig(ctx, d.image_id, { alt: `${d.name} figure`, sizes: '(max-width: 1000px) 100vw, 520px' }) : ''}
+        </article>`,
+      )}
+    </div>`;
+  return layout(ctx, { page: 'models', title: 'Models', description: 'Process models from the Large Scale Hydrology group, including the calibration-free complementary relationship evapotranspiration model CR_v3.0.', body, path: '/models.html' });
 }
 
 /* ---------- People ---------- */

@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 export const SUPPORTED_SCHEMA = 1;
-const FILES = ['meta', 'site', 'people', 'publications', 'news', 'datasets', 'research', 'collaborators', 'media'];
+const FILES = ['meta', 'site', 'people', 'publications', 'news', 'datasets', 'models', 'research', 'collaborators', 'media'];
 
 /**
  * The only way this project reads content. `source` is a directory holding the

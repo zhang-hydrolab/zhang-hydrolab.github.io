@@ -30,6 +30,7 @@ function collectUsage(api) {
     for (const match of n.body_md.matchAll(/\(media:([0-9a-f]{16})\)/g)) use(match[1], 'figure');
   }
   for (const d of api.datasets.items) use(d.image_id, 'figure');
+  for (const m of api.models.items) use(m.image_id, 'figure');
   for (const theme of api.research.themes) {
     use(theme.image_id, 'mark');
     for (const p of theme.projects) use(p.image_id, 'figure');

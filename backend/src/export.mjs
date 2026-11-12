@@ -45,13 +45,14 @@ export function buildApi(store) {
 
   const newsRows = published(store, 'news');
   const datasetRows = published(store, 'datasets');
+  const modelRows = published(store, 'models');
   const themeRows = published(store, 'research_themes');
   const projectRows = published(store, 'research_projects');
   const collabRows = published(store, 'collaborators');
   const mediaRows = store.listMedia({ status: 'published', limit: 100000 });
   const settings = store.settings();
 
-  const all = [peopleRows, pubRows, newsRows, datasetRows, themeRows, projectRows, collabRows];
+  const all = [peopleRows, pubRows, newsRows, datasetRows, modelRows, themeRows, projectRows, collabRows];
   const updatedAt = all.map(stamp).reduce((max, s) => (s > max ? s : max), '');
 
   return {
@@ -65,6 +66,7 @@ export function buildApi(store) {
         publications: pubRows.length,
         news: newsRows.length,
         datasets: datasetRows.length,
+        models: modelRows.length,
         researchThemes: themeRows.length,
         researchProjects: projectRows.length,
         collaborators: collabRows.length,
@@ -80,6 +82,7 @@ export function buildApi(store) {
     },
     'news.json': { count: newsRows.length, items: newsRows.map(publicRow) },
     'datasets.json': { count: datasetRows.length, items: datasetRows.map(publicRow) },
+    'models.json': { count: modelRows.length, items: modelRows.map(publicRow) },
     'research.json': {
       themes: themeRows.map((theme) => ({
         ...publicRow(theme),

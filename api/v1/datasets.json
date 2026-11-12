@@ -1,5 +1,5 @@
 {
-  "count": 4,
+  "count": 5,
   "items": [
     {
       "id": "pml-v2-2",
@@ -109,6 +109,34 @@
         "Wang, L., & Zhang, Y. (2024). Filling GRACE data gap using an innovative transformer-based deep learning approach. Remote Sensing of Environment, 315, 114465. https://doi.org/10.1016/j.rse.2024.114465"
       ],
       "image_id": "b31b5f27e3866661"
+    },
+    {
+      "id": "et-wb",
+      "name": "ET-WB",
+      "summary_en": "Water-balance-based evapotranspiration (ETwb) for 56 large river basins (>10⁵ km²) worldwide over 1983–2016. For each basin, observed runoff is combined with four precipitation products (GPCC, CRU, MSWEP, GPCP) and three terrestrial water storage change estimates (JPL, GSFC, CSR), yielding 12 annual ETwb series and a Bayesian three-cornered-hat merged series recommended as a benchmark for global ET models. Basin boundaries are provided as shapefiles and as a 0.25° NetCDF mask.",
+      "summary_zh": "1983–2016 年全球 56 个大型流域（面积大于 10⁵ km²）的水量平衡蒸散发（ETwb）基准数据集。对每个流域，将实测径流与四种降水产品（GPCC、CRU、MSWEP、GPCP）和三种陆地水储量变化估计（JPL、GSFC、CSR）组合，得到 12 条逐年 ETwb 序列，并用基于贝叶斯的三角帽方法融合得到推荐用于检验全球蒸散发模型的基准序列。同时提供流域边界的 Shapefile 和 0.25° NetCDF 掩膜。",
+      "scope": "Global (56 basins)",
+      "variables": "ETwb",
+      "temporal": "Annual",
+      "spatial": "56 river basins",
+      "start_year": 1983,
+      "end_year": 2016,
+      "coverage_label": "1983 – 2016",
+      "downloads": [
+        {
+          "label": "National Tibetan Plateau Data Center",
+          "url": "https://data.tpdc.ac.cn/en/data/e010cd0d-0881-4e7e-9d63-d36992750b04"
+        },
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.11888/Atmos.tpdc.300493"
+        }
+      ],
+      "citations": [
+        "Ma, N. (2023). Dataset of the water-balance-based evapotranspiration of global typical large river basins (1983-2016). National Tibetan Plateau / Third Pole Environment Data Center. https://doi.org/10.11888/Atmos.tpdc.300493.",
+        "Ma, N., Zhang, Y., & Szilagyi, J. (2024). Water-balance-based evapotranspiration for 56 large river basins: A benchmarking dataset for global terrestrial evapotranspiration modeling. Journal of Hydrology, 630, 130607. https://doi.org/10.1016/j.jhydrol.2024.130607."
+      ],
+      "image_id": null
     }
   ]
 }

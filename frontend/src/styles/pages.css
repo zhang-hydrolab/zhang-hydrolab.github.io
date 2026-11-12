@@ -695,6 +695,11 @@
   border-top: 1px solid var(--ink);
 }
 
+.dataset:not(:has(.fig)) {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 860px;
+}
+
 .dataset h2 {
   margin-bottom: 8px;
   font-size: 26px;

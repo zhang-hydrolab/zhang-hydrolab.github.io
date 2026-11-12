@@ -4,6 +4,7 @@ export const NAV = [
   { href: '/research.html', key: 'research', en: 'Research', zh: '研究方向' },
   { href: '/publications.html', key: 'publications', en: 'Publications', zh: '论文成果' },
   { href: '/data.html', key: 'data', en: 'Data', zh: '数据产品' },
+  { href: '/models.html', key: 'models', en: 'Models', zh: '模型产品' },
   { href: '/people.html', key: 'people', en: 'People', zh: '团队成员' },
   { href: '/news.html', key: 'news', en: 'News', zh: '新闻动态' },
   { href: '/collaboration.html', key: 'collaboration', en: 'Collaboration', zh: '合作网络' },

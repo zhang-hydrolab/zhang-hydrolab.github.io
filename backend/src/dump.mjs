@@ -13,6 +13,7 @@ export const CONTENT_TABLES = [
   'publications',
   'news',
   'datasets',
+  'models',
   'research_themes',
   'research_projects',
   'collaborators',

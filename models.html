@@ -1,0 +1,157 @@
+<!doctype html><html lang="en" data-lang="en" data-title-en="Models · Large Scale Hydrology Group" data-title-zh="模型产品 · 大尺度水文学团队">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Models · Large Scale Hydrology Group</title>
+<meta name="description" content="Process models from the Large Scale Hydrology group, including the calibration-free complementary relationship evapotranspiration model CR_v3.0.">
+<link rel="canonical" href="https://zhang-hydrolab.github.io/models.html">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Large Scale Hydrology Group">
+<meta property="og:title" content="Models · Large Scale Hydrology Group">
+<meta property="og:description" content="Process models from the Large Scale Hydrology group, including the calibration-free complementary relationship evapotranspiration model CR_v3.0.">
+<meta property="og:url" content="https://zhang-hydrolab.github.io/models.html">
+<meta property="og:image" content="https://zhang-hydrolab.github.io/media/e40a2308e73d60dd-2400.webp">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>(function(){var d=document.documentElement,l=null;d.classList.add('js');try{l=new URLSearchParams(location.search).get('lang')}catch(e){}if(l!=='zh'&&l!=='en'){var m=document.cookie.match(/(?:^|; )lab-lang=(zh|en)/);l=m?m[1]:null}if(!l){try{l=sessionStorage.getItem('lab-lang')}catch(e){}}if(l==='zh'||l==='en'){document.cookie='lab-lang='+l+'; path=/; SameSite=Lax';try{sessionStorage.setItem('lab-lang',l)}catch(e){}}if(l==='zh'){d.dataset.lang='zh';d.lang='zh-CN';if(d.dataset.titleZh)document.title=d.dataset.titleZh}})();</script>
+<link rel="preload" href="/assets/fonts/source-serif-4-latin-wght-normal-EUO3YR6J.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/source-sans-3-latin-wght-normal-ILI3Y2TR.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/style-4CUMWMGZ.css">
+<script type="module" src="/assets/main-QB4ZHOO5.js"></script>
+</head>
+<body id="top" data-page="models">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="/" aria-label="Large Scale Hydrology Group, home">
+        <img class="nav__logo" src="/media/601b88f216dd2c21-320.webp" srcset="/media/601b88f216dd2c21-160.webp 160w, /media/601b88f216dd2c21-320.webp 320w" sizes="48px" width="1024" height="1024" alt="" loading="eager" decoding="async">
+        <span>
+          <span class="nav__name"><span class="t-en">Large Scale Hydrology Group</span><span class="t-zh" lang="zh-CN">大尺度水文学团队</span></span>
+          <span class="nav__sub"><span class="t-en">IGSNRR, Chinese Academy of Sciences</span><span class="t-zh" lang="zh-CN">中国科学院地理科学与资源研究所</span></span>
+        </span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="/research.html" ><span class="t-en">Research</span><span class="t-zh" lang="zh-CN">研究方向</span></a><a href="/publications.html" ><span class="t-en">Publications</span><span class="t-zh" lang="zh-CN">论文成果</span></a><a href="/data.html" ><span class="t-en">Data</span><span class="t-zh" lang="zh-CN">数据产品</span></a><a href="/models.html" aria-current="page"><span class="t-en">Models</span><span class="t-zh" lang="zh-CN">模型产品</span></a><a href="/people.html" ><span class="t-en">People</span><span class="t-zh" lang="zh-CN">团队成员</span></a><a href="/news.html" ><span class="t-en">News</span><span class="t-zh" lang="zh-CN">新闻动态</span></a><a href="/collaboration.html" ><span class="t-en">Collaboration</span><span class="t-zh" lang="zh-CN">合作网络</span></a>
+      </nav>
+      <div class="nav__tools">
+        <button class="tool" type="button" data-search-open aria-label="Search the site" title="Search (Ctrl K)"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m14 14 4 4" stroke="currentColor" stroke-width="1.5"/></svg></button>
+        <div class="langswitch" role="group" aria-label="Language / 语言">
+          <button type="button" data-lang-set="en" lang="en" aria-pressed="true" title="English">EN</button>
+          <button type="button" data-lang-set="zh" lang="zh-CN" aria-pressed="false" title="中文">中文</button>
+        </div>
+        <button class="tool tool--menu" type="button" data-menu-open aria-label="Open menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      </div>
+    </div>
+  </header>
+<dialog class="menu" data-menu aria-label="Menu">
+    <div class="menu__top">
+      <span><span class="t-en">Menu</span><span class="t-zh" lang="zh-CN">菜单</span></span>
+      <button class="tool" type="button" data-menu-close aria-label="Close menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 4 12 12M16 4 4 16" stroke="currentColor" stroke-width="1.5"/></svg></button>
+    </div>
+    <nav aria-label="Mobile">
+      <a href="/"><span class="t-en">Home</span><span class="t-zh" lang="zh-CN">首页</span></a>
+      <a href="/research.html"><span class="t-en">Research</span><span class="t-zh" lang="zh-CN">研究方向</span></a><a href="/publications.html"><span class="t-en">Publications</span><span class="t-zh" lang="zh-CN">论文成果</span></a><a href="/data.html"><span class="t-en">Data</span><span class="t-zh" lang="zh-CN">数据产品</span></a><a href="/models.html"><span class="t-en">Models</span><span class="t-zh" lang="zh-CN">模型产品</span></a><a href="/people.html"><span class="t-en">People</span><span class="t-zh" lang="zh-CN">团队成员</span></a><a href="/news.html"><span class="t-en">News</span><span class="t-zh" lang="zh-CN">新闻动态</span></a><a href="/collaboration.html"><span class="t-en">Collaboration</span><span class="t-zh" lang="zh-CN">合作网络</span></a>
+    </nav>
+  </dialog>
+<main id="main">
+
+    <header class="pagehead">
+    <div class="wrap pagehead__grid">
+      <div>
+        <p class="kicker"><a href="/"><span class="t-en">Home</span><span class="t-zh" lang="zh-CN">首页</span></a> / <span class="t-en">Models</span><span class="t-zh" lang="zh-CN">模型产品</span></p>
+        <h1><span class="t-en">Models</span><span class="t-zh" lang="zh-CN">模型产品</span></h1>
+        <p class="pagehead__lead"><span class="t-en">Process models developed by the group, together with their downloadable products.</span><span class="t-zh" lang="zh-CN">课题组发展的过程模型及其可下载产品。</span></p>
+      </div>
+      <figure class="etg" data-module="etglobe">
+    <div class="etg__stage">
+      <img class="etg__still" src="/earth/etglobe-still.webp" width="900" height="900" alt="Globe of mean July evapotranspiration from PML-V2.2, highest over the forests of the Northern Hemisphere" decoding="async" fetchpriority="high">
+      <canvas class="etg__canvas" aria-hidden="true"></canvas>
+      <button class="pause" type="button" data-pause aria-pressed="false" aria-label="Pause the animation" title="Pause or resume" hidden><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M3 1.5h2v9H3zM7 1.5h2v9H7z"/></svg></button>
+    </div>
+    <figcaption class="etg__key">
+      <p class="etg__month"><b data-etg-month><span class="t-en">July</span><span class="t-zh" lang="zh-CN">七月</span></b> <span class="meta"><span class="t-en">PML-V2.2 evapotranspiration, mean of 2001–2020</span><span class="t-zh" lang="zh-CN">PML-V2.2 蒸散发，2001–2020 年平均</span></span></p>
+      <p class="etg__scale"><span>0</span><i class="etg__ramp" aria-hidden="true"></i><span><span class="t-en">150 mm per month</span><span class="t-zh" lang="zh-CN">150 毫米/月</span></span></p>
+    </figcaption>
+    <script type="application/json" id="etg-months">[["January","一月"],["February","二月"],["March","三月"],["April","四月"],["May","五月"],["June","六月"],["July","七月"],["August","八月"],["September","九月"],["October","十月"],["November","十一月"],["December","十二月"]]</script>
+  </figure>
+    </div>
+  </header>
+    <section class="wrap">
+      <h2 class="minor"><span class="t-en">Temporal coverage</span><span class="t-zh" lang="zh-CN">时间覆盖</span></h2>
+      <figure class="cov">
+    <ol class="cov__rows">
+      <li>
+          <a class="link cov__name" href="#cr-v3">CR_v3.0</a>
+          <span class="cov__track"><i style="left:4.35%;width:93.48%"></i></span>
+          <span class="cov__range">1982 – 2025</span>
+        </li>
+    </ol>
+    <div class="cov__axis" aria-hidden="true">
+      <span></span>
+      <span class="cov__track"><span style="left:0.00%">1980</span><span style="left:21.74%">1990</span><span style="left:43.48%">2000</span><span style="left:65.22%">2010</span><span style="left:86.96%">2020</span></span>
+      <span></span>
+    </div>
+  </figure>
+    </section>
+    <div class="wrap datasets">
+      <article class="dataset" id="cr-v3">
+          <div>
+            <h2>CR_v3.0</h2>
+            <p><span class="t-en">Global terrestrial evapotranspiration estimated by the calibration-free complementary relationship model (Version 3.0). Forcing includes air temperature and relative humidity from JRA3Q, and net radiation and wind speed from ERA5, with net radiation corrected against CERES. V3 is an upgraded version of V2; earlier versions are deprecated.</span><span class="t-zh" lang="zh-CN">由无需率定的互补关系模型估算的全球陆地蒸散发产品（第 3 版）。驱动数据为 JRA3Q 的气温和相对湿度，以及 ERA5 的净辐射和风速，其中净辐射已对照 CERES 订正。V3 为 V2 的升级版，早期版本不再推荐使用。</span></p>
+            <div class="table-scroll"><table class="table table--spec"><tbody>
+              <tr><th scope="row"><span class="t-en">Scope</span><span class="t-zh" lang="zh-CN">范围</span></th><td>Global</td></tr>
+              <tr><th scope="row"><span class="t-en">Variables</span><span class="t-zh" lang="zh-CN">变量</span></th><td>ET</td></tr>
+              <tr><th scope="row"><span class="t-en">Time step</span><span class="t-zh" lang="zh-CN">时间分辨率</span></th><td>Monthly · annual</td></tr>
+              <tr><th scope="row"><span class="t-en">Grid</span><span class="t-zh" lang="zh-CN">空间分辨率</span></th><td>0.25°</td></tr>
+              <tr><th scope="row"><span class="t-en">Period</span><span class="t-zh" lang="zh-CN">时段</span></th><td>1982 – 2025</td></tr>
+            </tbody></table></div>
+            <h3><span class="t-en">Download</span><span class="t-zh" lang="zh-CN">下载</span></h3>
+            <ul class="plain"><li><a class="link" href="https://www.ncdc.ac.cn/portal/metadata/fb0953e4-2969-4c52-9859-d1715f2c9a69" target="_blank" rel="noopener">National Cryosphere Desert Data Center</a></li><li><a class="link" href="https://doi.org/10.12072/ncdc.et.db4024.2023" target="_blank" rel="noopener">DOI</a></li></ul>
+            <h3><span class="t-en">How to cite</span><span class="t-zh" lang="zh-CN">引用方式</span></h3>
+            <ol class="cite"><li><p>Ma, N., Szilagyi, J., &amp; Zhang, Y. (2023). Global terrestrial evapotranspiration dataset derived from complementary-relationship method (Version 3.0). National Cryosphere Desert Data Center. https://doi.org/10.12072/ncdc.et.db4024.2023.</p><button class="link" type="button" data-copy="Ma, N., Szilagyi, J., &amp; Zhang, Y. (2023). Global terrestrial evapotranspiration dataset derived from complementary-relationship method (Version 3.0). National Cryosphere Desert Data Center. https://doi.org/10.12072/ncdc.et.db4024.2023."><span class="t-en">Copy citation</span><span class="t-zh" lang="zh-CN">复制引用</span></button></li><li><p>Ma, N., Szilagyi, J., &amp; Zhang, Y. (2021). Calibration-Free Complementary Relationship Estimates Terrestrial Evapotranspiration Globally. Water Resources Research, 57(9), e2021WR029691. https://doi.org/10.1029/2021WR029691.</p><button class="link" type="button" data-copy="Ma, N., Szilagyi, J., &amp; Zhang, Y. (2021). Calibration-Free Complementary Relationship Estimates Terrestrial Evapotranspiration Globally. Water Resources Research, 57(9), e2021WR029691. https://doi.org/10.1029/2021WR029691."><span class="t-en">Copy citation</span><span class="t-zh" lang="zh-CN">复制引用</span></button></li></ol>
+          </div>
+          
+        </article>
+    </div>
+</main>
+<footer class="footer">
+    <svg class="footer__tide" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path d="M0 58C180 30 300 30 480 50s300 34 480 12 300-42 480-18v46H0Z" fill="#cfe2f1"/>
+      <path d="M0 70C220 42 320 44 520 62s280 26 460 8 280-26 460-6v26H0Z" fill="#6da4d0"/>
+      <path d="M0 80C200 62 360 62 560 74s300 16 480 4 240-16 400-6v18H0Z" fill="#0a3559"/>
+    </svg>
+    <div class="footer__sea">
+    <div class="wrap footer__grid">
+      <div>
+        <h2><span class="t-en">Large Scale Hydrology Group</span><span class="t-zh" lang="zh-CN">大尺度水文学团队</span></h2>
+        <p><span class="t-en">Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences</span><span class="t-zh" lang="zh-CN">中国科学院地理科学与资源研究所</span></p>
+      </div>
+      <div>
+        <h2><span class="t-en">Contact</span><span class="t-zh" lang="zh-CN">联系方式</span></h2>
+        <p><span class="t-en">IGSNRR, A937</span><span class="t-zh" lang="zh-CN">中国科学院地理科学与资源研究所 A937</span></p>
+        <p><a class="link" href="mailto:zhangyq@igsnrr.ac.cn">zhangyq@igsnrr.ac.cn</a></p>
+      </div>
+      <div>
+        <h2><span class="t-en">Links</span><span class="t-zh" lang="zh-CN">相关链接</span></h2>
+        <ul>
+          <li><a class="link" href="https://scholar.google.com/citations?user=t5iGFeAAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li><li><a class="link" href="https://igsnrr.cas.cn/sourcedb/zw/zjrck/kygg/bjdbgc/201903/t20190327_5262230.html" target="_blank" rel="noopener">IGSNRR profile</a></li>
+          <li><a class="link" href="/api/v1/meta.json"><span class="t-en">Open content API</span><span class="t-zh" lang="zh-CN">开放内容接口</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer__legal">
+      <span>© 2026 <span class="t-en">Large Scale Hydrology Group</span><span class="t-zh" lang="zh-CN">大尺度水文学团队</span></span>
+      <span><span class="t-en">Content updated</span><span class="t-zh" lang="zh-CN">内容更新于</span> 2026-11-12</span>
+    </div>
+    </div>
+  </footer>
+<dialog class="search" data-search aria-label="Search">
+    <form method="dialog" class="search__box">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m14 14 4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+      <input data-search-input type="search" placeholder="People, papers, datasets, models, news" data-placeholder-zh="成员、论文、数据、模型、新闻" aria-label="Search the site" autocomplete="off">
+      <button class="search__esc" type="submit" aria-label="Close search">Esc</button>
+    </form>
+    <ul class="search__results" data-search-results aria-live="polite"></ul>
+  </dialog>
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+</body>
+</html>

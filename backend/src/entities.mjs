@@ -114,6 +114,32 @@ export const ENTITIES = {
     ],
   },
 
+  models: {
+    table: 'models',
+    label: 'Models',
+    title: (r) => r.name,
+    subtitle: (r) => r.coverage_label,
+    order: 'sort_order ASC, name ASC',
+    slugFrom: (r) => r.name,
+    search: ['name', 'summary_en', 'summary_zh', 'variables'],
+    fields: [
+      text('name', 'Name', { required: true }),
+      long('summary_en', 'Summary (English)'),
+      long('summary_zh', 'Summary (中文)'),
+      text('scope', 'Spatial scope', { help: 'Global, China ...' }),
+      text('variables', 'Variables'),
+      text('temporal', 'Temporal resolution'),
+      text('spatial', 'Spatial resolution'),
+      { name: 'start_year', label: 'First year', type: 'int', min: 1900, max: 2100 },
+      { name: 'end_year', label: 'Last year (empty = ongoing)', type: 'int', min: 1900, max: 2100 },
+      text('coverage_label', 'Coverage label'),
+      { name: 'downloads', label: 'Download links', type: 'links' },
+      { name: 'citations', label: 'How to cite', type: 'strings', multiline: true },
+      { name: 'image_id', label: 'Figure', type: 'media', accept: 'image' },
+      sortOrder,
+    ],
+  },
+
   research_themes: {
     table: 'research_themes',
     label: 'Research themes',

@@ -11,7 +11,7 @@ never reads the database, and the back end knows nothing about HTML.
 | `frontend/` | Turns the API and media into static pages | At build time only |
 | `scripts/publish.mjs` | Export, snapshot, build, verify, copy to the repository root | At publish time |
 
-The API has nine files: `meta`, `site`, `people`, `publications`, `news`, `datasets`, `research`,
+The API has ten files: `meta`, `site`, `people`, `publications`, `news`, `datasets`, `models`, `research`,
 `collaborators` and `media`. `meta.json` carries `schemaVersion`. Add fields freely; change or
 remove one only with a new version.
 

@@ -7,7 +7,7 @@ import { loadApi } from './src/lib/api.mjs';
 import { scholarly } from './src/lib/scholarly.mjs';
 import { buildMedia } from './src/lib/media.mjs';
 import { homePage } from './src/views/home.mjs';
-import { articlePage, collaborationPage, dataPage, newsPage, notFoundPage, peoplePage, publicationsPage, researchPage } from './src/views/pages.mjs';
+import { articlePage, collaborationPage, dataPage, modelsPage, newsPage, notFoundPage, peoplePage, publicationsPage, researchPage } from './src/views/pages.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 
@@ -64,6 +64,9 @@ function buildSearchIndex(api) {
   for (const d of api.datasets.items) {
     items.push({ type: 'Dataset', title: d.name, sub: d.coverage_label, url: `/data.html#${d.id}`, text: `${d.name} ${d.summary_en} ${d.summary_zh ?? ''} ${d.variables}`.toLowerCase() });
   }
+  for (const m of api.models.items) {
+    items.push({ type: 'Model', title: m.name, sub: m.coverage_label, url: `/models.html#${m.id}`, text: `${m.name} ${m.summary_en} ${m.summary_zh ?? ''} ${m.variables}`.toLowerCase() });
+  }
   for (const n of api.news.items) {
     items.push({ type: 'News', title: n.title_en || n.title_zh, title_zh: n.title_zh || n.title_en, sub: String(n.year), url: n.body_md ? `/news/${encodeURIComponent(n.id)}.html` : (n.source_url || '/news.html'), text: `${n.title_en} ${n.title_zh}`.toLowerCase() });
   }
@@ -93,6 +96,7 @@ export async function buildSite({ apiSource, mediaSource, outDir, dev = false })
     'research.html': researchPage(ctx),
     'publications.html': publicationsPage(ctx),
     'data.html': dataPage(ctx),
+    'models.html': modelsPage(ctx),
     'people.html': peoplePage(ctx),
     'news.html': newsPage(ctx),
     'collaboration.html': collaborationPage(ctx),
