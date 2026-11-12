@@ -594,15 +594,14 @@ export function collaborationPage(ctx) {
   const { items } = ctx.api.collaborators;
   const published = ctx.api.publications.items;
   const body = html`
+    <div data-module="collabmap">
     ${pageHead({
       en: 'Collaboration',
       zh: '合作网络',
       lead: t('The group works with hydrologists and climate scientists in Europe, North America and Australia. Select a collaborator for a profile and joint papers.', '团队与欧洲、北美和澳大利亚的水文与气候科学家开展合作。点击合作者可查看简介与合作论文。'),
+      visual: html`<figure class="plate plate--map">${worldMap(ctx)}</figure>`,
     })}
-    <section class="wrap" data-module="collabmap">
-      <figure class="plate plate--map">
-        ${worldMap(ctx)}
-      </figure>
+    <section class="wrap">
       <ul class="collabs">
         ${items.map((c) => {
           const papers = coauthored(c, published).sort((a, b) => b.year - a.year || (a.sort_order ?? 0) - (b.sort_order ?? 0));
@@ -631,7 +630,8 @@ export function collaborationPage(ctx) {
         <button class="tool" type="button" data-dialog-close><span class="sr-only">${t('Close', '关闭')}</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 4 12 12M16 4 4 16" stroke="currentColor" stroke-width="1.5"/></svg></button>
       </div>
       <div data-collab-slot></div>
-    </dialog>`;
+    </dialog>
+    </div>`;
   return layout(ctx, { page: 'collaboration', title: 'Collaboration', description: 'International collaborators of the Large Scale Hydrology group.', body, path: '/collaboration.html' });
 }
 

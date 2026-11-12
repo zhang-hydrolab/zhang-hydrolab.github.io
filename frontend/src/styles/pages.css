@@ -1557,11 +1557,21 @@ html.js .person > .person__detail {
   border-top: 1px solid var(--rule);
 }
 
-/* Collaboration: a flat Equal Earth map, then the collaborators as cards that open profiles. */
+/* Collaboration: the map sits in the page-head sky band, beside the title. */
+.pagehead:has(.plate--map) {
+  padding-bottom: clamp(16px, 2.2vw, 28px);
+}
+
+.pagehead:has(.plate--map) .pagehead__grid {
+  grid-template-columns: minmax(17rem, 0.4fr) minmax(0, 1fr);
+  gap: 16px clamp(20px, 3vw, 40px);
+  align-items: center;
+}
+
 .plate--map {
-  /* Narrower than the full wrap so the collaborator cards sit on the first screen. */
-  max-width: 640px;
-  margin: 20px auto 0;
+  margin: 0;
+  width: 100%;
+  max-width: none;
 }
 
 .worldmap {
@@ -1572,7 +1582,7 @@ html.js .person > .person__detail {
 }
 
 .worldmap__sea {
-  fill: #f2f7fc;
+  fill: none;
 }
 
 .worldmap__grid {
@@ -1640,10 +1650,10 @@ html.js .person > .person__detail {
 /* The outline keeps a label readable where a line passes behind it. */
 .worldmap text {
   fill: var(--ink);
-  font-size: 24px;
+  font-size: 21px;
   font-weight: 600;
   paint-order: stroke;
-  stroke: #f2f7fc;
+  stroke: var(--sky);
   stroke-width: 5px;
   stroke-linejoin: round;
 }
@@ -1875,6 +1885,13 @@ html.js .collab > .collab__detail {
   margin: 0 0 14px;
 }
 
+@media (max-width: 860px) {
+  .pagehead:has(.plate--map) .plate--map {
+    max-width: 720px;
+    margin-inline: auto;
+  }
+}
+
 @media (max-width: 640px) {
   .collab__head {
     grid-template-columns: 96px minmax(0, 1fr);
@@ -1900,6 +1917,6 @@ html.js .collab > .collab__detail {
   }
 
   .worldmap text {
-    font-size: 24px;
+    font-size: 21px;
   }
 }
