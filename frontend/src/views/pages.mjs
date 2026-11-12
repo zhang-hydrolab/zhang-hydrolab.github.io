@@ -602,7 +602,6 @@ export function collaborationPage(ctx) {
     <section class="wrap" data-module="collabmap">
       <figure class="plate plate--map">
         ${worldMap(ctx)}
-        <figcaption>${t('Lines link Beijing with the cities of collaborating institutions. Equal Earth projection centred on 150° E; coastlines from Natural Earth.', '线条连接北京与合作机构所在城市。等面积 Equal Earth 投影，中央经线 150° E；海岸线来自 Natural Earth。')}</figcaption>
       </figure>
       <ul class="collabs">
         ${items.map((c) => {

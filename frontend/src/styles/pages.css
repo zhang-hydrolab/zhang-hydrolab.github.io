@@ -1559,7 +1559,9 @@ html.js .person > .person__detail {
 
 /* Collaboration: a flat Equal Earth map, then the collaborators as cards that open profiles. */
 .plate--map {
-  margin-top: 32px;
+  /* Narrower than the full wrap so the collaborator cards sit on the first screen. */
+  max-width: 640px;
+  margin: 20px auto 0;
 }
 
 .worldmap {
@@ -1638,11 +1640,11 @@ html.js .person > .person__detail {
 /* The outline keeps a label readable where a line passes behind it. */
 .worldmap text {
   fill: var(--ink);
-  font-size: 15px;
+  font-size: 24px;
   font-weight: 600;
   paint-order: stroke;
   stroke: #f2f7fc;
-  stroke-width: 4px;
+  stroke-width: 5px;
   stroke-linejoin: round;
 }
 
@@ -1898,6 +1900,6 @@ html.js .collab > .collab__detail {
   }
 
   .worldmap text {
-    font-size: 19px;
+    font-size: 24px;
   }
 }
