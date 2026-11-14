@@ -50,15 +50,27 @@
         {
           "id": "forest-fire-flood-ecological-hydrological-effects",
           "theme_id": "water-security",
-          "name": "Forest Fire & Flood Ecological-Hydrological Effects",
-          "description": "The research explores the impacts of bushfires on hydrological processes in southeast Australia, particularly focusing on changes in water balance and flood magnitudes. One study examines the effects of the 2009 Victorian Bushfires on water balance in eight forested catchments, finding a reduction in evapotranspiration and an increase in streamflow, leading to a long-term decline in water storage in burned areas. Another study investigates the 2019-2020 mega forest fires, showing that these fires significantly amplified flood magnitudes, especially in regions with winter-dominated rainfall.",
+          "name": "Fire Impacts and Cascading Hazards",
+          "description": "This research examines how wildfires alter catchment water balance and intensify subsequent flood hazards. Studies in southeast Australia show that fire-induced vegetation and land-surface changes can modify evapotranspiration and streamflow, while amplifying flood peaks under certain hydroclimatic conditions. These findings highlight the cascading hydrological impacts of forest fires and their implications for flood risk.",
           "image_id": "378d11a0298c8e7d",
           "related": [
             "Xu, Z., Zhang, Y., Zhang, X., Ma, N., Tian, J., Kong, D., & Post, D. (2022). Bushfire‐Induced Water Balance Changes Detected by a Modified Paired Catchment Method. Water Resources Research, 58(11). https://doi.org/10.1029/2021wr031013",
             "Xu, Z., Zhang, Y., Blöschl, G., & Piao, S. (2023). Mega Forest Fires Intensify Flood Magnitudes in Southeast Australia. Geophysical Research Letters, 50(12). https://doi.org/10.1029/2023gl103812"
           ],
-          "name_zh": "林火与洪水的生态水文效应",
-          "description_zh": "研究关注澳大利亚东南部林火对水文过程的影响，特别是水量平衡和洪水量级的变化。其中一项研究分析 2009 年维多利亚州林火对 8 个森林流域水量平衡的影响，发现火后蒸散发减少、径流增加，过火区水储量长期下降；另一项研究表明，2019—2020 年特大林火显著放大了洪水量级，在冬季降雨主导的地区尤为明显。"
+          "name_zh": "林火影响与级联灾害",
+          "description_zh": "本研究关注林火如何改变流域水量平衡并加剧后续洪水灾害。在澳大利亚东南部的研究表明，林火引起的植被与陆面变化会改变蒸散发和径流，并在特定水文气候条件下放大洪峰。这些发现揭示了林火的级联水文影响及其对洪水风险的意义。"
+        },
+        {
+          "id": "drought-recovery-and-hydrological-resilience",
+          "theme_id": "water-security",
+          "name": "Drought Recovery and Hydrological Resilience",
+          "description": "This research investigates how large river basins recover from severe droughts and why recovery varies across regions. By integrating GRACE satellite observations with global water availability estimates, we quantify terrestrial water storage recovery and identify pronounced disparities between humid and dryland basins. We further examine how post-drought water availability, recurrent droughts, and human water use influence recovery trajectories and long-term hydrological resilience.",
+          "image_id": null,
+          "related": [
+            "Xu, Z., Zhang, Y., Blöschl, G., Wagener, T., AghaKouchak, A., Zhang, X., Wang, L., Tian, J., Ma, N., Li, X., Li, C., Huang, Q., Tang, Z., Yang, X., Xia, J., & Liu, C. (2026). Satellite evidence of unequal basin-scale recovery from severe droughts. National Science Review, nwag624. https://doi.org/10.1093/nsr/nwag624"
+          ],
+          "name_zh": "干旱恢复与水文韧性",
+          "description_zh": "本研究关注严重干旱后大型流域水文系统的恢复过程及其区域差异。通过融合 GRACE 卫星观测与全球水资源可利用量估算，量化陆地水储量恢复过程，揭示湿润与干旱流域之间显著的恢复差异，并进一步分析干旱后水分可利用量、重复干旱和人类用水对水文恢复及长期韧性的影响。"
         }
       ]
     },

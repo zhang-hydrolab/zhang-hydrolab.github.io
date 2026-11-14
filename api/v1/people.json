@@ -204,19 +204,35 @@
           "name_zh": "许振武",
           "honorific": "Dr.",
           "role": "postdoc",
-          "research_field": "Hydroclimate; Ecohydrology",
-          "bio_en": "Dr. Zhenwu Xu specializes in hydroclimate extremes. His research focuses on hydrological responses to disturbances caused by droughts, wildfires, and human activities, aiming to advance understanding of the resilience and evolution of Earth’s water resources and ecosystems. In 2026, Zhenwu Xu received NSFC Young Scientists Fund (Category C).",
-          "bio_zh": "许振武为中国科学院地理科学与资源研究所博士后，2024 年于中国科学院大学获得博士学位，博士期间曾赴维也纳工业大学接受联合研究训练。他整合卫星观测、实测资料与分布式生态水文模型，研究干旱、野火及人类活动扰动下的水文响应，并参与 PML 蒸散发与生产力模型的数据和方法开发。\n\n研究方向：水文气候极端事件、生态水文与水文系统韧性。2026 年获青年科学基金项目（C 类）资助。",
+          "research_field": "Global Change Ecohydrology",
+          "bio_en": "Dr. Zhenwu Xu is a postdoctoral researcher at the Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences. His research focuses on global change ecohydrology, particularly hydrological responses and resilience to disturbances such as droughts, wildfires, and human activities. He integrates satellite observations, field measurements, and ecohydrological modeling to investigate water balance changes, water–carbon interactions, and vegetation–water feedbacks. He also contributes to the development of the PML-V2 evapotranspiration and gross primary production modeling framework. In 2026, Zhenwu Xu received NSFC Young Scientists Fund (Category C).",
+          "bio_zh": "许振武博士是中国科学院地理科学与资源研究所博士后，主要从事全球变化生态水文学研究，关注干旱、林火及人类活动等扰动下的水文响应与系统韧性。通过融合卫星遥感、地面观测和生态水文模型，研究水量平衡变化、生态系统碳水耦合及植被—水文反馈机制，并参与 PML-V2 蒸散发与总初级生产力模型及数据产品的研发。\n\n研究方向：全球变化生态水文学。2026 年获青年科学基金项目（C 类）资助。",
           "email": "xuzhenwu@igsnrr.ac.cn",
           "links": [
             {
-              "label": "Homepage",
+              "label": "Google Scholar",
+              "url": "https://scholar.google.com/citations?hl=en&sortby=pubdate&user=6B4XU-YAAAAJ&view_op=list_works"
+            },
+            {
+              "label": "Personal Website",
               "url": "https://xuzhenwu.github.io/"
+            },
+            {
+              "label": "ORCID",
+              "url": "https://orcid.org/0000-0003-2607-8343"
+            },
+            {
+              "label": "Email",
+              "url": "mailto:xuzhenwu@igsnrr.ac.cn"
+            },
+            {
+              "label": "Secondary Email",
+              "url": "mailto:xuzhenwu.cas@gmail.com"
             }
           ],
           "photo_id": "a41f260ea75d6adf",
           "photo_focus": "50% 25%",
-          "research_field_zh": "水文气候；生态水文学",
+          "research_field_zh": "全球变化生态水文学",
           "author_names": []
         }
       ]

@@ -43,11 +43,13 @@ export function personLinks(person) {
   if (!entries.length) return '';
   return html`<ul class="person-links">
     ${entries.map((link) => {
-      const [en, zh] = labels[link.kind] ?? [link.label, link.label];
       const mail = link.kind === 'email';
+      const secondary = mail && /secondary|备用/i.test(link.label);
+      const [en, zh] = secondary ? ['Secondary email', '备用邮箱'] : labels[link.kind] ?? [link.label, link.label];
+      const address = mail ? link.url.slice(7) : '';
       return html`<li><a class="person-links__link person-links__link--${link.kind}" href="${safeHref(link.url)}" ${mail ? '' : raw('target="_blank" rel="noopener noreferrer"')}>
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${raw(icons[link.kind])}</svg>
-        <span class="sr-only">${t(`${person.name_en}: ${en}${mail ? ` (${person.email || link.url.slice(7)})` : ''}`, `${person.name_zh || person.name_en}：${zh}${mail ? `（${person.email || link.url.slice(7)}）` : ''}`)}</span>
+        <span class="sr-only">${t(`${person.name_en}: ${en}${mail ? ` (${address})` : ''}`, `${person.name_zh || person.name_en}：${zh}${mail ? `（${address}）` : ''}`)}</span>
         <span class="person-links__tooltip" aria-hidden="true">${t(en, zh)}</span>
       </a></li>`;
     })}
