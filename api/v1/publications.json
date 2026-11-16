@@ -1,5 +1,5 @@
 {
-  "count": 125,
+  "count": 128,
   "years": [
     {
       "year": 2018,
@@ -35,7 +35,7 @@
     },
     {
       "year": 2026,
-      "count": 13
+      "count": 16
     }
   ],
   "topics": [
@@ -53,11 +53,15 @@
     },
     {
       "topic": "Evapotranspiration",
-      "count": 19
+      "count": 20
     },
     {
       "topic": "Drought",
       "count": 18
+    },
+    {
+      "topic": "Agriculture",
+      "count": 7
     },
     {
       "topic": "Floods & extremes",
@@ -76,15 +80,61 @@
       "count": 6
     },
     {
-      "topic": "Agriculture",
-      "count": 5
-    },
-    {
       "topic": "AI & machine learning",
       "count": 2
     }
   ],
   "items": [
+    {
+      "id": "2026-zhu-precipitation-trend-uncertainty-from-product",
+      "year": 2026,
+      "title": "Precipitation trend uncertainty from product choice rivals or exceeds the magnitude of actual trends",
+      "authors": "Zhu, S., Wada, Y., Miralles, D. G., Zhang, Y., Miao, C., Bangalath, H. K., Wang, X., & Beck, H. E.",
+      "venue": "Communications Earth & Environment",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.1038/s43247-026-04148-w",
+      "url": "",
+      "pdf_id": null,
+      "topics": [],
+      "featured": 0
+    },
+    {
+      "id": "2026-li-local-and-remote-impacts-of",
+      "year": 2026,
+      "title": "Local and Remote Impacts of Regional Irrigation on Near‐Surface Temperature",
+      "authors": "Li, H., Lo, M.-H., Peel, M. C., Ryu, D., Thiery, W., & Zhang, Y.",
+      "venue": "Journal of Geophysical Research: Atmospheres",
+      "volume": "131",
+      "issue": "11",
+      "pages": "e2026JD046366",
+      "doi": "10.1029/2026jd046366",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Agriculture"
+      ],
+      "featured": 0
+    },
+    {
+      "id": "2026-laluet-assessing-the-suitability-of-global",
+      "year": 2026,
+      "title": "Assessing the suitability of global evapotranspiration products over irrigated areas",
+      "authors": "Laluet, P., Corbari, C., Baez-Villanueva, O., Walther, S., Zhang, Y., Muñoz-Sabater, J., Albergel, C., & Dorigo, W.",
+      "venue": "Hydrology and Earth System Sciences",
+      "volume": "30",
+      "issue": "6",
+      "pages": "1779-1799",
+      "doi": "10.5194/hess-30-1779-2026",
+      "url": "",
+      "pdf_id": null,
+      "topics": [
+        "Evapotranspiration",
+        "Agriculture"
+      ],
+      "featured": 0
+    },
     {
       "id": "2026-xie-predicting-root-zone-soil-moisture-using",
       "year": 2026,
