@@ -52,7 +52,7 @@
           "theme_id": "water-security",
           "name": "Fire Impacts and Cascading Hazards",
           "description": "This research examines how wildfires alter catchment water balance and intensify subsequent flood hazards. Studies in southeast Australia show that fire-induced vegetation and land-surface changes can modify evapotranspiration and streamflow, while amplifying flood peaks under certain hydroclimatic conditions. These findings highlight the cascading hydrological impacts of forest fires and their implications for flood risk.",
-          "image_id": "378d11a0298c8e7d",
+          "image_id": "97b31800920bc972",
           "related": [
             "Xu, Z., Zhang, Y., Zhang, X., Ma, N., Tian, J., Kong, D., & Post, D. (2022). Bushfire‐Induced Water Balance Changes Detected by a Modified Paired Catchment Method. Water Resources Research, 58(11). https://doi.org/10.1029/2021wr031013",
             "Xu, Z., Zhang, Y., Blöschl, G., & Piao, S. (2023). Mega Forest Fires Intensify Flood Magnitudes in Southeast Australia. Geophysical Research Letters, 50(12). https://doi.org/10.1029/2023gl103812"
@@ -65,7 +65,7 @@
           "theme_id": "water-security",
           "name": "Drought Recovery and Hydrological Resilience",
           "description": "This research investigates how large river basins recover from severe droughts and why recovery varies across regions. By integrating GRACE satellite observations with global water availability estimates, we quantify terrestrial water storage recovery and identify pronounced disparities between humid and dryland basins. We further examine how post-drought water availability, recurrent droughts, and human water use influence recovery trajectories and long-term hydrological resilience.",
-          "image_id": null,
+          "image_id": "ebea0c23583edacb",
           "related": [
             "Xu, Z., Zhang, Y., Blöschl, G., Wagener, T., AghaKouchak, A., Zhang, X., Wang, L., Tian, J., Ma, N., Li, X., Li, C., Huang, Q., Tang, Z., Yang, X., Xia, J., & Liu, C. (2026). Satellite evidence of unequal basin-scale recovery from severe droughts. National Science Review, nwag624. https://doi.org/10.1093/nsr/nwag624"
           ],

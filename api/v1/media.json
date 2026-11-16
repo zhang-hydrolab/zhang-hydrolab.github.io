@@ -1,6 +1,26 @@
 {
-  "count": 117,
+  "count": 119,
   "items": [
+    {
+      "id": "ebea0c23583edacb",
+      "sha256": "ebea0c23583edacb45ebb1883fe93a4269c5426460f9fea4a33204ce14d30ff6",
+      "ext": "jpg",
+      "mime": "image/jpeg",
+      "bytes": 830806,
+      "filename": "F1-recovery_time.jpg",
+      "alt_en": "Drought recovery probability and median and longest unrecovered times of terrestrial water storage across global river basins (Xu et al., 2026, NSR, Figure 1)",
+      "alt_zh": "全球流域陆地水储量干旱后恢复概率、恢复时间中位数与最长未恢复时间（Xu 等，2026，NSR，图 1）"
+    },
+    {
+      "id": "97b31800920bc972",
+      "sha256": "97b31800920bc9727d1362788e3b0202f46f4cf0d2003c350601dc4f3bea7e3d",
+      "ext": "png",
+      "mime": "image/png",
+      "bytes": 378602,
+      "filename": "F4.png",
+      "alt_en": "Conceptual diagram of fire impacts on infiltration-excess and saturation-excess runoff processes (Xu et al., 2023, GRL, Figure 4)",
+      "alt_zh": "林火对超渗产流与蓄满产流过程影响的示意图（Xu 等，2023，GRL，图 4）"
+    },
     {
       "id": "1f3868184379c7e8",
       "sha256": "1f3868184379c7e8ef65775f53153cb4cc81010dae580dd3f95644b8ec0a34db",
